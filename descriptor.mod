@@ -1,5 +1,5 @@
-version="1.0"
-picture="thunbnail.png"
+version="1.1"
+picture="thumbnail.png"
 tags={
 	"Fixes"
 }
