@@ -1,0 +1,169 @@
+FormGreaterYugoslaviaCata = {
+	
+	GreaterYugoslavia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			tag = YUG
+		}
+
+		available = {
+			is_subject = no
+			# Yugoslavia
+			custom_trigger_tooltip = {
+				tooltip = form_country_yugoslavia_required_states_tt
+				controls_state = 107
+				controls_state = 108
+				controls_state = 106
+				controls_state = 802
+				controls_state = 803
+				controls_state = 970
+				controls_state = 764
+				controls_state = 45
+				controls_state = 105
+				controls_state = 104
+				controls_state = 804
+				controls_state = 103
+				controls_state = 109
+				controls_state = 102
+				controls_state = 853
+			}
+			# Bulgaria
+			custom_trigger_tooltip = {
+				tooltip = form_country_bulgaria_required_states_tt
+				controls_state = 211
+				controls_state = 212
+				controls_state = 48
+				controls_state = 801
+			}
+			#centeral Mac
+			custom_trigger_tooltip = {
+				tooltip = form_bulgaria4_claims_coring_states_tt
+				controls_state = 731
+			}
+			#thrace
+			custom_trigger_tooltip = {
+				tooltip = form_bulgaria5_claims_coring_states_tt
+				controls_state = 184
+			}
+			#Dobruja
+			custom_trigger_tooltip = {
+				tooltip = form_bulgaria6_claims_coring_states_tt
+				controls_state = 77
+			}
+
+			
+		}
+
+		visible = {
+			original_tag = YUG
+			NOT = {has_global_flag = formed_greater_yugoslavia}
+			has_global_flag = HasDonethefocus
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = YUG_GYS
+
+			# Bulgaria
+			custom_effect_tooltip = form_bulgaria_coring_states_tt
+			custom_effect_tooltip = form_bulgaria1_claims_coring_states_tt
+			custom_effect_tooltip = form_bulgaria2_claims_coring_states_tt
+			custom_effect_tooltip = form_bulgaria3_claims_coring_states_tt
+
+			hidden_effect = {
+				124 = { add_core_of = YUG }
+				138 = { add_core_of = YUG }
+				139 = { add_core_of = YUG }
+				140 = { add_core_of = YUG }
+				141 = { add_core_of = YUG }
+				38 = { add_core_of = YUG }
+				666 = { add_core_of = YUG }
+				913 = { add_core_of = YUG }
+				915 = { add_core_of = YUG }
+				916 = { add_core_of = YUG }
+				917 = { add_core_of = YUG }
+				918 = { add_core_of = YUG }	
+				919 = { add_core_of = YUG }
+				211 = { add_core_of = YUG }
+				212 = { add_core_of = YUG }
+				48 = { add_core_of = YUG }
+				801 = { add_core_of = YUG }
+				731 = { add_core_of = YUG }
+				184 = { add_core_of = YUG }
+				77 = { add_core_of = YUG }
+				791 = { add_core_of = YUG }
+			}
+			set_global_flag = formed_greater_yugoslavia
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+Portugal_Saf_decisions = {
+	BuyAngola = {
+		icon = generic_goal_territory
+        allowed = {
+            tag = SAF
+		}
+		visible = {
+			tag = SAF
+		}
+        cost = 50
+        available = {
+			has_war = no
+            POR = { exists = yes }
+            NOT = { has_war_with = POR }
+            POR = {
+				controls_state = 891
+				controls_state = 892
+				controls_state = 540
+				controls_state = 796
+			}
+        }
+		complete_effect = {
+            POR = {
+				country_event = {
+					id = saf_portugal.1
+					days = 10
+				}
+			}
+		}
+        fire_only_once = yes
+	}
+	BuyMozambique = {
+		icon = generic_goal_territory
+        allowed = {
+            tag = SAF
+		}
+		visible = {
+			tag = SAF
+		}
+        cost = 50
+        available = {
+			has_war = no
+            POR = { exists = yes }
+            NOT = { has_war_with = POR }
+            POR = {
+				controls_state = 544
+				controls_state = 896
+				controls_state = 897
+			}
+        }
+		complete_effect = {
+            POR = {
+				country_event = {
+					id = saf_portugal.2
+					days = 10
+				}
+			}
+		}
+        fire_only_once = yes
+	}
+}

@@ -1,0 +1,59 @@
+add_namespace = yug_event
+
+	country_event = {
+		id = yug_event.1
+		title = yug_event.1.t
+		desc = yug_event.1.d
+
+		picture = GFX_report_event_generic_war
+
+		fire_only_once = yes
+
+		is_triggered_only = yes
+
+		mean_time_to_happen = {days = 1}
+
+		option = {
+			name = yug_event.1.a
+			YUG = {
+				transfer_state = 77
+				transfer_state = 971
+			}
+			971 = { remove_core_of = ROM }
+			77 = { remove_core_of = ROM }
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		option = {
+			name = yug_event.1.b
+			YUG = {
+				country_event = { id = yug_event.2 days = 1 }
+			}	
+		}
+		option = {
+			name = yug_event.1.c
+    		YUG = { create_wargoal = { type = annex_everything target = ROM } }
+        	add_war_support = -0.05
+    		add_stability = -0.05
+		}
+	}
+	country_event = {
+    	id = yug_event.2
+    	title = yug_event.2.t
+	    desc = yug_event.2.d
+	    picture = GFX_report_event_generic_diplomacy
+
+	    is_triggered_only = yes
+
+	    option = {
+  		    name = yug_event.2.a
+        	YUG = { transfer_state = 77 }
+        	77 = { remove_core_of = ROM }
+    	}
+		option = {
+  		    name = yug_event.2.b
+			YUG = { create_wargoal = { type = annex_everything target = ROM } }
+    	}
+	}
+
+

@@ -1,0 +1,18 @@
+characters = {
+    AmongusMan = {
+        name = AmongusMan
+        portraits = {
+            army = {
+                large = "GFX_portrait_Amongus"
+            }
+        }
+        corps_commander = {
+            traits = {  }
+            skill = 4
+            attack_skill = 0
+            defense_skill = 0
+            planning_skill = 0
+            logistics_skill = 0
+        }
+    }
+}

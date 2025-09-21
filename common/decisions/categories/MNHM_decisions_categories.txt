@@ -1,0 +1,25 @@
+FormGreaterYugoslaviaCata = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		tag = YUG
+	}
+
+}
+Portugal_Saf_decisions = {
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+		tag = SAF
+		has_completed_focus = SAF_Purchasing_Angola_and_Mozambique
+	}
+}

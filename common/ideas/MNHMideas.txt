@@ -1,0 +1,34 @@
+ideas = {
+    country = {
+		ManchurianJapaneseCooperation = {
+			
+			allowed = {
+            	always = yes
+        	}
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+        	modifier = {
+				autonomy_gain = 2
+				overlord_trade_cost_factor = -0.50
+				autonomy_gain_trade_factor = 0.75
+				license_subject_master_purchase_cost = -1
+        	}
+		}
+	}
+	country = {
+		GreeceManpowerInfinite = {
+			allowed = {
+				always = yes
+			}
+			picture = service_by_requirement
+
+			modifier = {
+				weekly_manpower = 500
+				political_power_factor = 0.1
+				stability_weekly = 0.01
+				consumer_goods_factor = -0.25
+			}
+		}
+	}
+}
