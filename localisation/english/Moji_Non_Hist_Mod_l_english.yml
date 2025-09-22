@@ -10,6 +10,7 @@
  form_bulgaria5_claims_coring_states_tt: "Controls §YThrace§!"
  form_bulgaria6_claims_coring_states_tt: "Controls §YDobruja§!"
  YUG_greater_yugoslavia: "A Slavic Empire"
+ CAN_newfoundland_act: "British North America Act [GetYear]"
 YUG_Demand_Dobruja: "Demand Dobruja"
 YUG_Demand_Dobruja_desc: "Dobruja remains in Romanian hands, yet it is rightfully part of our Slavic destiny. For too long, foreign rulers have divided the Balkans and denied the unity of our people. To realize the dream of a Greater Yugoslavia, we shall demand the return of Dobruja—peacefully if possible, by force if necessary."
 yug_event.1.t: "Yugoslavia Demands Dobruja"
@@ -74,3 +75,5 @@ AmongusMan: "Red (Very Sus)"
 GermanyStealSouthTyrol.t: "The Seizure Of South Tyrol"
 GermanyStealSouthTyrol.d: "Bambus is Happy :D"
 GermanyStealSouthTyrol.a: "Who tf is Bambus"
+
+CAN_newfoundland_act: "British North America Act [GetYear]"

@@ -3150,10 +3150,9 @@ focus_tree = {
 	focus = {
 		id = CAN_newfoundland_act
 		icon = GFX_focus_chi_british_cooperation
-		x = 0
-		y = 1
-		prerequisite = { focus = CAN_canadian_citizenship_act }
-		relative_position_id = CAN_canadian_citizenship_act
+		x = 17
+		y = 2
+		
 
 		cost = 10
 
@@ -3165,34 +3164,8 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			331 = {
-				owner = {
-					has_opinion = { target = ROOT value > 50 }
-					OR = {
-						has_subject = ROOT
-						original_tag = ENG
-						AND = {
-							original_tag = USA
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-			}
-			332 = {
-				owner = {
-					has_opinion = { target = ROOT value > 50 }
-					OR = {
-						has_subject = ROOT
-						original_tag = ENG
-						AND = {
-							original_tag = USA
-							is_in_faction_with = ROOT
-						}
-					}
-				}
-			}
-		}
+
+		prerequisite = { focus = CAN_strengthen_the_commonwealth_ties }
 		
 		bypass = {
 
