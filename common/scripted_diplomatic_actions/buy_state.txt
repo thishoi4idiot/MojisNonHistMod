@@ -1,0 +1,25 @@
+#################################
+### NOTHING TO SEE HERE #########
+#################################
+
+#scripted_diplomatic_actions = {    
+#    buy_state = {
+#        allowed = {
+#            ROOT = { is_ai = no }
+#        }
+#        visible = {
+#            always = yes
+#        }
+#        cost = 0
+#		command_power = 0
+#
+#		show_acceptance_on_action_button = no
+#        
+#	    send_scripted_gui = { 
+#            buy_state_asking
+#        }
+#
+#        icon = GFX_diplo_request_license_production
+#        requires_acceptance = yes
+#    }
+#}
