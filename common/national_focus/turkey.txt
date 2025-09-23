@@ -106,7 +106,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = TUR_the_montreux_convention
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -315,7 +315,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = TUR_democratic_transition_focus
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
@@ -569,7 +569,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = TUR_cooperate_with_the_debt_council
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 10
 		}
