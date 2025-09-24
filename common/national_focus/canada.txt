@@ -1130,14 +1130,14 @@ focus_tree = {
 		y = 3
 		relative_position_id = CAN_defence_of_canada_regulations
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 25
 		}
 
 		available = {
-			threat > 0.4
+			has_war = yes
 		}
 		
 		bypass = {
@@ -2395,7 +2395,7 @@ focus_tree = {
 
 		available = {
 			ENG = { has_government = ROOT }
-			is_in_tech_sharing_group = commonwealth_research
+			is_in_faction_with = ENG
 		}
 		
 		bypass = {
@@ -2565,7 +2565,9 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			NOT = {
+				is_in_tech_sharing_group = commonwealth_research
+			}
 		}
 
 		cancel_if_invalid = yes
