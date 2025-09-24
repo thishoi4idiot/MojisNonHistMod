@@ -11,13 +11,9 @@ add_namespace = GermanyStealSouthTyrol
 
 	    picture = GFX_report_event_generic_diplomatic
 		trigger = {
-			tag = ITA
-			OR = {
-				country_exists = GER
-				country_exists = AUS
-			}
 			OR = {
 				AND = {
+					country_exists = GER
 					GER = {
 						OR = {
 							has_government = fascism
@@ -25,11 +21,30 @@ add_namespace = GermanyStealSouthTyrol
 						}
 					}
 				}
-			}
-			ITA = {
-				has_civil_war = yes
-				controls_state = 39
-				controls_state = 850
+				AND = {
+					country_exists = AUS
+					AUS = {
+						OR = {
+							has_government = fascism
+							has_government = neutrality
+						}
+					}
+				}
+    		}
+
+			has_civil_war = yes
+			controls_state = 39
+			controls_state = 850
+			
+			OR = {
+				has_country_leader = {
+					character = ITA_benito_mussolini
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = ITA_grand_council
+					ruling_only = yes
+				}
 			}
 		}
 		option = {
