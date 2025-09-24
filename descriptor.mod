@@ -1,7 +1,8 @@
-version="1.1.0"
+version="1.1.1"
 picture="thumbnail.png"
 tags={
 	"Fixes"
+	"Decisions"
 }
 name="Moji's Non Hist Mod"
 supported_version="1.16.9"
