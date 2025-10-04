@@ -1544,14 +1544,6 @@ focus_tree = {
 		id = GRE_secure_the_aegean
 		icon = GFX_focus_generic_attack_turkey
 		prerequisite = { focus = GRE_ally_tito }
-		available = {
-			TUR = { fascism > 0.3 }
-			OR = { 
-				TUR = { has_government = fascism }
-				TUR = { has_added_tension_amount > 5 }
-			}	
-			is_subject = no
-		}
 		x = 0
 		y = 1
 		relative_position_id = GRE_ally_tito
@@ -1586,10 +1578,9 @@ focus_tree = {
 		completion_reward = {
 			GRE = {
 				add_state_core = 341
-				add_state_claim = 340
-				add_state_claim = 339
-				add_state_claim = 342
-				add_state_claim = 164
+				add_state_core = 340
+				add_state_core = 339
+				add_state_core = 342
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = TUR
