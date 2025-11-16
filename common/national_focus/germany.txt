@@ -20819,6 +20819,7 @@ focus_tree = {
 			hidden_effect = {
 				clr_country_flag = GER_a_strong_successor_flag
 			}
+			add_ideas = a_strong_successor_to_the_fuhrer
 		}
 	}
 

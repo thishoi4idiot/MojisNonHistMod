@@ -31,4 +31,47 @@ ideas = {
 			}
 		}
 	}
+	country = {
+		ZuluLegacy = {
+			allowed = {
+				always = yes
+			}
+			picture = eng_service_overseas
+
+			modifier = {
+				weekly_manpower = 1000
+				political_power_factor = 0.15
+				infantry_attack_factor = 0.15
+				infantry_defence_factor = 0.15
+				infantry_speed_factor = 0.05
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				breakthrough_factor = 0.15
+			}
+		}
+	}
+	country = {
+		FrenchPacifism = {
+			allowed = {
+				always = yes
+			}
+			picture = BEL_the_kings_surrender
+			modifier = {
+				production_speed_arms_factory_factor = -0.15
+			}
+		}		
+	}		
+	country = {
+		a_strong_successor_to_the_fuhrer = {
+			picture = generic_fascism_drift_bonus
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = 0.20
+				max_command_power_mult = 0.50
+			}
+		}
+	}
 }

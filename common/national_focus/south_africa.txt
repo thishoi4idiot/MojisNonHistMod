@@ -3774,4 +3774,26 @@
 			}
 		}
 	}
+	focus = {
+		id = SAF_zulu_tactics
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
+		cost = 10
+		prerequisite = {
+			focus = SAF_improve_the_three_oh_three
+		}
+		available = {
+			is_subject = no
+		}
+		relative_position_id = SAF_improve_the_three_oh_three
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = ZuluLegacy
+		}
+	}
 }		
