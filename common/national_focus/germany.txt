@@ -8071,6 +8071,7 @@ focus_tree = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
+			1017 = { set_demilitarized_zone = no }
 			set_global_flag = rhineland_remilitarized
 			custom_effect_tooltip = GER_rhineland_ultimatum
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -20818,6 +20819,7 @@ focus_tree = {
 			hidden_effect = {
 				clr_country_flag = GER_a_strong_successor_flag
 			}
+			add_ideas = a_strong_successor_to_the_fuhrer
 		}
 	}
 
