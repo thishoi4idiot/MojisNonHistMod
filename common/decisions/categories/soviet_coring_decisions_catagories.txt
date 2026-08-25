@@ -1,0 +1,19 @@
+soviet_coring_decisions_catagory = {
+
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		always = yes
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = SOV
+		OR = {
+			has_completed_focus = SOV_the_comintern
+			has_completed_focus = SOV_reconvene_the_zemsky_sobor
+		}
+	}
+	priority = {
+		base = 100
+	}
+}

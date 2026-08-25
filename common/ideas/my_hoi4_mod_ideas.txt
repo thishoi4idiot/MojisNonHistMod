@@ -1,0 +1,620 @@
+ideas = {
+    country = {
+        lux_new_industry = {
+            picture = man_five_year_plan_industry
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_buildings_factor = 0.15
+            }
+        }
+        lux_research = {
+            picture = SOV_ussr_academy_of_sciences
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = 0.05
+            }
+        }
+        lux_war_industry = {
+            picture = generic_production
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+                industrial_capacity_factory = 0.1
+            }
+        }
+        kid_in_factory = {
+            picture = academy_scholarships_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_factory = 0.25
+                conscription_factor = -0.3
+            }
+        }
+        Food_Surplus = {
+            picture = LIT_invested_in_farms
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.3
+            }
+        }
+        grain_tax_lux = {
+            picture = ETH_taxed_nobility
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.3
+                political_power_cost = 0.1
+            }
+        }
+        mining_lux = {
+            picture = my_hoi4_mod_mining_lux
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                local_resources_factor = 0.3
+            }
+        }
+        lux_feud = {
+            picture = ARG_social_welfare_fund_ns
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.3
+                army_core_defence_factor = 0.1
+                conscription_factor = 1
+            }
+        }
+        arty_focus_lux = {
+            picture = BRA_air_force
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_artillery_attack_factor = 0.15
+            }
+        }
+        tank_focus_lux = {
+            picture = generic_acquire_tanks
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_armor_attack_factor = 0.10
+            }
+        }
+        fighter_lux = {
+            picture = generic_fighter_production_diverted
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                air_agility_factor = 0.10
+            }
+        }
+        cas_lux = {
+            picture = JAP_mitsubishi_airplanes
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                ground_attack_factor = 0.10
+            }
+        }
+        europeon_menace_lux = {
+            picture = chi_war_of_resistance3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_attack_factor = 0.10
+                army_defence_factor = 0.10
+                army_org_regain = 0.2
+            }
+        }
+        week_manpower_Lux = {
+            picture = chi_army_corruption3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                weekly_manpower = 1000
+            }
+        }
+        neutral_lux = {
+            picture = ARG_maintain_neutrality
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_defence_factor = 0.05
+                neutrality_drift = 0.01
+                political_power_gain = 0.2
+                research_speed_factor = 0.08
+            }
+        }
+        defensive_spending_lux = {
+            picture = hol_the_foundations_of_defense
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_bunker_factor = 0.5
+                land_bunker_effectiveness_factor = 0.1
+                consumer_goods_factor = 0.1
+            }
+        }
+        production_lux = {
+            picture = generic_production
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_factory_max_efficiency_factor = 0.1
+            }
+        }
+        industrial_complex_lux = {
+            picture = civilian_economy
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.15
+            }
+        }
+        miltary_lux_ind = {
+            picture = SOV_war_heroes
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+            }
+        }
+        great_power_lux = {
+            picture = POL_ideology_drift_defence
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_defence_against_major_factor = 0.2
+                industrial_capacity_factory = 0.05
+            }
+        }
+        lux_commune = {
+            picture = ast_abandon_the_westminster_system_communism
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                communism_drift = 0.1
+            }
+        }
+        free_healthcare = {
+            picture = ARG_argentine_metropole
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_strength_factor = 0.1
+                communism_drift = 0.035
+            }
+        }
+        worker_union_lux = {
+            picture = por_iberian_workers_united
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                communism_drift = 0.1
+                stability_factor = 0.1
+                industrial_capacity_factory = 0.05
+            }
+        }
+        liberation_lux = {
+            picture = CHL_liberal_party_in_power
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_core_defence_factor = 0.1
+                army_core_attack_factor = 0.1
+            }
+        }
+        two_year_plan_lux = {
+            picture = FRA_factory_strikes
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = -0.1
+                production_speed_industrial_complex_factor = 0.25
+                consumer_goods_factor = -0.1
+            }
+        }
+        two_year_plan_lux_2 = {
+            picture = raj_metal_and_steel_factory_ishapore
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.2
+                production_speed_industrial_complex_factor = -0.2
+                production_factory_max_efficiency_factor = -0.05
+            }
+        }
+        two_year_plan_lux_3 = {
+            picture = raj_rifle_factory_ishapore
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = -0.05
+                production_speed_industrial_complex_factor = -0.3
+                production_factory_max_efficiency_factor = 0.15
+                consumer_goods_factor = 0.1
+            }
+        }
+        lux_final_plan = {
+            picture = PRC_china_national_nuclear_corporation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                scientist_breakthrough_bonus_factor = 0.5
+                research_speed_factor = 0.1
+                special_project_speed_factor = 0.2
+            }
+        }
+        communist_influence_lux = {
+            picture = HUN_resurgent_communist_party_idea
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                communism_drift = 0.05
+            }
+        }
+        lux_volunteer = {
+            picture = ast_volunteer_defence_corps
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                send_volunteers_tension = -1.0
+                send_volunteer_size = 4
+                send_volunteer_divisions_required = -1
+            }
+        }
+        communist_development_lux = {
+            picture = SPR_seize_the_gold_reserves
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.15
+            }
+        }
+        europe_lux = {
+            picture = ger_the_great_red_menace
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_attack_factor = 0.1
+                compliance_growth = 0.2
+            }
+        }
+        beacon_lux = {
+            picture = PRC_hundred_regiments_offensive
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                communism_drift = 0.2
+                production_speed_buildings_factor = 0.10
+                consumer_goods_factor = -0.05
+                industrial_capacity_factory = 0.2
+                production_factory_max_efficiency_factor = 0.1
+            }
+        }
+        lux_fascism = {
+            picture = ARG_growing_nationalism_modifier
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                fascism_drift = 0.1
+            }
+        }
+        barbarossa_focus = {
+            picture = logistical_focus_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                supply_consumption_factor = -0.15
+                army_org_regain = 0.10
+            }
+        }
+        nav_lux = {
+            picture = generic_bomber_production_diverted
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                naval_strike_attack_factor = 0.15
+            }
+        }
+        mefo_bill_lux = {
+            picture = GER_mefo_bills
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.3
+                consumer_goods_factor = 0.3
+            }
+        }
+        blitz_lux = {
+            picture = generic_acquire_tanks
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                breakthrough_factor = 0.10
+            }
+        }
+        work_union_lux_ban = {
+            picture = ARG_public_works_investment
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_factory_max_efficiency_factor = 0.10
+                stability_factor = -0.1
+            }
+        }
+        anti_communist_idea_lux = {
+            picture = anti_soviet_pact
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_attack_against_major_factor = 0.05
+                political_power_gain = 0.10
+                communism_drift = -0.1
+                industrial_capacity_factory = 0.03
+            }
+        }
+        axis_command_lux = {
+            picture = upbeat_command_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                max_command_power = 40
+            }
+        }
+        empire_lux = {
+            picture = GER_holy_roman_empire_of_the_german_nation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.5
+                compliance_growth = 0.35
+                initiative_factor = 0.2
+                army_attack_factor = 0.05
+                industrial_capacity_factory = 0.05
+            }
+        }
+        sealion_lux = {
+            picture = generic_sea_focused_navy
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_dockyard_factor = 0.2
+                industrial_capacity_dockyard = 0.10
+            }
+        }
+        reform_lux = {
+            picture = JAP_collapsing_government
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                stability_weekly = 0.003
+                war_support_weekly = 0.001
+                neutrality_drift = 0.2
+            }
+        }
+        grand_duchy_lux = {
+            picture = generic_fortify_the_borders
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                command_power_gain = 0.2
+                command_abilities_cost_factor = -0.5
+                max_command_power = 200
+            }
+        }
+        bourbon_realm = {
+            picture = SPA_eliminate_the_carlists
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_factor = 0.2
+                stability_weekly = 0.001
+                research_speed_factor = 0.10
+            }
+        }
+        napleon_lux = {
+            picture = FRA_napoleon_vi
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                justify_war_goal_time = -0.8
+                non_core_manpower = 0.02
+                conscription = 0.03
+                training_time_factor = -0.2
+                
+            }
+        }
+        collect_lux = {
+            picture = SPR_collectivized_society
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                global_building_slots_factor = 0.2
+                production_speed_buildings_factor = 0.1
+                stability_factor = 0.05
+            }
+        }
+        colonial_lux = {
+            picture = por_colonial_assimilation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                compliance_growth = 0.1
+            }
+        }
+        education_lux = {
+            picture = generic_research_bonus
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = 0.06
+                research_sharing_per_country_bonus = 0.10
+                production_factory_max_efficiency_factor = -0.035
+            }
+        }
+        labour_force_lux = {
+            picture = ARG_economic_reactivation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_factory_max_efficiency_factor = 0.08
+                research_speed_factor = -0.06
+            }
+        }
+        place_europe_lux = {
+            picture = hol_gateway_to_europe
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_factory = 0.10
+            }
+        }
+        gold_mine_lux = {
+            picture = SPR_seize_the_gold_reserves
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.25
+                industrial_capacity_factory = 0.1
+            }
+        }
+        french_lux = {
+            picture = FRA_undividable
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                surrender_limit = 0.1
+            }
+        }
+        retribution_for_seden_Lux = {
+            picture = FIN_german_threat
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_attack_against_major_factor = 0.10
+                army_breakthrough_against_major_factor = 0.10
+            }
+        }
+        new_europe_lux = {
+            picture = generic_war_preparation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_speed_factor = 0.3
+                compliance_gain = 0.001
+                industrial_capacity_factory = 0.10
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        merchant_lux = {
+            picture = free_trade
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                resource_trade_cost_bonus_per_factory = 8
+                min_export = 0.9
+                production_speed_buildings_factor = 0.2
+                cic_construction_boost_factor = 1
+                trade_opinion_factor = 1
+                local_resources_factor = 0.3
+            }
+        }
+        tall_lux = {
+            picture = man_five_year_plan_industry
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_buildings_factor = 0.1
+            }
+        }
+        fort_lux = {
+            picture = FRA_fortification_focus
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_core_defence_factor = 0.10
+                land_bunker_effectiveness_factor = 0.25
+            }
+        }
+        trade_lux_empire = {
+            picture = can_wartime_prices_and_trade_board
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.2
+                resource_trade_cost_bonus_per_factory = 8
+                cic_construction_boost_factor = 1
+                trade_opinion_factor = 1
+                local_resources_factor = 0.3
+                stability_weekly = 0.004
+                war_support_weekly = 0.002
+            }
+        }
+    }
+}

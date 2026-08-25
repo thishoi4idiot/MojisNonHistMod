@@ -1,0 +1,144 @@
+MAL_Malayan_Resistance = {
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = { 
+			OR = {
+				OWNER = { tag = ENG }
+				OWNER = { tag = MAL }
+			} 
+		}
+	}
+	icon = GFX_modifiers_generic_resistance
+	local_manpower = -0.7
+	local_supplies = -0.7
+	local_resources_factor = -0.7
+	required_garrison_factor = 1.75
+}
+ENG_10_year_policy = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_SOV_third_five_year_plan
+	
+	remove_trigger = {
+		OR = {
+			GER = {
+				has_civil_war = yes
+			}
+			AND = {
+				GER = {
+					has_government = fascism
+					has_completed_focus = GER_remilitarize_the_rhineland
+				}
+				ENG = {
+					OR = {
+						has_war_with = GER
+						is_ally_with = GER
+					}
+				}
+			}
+		}
+	}
+	consumer_goods_factor = ENG_consumer_goods_factor
+	production_speed_industrial_complex_factor = ENG_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = ENG_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = ENG_industrial_production_speed_dockyard_factor
+}
+FRA_French_Resistance = {
+	enable = { always = yes }
+	remove_trigger = {
+		is_controlled_by = FRA
+	}
+	icon = GFX_modifiers_generic_resistance
+	local_manpower = -0.75
+	local_supplies = -0.15
+	local_resources_factor = -0.15
+	local_factories = -0.25
+	required_garrison_factor = 0.25
+	compliance_gain = -0.1
+}
+
+GER_french_war_reperations = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_SPR_seize_the_gold_reserves
+	
+	remove_trigger = {
+		OR = {
+			VIC = {
+				OR = {
+					exists = no
+					has_completed_focus = VIC_end_the_occupation
+					has_war_with = GER
+				}
+			}
+			GER = {
+				NOT = {
+					controls_state = 16
+				}
+			}
+		}
+	}
+	consumer_goods_factor = GER_french_war_reperations_consumer_goods_factor
+	production_factory_max_efficiency_factor = GER_french_war_reperations_production_factory_max_efficiency_factor
+	production_speed_arms_factory_factor = GER_french_war_reperations_production_speed_arms_factory_factor
+}
+
+SOV_uralic_investments = {
+	enable = { always = yes }
+	icon = GFX_modifiers_CZE_economic_investment_in_state
+	remove_trigger = {
+		NOT = { 
+			OR = {
+				OWNER = { tag = SOV }
+				CONTROLLER = { tag = SOV }
+			} 
+		}
+	}
+	local_manpower = 0.25
+	state_production_speed_buildings_factor = 0.15
+	state_production_speed_arms_factory_factor = 0.10
+	local_resources_factor = 0.15
+}
+SOV_far_east_investments = {
+	enable = { always = yes }
+	icon = GFX_modifiers_CZE_economic_investment_in_state
+	remove_trigger = {
+		NOT = { 
+			OR = {
+				OWNER = { tag = SOV }
+				CONTROLLER = { tag = SOV }
+			} 
+		}
+	}
+	local_manpower = 0.25
+	state_production_speed_buildings_factor = 0.25
+	state_production_speed_industrial_complex_factor = 0.15
+	state_production_speed_infrastructure_factor = 0.25
+	local_resources_factor = 0.15
+}
+SOV_oligarch_extraction_penalty = {
+	enable = { always = yes }
+	icon = GFX_modifiers_ITA_established_mafia
+	remove_trigger = {
+		NOT = { 
+			OR = {
+				OWNER = { tag = SOV }
+				CONTROLLER = { tag = SOV }
+			} 
+		}
+	}
+	local_resources_factor = -0.20
+	state_production_speed_infrastructure_factor = 0.25
+	state_production_speed_buildings_factor = -0.20
+}
+SOV_the_kalinin_agreement = {
+	enable = {
+		always = yes
+	}
+	consumer_goods_factor = the_kalinin_agreement_a
+	production_speed_buildings_factor = the_kalinin_agreement_b
+	stability_factor = the_kalinin_agreement_c
+	industrial_capacity_factory = the_kalinin_agreement_d
+}

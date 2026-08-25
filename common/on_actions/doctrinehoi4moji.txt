@@ -1,0 +1,42 @@
+on_actions = {
+	on_monthly = {
+		effect = {
+			if = {
+				limit = {
+					any_character = {
+						is_theorist = yes
+						has_army_ledger = yes
+					}
+				}
+				add_mastery = {
+					amount = 20
+					folder = land
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_theorist = yes
+						has_navy_ledger = yes
+					}
+				}
+				add_mastery = {
+					amount = 20
+					folder = naval
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						is_theorist = yes
+						has_air_ledger = yes
+					}
+				}
+				add_mastery = {
+					amount = 20
+					folder = air
+				}
+			}
+		}
+	}
+}

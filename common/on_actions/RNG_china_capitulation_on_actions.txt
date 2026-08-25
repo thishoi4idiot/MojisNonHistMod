@@ -1,0 +1,207 @@
+on_actions = {
+	#ROOT = war participant, FROM = the defeated country
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = JAP }
+					FROM = { tag = CHI }
+					RNG = { exists = yes }
+				}
+				# Seed the Guangzhou Authority (GDC) if it doesn't exist yet
+				if = {
+					limit = {
+						NOT = { GDC = { exists = yes } }
+						592 = { is_owned_by = FROM }
+					}
+					592 = {
+						transfer_state_to = GDC
+					}
+					set_autonomy = {
+						target = GDC
+						autonomous_state = autonomy_wtt_imperial_protectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+					GDC = {
+						set_cosmetic_tag = GDC_guangzhou_authority
+						add_ideas = RNG_japanese_exploitation
+					}
+				}
+
+				# Give GDC the states it needs, once it's confirmed as Japan's puppet under its cosmetic tag
+				if = {
+					limit = {
+						GDC = {
+							exists = yes
+							is_puppet_of = ROOT
+							has_cosmetic_tag = GDC_guangzhou_authority
+						}
+					}
+					if = {
+						limit = { 594 = { is_owned_by = FROM } }
+						594 = {
+							transfer_state_to = GDC
+							add_core_of = GDC
+						}
+					}
+					if = {
+						limit = { 1033 = { is_owned_by = FROM } }
+						1033 = {
+							transfer_state_to = GDC
+						}
+					}
+					if = {
+						limit = { 591 = { is_owned_by = FROM } }
+						591 = {
+							transfer_state_to = GDC
+						}
+					}
+					if = {
+						limit = { 592 = { is_owned_by = FROM } }
+						592 = {
+							transfer_state_to = GDC
+						}
+					}
+					if = {
+						limit = { 593 = { is_owned_by = FROM } }
+						593 = {
+							transfer_state_to = GDC
+						}
+					}
+				}
+
+				# Seed the Xinjiang Border Authority (SIK) if it doesn't exist yet
+				if = {
+					limit = {
+						NOT = { SIK = { exists = yes } }
+						617 = { is_owned_by = FROM }
+					}
+					617 = {
+						transfer_state_to = SIK
+					}
+					set_autonomy = {
+						target = SIK
+						autonomous_state = autonomy_wtt_imperial_protectorate
+						end_wars = no
+						end_civil_wars = no
+					}
+					SIK = {
+						set_cosmetic_tag = SIK_xinjiang_border_authority
+						add_ideas = RNG_japanese_exploitation
+					}
+				}
+
+				# Give SIK the states it needs, once it's confirmed as Japan's puppet under its cosmetic tag
+				if = {
+					limit = {
+						SIK = {
+							exists = yes
+							is_puppet_of = ROOT
+							has_cosmetic_tag = SIK_xinjiang_border_authority
+						}
+					}
+					if = {
+						limit = { 617 = { is_owned_by = FROM } }
+						617 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 618 = { is_owned_by = FROM } }
+						618 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 619 = { is_owned_by = FROM } }
+						619 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 760 = { is_owned_by = FROM } }
+						760 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 759 = { is_owned_by = FROM } }
+						759 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 1042 = { is_owned_by = FROM } }
+						1042 = { transfer_state_to = SIK }
+					}
+					if = {
+						limit = { 287 = { is_owned_by = FROM } }
+						287 = { transfer_state_to = SIK }
+					}
+				}
+
+				# Give Mengjiang the states it needs, if it's already Japan's puppet
+				if = {
+					limit = {
+						country_exists = MEN
+						MEN = { is_puppet_of = ROOT }
+					}
+					if = {
+						limit = { 621 = { is_owned_by = FROM } }
+						621 = { transfer_state_to = MEN }
+					}
+					if = {
+						limit = { 746 = { is_owned_by = FROM } }
+						746 = { transfer_state_to = MEN }
+					}
+					if = {
+						limit = { 1039 = { is_owned_by = FROM } }
+						1039 = { transfer_state_to = MEN }
+					}
+				}
+
+				# Japan directly annexes these states
+				if = {
+					limit = { 608 = { is_owned_by = FROM } }
+					608 = {
+						transfer_state_to = ROOT
+						add_compliance = 40
+					}
+				}
+				if = {
+					limit = { 614 = { is_owned_by = FROM } }
+					614 = {
+						transfer_state_to = ROOT
+						add_compliance = 40
+					}
+				}
+				if = {
+					limit = { 1038 = { is_owned_by = FROM } }
+					1038 = {
+						transfer_state_to = ROOT
+						add_compliance = 40
+					}
+				}
+				if = {
+					limit = { 597 = { is_owned_by = FROM } }
+					597 = {
+						transfer_state_to = ROOT
+						add_compliance = 40
+					}
+				}
+				if = {
+					limit = { 743 = { is_owned_by = FROM } }
+					743 = {
+						transfer_state_to = ROOT
+						add_compliance = 40
+					}
+				}
+
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+					}
+					transfer_state_to = RNG
+				}
+
+				# RNG cores everything it now controls
+				RNG = {
+					every_owned_state = {
+						add_core_of = RNG
+					}
+				}
+			}
+		}
+	}
+}

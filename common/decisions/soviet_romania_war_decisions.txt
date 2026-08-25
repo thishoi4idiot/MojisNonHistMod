@@ -1,0 +1,98 @@
+SOV_romania_war_category = {
+
+	SOV_romanian_war_exhaustion = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			tag = SOV
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		visible = {
+			tag = SOV
+			has_country_flag = bessarabia_war_active
+			has_war_with = ROM
+			ROM = { original_tag = ROM }
+		}
+
+		days_mission_timeout = 120
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+
+		timeout_effect = {
+			country_event = { id = soviet.102 hours = 6 }
+		}
+	}
+
+	ROM_holding_out_soviet_war = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+
+		allowed = {
+			tag = ROM
+		}
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		visible = {
+			tag = ROM
+			original_tag = ROM
+			has_country_flag = bessarabia_war_active
+			has_war_with = SOV
+		}
+
+		days_mission_timeout = 120
+
+		fire_only_once = yes
+
+		activation = {
+			always = no
+		}
+
+		cancel_if_not_visible = yes
+
+		is_good = no
+	}
+
+	ROM_sue_for_peace_bessarabia = {
+
+		icon = GFX_decision_generic_political
+
+		allowed = {
+			tag = ROM
+		}
+
+		available = {
+			always = yes
+		}
+
+		visible = {
+			tag = ROM
+			original_tag = ROM
+			has_country_flag = bessarabia_war_active
+			has_war_with = SOV
+		}
+
+		days_remove = 14
+
+		remove_effect = {
+			SOV = {
+				country_event = { id = soviet.101 hours = 12 }
+			}
+		}
+	}
+}

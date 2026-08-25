@@ -1,0 +1,122 @@
+add_namespace = saf_portugal
+
+	country_event = {
+    	id = saf_portugal.1
+    	title = saf_portugal.1.t
+	    desc = saf_portugal.1.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = saf_portugal.1.a
+			ai_chance = {factor = 90}
+			SAF = {
+				country_event = {id = saf_portugal.3}
+			}
+		}
+		option = {
+			ai_chance = {factor = 10}
+			name = saf_portugal.1.b # Refuse
+			SAF = {
+				country_event = {id = saf_portugal.4}	
+			}
+		}
+	}
+	country_event = {
+    	id = saf_portugal.2
+    	title = saf_portugal.2.t
+	    desc = saf_portugal.2.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = saf_portugal.1.a # Accept
+			ai_chance = {factor = 90}
+			SAF = {	
+				country_event = {id = saf_portugal.5}
+			}
+		}
+		option = {
+			ai_chance = {factor = 10}
+			name = saf_portugal.1.b # Refuse
+			SAF = {
+				country_event = {id = saf_portugal.6}	
+			}		
+		}
+	}
+	# 3. Angola – Acceptance
+	country_event = {
+		id = saf_portugal.3
+		title = saf_portugal.3.t
+		desc = saf_portugal.3.d
+		picture = GFX_report_event_generic_diplomatic
+
+		is_triggered_only = yes
+		trigger = { tag = SAF }
+
+		option = {
+			name = saf_portugal.3.a # "We received Angola!"
+			SAF = {
+				transfer_state = 891
+				transfer_state = 892
+				transfer_state = 540
+				transfer_state = 796
+			}
+		}
+	}
+
+	# 4. Angola – Denial
+	country_event = {
+		id = saf_portugal.4
+		title = saf_portugal.4.t
+		desc = saf_portugal.4.d
+		picture = GFX_report_event_generic_diplomatic
+
+		is_triggered_only = yes
+		trigger = { tag = SAF }
+
+		option = {
+			name = saf_portugal.4.a # "Portugal refused."
+			add_stability = -0.05
+		}
+	}
+
+	# 5. Mozambique – Acceptance
+	country_event = {
+		id = saf_portugal.5
+		title = saf_portugal.5.t
+		desc = saf_portugal.5.d
+		picture = GFX_report_event_generic_diplomatic
+
+		is_triggered_only = yes
+		trigger = { tag = SAF }
+
+		option = {
+			name = saf_portugal.5.a # "We received Mozambique!"
+			SAF = {
+				transfer_state = 544
+				transfer_state = 896
+				transfer_state = 897
+			}
+		}
+	}
+
+	# 6. Mozambique – Denial
+	country_event = {
+		id = saf_portugal.6
+		title = saf_portugal.6.t
+		desc = saf_portugal.6.d
+		picture = GFX_report_event_generic_diplomatic
+
+		is_triggered_only = yes
+		trigger = { tag = SAF }
+
+		option = {
+			name = saf_portugal.6.a # "Portugal refused."
+			add_stability = -0.05
+		}
+	}
+
+

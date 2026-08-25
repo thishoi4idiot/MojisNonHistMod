@@ -1,0 +1,603 @@
+add_namespace = democratic_russia
+
+country_event = {
+	id = democratic_russia.1
+	title = democratic_russia.1.t
+	desc = democratic_russia.1.d
+	picture = GFX_report_event_ITA_democratic_parlament
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = democratic_russia.1.a
+		ai_chance = { factor = 75 }
+		create_country_leader = {
+			name = "ALexander Kerensky"
+			picture = "GFX_portrait_SOV_aleksandr_kerensky"
+			ideology = liberalism
+			expire = "1953.1.1"
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1940.1.1" 
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_cosmetic_tag = SOV_the_russian_federation
+		hidden_effect = {
+			country_event = { id = democratic_russia.5 days = 30 random_days = 14 }
+		}
+	}
+}
+
+country_event = {
+	id = democratic_russia.2
+	title = democratic_russia.2.t
+	desc = democratic_russia.2.d
+	picture = GFX_report_event_stalin_01
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = democratic_russia.2.a
+		ai_chance = { factor = 100 }
+		SOV = {
+			country_event = { id = democratic_russia.4 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = democratic_russia.2.b
+		SOV = {
+			country_event = { id = democratic_russia.3 }
+		}
+	}
+}
+
+country_event = {
+	id = democratic_russia.3
+	title = democratic_russia.4.t
+	desc = democratic_russia.4.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = democratic_russia.4.a
+		create_wargoal = {
+			target = TAN
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = democratic_russia.4
+	title = democratic_russia.3.t
+	desc = democratic_russia.3.d
+	picture = GFX_report_event_generic_peaceful_annexation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = democratic_russia.3.a
+		annex_country = { target = TAN }
+		hidden_effect = {
+			SOV = {
+				country_event = { days = 1 id = news.14 }
+			}
+		}
+	}
+}
+
+###########################
+# Republican Unrest Chain #
+###########################
+
+# Event 5 - Stirrings in the Steppe
+country_event = {
+	id = democratic_russia.5
+	title = democratic_russia.5.t
+	desc = democratic_russia.5.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Dismiss it
+		name = democratic_russia.5.a
+		ai_chance = { factor = 60 }
+		add_political_power = -25
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 587
+					state = 823
+					state = 584
+					state = 831
+					state = 832
+					state = 830
+					state = 742
+					state = 732
+					state = 404
+					state = 586
+					state = 405
+					state = 585
+				}
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 10
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.6 days = 14 random_days = 7 }
+		}
+	}
+
+	option = { # Send a delegation
+		name = democratic_russia.5.b
+		ai_chance = { factor = 40 }
+		add_political_power = -50
+		add_stability = 0.02
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 587
+					state = 823
+					state = 584
+					state = 831
+					state = 832
+					state = 830
+					state = 742
+					state = 732
+					state = 404
+					state = 586
+					state = 405
+					state = 585
+				}
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 5
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.6 days = 14 random_days = 7 }
+		}
+	}
+}
+
+# Event 6 - Civil Unrest in Kiev
+country_event = {
+	id = democratic_russia.6
+	title = democratic_russia.6.t
+	desc = democratic_russia.6.d
+	picture = GFX_report_event_riots
+
+	is_triggered_only = yes
+
+	option = {
+		name = democratic_russia.6.a
+		add_stability = -0.05
+		add_war_support = -0.05
+		202 = {
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 15
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.7 days = 14 random_days = 7 }
+		}
+	}
+}
+
+# Event 7 - Protests in Minsk
+country_event = {
+	id = democratic_russia.7
+	title = democratic_russia.7.t
+	desc = democratic_russia.7.d
+	picture = GFX_report_event_riots
+
+	is_triggered_only = yes
+
+	option = {
+		name = democratic_russia.7.a
+		add_stability = -0.05
+		add_political_power = -25
+		206 = {
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 15
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.8 days = 14 random_days = 7 }
+		}
+	}
+}
+
+# Event 8 - Ukraine Unstable
+country_event = {
+	id = democratic_russia.8
+	title = democratic_russia.8.t
+	desc = democratic_russia.8.d
+	picture = GFX_report_event_riots
+
+	is_triggered_only = yes
+
+	option = {
+		name = democratic_russia.8.a
+		add_stability = -0.05
+		add_war_support = -0.10
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+				is_owned_and_controlled_by = ROOT
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 20
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.9 days = 14 random_days = 7 }
+		}
+	}
+}
+
+# Event 9 - Baku in Flames
+country_event = {
+	id = democratic_russia.9
+	title = democratic_russia.9.t
+	desc = democratic_russia.9.d
+	picture = GFX_report_event_burning_city
+
+	is_triggered_only = yes
+
+	option = {
+		name = democratic_russia.9.a
+		add_stability = -0.05
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 229
+					state = 230
+					state = 231
+					state = 826
+				}
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 25
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.10 days = 14 random_days = 7 }
+		}
+	}
+}
+
+# Event 10 - Belarus Demands Autonomy
+country_event = {
+	id = democratic_russia.10
+	title = democratic_russia.10.t
+	desc = democratic_russia.10.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { # Grant autonomy
+		name = democratic_russia.10.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = BLR
+			}
+			remove_core_of = ROOT
+		}
+		release_on_controlled = BLR
+		if = {
+			limit = { BLR = { exists = yes } }
+			BLR = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				add_popularity = { ideology = democratic popularity = 0.50 }
+				add_popularity = { ideology = neutrality popularity = 0.40 }
+				add_popularity = { ideology = fascism popularity = 0.05 }
+				add_popularity = { ideology = communism popularity = 0.05 }
+			}
+			set_autonomy = {
+				target = BLR
+				autonomous_state = autonomy_supervised_state
+			}
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.11 days = 21 random_days = 7 }
+		}
+	}
+
+	option = { # Refuse
+		name = democratic_russia.10.b
+		ai_chance = { factor = 60 }
+		add_stability = -0.10
+		add_war_support = -0.10
+		add_political_power = -75
+		add_ideas = SOV_belarusian_crackdown
+		every_owned_state = {
+			limit = {
+				is_core_of = BLR
+				is_owned_and_controlled_by = ROOT
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 35
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.11 days = 21 random_days = 7 }
+		}
+	}
+}
+
+# Event 11 - Ukraine Demands Autonomy
+country_event = {
+	id = democratic_russia.11
+	title = democratic_russia.11.t
+	desc = democratic_russia.11.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { # Grant autonomy
+		name = democratic_russia.11.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		add_political_power = -50
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			remove_core_of = ROOT
+		}
+		release_on_controlled = UKR
+		if = {
+			limit = { UKR = { exists = yes } }
+			UKR = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				add_popularity = { ideology = democratic popularity = 0.50 }
+				add_popularity = { ideology = neutrality popularity = 0.40 }
+				add_popularity = { ideology = fascism popularity = 0.05 }
+				add_popularity = { ideology = communism popularity = 0.05 }
+			}
+			set_autonomy = {
+				target = UKR
+				autonomous_state = autonomy_supervised_state
+			}
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.12 days = 21 random_days = 7 }
+		}
+	}
+
+	option = { # Refuse
+		name = democratic_russia.11.b
+		ai_chance = { factor = 60 }
+		add_stability = -0.10
+		add_war_support = -0.10
+		add_political_power = -75
+		add_ideas = SOV_ukrainian_crackdown
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+				is_owned_and_controlled_by = ROOT
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 40
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.12 days = 21 random_days = 7 }
+		}
+	}
+}
+
+# Event 12 - Transcaucasia Seeks Autonomy
+country_event = {
+	id = democratic_russia.12
+	title = democratic_russia.12.t
+	desc = democratic_russia.12.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { # Grant autonomy
+		name = democratic_russia.12.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		add_political_power = -75
+		826 = { remove_core_of = ROOT }
+		231 = { remove_core_of = ROOT }
+		230 = { remove_core_of = ROOT }
+		229 = { remove_core_of = ROOT }
+		if = {
+			limit = {
+				229 = { NOT = { is_owned_by = GEO } }
+			}
+			229 = { transfer_state_to = GEO }
+		}
+		if = {
+			limit = {
+				230 = { NOT = { is_owned_by = GEO } }
+			}
+			230 = { transfer_state_to = GEO }
+		}
+		if = {
+			limit = {
+				826 = { NOT = { is_owned_by = GEO } }
+			}
+			826 = { transfer_state_to = GEO }
+		}
+		release_on_controlled = GEO
+		if = {
+			limit = { GEO = { exists = yes } }
+			GEO = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				add_popularity = { ideology = democratic popularity = 0.50 }
+				add_popularity = { ideology = neutrality popularity = 0.40 }
+				add_popularity = { ideology = fascism popularity = 0.05 }
+				add_popularity = { ideology = communism popularity = 0.05 }
+				826 = { add_core_of = GEO }
+				231 = { add_core_of = GEO }
+				230 = { add_core_of = GEO }
+				229 = { add_core_of = GEO }
+				set_cosmetic_tag = transcaucasia_unified
+				set_global_flag = form_transcaucasia_flag
+			}
+			set_autonomy = {
+				target = GEO
+				autonomous_state = autonomy_supervised_state
+			}
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.13 days = 21 random_days = 7 }
+		}
+	}
+
+	option = { # Refuse
+		name = democratic_russia.12.b
+		ai_chance = { factor = 60 }
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -100
+		add_ideas = SOV_transcaucasian_crackdown
+		229 = { remove_core_of = ROOT }
+		230 = { remove_core_of = ROOT }
+		231 = { remove_core_of = ROOT }
+		826 = { remove_core_of = ROOT }
+		every_owned_state = {
+			limit = {
+				state = 229
+				state = 230
+				state = 231
+				state = 826
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 35
+		}
+		hidden_effect = {
+			country_event = { id = democratic_russia.13 days = 21 random_days = 7 }
+		}
+	}
+}
+
+# Event 13 - Turkestan Seeks Autonomy
+country_event = {
+	id = democratic_russia.13
+	title = democratic_russia.13.t
+	desc = democratic_russia.13.d
+	picture = GFX_report_event_generic_parliament
+
+	is_triggered_only = yes
+
+	option = { # Grant autonomy
+		name = democratic_russia.13.a
+		ai_chance = { factor = 40 }
+		add_stability = 0.05
+		add_political_power = -75
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 587
+					state = 823
+					state = 584
+					state = 831
+					state = 832
+					state = 830
+					state = 742
+					state = 732
+					state = 404
+					state = 586
+					state = 405
+					state = 585
+				}
+			}
+			remove_core_of = ROOT
+			transfer_state_to = KAZ
+		}
+		if = {
+			limit = { KAZ = { exists = yes } }
+			KAZ = {
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				add_popularity = { ideology = democratic popularity = 0.50 }
+				add_popularity = { ideology = neutrality popularity = 0.40 }
+				add_popularity = { ideology = fascism popularity = 0.05 }
+				add_popularity = { ideology = communism popularity = 0.05 }
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 587
+							state = 823
+							state = 584
+							state = 831
+							state = 832
+							state = 830
+							state = 742
+							state = 732
+							state = 404
+							state = 586
+							state = 405
+							state = 585
+						}
+					}
+					add_core_of = KAZ
+				}
+				set_cosmetic_tag = turkestan_united
+				set_global_flag = form_turkestan_flag
+			}
+			set_autonomy = {
+				target = KAZ
+				autonomous_state = autonomy_supervised_state
+			}
+		}
+	}
+
+	option = { # Refuse
+		name = democratic_russia.13.b
+		ai_chance = { factor = 60 }
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -100
+		add_ideas = SOV_turkestan_crackdown
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 587
+					state = 823
+					state = 584
+					state = 831
+					state = 832
+					state = 830
+					state = 742
+					state = 732
+					state = 404
+					state = 586
+					state = 405
+					state = 585
+				}
+			}
+			remove_core_of = ROOT
+			start_resistance = yes
+			set_resistance = 40
+		}
+	}
+}

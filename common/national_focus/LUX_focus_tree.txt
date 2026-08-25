@@ -1,0 +1,4361 @@
+focus_tree = {
+    id = LUX_focus_tree
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 1000
+            tag = LUX
+        }
+    }
+    continuous_focus_position = { x = 418 y = 1072 }
+
+    focus = {
+        id = my_hoi4_mod_new_focus_tree_focus_1
+        icon = GFX_focus_AFG_a_modern_economy
+        x = 1
+        y = -1
+        cost = 4
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_2 }
+        available_if_capitulated = yes
+        available = {
+            controls_state = 8
+        }
+        completion_reward = {
+            add_ideas = lux_new_industry
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_2
+        icon = GFX_focus_generic_farmland
+        x = 7
+        y = -1
+        cost = 4
+        mutually_exclusive = { focus = my_hoi4_mod_new_focus_tree_focus_1 }
+        available = {
+            controls_state = 8
+        }
+        completion_reward = {
+            8 = {
+                add_extra_state_shared_building_slots = 14
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_3
+        icon = GFX_goal_generic_scientific_exchange
+        x = 6
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_new_focus_tree_focus_1 focus = my_hoi4_mod_LUX_focus_tree_focus_2 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = lux_research
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_4
+        icon = GFX_focus_NORDIC_dem_research
+        x = 6
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_3 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_research_slot = 1
+            country_event = { id = hmb_my_hoi4_mod_advisor_focus.1 days = 1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_5
+        icon = GFX_focus_research
+        x = 6
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_4 }
+        available = {
+            num_of_civilian_factories > 10
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+                bonus = 2.0
+                uses = 1
+                category = artillery
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_6
+        icon = GFX_goal_generic_construct_civ_factory
+        x = -4
+        y = 0
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_new_focus_tree_focus_1 }
+        completion_reward = {
+                8 = {
+                    add_extra_state_shared_building_slots = 8
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_7
+        icon = GFX_goal_generic_construct_mil_factory
+        x = 0
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_new_focus_tree_focus_1 }
+        completion_reward = {
+                8 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_8
+        icon = GFX_focus_befriend_italy
+        x = -6
+        y = 2
+        cost = 2
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_6 }
+        available = {
+            ITA = {
+                has_opinion = {
+                    target = LUX
+                    value > 79
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = -30
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_9
+        icon = GFX_focus_BRA_us_of_brazil
+        x = -6
+        y = 1
+        cost = 2
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_6 }
+        available = {
+            LUX = {
+                has_opinion = {
+                    target = BRA
+                    value > 79
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = -30
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_10
+        icon = GFX_focus_chi_reach_out_to_france
+        x = -8
+        y = 1
+        cost = 2
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_6 }
+        available = {
+            FRA = {
+                has_opinion = {
+                    target = LUX
+                    value > 79
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = -30
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_11
+        icon = GFX_focus_chi_collaboration_with_the_japanese
+        x = -8
+        y = 2
+        cost = 2
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_6 }
+        available = {
+            has_opinion = {
+                target = JAP
+                value > 49 # Set your minimum required opinion value here
+            }
+        }
+        completion_reward = {
+            add_political_power = -30
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_12
+        icon = GFX_focus_generic_steel
+        x = -4
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_7 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_6 }
+        available = {
+            controls_state = 8
+        }
+        completion_reward = {
+            8 = {
+                add_resource = {
+                    type = steel
+                    amount = 30
+                }
+            }
+                8 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_13
+        icon = GFX_focus_BEL_belgian_miracle
+        x = 0
+        y = 1
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_7 }
+        bypass_if_unavailable = yes
+        available = {
+            controls_state = 6
+        }
+        completion_reward = {
+                6 = {
+                    add_extra_state_shared_building_slots = 3
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_14
+        icon = GFX_focus_AUS_raid_military_storages
+        x = 0
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_12 }
+        available_if_capitulated = yes
+        select_effect = {
+            add_ideas = war_economy
+        }
+        completion_reward = {
+            add_ideas = lux_war_industry
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_15
+        icon = GFX_focus_CHI_weaponise_the_faithful
+        x = -2
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_12 }
+        completion_reward = {
+            add_ideas = kid_in_factory
+                8 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_16
+        icon = GFX_focus_CHL_focus_on_cattle_and_wool
+        x = 9
+        y = 0
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_2 }
+        completion_reward = {
+            8 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+                add_manpower = 500000
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_17
+        icon = GFX_goal_generic_positive_trade_relations
+        x = 9
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_16 }
+        completion_reward = {
+            add_political_power = 150
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_19
+        icon = GFX_focus_AFG_afghan_bank
+        x = 9
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_17 }
+        completion_reward = {
+            add_ideas = Food_Surplus
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+            country_event = { id = hmb_my_hoi4_mod_advisor_focus.3 days = 1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_20
+        icon = GFX_focus_generic_modernizing_agriculture
+        x = 11
+        y = 1
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_21_2 }
+        completion_reward = {
+            add_ideas = grain_tax_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_21
+        icon = GFX_focus_generic_truck
+        x = 11
+        y = 2
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_20 }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                ahead_reduction = 2
+                uses = 2
+                category = motorized_equipment
+            }
+            8 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_21_2
+        icon = GFX_focus_DEN_schleswigian_farmers
+        x = 11
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_2 }
+        completion_reward = {
+            add_stability = 0.2
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_22
+        icon = GFX_focus_AST_broken_hill_proprietary_company
+        x = 13
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_21_2 }
+        completion_reward = {
+            add_ideas = mining_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_23
+        icon = GFX_focus_generic_coal_mining
+        x = 13
+        y = 2
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_22 }
+        available = {
+            controls_state = 7
+        }
+        completion_reward = {
+            7 = {
+                add_resource = {
+                    type = coal
+                    amount = 40
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_24
+        icon = GFX_focus_CHL_expand_the_forestry
+        x = 10
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_21 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_19 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_5 }
+        completion_reward = {
+            add_ideas = lux_feud
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_25
+        icon = GFX_focus_ETH_freedom_at_gunpoint
+        x = 1
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_14 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_15 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_5 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_9 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_8 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_10 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_11 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            8 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 2
+                ahead_reduction = 4
+                category = infantry_weapons
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_27
+        icon = GFX_goal_generic_army_doctrines
+        x = 17
+        y = -1
+        cost = 5
+        available_if_capitulated = yes
+        completion_reward = {
+            army_experience = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_28
+        icon = GFX_focus_prc_infiltration
+        x = 17
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_27 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_29
+        icon = GFX_focus_generic_tank_production
+        x = 20
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_27 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = tank_focus_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_30
+        icon = GFX_focus_PER_raf_planes
+        x = 23
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_27 }
+        available_if_capitulated = yes
+        completion_reward = {
+            air_experience = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_31
+        icon = GFX_goal_generic_army_artillery2
+        x = 18
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_28 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_32 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = arty_focus_lux
+            add_tech_bonus = {
+                bonus = 2.0
+                ahead_reduction = 3
+                uses = 1
+                category = artillery
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_32
+        icon = GFX_focus_generic_manpower
+        x = 16
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_28 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_31 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_war_support = 0.05
+            add_manpower = 100000
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_33
+        icon = GFX_focus_SIA_reverse_engineer_allied_tanks
+        x = 17
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_32 focus = my_hoi4_mod_LUX_focus_tree_focus_31 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                ahead_reduction = 4
+                uses = 1
+                category = engineers_tech
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_34_copy_copy
+        icon = GFX_goal_generic_CAS
+        x = 25
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_30 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_35 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = cas_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_35
+        icon = GFX_goal_generic_air_fighter2
+        x = 22
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_30 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_34_copy_copy }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = fighter_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_36
+        icon = GFX_focus_generic_the_council_of_europe
+        x = 19
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_33 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_69 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = europeon_menace_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_37
+        icon = GFX_focus_generic_air_partners
+        x = 22
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_35 focus = my_hoi4_mod_LUX_focus_tree_focus_34_copy_copy }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.5
+                uses = 2
+                category = light_air
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_37_2
+        icon = GFX_focus_generic_government_in_exile
+        x = 44
+        y = -1
+        cost = 5
+        completion_reward = {
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_38
+        icon = GFX_focus_generic_blue_flags
+        x = 29
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37_2 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_40 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        completion_reward = {
+            add_stability = 0.2
+            add_war_support = -0.05
+            country_event = {
+                id = luxembourg.1
+                days = 0
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_39
+        icon = GFX_focus_generic_spur_communist_revolutions
+        x = 38
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37_2 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_38 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_40 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_ideas = lux_commune
+            set_party_name = {
+                ideology = communism
+                name = "Dominique Urbany"
+                long_name = "Dominique Urbany"
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_40
+        icon = GFX_focus_generic_strike_at_democracy1
+        x = 52
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37_2 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_38 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_ideas = lux_fascism
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_41
+        icon = GFX_focus_BUL_form_a_regency_council
+        x = 63
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37_2 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_40 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_38 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = reform_lux
+                days = 360
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_42
+        icon = GFX_focus_SWI_neutrality_on_the_move
+        x = 32
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_38 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_43 }
+        completion_reward = {
+            add_ideas = neutral_lux
+            add_war_support = 0.1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_43
+        icon = GFX_focus_generic_influence_benelux
+        x = 26
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_38 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_42 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            create_faction = "Benelux League"
+            BEL = {
+            country_event = {
+                id = luxembourg.11
+                days = 0
+            }
+            }
+            HOL = {
+            country_event = {
+                id = luxembourg.10
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_44
+        icon = GFX_focus_BEL_belgian_renaissance
+        x = 24
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_47 }
+        will_lead_to_war_with = BEL
+        available = {
+            is_in_faction_with = BEL
+        }
+        completion_reward = {
+            annex_country  = {
+                   target = BEL
+                    transfer_troops = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_45
+        icon = GFX_focus_INS_dutch_east_indies
+        x = 22
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_47 }
+        will_lead_to_war_with = HOL
+        available_if_capitulated = yes
+        available = {
+            is_in_faction_with = HOL
+        }
+        completion_reward = {
+            annex_country = {
+                target = HOL
+                transfer_troops = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_46
+        icon = GFX_goal_generic_construct_civilian
+        x = 26
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_57 focus = my_hoi4_mod_LUX_focus_tree_focus_128 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_56 }
+        completion_reward = {
+            add_ideas = industrial_complex_lux
+                8 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_47
+        icon = GFX_focus_generic_industry_investment
+        x = 24
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_43 }
+        completion_reward = {
+            add_political_power = -100
+            add_stability = -0.3
+            add_war_support = -0.1
+            6 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            7 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_48
+        icon = GFX_focus_BEL_benelux_union
+        x = 23
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_45 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_44 }
+        completion_reward = {
+            add_faction_initiative = 4
+            every_owned_state = {
+                add_extra_state_shared_building_slots = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_49
+        icon = GFX_focus_PRC_army_command
+        x = 14
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_27 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = week_manpower_Lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_50
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 3
+        y = 0
+        cost = 8
+        prerequisite = { focus = my_hoi4_mod_new_focus_tree_focus_1 focus = my_hoi4_mod_LUX_focus_tree_focus_2 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_tech_bonus = {
+                name = industry_boost
+                bonus = 1.0
+                uses = 2
+                category = industry
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_51
+        icon = GFX_goal_rhineland
+        x = 15
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_49 }
+        available_if_capitulated = yes
+        completion_reward = {
+            army_experience = 100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_52
+        icon = GFX_goal_continuous_research
+        x = 32
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_42 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_53
+        icon = GFX_goal_generic_defence
+        x = 32
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_52 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = defensive_spending_lux
+            add_stability = 0.1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_54
+        icon = GFX_goal_generic_construct_military
+        x = 33
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_53 }
+        completion_reward = {
+                8 = {
+                    add_extra_state_shared_building_slots = 2
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 2
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_55
+        icon = GFX_goal_generic_production2
+        x = 31
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_53 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = production_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_56
+        icon = GFX_focus_GER_demonstration_of_military_achievements
+        x = 30
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_57 focus = my_hoi4_mod_LUX_focus_tree_focus_128 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_46 }
+        completion_reward = {
+            add_ideas = miltary_lux_ind
+                8 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_57
+        icon = GFX_focus_ARG_anti_american_propaganda
+        x = 27
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_42 focus = my_hoi4_mod_LUX_focus_tree_focus_43 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 1
+            }
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            add_offsite_building = {
+                type = dockyard
+                level = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_58
+        icon = GFX_focus_SWI_fortify_border_with_france
+        x = 20
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_48 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_59 }
+        will_lead_to_war_with = FRA
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_59
+        icon = GFX_focus_SWI_fortify_border_with_germany
+        x = 23
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_48 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_58 }
+        will_lead_to_war_with = GER
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = GER
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_60
+        icon = GFX_focus_RAJ_the_crown_and_the_world
+        x = 31
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_54 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_55 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_132 }
+        completion_reward = {
+            add_ideas = great_power_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_61
+        icon = GFX_focus_AUS_seek_to_purchase_alaska
+        x = 28
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_46 focus = my_hoi4_mod_LUX_focus_tree_focus_56 }
+        available_if_capitulated = yes
+        available = {
+            is_ai = no
+            USA = {
+                owns_state = 463
+            }
+        }
+        completion_reward = {
+            USA = {
+            country_event = {
+                id = luxembourg.2
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_62
+        icon = GFX_focus_generic_winter_warfare
+        x = 25
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_61 }
+        available_if_capitulated = yes
+        available = {
+            LUX = {
+                owns_state = 463
+            }
+        }
+        completion_reward = {
+            463 = {
+                add_extra_state_shared_building_slots = 10
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            463 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_63
+        icon = GFX_goal_generic_oil_refinery
+        x = 27
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_61 }
+        available_if_capitulated = yes
+        available = {
+            LUX = {
+                owns_state = 463
+            }
+        }
+        completion_reward = {
+            463 = {
+                add_resource = {
+                    type = coal
+                    amount = 10
+                }
+            }
+            463 = {
+                add_resource = {
+                    type = steel
+                    amount = 20
+                }
+            }
+            463 = {
+                add_resource = {
+                    type = oil
+                    amount = 30
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_64
+        icon = GFX_focus_GER_integration_of_puppet_economies
+        x = 26
+        y = 7
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_62 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_63 }
+        available_if_capitulated = yes
+        available = {
+            LUX = {
+                owns_state = 463
+            }
+        }
+        select_effect = {
+            add_state_core = 463
+        }
+        completion_reward = {
+            add_state_core = 463
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_65
+        icon = GFX_focus_eng_concessions_to_the_trade_unions
+        x = 36
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        completion_reward = {
+            add_ideas = worker_union_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_66
+        icon = GFX_focus_generic_field_hostpital
+        x = 38
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        completion_reward = {
+            add_ideas = free_healthcare
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_67
+        icon = GFX_focus_PRC_immediate_response_to_lack_of_army
+        x = 40
+        y = 1
+        cost = 4
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_39 }
+        completion_reward = {
+            add_stability = 0.10
+            add_popularity = {
+                ideology = communism
+                popularity = 0.2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_68
+        icon = GFX_goal_support_communism
+        x = 38
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_65 focus = my_hoi4_mod_LUX_focus_tree_focus_66 focus = my_hoi4_mod_LUX_focus_tree_focus_67 }
+        completion_reward = {
+            set_politics = {
+                ruling_party = communism
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_69
+        icon = GFX_goal_generic_army_tanks
+        x = 20
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_29 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 2
+                category = armor
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_70
+        icon = GFX_focus_generic_africa_factory
+        x = 2
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_50 }
+        available_if_capitulated = yes
+        available = {
+            has_capitulated = yes
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_71
+        icon = GFX_focus_AST_permanent_military_forces
+        x = 4
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_50 }
+        available_if_capitulated = yes
+        available = {
+            has_capitulated = yes
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 3
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_72
+        icon = GFX_focus_BEL_government_resigns
+        x = 3
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_70 focus = my_hoi4_mod_LUX_focus_tree_focus_71 }
+        available_if_capitulated = yes
+        available = {
+            has_capitulated = yes
+        }
+        completion_reward = {
+            add_legitimacy = 50
+            add_political_power = 100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_73
+        icon = GFX_focus_PRC_petition_for_freedom
+        x = 3
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_72 }
+        completion_reward = {
+            add_war_support = 0.1
+            add_stability = 0.1
+            add_timed_idea = {
+                idea = liberation_lux
+                days = 200
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_74
+        icon = GFX_goal_support_fourth_int
+        x = 35
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_68 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = two_year_plan_lux
+                days = 730
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_75
+        icon = GFX_focus_generic_communist_asia
+        x = 35
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_74 }
+        available = {
+            NOT = {
+                has_idea = two_year_plan_lux
+            }
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = two_year_plan_lux_2
+                days = 730
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_75_copy
+        icon = GFX_focus_generic_communist
+        x = 35
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_75 }
+        available = {
+            NOT = {
+                has_idea = two_year_plan_lux_2
+            }
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = two_year_plan_lux_3
+                days = 730
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_77
+        icon = GFX_focus_generic_nuclear_development
+        x = 35
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_75_copy }
+        available = {
+            NOT = {
+                has_idea = two_year_plan_lux_3
+            }
+        }
+        completion_reward = {
+            add_ideas = lux_final_plan
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                ahead_reduction = 3
+                category = nuclear
+            }
+            add_breakthrough_progress = {
+            specialization = specialization_nuclear
+            value = 0.5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_78
+        icon = GFX_focus_fra_loyalty_stalin
+        x = 39
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_68 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_79 }
+        bypass_if_unavailable = yes
+        available = {
+            SOV = {
+                has_government = communism
+                is_in_faction = yes
+            }
+        }
+        completion_reward = {
+            SOV = {
+            country_event = {
+                id = luxembourg.3
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_79
+        icon = GFX_focus_PHI_maritime_communism
+        x = 42
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_68 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_78 }
+        completion_reward = {
+            add_political_power = 150
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_80
+        icon = GFX_focus_SOV_the_comecon
+        x = 37
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_78 }
+        available_if_capitulated = yes
+        available = {
+            is_in_faction_with = SOV
+        }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            SOV = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_81
+        icon = GFX_focus_focus_fra_revolution_utmost
+        x = 44
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_79 }
+        completion_reward = {
+            add_manpower = 100000
+            IRE = {
+                add_timed_idea = {
+                    idea = communist_influence_lux
+                    days = 1000
+                }
+            }
+            DEN = {
+                add_timed_idea = {
+                    idea = communist_influence_lux
+                    days = 1000
+                }
+            }
+            POR = {
+                add_timed_idea = {
+                    idea = communist_influence_lux
+                    days = 1000
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_82
+        icon = GFX_focus_generic_influence_benelux
+        x = 42
+        y = 4
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_78 focus = my_hoi4_mod_LUX_focus_tree_focus_79 }
+        completion_reward = {
+            BEL = {
+                add_ideas = communist_influence_lux
+            }
+            HOL = {
+                add_ideas = communist_influence_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_83
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 42
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_82 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_84 }
+        will_lead_to_war_with = HOL
+        will_lead_to_war_with = BEL
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = HOL
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = BEL
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_84
+        icon = GFX_focus_CZE_german_puppet
+        x = 40
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_82 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_83 }
+        will_lead_to_war_with = BEL
+        will_lead_to_war_with = HOL
+        completion_reward = {
+            BEL = {
+            country_event = {
+                id = luxembourg.5
+                days = 0
+            }
+            }
+            HOL = {
+            country_event = {
+                id = luxembourg.7
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_85
+        icon = GFX_focus_SWE_counter_revolution
+        x = 26
+        y = 0
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_37_2 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_27 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            set_rule = { can_send_volunteers = yes }
+            add_ideas = lux_volunteer
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_86
+        icon = GFX_focus_generic_annex_country_2
+        x = 40
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_84 }
+        available = {
+            HOL = {
+                is_subject_of = LUX
+            }
+            BEL = {
+                is_subject_of = LUX
+            }
+        }
+        completion_reward = {
+            add_stability = -0.1
+            annex_country = {
+                target = BEL
+                transfer_troops = yes
+            }
+            annex_country = {
+                target = HOL
+                transfer_troops = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_87
+        icon = GFX_focus_generic_women_in_military
+        x = 37
+        y = 6
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_80 }
+        completion_reward = {
+            army_experience = 100
+            add_war_support = 0.1
+            add_political_power = 60
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_88
+        icon = GFX_focus_fra_french_union
+        x = 44
+        y = 6
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_81 }
+        completion_reward = {
+            FRA = {
+                add_timed_idea = {
+                    idea = communist_influence_lux
+                    days = 800
+                }
+            }
+            FRA = {
+                add_political_power = -50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_89
+        icon = GFX_focus_GER_end_european_communism
+        x = 46
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_88 focus = my_hoi4_mod_LUX_focus_tree_focus_90 }
+        will_lead_to_war_with = FRA
+        will_lead_to_war_with = GER
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = GER
+            }
+            add_ideas = europe_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_90
+        icon = GFX_focus_ger_oppose_hitler
+        x = 46
+        y = 6
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_81 }
+        completion_reward = {
+            GER = {
+                add_timed_idea = {
+                    idea = communist_influence_lux
+                    days = 800
+                }
+            }
+            GER = {
+                add_political_power = -50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_91
+        icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+        x = 43
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_93 }
+        completion_reward = {
+            add_ideas = beacon_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_92
+        icon = GFX_focus_CHI_prepare_war_zones
+        x = 36
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_87 }
+        completion_reward = {
+            add_ideas = miltary_lux_ind
+            add_command_power = 100
+            add_war_support = 0.1
+            add_stability = 0.1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_93
+        icon = GFX_goal_generic_soviet_construction
+        x = 43
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_87 focus = my_hoi4_mod_LUX_focus_tree_focus_81 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_94
+        icon = GFX_focus_ETH_the-italo_ethiopian_empire
+        x = 52
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_40 }
+        completion_reward = {
+            set_politics = {
+                ruling_party = fascism
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_95
+        icon = GFX_focus_JAP_new_order_in_east_asia
+        x = 54
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_94 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        completion_reward = {
+            add_political_power = 150
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_96
+        icon = GFX_focus_GER_anschluss_historical
+        x = 50
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_94 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_95 }
+        available = {
+            GER = {
+                has_government = fascism
+                is_in_faction = yes
+            }
+            
+        }
+        completion_reward = {
+            GER = {
+            country_event = {
+                id = luxembourg.6
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_97
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 46
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            GER = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_98
+        icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+        x = 49
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_99 }
+        available = {
+            controls_state = 7
+            controls_state = 6
+        }
+        completion_reward = {
+            add_ideas = sealion_lux
+            6 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            7 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_99
+        icon = GFX_focus_GER_war_with_the_ussr
+        x = 52
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_98 }
+        completion_reward = {
+            add_ideas = barbarossa_focus
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_100
+        icon = GFX_goal_generic_navy_battleship
+        x = 47
+        y = 4
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_98 }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 2.0
+                uses = 2
+                category = naval_equipment
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_101
+        icon = GFX_goal_generic_air_naval_bomber
+        x = 48
+        y = 5
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_98 }
+        completion_reward = {
+            add_ideas = nav_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_102
+        icon = GFX_focus_generic_military_industry
+        x = 51
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_99 }
+        available = {
+            controls_state = 7
+            controls_state = 6
+        }
+        completion_reward = {
+                6 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+                7 = {
+                    add_extra_state_shared_building_slots = 1
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_103
+        icon = GFX_focus_GER_adopt_new_panzer_doctrine_historical
+        x = 50
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        available_if_capitulated = yes
+        completion_reward = {
+            add_ideas = blitz_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_104
+        icon = GFX_focus_PRC_promote_paper_bills
+        x = 54
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_95 focus = my_hoi4_mod_LUX_focus_tree_focus_96 }
+        completion_reward = {
+            add_ideas = mefo_bill_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_105
+        icon = GFX_focus_RAJ_the_return_of_the_east_india_trading_company
+        x = 57
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_104 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_95 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_106
+        icon = GFX_focus_generic_influence_benelux
+        x = 55
+        y = 4
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_95 }
+        completion_reward = {
+            add_manpower = 30000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_107
+        icon = GFX_focus_BEL_eben_emael_fortress
+        x = 55
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_106 }
+        completion_reward = {
+            add_political_power = 100
+            BEL = {
+                add_political_power = -50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_108
+        icon = GFX_focus_BEL_defensive_neutrality
+        x = 55
+        y = 6
+        cost = 15
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_107 }
+        will_lead_to_war_with = BEL
+        completion_reward = {
+            BEL = {
+            country_event = {
+                id = luxembourg.8
+                days = 0
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_109
+        icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+        x = 56
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_108 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_116 }
+        will_lead_to_war_with = HOL
+        will_lead_to_war_with = SWI
+        will_lead_to_war_with = GER
+        will_lead_to_war_with = AUS
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = HOL
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = SWI
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = GER
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = AUS
+            }
+            GER = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            HOL = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            AUS = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            SWI = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_110
+        icon = GFX_focus_ger_reichskommisariats
+        x = 58
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_108 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_111
+        icon = GFX_focus_attack_france
+        x = 49
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_103 }
+        available = {
+            controls_state = 29
+        }
+        completion_reward = {
+            add_state_core = 29
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_112
+        icon = GFX_goal_generic_axis_build_infantry
+        x = 52
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_118 }
+        completion_reward = {
+            add_ideas = axis_command_lux
+            GER = {
+                army_experience = 50
+                add_command_power = 50
+            }
+            army_experience = 100
+            add_command_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_113
+        icon = GFX_focus_GER_total_control_over_domestic_affairs
+        x = 59
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_95 }
+        completion_reward = {
+            add_ideas = industrial_complex_lux
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_114
+        icon = GFX_goal_anti_comintern_pact
+        x = 53
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_104 }
+        completion_reward = {
+            add_ideas = work_union_lux_ban
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_115
+        icon = GFX_focus_attack_soviet
+        x = 52
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_114 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_99 }
+        completion_reward = {
+            add_ideas = anti_communist_idea_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_116
+        icon = GFX_focus_AFG_establish_darulaman
+        x = 58
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_113 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_105 }
+        completion_reward = {
+            add_stability = 0.15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_117
+        icon = GFX_focus_RAJ_to_shake_the_world
+        x = 55
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_112 focus = my_hoi4_mod_LUX_focus_tree_focus_109 }
+        completion_reward = {
+            add_ideas = empire_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_118
+        icon = GFX_focus_GER_kdf_wagen
+        x = 51
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_103 }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                ahead_reduction = 1
+                uses = 1
+                category = motorized_equipment
+            }
+            country_event = { id = hmb_my_hoi4_mod_advisor_focus.5 days = 1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_119
+        icon = GFX_focus_generic_industry_3
+        x = 51
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_111 focus = my_hoi4_mod_LUX_focus_tree_focus_110 }
+        available = {
+            controls_state = 29
+        }
+        completion_reward = {
+            29 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            29 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_120
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 48
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_98 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_111 }
+        available = {
+            controls_state = 29
+        }
+        completion_reward = {
+            29 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = dockyard
+                    level = 4
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_121
+        icon = GFX_focus_eng_imperial_federation
+        x = 71
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_122 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_133 }
+        available = {
+            NOT = {
+                has_idea = reform_lux
+            }
+        }
+        completion_reward = {
+            set_rule = { can_declare_war_on_same_ideology = no }
+            set_rule = { can_join_factions = no }
+            add_ideas = grand_duchy_lux
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_122
+        icon = GFX_focus_focus_fra_orleans_restoration
+        x = 61
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
+        available = {
+            NOT = {
+                has_idea = reform_lux
+            }
+        }
+        complete_tooltip = {
+            add_ideas = bourbon_realm
+        }
+        completion_reward = {
+            add_ideas = bourbon_realm
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_124
+        icon = GFX_focus_fra_le_deluge
+        x = 66
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_41 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_122 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        available = {
+            NOT = {
+                has_idea = reform_lux
+            }
+        }
+        completion_reward = {
+            add_ideas = napleon_lux
+            set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_125
+        icon = GFX_focus_generic_court
+        x = 84
+        y = 2
+        cost = 4
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 focus = my_hoi4_mod_LUX_focus_tree_focus_122 focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
+        completion_reward = {
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_126
+        icon = GFX_focus_RAJ_special_economic_zones
+        x = 87
+        y = 2
+        cost = 4
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 focus = my_hoi4_mod_LUX_focus_tree_focus_124 focus = my_hoi4_mod_LUX_focus_tree_focus_122 }
+        completion_reward = {
+            8 = {
+                add_extra_state_shared_building_slots = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_127
+        icon = GFX_focus_SOV_the_last_purge
+        x = 37
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_68 }
+        completion_reward = {
+            add_ideas = collect_lux
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_128
+        icon = GFX_focus_generic_africa_defense
+        x = 29
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_43 focus = my_hoi4_mod_LUX_focus_tree_focus_42 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_manpower = 50000
+            create_wargoal = {
+                type = annex_everything
+                target = LIB
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_129
+        icon = GFX_focus_INS_east_indies_investments
+        x = 16
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_45 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_51 }
+        available = {
+            is_in_faction_with = INS
+            date > 1939.1.1
+        }
+        completion_reward = {
+            LUX = {
+                puppet = INS
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_130
+        icon = GFX_focus_CONGO_belgian_congo
+        x = 14
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_44 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_51 }
+        available = {
+            is_in_faction_with = COG
+        }
+        completion_reward = {
+            LUX = {
+                puppet = COG
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_131
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        x = 15
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_129 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_130 }
+        available = {
+            COG = {
+                is_subject_of = LUX
+            }
+            INS = {
+                is_subject_of = LUX
+            }
+        }
+        completion_reward = {
+            add_ideas = colonial_lux
+            annex_country = {
+                target = INS
+                transfer_troops = yes
+            }
+            annex_country = {
+                target = COG
+                transfer_troops = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_132
+        icon = GFX_focus_generic_manpower
+        x = 33
+        y = 6
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_54 focus = my_hoi4_mod_LUX_focus_tree_focus_55 }
+        completion_reward = {
+            add_manpower = 100000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_133
+        icon = GFX_focus_BEL_dietsland
+        x = 79
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_125 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        completion_reward = {
+            add_manpower = 100000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_134
+        icon = GFX_goal_continuous_boost_freedom
+        x = 83
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_125 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_135 }
+        completion_reward = {
+            add_stability = 0.1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_135
+        icon = GFX_focus_generic_advanced_military_studies
+        x = 85
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_125 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_134 }
+        completion_reward = {
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_136
+        icon = GFX_focus_generic_education
+        x = 83
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_134 focus = my_hoi4_mod_LUX_focus_tree_focus_135 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_137 }
+        completion_reward = {
+            add_ideas = education_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_137
+        icon = GFX_focus_ICE_embrace_the_workers_revolution
+        x = 85
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_135 focus = my_hoi4_mod_LUX_focus_tree_focus_134 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_136 }
+        completion_reward = {
+            add_ideas = labour_force_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_138
+        icon = GFX_focus_AUS_lawmaking_leniency
+        x = 83
+        y = 5
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_137 focus = my_hoi4_mod_LUX_focus_tree_focus_136 }
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_139
+        icon = GFX_focus_AFG_fruit_processing
+        x = 87
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_126 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_140 }
+        completion_reward = {
+            add_ideas = industrial_complex_lux
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_140
+        icon = GFX_focus_AFG_sugar_factory
+        x = 89
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_126 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_139 }
+        completion_reward = {
+            add_ideas = miltary_lux_ind
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_141
+        icon = GFX_focus_BEL_belgian_special_forces
+        x = 80
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_133 }
+        completion_reward = {
+            BEL = {
+                country_event = {
+                    id = luxembourg.13
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_142
+        icon = GFX_focus_INS_dutch_east_indies
+        x = 78
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_133 }
+        completion_reward = {
+            HOL = {
+                country_event = {
+                    id = luxembourg.14
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_130_copy
+        icon = GFX_focus_CONGO_belgian_congo
+        x = 80
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_141 }
+        completion_reward = {
+            COG = {
+                country_event = {
+                    id = luxembourg.16
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_129_copy
+        icon = GFX_focus_INS_east_indies_investments
+        x = 78
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_142 }
+        available = {
+            date > 1939.1.1
+        }
+        completion_reward = {
+            INS = {
+                country_event = {
+                    id = luxembourg.15
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_145
+        icon = GFX_focus_usa_focus_on_europe
+        x = 80
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_129_copy }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_130_copy }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_138 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_146 }
+        completion_reward = {
+            add_ideas = place_europe_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_146
+        icon = GFX_focus_generic_economic_recovery
+        x = 87
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_139 focus = my_hoi4_mod_LUX_focus_tree_focus_140 }
+        completion_reward = {
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_147
+        icon = GFX_focus_generic_communist_industry
+        x = 40
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_78 focus = my_hoi4_mod_LUX_focus_tree_focus_79 }
+        completion_reward = {
+            add_political_power = 150
+            add_popularity = {
+                ideology = communism
+                popularity = 0.25
+            }
+            add_tech_bonus = {
+                name = industry_boost
+                bonus = 2.0
+                uses = 1
+                category = industry
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_148
+        icon = GFX_focus_generic_attack_the_guyanas
+        x = 61
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_122 }
+        available = {
+            ENG = {
+                owns_state = 687
+            }
+            FRA = {
+                owns_state = 310
+            }
+        }
+        completion_reward = {
+            ENG = {
+                country_event = {
+                    id = luxembourg.17
+                    days = 0
+                }
+            }
+            FRA = {
+                country_event = {
+                    id = luxembourg.20
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_149
+        icon = GFX_focus_generic_attack_venezuela
+        x = 61
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_148 }
+        completion_reward = {
+            VEN = {
+                country_event = {
+                    id = luxembourg.21
+                    days = 0
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_150
+        icon = GFX_focus_generic_south_america
+        x = 61
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_149 }
+        completion_reward = {
+            add_manpower = 100000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_151
+        icon = GFX_focus_generic_attack_colombia
+        x = 61
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_150 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = COL
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = ECU
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_152
+        icon = GFX_focus_generic_attack_peru
+        x = 61
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_151 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_153 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = PRU
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = BOL
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = PAR
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_153
+        icon = GFX_focus_generic_attack_argentina
+        x = 63
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_150 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = ARG
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = CHL
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_154
+        icon = GFX_focus_attack_mexico
+        x = 65
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_150 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = COS
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = ELS
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = GUA
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = HON
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = NIC
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = PAN
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = MEX
+            }
+            create_wargoal = {
+                type = annex_everything
+                target = CUB
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_155
+        icon = GFX_focus_PHI_reconciliation_with_spain
+        x = 61
+        y = 8
+        cost = 20
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_152 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_156 }
+        will_lead_to_war_with = SPR
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = SPR
+            }
+            PRU = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            COL = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            ECU = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            ARG = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            CHL = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            BOL = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            BLZ = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            COS = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            ELS = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            GUA = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            HON = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            NIC = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            PAN = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            MEX = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            CUB = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            PHI = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            PAR = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+            VEN = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_156
+        icon = GFX_focus_generic_attack_philippines
+        x = 63
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_154 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = PHI
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_157
+        icon = GFX_focus_generic_attack_usa
+        x = 61
+        y = 9
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_155 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = USA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_158
+        icon = GFX_focus_generic_expand_gold_mining
+        x = 65
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_152 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_154 }
+        available = {
+            controls_state = 303
+            controls_state = 277
+        }
+        completion_reward = {
+            add_ideas = gold_mine_lux
+            277 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            303 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_159
+        icon = GFX_focus_fra_milice
+        x = 64
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_122 focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
+        completion_reward = {
+            add_ideas = french_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_160
+        icon = GFX_focus_fra_devalue_the_franc
+        x = 67
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = FRA_devalue_the_franc
+                days = 365
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_161
+        icon = GFX_focus_chi_reach_out_to_france
+        x = 66
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_160 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_162 }
+        available = {
+            FRA = {
+                has_government = neutrality
+            }
+        }
+        completion_reward = {
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_162
+        icon = GFX_focus_attack_france
+        x = 68
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_160 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_161 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_163 }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA
+            }
+            FRA = {
+                every_core_state = {
+                    add_core_of = LUX
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_163
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 64
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_161 focus = my_hoi4_mod_LUX_focus_tree_focus_159 }
+        mutually_exclusive = { focus = my_hoi4_mod_LUX_focus_tree_focus_162 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            FRA = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_164
+        icon = GFX_focus_CZE_demonstration_of_military_achievements
+        x = 68
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_162 focus = my_hoi4_mod_LUX_focus_tree_focus_161 }
+        completion_reward = {
+            add_manpower = 100000
+            add_war_support = 0.15
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 1
+                category = infantry_weapons
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_165
+        icon = GFX_focus_attack_germany
+        x = 67
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_164 }
+        completion_reward = {
+            add_ideas = retribution_for_seden_Lux
+            create_wargoal = {
+                type = annex_everything
+                target = GER
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_166
+        icon = GFX_focus_generic_attack_siam
+        x = 77
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_129_copy }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = SIA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_167
+        icon = GFX_focus_ARG_banco_central_de_la_republica_argentina
+        x = 66
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_161 }
+        available = {
+            is_in_faction_with = FRA
+        }
+        completion_reward = {
+            add_stability = 0.2
+            8 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            FRA = {
+                puppet = {
+                    target = LUX
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_168
+        icon = GFX_focus_generic_industry_1
+        x = 70
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_162 }
+        available = {
+            controls_state = 16
+        }
+        completion_reward = {
+            16 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            16 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_169
+        icon = GFX_focus_JAP_expand_the_showa_research_association
+        x = 69
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_164 }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+                bonus = 5.0
+                uses = 1
+                category = artillery
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_170
+        icon = GFX_focus_GER_remilitarize_the_rhineland
+        x = 67
+        y = 6
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_165 }
+        available = {
+            controls_state = 51
+            controls_state = 42
+        }
+        completion_reward = {
+            add_state_core = 42
+            add_state_core = 51
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_171
+        icon = GFX_focus_GER_european_confederation
+        x = 67
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_170 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_169 }
+        completion_reward = {
+            add_ideas = new_europe_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_172
+        icon = GFX_focus_generic_merchant_fleet
+        x = 65
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_158 }
+        available = {
+            controls_state = 7
+            controls_state = 6
+        }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 3
+                category = naval_equipment
+            }
+            6 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            7 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_173
+        icon = GFX_goal_generic_positive_trade_relations
+        x = 72
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        completion_reward = {
+            add_ideas = merchant_lux
+            country_event = { id = hmb_my_hoi4_mod_advisor_focus.7 days = 1 }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_174
+        icon = GFX_focus_eng_move_to_secure_the_dominions
+        x = 70
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        available = {
+            controls_state = 8
+            num_of_civilian_factories > 4
+        }
+        completion_reward = {
+            8 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = -4
+                    instant_build = yes
+                }
+            }
+            add_offsite_building = {
+                type = industrial_complex
+                level = 5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_175
+        icon = GFX_focus_generic_military_dictatorship
+        x = 70
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_174 }
+        available = {
+            controls_state = 8
+            num_of_military_factories > 4
+            
+        }
+        completion_reward = {
+            add_ideas = place_europe_lux
+            8 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = -4
+                    instant_build = yes
+                }
+            }
+            add_offsite_building = {
+                type = arms_factory
+                level = 5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_176
+        icon = GFX_goal_generic_construct_civilian
+        x = 74
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_121 }
+        completion_reward = {
+            add_ideas = tall_lux
+            8 = {
+                add_extra_state_shared_building_slots = 10
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 10
+                add_building_construction = {
+                    type = infrastructure
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_177
+        icon = GFX_focus_GER_factories_for_resources
+        x = 72
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_176 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_173 }
+        completion_reward = {
+            8 = {
+                add_resource = {
+                    type = steel
+                    amount = 15
+                }
+                add_resource = {
+                    type = aluminium
+                    amount = 15
+                }
+                add_resource = {
+                    type = tungsten
+                    amount = 15
+                }
+                add_resource = {
+                    type = chromium
+                    amount = 15
+                }
+                add_resource = {
+                    type = oil
+                    amount = 15
+                }
+                add_resource = {
+                    type = rubber
+                    amount = 15
+                }
+            }
+            8 = {
+                add_resource = {
+                    type = coal
+                    amount = 15
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_178
+        icon = GFX_focus_CHI_military_mission
+        x = 76
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_176 }
+        completion_reward = {
+            8 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_179
+        icon = GFX_focus_generic_coastal_fort
+        x = 74
+        y = 5
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_178 }
+        completion_reward = {
+            add_ideas = fort_lux
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_180
+        icon = GFX_goal_continuous_non_factory_construct
+        x = 72
+        y = 4
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_177 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_184 }
+        completion_reward = {
+            add_tech_bonus = {
+                bonus = 1.0
+                uses = 2
+                ahead_reduction = 4
+                category = industry
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_181
+        icon = GFX_focus_generic_money_for_equipment
+        x = 70
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_180 }
+        completion_reward = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_182
+        icon = GFX_focus_CONGO_gold_and_diamonds
+        x = 72
+        y = 5
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_180 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_183
+        icon = GFX_focus_generic_arms_trade
+        x = 72
+        y = 7
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_179 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_181 }
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_182 }
+        completion_reward = {
+            add_ideas = trade_lux_empire
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_184
+        icon = GFX_focus_generic_hydroelectric_energy
+        x = 74
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_176 }
+        completion_reward = {
+            8 = {
+                add_building_construction = {
+                    type = dam
+                    level = 1
+                    instant_build = yes
+                    province = {
+                        id = 6583
+                    }
+                }
+            }
+            8 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_185
+        icon = GFX_focus_JAP_greater_east_asian_co_properity_sphere
+        x = 69
+        y = 9
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            JAP = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_186
+        icon = GFX_focus_generic_italy_first
+        x = 71
+        y = 9
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            ITA = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_187
+        icon = GFX_focus_CHI_lay_the_foundation_for_a_united_china
+        x = 73
+        y = 9
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            PRC = {
+                add_ideas = communist_development_lux
+            }
+            CHI = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_188
+        icon = GFX_focus_GER_the_four_year_plan
+        x = 75
+        y = 9
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            GER = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_189
+        icon = GFX_focus_eng_the_sun_never_sets
+        x = 69
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            ENG = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_190
+        icon = GFX_focus_fra_french_union
+        x = 71
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            FRA = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_191
+        icon = GFX_focus_usa_recruit_the_free_corps
+        x = 73
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            USA = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_LUX_focus_tree_focus_192
+        icon = GFX_focus_SOV_international_union_of_soviet_republics
+        x = 75
+        y = 8
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_183 }
+        completion_reward = {
+            add_offsite_building = {
+                type = arms_factory
+                level = 1
+            }
+            SOV = {
+                add_ideas = communist_development_lux
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

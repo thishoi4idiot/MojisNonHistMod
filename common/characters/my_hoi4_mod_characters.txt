@@ -1,0 +1,300 @@
+characters = {
+    new_character_1 = {
+        name = new_character_1
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_1
+                small = GFX_idea_my_hoi4_mod_new_character_1
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_1
+            cost = 150
+            allowed = {
+                original_tag = LUX
+                has_government = democratic
+            }
+            traits = { my_hoi4_mod_political_trait_1 }
+        }
+        navy_leader = {
+            traits = { superior_tactician ironside }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 5
+            maneuvering_skill = 4
+            coordination_skill = 4
+            legacy_id = -1
+        }
+    }
+    new_character_2 = {
+        name = new_character_2
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_2
+                small = GFX_idea_my_hoi4_mod_new_character_2
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_2
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_2 }
+        }
+        field_marshal = {
+            traits = { armor_officer panzer_leader }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 1
+            planning_skill = 4
+            logistics_skill = 3
+            legacy_id = -1
+        }
+    }
+    new_character_3 = {
+        name = new_character_3
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_3
+                small = GFX_idea_my_hoi4_mod_new_character_3
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_3
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_3 }
+        }
+        corps_commander = {
+            traits = { infantry_officer infantry_leader }
+            skill = 4
+            attack_skill = 2
+            defense_skill = 5
+            planning_skill = 4
+            logistics_skill = 2
+            legacy_id = -1
+        }
+    }
+    new_character_4 = {
+        name = new_character_4
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_4
+                small = GFX_idea_my_hoi4_mod_new_character_4
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_4
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_4 }
+        }
+    }
+    new_character_5 = {
+        name = new_character_5
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_5
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_5
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_5 }
+        }
+    }
+    new_character_6 = {
+        name = new_character_6
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_6
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_6
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_7 }
+        }
+    }
+    new_character_7 = {
+        name = new_character_7
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_7
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_7
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_6 }
+        }
+    }
+    new_character_8 = {
+        name = new_character_8
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_8
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_8
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_8 }
+        }
+    }
+    new_character_9 = {
+        name = new_character_9
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_9
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_9
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_9 }
+        }
+    }
+    new_character_10 = {
+        name = new_character_10
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_10
+                small = GFX_idea_my_hoi4_mod_new_character_10
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_10
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_10 }
+        }
+        field_marshal = {
+            traits = { trickster infantry_leader }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 6
+            planning_skill = 2
+            logistics_skill = 5
+            legacy_id = -1
+        }
+    }
+    new_character_11 = {
+        name = new_character_11
+        portraits = {
+            civilian = {
+                large = GFX_portrait_unknown
+                small = GFX_idea_my_hoi4_mod_new_character_11
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = new_character_11
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_11 }
+        }
+    }
+    new_character_12 = {
+        name = new_character_12
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_12
+                small = GFX_idea_my_hoi4_mod_new_character_12
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = new_character_12
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_12 }
+        }
+        field_marshal = {
+            traits = { panzer_leader }
+            skill = 3
+            attack_skill = 5
+            defense_skill = 1
+            planning_skill = 5
+            logistics_skill = 4
+            legacy_id = -1
+        }
+    }
+    new_character_13 = {
+        name = new_character_13
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_13
+                small = GFX_idea_my_hoi4_mod_new_character_13
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = new_character_13
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_13 }
+        }
+    }
+    new_character_14 = {
+        name = new_character_14
+        portraits = {
+            civilian = {
+                large = GFX_portrait_my_hoi4_mod_new_character_14
+                small = GFX_idea_my_hoi4_mod_new_character_14
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = new_character_14
+            cost = 150
+            allowed = {
+                original_tag = LUX
+            }
+            traits = { my_hoi4_mod_political_trait_14 }
+        }
+    }
+}

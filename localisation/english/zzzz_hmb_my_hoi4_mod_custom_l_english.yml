@@ -1,0 +1,9 @@
+﻿l_english:
+ hmb_my_hoi4_mod_advisor_program_1_advisor_only_tt:0 "This focus can only be completed by The assigned advisor through the advisor focus program."
+ hmb_my_hoi4_mod_advisor_program_1_in_progress_tt:0 "The assigned advisor is working on this focus. Progress remaining: §R$DAYS_LEFT|0$§!/$TOTAL_DAYS|0$ days."
+ hmb_my_hoi4_mod_advisor_program_2_advisor_only_tt:0 "This focus can only be completed by The assigned advisor through the advisor focus program."
+ hmb_my_hoi4_mod_advisor_program_2_in_progress_tt:0 "The assigned advisor is working on this focus. Progress remaining: §R$DAYS_LEFT|0$§!/$TOTAL_DAYS|0$ days."
+ hmb_my_hoi4_mod_advisor_program_3_advisor_only_tt:0 "This focus can only be completed by Greta Baumann through the advisor focus program."
+ hmb_my_hoi4_mod_advisor_program_3_in_progress_tt:0 "Greta Baumann is working on this focus. Progress remaining: §R$DAYS_LEFT|0$§!/$TOTAL_DAYS|0$ days."
+ hmb_my_hoi4_mod_advisor_program_4_advisor_only_tt:0 "This focus can only be completed by Greta Baumann through the advisor focus program."
+ hmb_my_hoi4_mod_advisor_program_4_in_progress_tt:0 "Greta Baumann is working on this focus. Progress remaining: §R$DAYS_LEFT|0$§!/$TOTAL_DAYS|0$ days."

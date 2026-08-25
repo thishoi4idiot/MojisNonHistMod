@@ -1,0 +1,477 @@
+add_namespace = luxembourg
+
+country_event = {
+    id = luxembourg.1
+    title = luxembourg.1.t
+    desc = luxembourg.1.d
+    picture = GFX_report_event_001
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.1.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 100
+    }
+    option = {
+        name = luxembourg.1.b
+        ai_chance = {
+            factor = 1
+        }
+        add_stability = 0.1
+    }
+    option = {
+        name = luxembourg.1.c
+        ai_chance = {
+            factor = 1
+        }
+        add_war_support = 0.05
+    }
+}
+
+country_event = {
+    id = luxembourg.2
+    title = luxembourg.2.t
+    desc = luxembourg.2.d
+    picture = GFX_report_event_ast_parliament_house
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.2.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            transfer_state = 463
+        }
+          386= {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+    }
+    option = {
+        name = luxembourg.2.b
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+    }
+}
+
+country_event = {
+    id = luxembourg.3
+    title = luxembourg.3.t
+    desc = luxembourg.3.d
+    picture = GFX_report_event_AST_winston_platypus_2
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.3.a
+        ai_chance = {
+            factor = 1
+        }
+        SOV = {
+            add_to_faction = LUX
+        }
+    }
+    option = {
+        name = luxembourg.3.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.5
+    title = luxembourg.5.t
+    desc = luxembourg.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.5.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            puppet = BEL
+        }
+    }
+    option = {
+        name = luxembourg.5.b
+        ai_chance = {
+            factor = 0.15
+        }
+        LUX = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = BEL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.7
+    title = luxembourg.7.t
+    desc = luxembourg.7.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.7.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            puppet = HOL
+        }
+    }
+    option = {
+        name = luxembourg.7.b
+        ai_chance = {
+            factor = 0.2
+        }
+        LUX = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = HOL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.6
+    title = luxembourg.6.t
+    desc = luxembourg.6.d
+    picture = GFX_report_event_ast_planning
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.6.a
+        ai_chance = {
+            factor = 1
+        }
+        GER = {
+            add_to_faction = LUX
+        }
+    }
+    option = {
+        name = luxembourg.6.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.8
+    title = luxembourg.8.t
+    desc = luxembourg.8.d
+    picture = GFX_report_event_AUS_military_march
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.8.a
+        ai_chance = {
+            factor = 1
+        }
+        every_core_state = {
+            add_core_of = LUX
+        }
+        LUX = {
+            annex_country = {
+                target = BEL
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.8.b
+        ai_chance = {
+            factor = 0
+        }
+        add_war_support = -0.25
+        add_stability = -0.25
+        add_political_power = -200
+        add_manpower = -50000
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = BEL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.11
+    title = luxembourg.11.t
+    desc = luxembourg.11.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.11.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            add_to_faction = BEL
+        }
+    }
+    option = {
+        name = luxembourg.11.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.10
+    title = luxembourg.10.t
+    desc = luxembourg.10.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.10.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            add_to_faction = HOL
+        }
+    }
+    option = {
+        name = luxembourg.10.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.13
+    title = luxembourg.13.t
+    desc = luxembourg.13.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.13.a
+        ai_chance = {
+            factor = 0.1
+        }
+        every_owned_state = {
+            add_core_of = LUX
+        }
+        LUX = {
+            annex_country = {
+                target = BEL
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.13.b
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = BEL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.14
+    title = luxembourg.14.t
+    desc = luxembourg.14.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.14.a
+        ai_chance = {
+            factor = 1
+        }
+        every_owned_state = {
+            add_core_of = LUX
+        }
+        LUX = {
+            annex_country = {
+                target = HOL
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.14.b
+        ai_chance = {
+            factor = 0.1
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = HOL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.15
+    title = luxembourg.15.t
+    desc = luxembourg.15.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.15.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            annex_country = {
+                target = INS
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.15.b
+        ai_chance = {
+            factor = 0.1
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = INS
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.16
+    title = luxembourg.16.t
+    desc = luxembourg.16.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.16.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            annex_country = {
+                target = COG
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.16.b
+        ai_chance = {
+            factor = 0.1
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = COG
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.17
+    title = luxembourg.17.t
+    desc = luxembourg.17.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.17.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        LUX = {
+            transfer_state = 687
+        }
+    }
+    option = {
+        name = luxembourg.17.b
+        ai_chance = {
+            factor = 0
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = HOL
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.20
+    title = luxembourg.20.t
+    desc = luxembourg.20.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.20.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        LUX = {
+            transfer_state = 310
+        }
+    }
+    option = {
+        name = luxembourg.20.b
+        ai_chance = {
+            factor = 0.1
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA
+            }
+        }
+    }
+}
+
+country_event = {
+    id = luxembourg.21
+    title = luxembourg.21.t
+    desc = luxembourg.21.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = luxembourg.21.a
+        ai_chance = {
+            factor = 1
+        }
+        LUX = {
+            annex_country = {
+                target = VEN
+                transfer_troops = yes
+            }
+        }
+    }
+    option = {
+        name = luxembourg.21.b
+        ai_chance = {
+            factor = 0
+        }
+        LUX = {
+            create_wargoal = {
+                type = annex_everything
+                target = VEN
+            }
+        }
+    }
+}

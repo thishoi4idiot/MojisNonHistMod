@@ -1,0 +1,3570 @@
+focus_tree = {
+	id = venezuelan_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = VEN
+			#always = no
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1100 }
+
+#	focus = {
+#		id = ROM_
+#		icon = GFX_
+#		
+#		
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+	focus = {
+		id = VEN_modernize_the_army
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 5
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = VEN_develop_military_institute
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = VEN_modernize_the_army }
+		x = -3
+		y = 1
+		relative_position_id = VEN_modernize_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = VEN_improve_infantry_equipment
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = VEN_develop_military_institute }
+		x = -2
+		y = 1
+		relative_position_id = VEN_develop_military_institute
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_develop_infantry_technology
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_develop_support_equipment
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		prerequisite = { focus = VEN_develop_military_institute }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_develop_military_institute
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_develop_support_technology
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_advance_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = VEN_develop_military_institute }
+		
+		x = 2
+		y = 1
+		relative_position_id = VEN_develop_military_institute
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_develop_artillery_technology
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_doctrinal_improvement
+		icon = GFX_SOV_swap_to_political_advisors_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_advance_artillery }
+		prerequisite = { focus = VEN_develop_support_equipment }
+		prerequisite = { focus = VEN_improve_infantry_equipment }
+		
+		x = 0
+		y = 2
+		relative_position_id = VEN_develop_military_institute
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = VEN_doctrinal_improvment
+				cost_reduction = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_invite_german_military_mission
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = VEN_modernize_the_army }
+		
+		x = 1
+		y = 1
+		relative_position_id = VEN_modernize_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_government = fascism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = POL_german_training
+		}
+	}
+
+	focus = {
+		id = VEN_establish_venezuelan_tankforce
+		icon = GFX_focus_generic_tank_assembly
+		prerequisite = { focus = VEN_invite_german_military_mission }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_invite_german_military_mission
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_armor_bonus
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_tech_bonus = {
+				name = VEN_mech_bonus
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_increase_conscription
+		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_modernize_the_army }
+		
+		x = 3
+		y = 1
+		relative_position_id = VEN_modernize_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+	}
+
+	focus = {
+		id = VEN_develop_reserve_divisions
+		icon = GFX_SOV_barrier_troops_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_increase_conscription }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_increase_conscription
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ROM_reserve_divisions
+		}
+	}
+
+	focus = {
+		id = VEN_overhaul_the_navy
+		icon = GFX_focus_BRA_navy
+		
+		
+		x = 14
+		y = 0
+		#relative_position_id = VEN_modernize_the_army
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = VEN_prioritise_coastal_defense
+		icon = GFX_SOV_pc_of_the_ussr_navy_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_overhaul_the_navy }
+		mutually_exclusive = { focus = VEN_construct_a_grand_venezuelan_navy }
+		x = -1
+		y = 1
+		relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = escort_effort_focus
+		}
+	}
+
+	focus = {
+		id = VEN_improve_cruiser_models
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = VEN_prioritise_coastal_defense }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_prioritise_coastal_defense
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_cruiser_bonus
+				bonus = 2
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_invite_british_naval_experts
+		icon = GFX_focus_generic_merchant_fleet
+		prerequisite = { focus = VEN_prioritise_coastal_defense }
+		
+		x = -2
+		y = 1
+		relative_position_id = VEN_prioritise_coastal_defense
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+        			has_war_with = ENG
+    			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = britishConvoying
+		}
+	}
+
+	focus = {
+		id = VEN_construct_a_grand_venezuelan_navy
+		icon = GFX_focus_NORDIC_dem_navy
+		prerequisite = { focus = VEN_overhaul_the_navy }
+		mutually_exclusive = { focus = VEN_prioritise_coastal_defense }
+		x = 1
+		y = 1
+		relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+
+	focus = {
+		id = VEN_modernize_battleship_blueprints
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = VEN_construct_a_grand_venezuelan_navy }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_construct_a_grand_venezuelan_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_battleship_bonus
+				bonus = 2
+				uses = 1
+				category = bb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_improve_our_destroyers
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = VEN_modernize_battleship_blueprints }
+		prerequisite = { focus = VEN_improve_cruiser_models }
+		
+		x = -1
+		y = 1
+		relative_position_id = VEN_modernize_battleship_blueprints
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_battleship_bonus
+				bonus = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_adopt_modern_naval_strategies
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = VEN_improve_our_destroyers }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_improve_our_destroyers
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = VEN_modern_navy_strategy
+				cost_reduction = 1
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_establish_a_submarine_fleet
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = VEN_construct_a_grand_venezuelan_navy }
+		
+		x = 2
+		y = 1
+		relative_position_id = VEN_construct_a_grand_venezuelan_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_submarine_bonus
+				bonus = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_kickstart_naval_production
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = VEN_overhaul_the_navy }
+		
+		x = -3
+		y = 1
+		relative_position_id = VEN_overhaul_the_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+			NOT = {
+				controls_state = 307
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			307 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_establish_an_airforce
+		icon = GFX_focus_BRA_air_force
+		
+		
+		x = 21
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	focus = {
+		id = VEN_school_of_experimental_aviational_thought
+		icon = GFX_focus_generic_air_research_boost
+		prerequisite = { focus = VEN_establish_an_airforce }
+		
+		x = 3
+		y = 1
+		relative_position_id = VEN_establish_an_airforce
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+			IF = {
+				limit = { 
+					307 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+
+				307 = {
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 8113
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_modernize_aerial_tactics
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = VEN_establish_an_airforce }
+		
+		x = -6
+		y = 0
+		relative_position_id = VEN_school_of_experimental_aviational_thought
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = VEN_modern_air_tactic
+				cost_reduction = 1
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_prioritize_aerial_defence
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { focus = VEN_establish_an_airforce }
+		mutually_exclusive = { focus = VEN_an_offensive_airforce }
+		x = -1
+		y = 1
+		relative_position_id = VEN_establish_an_airforce
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_air_defence
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_construct_stationary_air_defences
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = VEN_prioritize_aerial_defence }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_prioritize_aerial_defence
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			307 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+			488 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+			489 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_an_offensive_airforce
+		icon = GFX_focus_generic_multi_role_aircraft
+		prerequisite = { focus = VEN_establish_an_airforce }
+		mutually_exclusive = { focus = VEN_prioritize_aerial_defence }
+		x = 1
+		y = 1
+		relative_position_id = VEN_establish_an_airforce
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_offensive_airforce
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_develop_strategic_bombers
+		icon = GFX_focus_generic_long_range_aircraft
+		prerequisite = { focus = VEN_an_offensive_airforce }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_an_offensive_airforce
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_develop_strategic_bombers
+				bonus = 1.0
+				uses = 1
+				category = heavy_air
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_industrial_improvement
+		icon = GFX_SOV_aristocratic_investments_ccp_2d_sov_compatibility
+		
+		
+		x = 29
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_establish_the_ministry_of_public_works_assistance
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = VEN_industrial_improvement }
+		
+		x = -3
+		y = 1
+		relative_position_id = VEN_industrial_improvement
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = idea_URG_ministry_of_public_works
+		}
+	}
+
+	focus = {
+		id = VEN_begin_rapid_industrialization
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = VEN_establish_the_ministry_of_public_works_assistance }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_establish_the_ministry_of_public_works_assistance
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.15
+			add_timed_idea = {
+				idea = idea_URG_rapid_industrialization
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_fund_domestic_industries
+		icon = GFX_SOV_heavy_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_begin_rapid_industrialization }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_begin_rapid_industrialization
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_invite_european_immigrants
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { focus = VEN_fund_domestic_industries }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_fund_domestic_industries
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_core_state = {
+				add_manpower = 50000
+			}
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = VEN_land_improvements
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = VEN_invite_european_immigrants }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_invite_european_immigrants
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_expand_oil_operations
+		icon = GFX_SOV_oil_production_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_industrial_improvement }
+		
+		x = -1
+		y = 1
+		relative_position_id = VEN_industrial_improvement
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			307 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_improvement_excavation_technology
+		icon = GFX_focus_SWE_landsverk
+		prerequisite = { focus = VEN_expand_oil_operations }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_expand_oil_operations
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = VEN_excavation_improvement
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_expand_coal_mines
+		icon = GFX_focus_generic_coal_mining
+		prerequisite = { focus = VEN_improvement_excavation_technology }
+		
+		x = 2
+		y = 1
+		relative_position_id = VEN_improvement_excavation_technology
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			489 = {
+				add_resource = {
+					type = coal
+					amount = 20
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_improve_excavation_infrastructure
+		icon = GFX_focus_generic_electrification
+		prerequisite = { focus = VEN_improvement_excavation_technology }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_improvement_excavation_technology
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			307 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_the_university_of_caracas
+		icon = GFX_SOV_leningrad_polytechnical_institute_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_industrial_improvement }
+		
+		x = 1
+		y = 1
+		relative_position_id = VEN_industrial_improvement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = VEN_education_reforms
+		icon = GFX_focus_SWE_education_reform
+		prerequisite = { focus = VEN_the_university_of_caracas }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_the_university_of_caracas
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+			add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = VEN_expand_state_arsenals
+		icon = GFX_SOV_expand_the_aircraft_industry_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_industrial_improvement }
+		
+		x = 3
+		y = 1
+		relative_position_id = VEN_industrial_improvement
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_encourage_military_entrepreneurship
+		icon = GFX_SOV_bring_old_trotskyists_back_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_expand_state_arsenals }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_expand_state_arsenals
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FRA_entrepeneurship
+		}
+	}
+
+	focus = {
+		id = VEN_strengthen_contreras_dictatorship
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+		
+		mutually_exclusive = { focus = VEN_oppose_contreras_dictatorship }
+		x = 36
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = VEN_expand_the_party
+		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_strengthen_contreras_dictatorship }
+		
+		x = -2
+		y = 1
+		relative_position_id = VEN_strengthen_contreras_dictatorship
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_state_propaganda
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = VEN_expand_the_party }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_expand_the_party
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = VEN_the_supreme_leader
+		icon = GFX_focus_GER_the_supreme_leader
+		prerequisite = { focus = VEN_state_propaganda }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_state_propaganda
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_country_leader_trait = GER_supreme_leader
+		}
+	}
+
+	focus = {
+		id = VEN_support_the_spanish_nationalists
+		icon = GFX_focus_generic_befriend_nationalist_spain_focus
+		prerequisite = { focus = VEN_strengthen_contreras_dictatorship }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_strengthen_contreras_dictatorship
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			SPR_scw_in_progress = yes
+			SPR = {
+				exists = yes
+				hidden_trigger = {
+					has_country_flag = SPR_nationalist_spain_flag
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			add_relation_modifier = {
+				target = SPA
+				modifier  = ETH_support_spain_static_modifier
+			}
+			add_relation_rule_override = {
+				target = SPA
+				can_send_volunteers = yes 
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_invite_spanish_exiles
+		icon = GFX_focus_spa_caudillo_of_spain
+		prerequisite = { focus = VEN_support_the_spanish_nationalists }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_support_the_spanish_nationalists
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			has_global_flag = scw_over
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				any_other_country = {
+				NOT = {
+					tag = SPA
+				}
+					has_civil_war = no
+					}
+				}
+			else = {
+				any_country = {
+					original_tag = SPR
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = neutrality
+					}
+				}
+					has_civil_war = no
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = VEN_introduce_corporatism
+		icon = GFX_focus_ICE_state_corporatism
+		prerequisite = { focus = VEN_strengthen_contreras_dictatorship }
+		
+		x = 2
+		y = 1
+		relative_position_id = VEN_strengthen_contreras_dictatorship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = idea_URG_corporatism
+		}
+	}
+
+	focus = {
+		id = VEN_align_with_germany
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = VEN_introduce_corporatism }
+		mutually_exclusive = { focus = VEN_venezuela_first }
+		x = 0
+		y = 1
+		relative_position_id = VEN_introduce_corporatism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			GER = {
+				has_government = fascism
+				exists = yes
+				has_capitulated = no
+				NOT = { is_in_faction_with = ROOT }
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+			 	limit = {
+			 		GER = {
+			 			has_government = fascism
+			 			exists = yes
+			 			has_capitulated = no
+			 			NOT = { is_in_faction_with = ROOT }
+			 		}
+			 	}
+			 	GER = {
+			 		country_event = {
+			 			id = generic.2
+			 			hours = 2 # optional - can take hours/days/months
+			 			random_hours = 2 # optional - can take hours/days/months
+			 		}
+			 	}
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_venezuela_first
+		icon = GFX_focus_generic_attack_venezuela
+		prerequisite = { focus = VEN_introduce_corporatism }
+		mutually_exclusive = { focus = VEN_align_with_germany }
+		x = 2
+		y = 1
+		relative_position_id = VEN_introduce_corporatism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_oppose_contreras_dictatorship
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		
+		mutually_exclusive = { focus = VEN_strengthen_contreras_dictatorship }
+		x = 45
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = VEN_form_the_wide_coalition
+		icon = GFX_focus_GER_the_peoples_victory
+		prerequisite = { focus = VEN_oppose_contreras_dictatorship }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_oppose_contreras_dictatorship
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_align_with_conseratism
+		icon = GFX_focus_por_concordat
+		prerequisite = { focus = VEN_form_the_wide_coalition }
+		mutually_exclusive = { focus = VEN_side_with_the_trade_unions }
+		x = -3
+		y = 1
+		relative_position_id = VEN_form_the_wide_coalition
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_reinforce_family_values
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { focus = VEN_align_with_conseratism }
+		
+		x = -2
+		y = 1
+		relative_position_id = VEN_align_with_conseratism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+
+	focus = {
+		id = VEN_overthrow_the_regime
+		icon = GFX_SOV_left_opposition_coup_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_align_with_conseratism }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_align_with_conseratism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_invite_a_foreign_monarch
+		icon = GFX_focus_DEN_the_king_assumes_power
+		prerequisite = { focus = VEN_overthrow_the_regime }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_overthrow_the_regime
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			NOT = {
+				DEN = {
+					has_government = neutrality
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_country_leader = {
+				name = "Christian X"
+				desc = "sigma_denma_desc"
+				picture = "GFX_portrait_DEN_christian_x"
+
+				ideology = despotism
+				traits = { DEN_the_king }
+				expire = "1965.1.1"
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_liberate_denmark
+		icon = GFX_focus_DEN_danish_freedom
+		prerequisite = { focus = VEN_invite_a_foreign_monarch }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_invite_a_foreign_monarch
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			OR = {
+				DEN = {
+					has_government = communism
+				}
+				DEN = {
+					has_government = fascism
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = DEN
+				expire = 0
+			}
+			add_state_core = 99
+			add_state_core = 912
+			add_state_core = 911
+			add_state_core = 37
+			add_state_core = 910
+			add_state_core = 337
+			add_state_core = 101
+			add_state_core = 100
+			add_state_core = 933
+			add_state_core = 138
+			add_state_core = 124
+		}
+	}
+
+	focus = {
+		id = VEN_side_with_the_trade_unions
+		icon = GFX_SOV_leader_of_the_party_and_the_people_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_form_the_wide_coalition }
+		mutually_exclusive = { focus = VEN_align_with_conseratism }
+		x = 3
+		y = 1
+		relative_position_id = VEN_form_the_wide_coalition
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.20
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_secure_trade_union_workers_support
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = VEN_side_with_the_trade_unions }
+		
+		x = -3
+		y = 1
+		relative_position_id = VEN_side_with_the_trade_unions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ENG_trade_union_factory_worker_support
+			add_ideas = ENG_factory_safety_regulations_1
+			add_stability = 0.1
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = VEN_strengthen_trade_unions
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = VEN_side_with_the_trade_unions }
+		
+		x = 3
+		y = 1
+		relative_position_id = VEN_side_with_the_trade_unions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = SOV_strong_trade_unions_idea
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = VEN_the_social_democratic_compromise
+		icon = GFX_focus_generic_social_democracy
+		prerequisite = { focus = VEN_side_with_the_trade_unions }
+		mutually_exclusive = { focus = VEN_embrace_marxist_ideals }
+		x = -1
+		y = 1
+		relative_position_id = VEN_side_with_the_trade_unions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.30
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_build_a_welfare_state
+		icon = GFX_focus_generic_public_works
+		prerequisite = { focus = VEN_the_social_democratic_compromise }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_the_social_democratic_compromise
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = HOL_weak_government
+				days = 720
+			}
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = VEN_state_paid_vacation
+		icon = GFX_focus_SWE_state_paid_vacation
+		prerequisite = { focus = VEN_build_a_welfare_state }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_build_a_welfare_state
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = SWE_paid_holidays_idea
+		}
+	}
+
+	focus = {
+		id = VEN_strengthen_public_trust
+		icon = GFX_focus_BRA_reach_out_to_military_dem
+		prerequisite = { focus = VEN_the_social_democratic_compromise }
+		
+		x = -2
+		y = 1
+		relative_position_id = VEN_the_social_democratic_compromise
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 200
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_protect_farmers
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = VEN_build_a_welfare_state }
+		
+		x = -1
+		y = 2
+		relative_position_id = VEN_build_a_welfare_state
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = FRA_agricultural_protectionism
+		}
+	}
+
+	focus = {
+		id = VEN_constitutional_guarantees
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = VEN_build_a_welfare_state }
+		
+		x = 1
+		y = 2
+		relative_position_id = VEN_build_a_welfare_state
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = ROM_constitutional_guarantees
+		}
+	}
+
+	focus = {
+		id = VEN_embrace_marxist_ideals
+		icon = GFX_SOV_expand_the_agitprop_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_side_with_the_trade_unions }
+		mutually_exclusive = { focus = VEN_the_social_democratic_compromise }
+		x = 1
+		y = 1
+		relative_position_id = VEN_side_with_the_trade_unions
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.30
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_introduce_planned_economy
+		icon = GFX_SOV_architect_of_communism_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_embrace_marxist_ideals }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_embrace_marxist_ideals
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = new_economic_policy
+		}
+	}
+
+	focus = {
+		id = VEN_agricultural_collectivization
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = VEN_introduce_planned_economy }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_introduce_planned_economy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FRA_agricultural_collectivization
+			add_stability = -0.2
+		}
+	}
+
+	focus = {
+		id = VEN_establish_the_secret_police
+		icon = GFX_focus_SWI_embrace_rote_drei
+		prerequisite = { focus = VEN_embrace_marxist_ideals }
+		
+		x = 2
+		y = 1
+		relative_position_id = VEN_embrace_marxist_ideals
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = ROM_securitate
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = VEN_collectivist_propaganda
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = VEN_establish_the_secret_police }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_establish_the_secret_police
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = SOV_collectivist_propaganda_NS
+			add_political_power = -100
+		}
+	}
+
+	focus = {
+		id = VEN_secure_the_party
+		icon = GFX_focus_SOV_the_supreme_soviet
+		prerequisite = { focus = VEN_collectivist_propaganda }
+		prerequisite = { focus = VEN_agricultural_collectivization }
+		
+		x = -1
+		y = 1
+		relative_position_id = VEN_collectivist_propaganda
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.30
+			}
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = VEN_looking_outwards
+		icon = GFX_focus_SOV_international_union_of_soviet_republics
+		prerequisite = { focus = VEN_secure_the_party }
+		
+		x = 0
+		y = 1
+		relative_position_id = VEN_secure_the_party
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = VEN_align_with_moscow
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = VEN_looking_outwards }
+		mutually_exclusive = { focus = VEN_socialist_neutrality }
+		mutually_exclusive = { focus = VEN_socialist_interventionism }
+		x = -1
+		y = 1
+		relative_position_id = VEN_looking_outwards
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			SOV = {
+				has_government = communism
+			}
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			SOV = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_socialist_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = VEN_looking_outwards }
+		mutually_exclusive = { focus = VEN_align_with_moscow }
+		mutually_exclusive = { focus = VEN_socialist_interventionism }
+		x = 1
+		y = 1
+		relative_position_id = VEN_looking_outwards
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = VEN_begin_expansionism
+		icon = GFX_SOV_eastern_expansion_ccp_2d_sov_compatibility
+		
+		
+		x = 55
+		y = 0
+		#relative_position_id = VEN_overhaul_the_navy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+			date > 1937.6.7
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	
+
+	focus = {
+		id = VEN_attack_ecuador
+		icon = GFX_focus_generic_attack_ecuador
+		prerequisite = { focus = VEN_begin_expansionism }
+		
+		x = -1
+		y = 1
+		relative_position_id = VEN_begin_expansionism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ECU
+				expire = 0
+			}
+		}
+	}	
+
+	focus = {
+		id = VEN_socialist_interventionism
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = VEN_looking_outwards }
+		mutually_exclusive = { focus = VEN_align_with_moscow }
+		mutually_exclusive = { focus = VEN_socialist_neutrality }
+		x = 3
+		y = 1
+		relative_position_id = VEN_looking_outwards
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_political_power = -100
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = volunteer_corps_focus
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = VEN_attack_colombia
+		icon = GFX_focus_generic_attack_colombia
+		prerequisite = { focus = VEN_begin_expansionism }
+		
+		x = -3
+		y = 1
+		relative_position_id = VEN_begin_expansionism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+				expire = 0
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_attack_peru
+		icon = GFX_focus_generic_attack_peru
+		prerequisite = { focus = VEN_begin_expansionism }
+		
+		x = 1
+		y = 1
+		relative_position_id = VEN_begin_expansionism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+				expire = 0
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_attack_panama
+		icon = GFX_SOV_into_central_asia_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_begin_expansionism }
+		
+		x = 3
+		y = 1
+		relative_position_id = VEN_begin_expansionism
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PAN
+				expire = 0
+			}
+		}
+	}
+
+	focus = {
+		id = VEN_target_the_europeans
+		icon = GFX_focus_usa_focus_on_europe
+		prerequisite = { focus = VEN_attack_panama }
+		prerequisite = { focus = VEN_attack_peru }
+		prerequisite = { focus = VEN_attack_colombia }
+		prerequisite = { focus = VEN_attack_ecuador }
+		
+		x = 0
+		y = 2
+		relative_position_id = VEN_begin_expansionism
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+
+	focus = {
+		id = VEN_conquer_british_colonies
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = VEN_target_the_europeans }
+		
+		x = 1
+		y = 1
+		relative_position_id = VEN_target_the_europeans
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_state_core = 691
+			add_state_core = 687
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 691 687 }
+			}
+		}
+	}
+	focus = {
+		id = VEN_seize_dutch_colonies
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = { focus = VEN_target_the_europeans }
+		
+		x = -1
+		y = 1
+		relative_position_id = VEN_target_the_europeans
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+			HOL = {
+				has_capitulated = yes
+			}
+		}
+		bypass = {
+			HOL = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			transfer_state = 695
+			transfer_state = 309
+			add_state_core = 695
+			add_state_core = 309
+		}
+	}
+	focus = {
+		id = VEN_revive_bolivars_dream
+		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
+		prerequisite = { focus = VEN_conquer_british_colonies }
+		prerequisite = { focus = VEN_seize_dutch_colonies }
+		
+		x = 0
+		y = 2
+		relative_position_id = VEN_target_the_europeans
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			is_ai = no
+			owns_state = 307
+			controls_state = 307
+			owns_state = 306
+			controls_state = 306
+			owns_state = 305
+			controls_state = 305
+			owns_state = 304
+			controls_state = 304
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			custom_effect_tooltip = gran_colombia_restoration
+			hidden_effect = {
+				load_focus_tree = gran_colombian_tree
+				set_global_flag = ven_gran_colombia_reborn
+			}
+		}
+	}
+
+}

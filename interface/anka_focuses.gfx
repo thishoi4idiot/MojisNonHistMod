@@ -1,0 +1,30 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_2"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_4"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_7"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_7.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_13"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_13.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_16"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_16.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Baltic_German_Focus_15"
+		texturefile = "gfx/interface/goals/Baltic_German_Focus_15.dds"
+	}
+}

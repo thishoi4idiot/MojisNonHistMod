@@ -1,0 +1,33 @@
+on_actions = {
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = TUR }
+					FROM = { tag = SOV }
+				}
+				set_rule = { can_join_factions = yes }
+				FROM = {
+					add_timed_idea = {
+						idea = SOV_turkish_soviet_war_victory
+						days = 365
+					}
+				}
+				add_timed_idea = {
+					idea = TUR_national_humiliation
+					days = 365
+				}
+				news_event = { id = bftb_news.403 hours = 6 }
+				if = {
+					limit = {
+						ENG = { has_war_with = SOV }
+					}
+					ENG = {
+						country_event = { id = bftb_turkey.152 hours = 6 }
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,254 @@
+Work_with_the_oligarchs = {
+ 
+	# ── Azneft (Baku, state 229) ────────────────────────────────────────────
+	SOV_invite_azneft_owners_decision = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+		available = {
+			has_completed_focus = SOV_work_with_the_oligarchs
+			229 = { is_owned_and_controlled_by = ROOT }
+		}
+		visible = { has_completed_focus = SOV_work_with_the_oligarchs }
+ 
+		cost = 0
+		fire_only_once = yes
+ 
+		complete_effect = {
+			229 = {
+				add_resource = { type = oil amount = 43 }
+				if = {
+					limit = { free_building_slots = { building = synthetic_refinery size > 0 include_locked = yes } }
+					add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
+				}
+				add_dynamic_modifier = { modifier = SOV_oligarch_extraction_penalty }
+			}
+			add_ideas = SOV_azneft_privatization_idea
+			custom_effect_tooltip = SOV_invite_azneft_owners_tt
+		}
+	}
+ 
+	# ── Grozneft (Grozny, state 821) ────────────────────────────────────────
+	SOV_invite_grozneft_owners_decision = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+		available = {
+			has_completed_focus = SOV_work_with_the_oligarchs
+			821 = { is_owned_and_controlled_by = ROOT }
+		}
+		visible = { has_completed_focus = SOV_work_with_the_oligarchs }
+ 
+		cost = 0
+		fire_only_once = yes
+ 
+		complete_effect = {
+			821 = {
+				add_resource = { type = oil amount = 23 }
+				if = {
+					limit = { free_building_slots = { building = synthetic_refinery size > 0 include_locked = yes } }
+					add_building_construction = { type = synthetic_refinery level = 1 instant_build = yes }
+				}
+				add_dynamic_modifier = { modifier = SOV_oligarch_extraction_penalty }
+			}
+			add_ideas = SOV_grozneft_privatization_idea
+			custom_effect_tooltip = SOV_invite_grozneft_owners_tt
+		}
+	}
+ 
+	# ── Embaneft (Emba basin / West Kazakhstan, state 406 - Guryev) ─────────
+	SOV_invite_embaneft_owners_decision = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+		available = {
+			has_completed_focus = SOV_work_with_the_oligarchs
+			406 = { is_owned_and_controlled_by = ROOT }
+		}
+		visible = { has_completed_focus = SOV_work_with_the_oligarchs }
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			406 = {
+				add_resource = { type = oil amount = 38 }
+				if = {
+					limit = { free_building_slots = { building = infrastructure size > 0 } }
+					add_building_construction = { type = infrastructure level = 1 instant_build = yes }
+				}
+				add_dynamic_modifier = { modifier = SOV_oligarch_extraction_penalty }
+			}
+			add_ideas = SOV_embaneft_privatization_idea
+			custom_effect_tooltip = SOV_invite_embaneft_owners_tt
+		}
+	}
+ 
+	# ── Maikopneft (Maikop, state 234 - Krasnodar) ───────────────────────────
+	SOV_invite_maikopneft_owners_decision = {
+		icon = GFX_decision_generic_construction
+		allowed = { always = yes }
+		available = {
+			has_completed_focus = SOV_work_with_the_oligarchs
+			234 = { is_owned_and_controlled_by = ROOT }
+		}
+		visible = { has_completed_focus = SOV_work_with_the_oligarchs }
+
+		cost = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			234 = {
+				add_resource = { type = oil amount = 46 }
+				add_dynamic_modifier = { modifier = SOV_oligarch_extraction_penalty }
+			}
+			add_ideas = SOV_maikopneft_privatization_idea
+			custom_effect_tooltip = SOV_invite_maikopneft_owners_tt
+		}
+	}
+ 
+	# ── OPTIONAL: buy a specific trust back out later ────────────────────────
+	# Removes that trust's debuff + idea pairing and hands the state back to
+	# pure state control. Costs political power now, since the "cost" side
+	# has moved off of PP for the initial deal. Delete this block if you'd
+	# rather the arrangement just be permanent once made.
+	SOV_buy_back_azneft_decision = {
+		icon = GFX_decision_generic_political
+		allowed = { always = yes }
+		available = {
+			has_idea = SOV_azneft_privatization_idea
+			229 = { is_owned_and_controlled_by = ROOT }
+		}
+		visible = { has_completed_focus = SOV_work_with_the_oligarchs }
+ 
+		cost = 200
+		fire_only_once = yes
+ 
+		complete_effect = {
+			remove_ideas = SOV_azneft_privatization_idea
+			229 = {
+				hidden_effect = {
+					remove_dynamic_modifier = { modifier = SOV_oligarch_extraction_penalty }
+				}
+			}
+			custom_effect_tooltip = SOV_buy_back_azneft_tt
+		}
+	}
+	# (Duplicate the above pattern for Grozneft/Embaneft/Maikopneft if you want
+	# buy-back available for all four rather than just Baku.)
+}
+SOV_renegotiate_the_agreements = {
+	test_the_trade_unions = {
+		icon = GFX_decision_generic_political
+		allowed = { always = yes }
+
+		visible = { has_completed_focus = SOV_empower_trade_unions }
+		days_remove = 120
+		days_re_enable = 120
+		cost = 50
+ 
+		complete_effect = {
+			add_to_variable = {
+				var = the_kalinin_agreement_a
+				value = 0.10
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_b
+				value = -0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_c
+				value = -0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_d
+				value = 0.20
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+		remove_effect = {
+			add_to_variable = {
+				var = the_kalinin_agreement_a
+				value = -0.10
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_b
+				value = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_c
+				value = 0.05
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				var = the_kalinin_agreement_d
+				value = -0.20
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+	}
+	exploit_the_trade_unions = {
+        icon = GFX_decision_generic_political
+        allowed = { always = yes }
+
+        visible = { has_completed_focus = SOV_empower_trade_unions }
+        available = {
+            # Can add additional requirements here if needed, e.g., requiring 100 political power
+        }
+		days_remove = 180
+        cost = 100 # Increased cost since it's a powerful permanent shift
+        fire_only_once = yes
+
+        complete_effect = {
+            add_stability = -0.10
+            add_war_support = -0.05
+        }
+		remove_effect = {
+			add_to_variable = {
+                var = the_kalinin_agreement_a
+                value = 0.15
+                tooltip = consumer_goods_factor_tt
+            }
+            add_to_variable = {
+                var = the_kalinin_agreement_b
+                value = -0.15
+                tooltip = production_speed_buildings_factor_tt
+            }
+            add_to_variable = {
+                var = the_kalinin_agreement_c
+                value = -0.20
+                tooltip = stability_factor_tt
+            }
+            add_to_variable = {
+                var = the_kalinin_agreement_d
+                value = 0.10
+                tooltip = industrial_capacity_factory_tt
+            }
+		}
+    }
+	throw_out_the_kalinin_agreement = {
+		icon = GFX_decision_generic_political
+		allowed = { always = yes }
+
+		visible = { has_completed_focus = SOV_empower_trade_unions }
+		available = {
+			OR = {
+				threat > 0.85
+				has_defensive_war = yes
+			}
+		}
+		cost = 150
+		fire_only_once = yes
+ 
+		complete_effect = {
+			add_stability = -0.15
+			add_war_support = -0.1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			remove_dynamic_modifier = {
+				modifier = SOV_the_kalinin_agreement
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+Work_with_the_oligarchs = {
+	icon = GFX_decision_category_generic_economy
+	allowed = { tag = SOV }
+	priority = 100
+}
+SOV_renegotiate_the_agreements = {
+	icon = GFX_decision_category_generic_economy
+	allowed = { tag = SOV }
+	priority = 50
+}

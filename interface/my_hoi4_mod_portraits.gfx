@@ -1,0 +1,94 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_1
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_1_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_1
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_1_small.dds"
+    }
+    spriteType = {
+        name = GFX_inner_circle_candidate_my_hoi4_mod_new_character_1
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_1_inner_circle.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_2
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_2_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_2
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_2_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_3
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_3_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_3
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_3_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_4
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_4_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_4
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_4_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_5
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_5_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_6
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_6_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_7
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_7_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_8
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_8_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_9
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_9_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_10
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_10_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_10
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_10_small.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_11
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_11_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_12
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_12_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_12
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_12_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_13
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_13_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_13
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_13_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_my_hoi4_mod_new_character_14
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_14_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_my_hoi4_mod_new_character_14
+        texturefile = "gfx/leaders/my_hoi4_mod/my_hoi4_mod_new_character_14_small.dds"
+    }
+}

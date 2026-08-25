@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_report_event_GCMP_Latvia_1"
+		texturefile = "gfx/event_pictures/GCMP_Latvia_1.dds"
+	}
+}

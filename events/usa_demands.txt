@@ -1,0 +1,142 @@
+add_namespace = usa_demands
+
+	country_event = {
+    	id = usa_demands.1
+    	title = usa_demands.1.t
+	    desc = usa_demands.1.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = usa_demands.1.a
+			ai_chance = {base = 90}
+			FROM = {
+				country_event = {id = usa_demands.2}
+			}
+		}
+		option = {
+			name = usa_demands.1.b # Refuse
+			ai_chance = {base = 10}
+			FROM = {
+				country_event = {id = usa_demands.3}	
+			}
+		}
+	}
+	country_event = {
+    	id = usa_demands.2
+    	title = usa_demands.2.t
+	    desc = usa_demands.2.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = usa_demands.2.a
+			ai_chance = {base = 90}
+			USA = {
+				add_stability = 0.05
+				transfer_state = 101
+			}
+		}
+	}
+	country_event = {
+    	id = usa_demands.3
+    	title = usa_demands.3.t
+	    desc = usa_demands.3.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = usa_demands.3.a
+			ai_chance = {base = 90}
+			USA = {
+				add_war_support = 0.05
+				create_wargoal = {
+					target = DEN
+					type = take_state
+					expire = 100
+				}
+			}
+		}
+		option = {
+			name = usa_demands.3.b
+			ai_chance = {base = 10}
+			USA = {
+				add_war_support = -0.10
+				add_stability = -0.10
+			}
+		}
+	}
+	country_event = {#USA demands we leave the continent
+		id = usa_demands.4
+		title = usa_demands.4.t
+	    desc = usa_demands.4.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {#Accept
+			name = usa_demands.4.a
+			ai_chance = {base = 90}
+			USA = {country_event = {id = usa_demands.5 hours = 6}}
+		}
+		option = {#Refuse
+			name = usa_demands.4.b
+			ai_chance = {base = 10}
+			USA = {country_event = {id = usa_demands.6 hours = 6}}
+		}
+	}
+	country_event = {
+		id = usa_demands.5
+		title = usa_demands.5.t
+	    desc = usa_demands.5.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = usa_demands.5.a
+			ai_chance = {base = 90}
+			USA = {
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+			every_state = {
+				limit = {
+					is_owned_by = FROM
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+					NOT = { is_core_of = ROOT }
+				}
+				transfer_state_to = USA
+			}
+		}
+	}
+	country_event = {
+		id = usa_demands.6
+		title = usa_demands.6.t
+	    desc = usa_demands.6.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = usa_demands.6.a
+			ai_chance = {base = 90}
+			USA = {
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+			create_wargoal = {
+				target = FROM
+				type = take_state
+				expire = 0
+			}
+		}
+	}
+	
+

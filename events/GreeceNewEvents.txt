@@ -1,0 +1,557 @@
+add_namespace = GreeceNewEvents
+	country_event = {
+    	id = GreeceNewEvents.1
+    	title = GreeceNewEvents.1.t
+	    desc = GreeceNewEvents.1.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = GreeceNewEvents.1.a
+			ai_chance = {base = 10}
+			GRE = {
+				country_event = {id = GreeceNewEvents.2}
+			}
+		}
+		option = {
+			name = GreeceNewEvents.1.b # Refuse
+			ai_chance = {base = 30}
+			
+			GRE = {
+				country_event = {id = GreeceNewEvents.3}	
+			}
+		}
+	}
+	country_event = {#They accept!
+    	id = GreeceNewEvents.2
+    	title = GreeceNewEvents.2.t
+	    desc = GreeceNewEvents.2.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = GreeceNewEvents.2.a
+			ai_chance = {factor = 90}
+			GRE = {
+				add_stability = 0.1
+				add_war_support = -0.05
+			}
+			805 = {add_core_of = GRE}
+		}
+	}
+	country_event = {#They Deny :(
+    	id = GreeceNewEvents.3
+    	title = GreeceNewEvents.3.t
+	    desc = GreeceNewEvents.3.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = GreeceNewEvents.3.a
+			ai_chance = {factor = 90}
+			ALB = {
+				declare_war_on = {
+					target = GRE
+					type = take_state_focus
+					generator = { 805 }
+				}
+			}
+			GRE = {
+				add_stability = -0.05
+				add_war_support = 0.05
+				805 = {add_core_of = GRE}
+			}
+		}
+	}
+
+	country_event = {
+		id = GreeceNewEvents.4
+		title = GreeceNewEvents.4.t
+		desc = GreeceNewEvents.4.d
+		picture = GFX_report_event_generic_read_write
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #okay then
+			name = GreeceNewEvents.4.a
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.5.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.5
+					hours = 12
+				}
+			}
+			
+		}
+
+		option = { #oh hell nah
+			name = GreeceNewEvents.4.b
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value < 25
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.6.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.6
+					hours = 12
+				}
+			}
+			
+		}
+	}
+
+	country_event = { #FROM gives us Trentino and Alto Adige/caves to our threats
+		id = GreeceNewEvents.5
+		title = GreeceNewEvents.5.t
+		desc = GreeceNewEvents.5.d
+		picture = GFX_report_event_election_vote
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #great!
+			name = GreeceNewEvents.5.a
+			ai_chance = {
+				base = 10
+			}
+
+			IF = {
+				limit = {
+					ROOT = {
+						has_completed_focus = GRE_islands_for_drachmae
+					}	
+				}
+				ITA = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ITA
+							NOT = {
+								state = 164
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ROOT = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = medium_increase
+					}
+
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GRE
+							industrial_complex > 2
+						}
+
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			164 = {
+				transfer_state_to = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	country_event = {
+		id = GreeceNewEvents.6
+		title = GreeceNewEvents.6.t
+		desc = GreeceNewEvents.6.d
+		picture = GFX_report_event_worker_protests
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #then we take it!!
+			name = GreeceNewEvents.6.a
+			ai_chance = {
+				base = 10
+			}
+
+			create_wargoal = {
+				type = take_claimed_state
+				target = FROM
+			}
+
+			164 = {
+				add_core_of = ROOT
+				add_claim_by = ROOT
+			}
+
+			ROOT = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = medium_decrease
+				}
+				add_war_support = 0.05
+			}
+			
+		}
+	}
+	
+	country_event = {
+		id = GreeceNewEvents.7
+		title = GreeceNewEvents.7.t
+		desc = GreeceNewEvents.7.d
+		picture = GFX_report_event_generic_read_write
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #okay then
+			name = GreeceNewEvents.7.a
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.8.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.8
+					hours = 12
+				}
+			}
+			
+		}
+
+		option = { #oh hell nah
+			name = GreeceNewEvents.7.b
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value < 25
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.9.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.9
+					hours = 12
+				}
+			}
+			
+		}
+	}
+
+	country_event = { #UK sells Cyprus
+		id = GreeceNewEvents.8
+		title = GreeceNewEvents.8.t
+		desc = GreeceNewEvents.8.d
+		picture = GFX_report_event_election_vote
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #great!
+			name = GreeceNewEvents.8.a
+			ai_chance = {
+				base = 10
+			}
+
+			IF = {
+				limit = {
+					ROOT = {
+						has_completed_focus = GRE_islands_for_drachmae
+					}    
+				}
+
+				ENG = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ENG
+							NOT = {
+								state = 183
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ROOT = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = medium_increase
+					}
+
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GRE
+							industrial_complex > 2
+						}
+
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			183 = {
+				transfer_state_to = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	country_event = {
+		id = GreeceNewEvents.9
+		title = GreeceNewEvents.9.t
+		desc = GreeceNewEvents.9.d
+		picture = GFX_report_event_worker_protests
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #then we take it!!
+			name = GreeceNewEvents.9.a
+			ai_chance = {
+				base = 10
+			}
+
+			create_wargoal = {
+				type = take_claimed_state
+				target = FROM
+			}
+
+			183 = {
+				add_core_of = ROOT
+				add_claim_by = ROOT
+			}
+
+			ROOT = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = medium_decrease
+				}
+				add_war_support = 0.05
+			}
+
+		}
+	}
+
+	country_event = {
+		id = GreeceNewEvents.10
+		title = GreeceNewEvents.10.t
+		desc = GreeceNewEvents.10.d
+		picture = GFX_report_event_generic_read_write
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #okay then
+			name = GreeceNewEvents.10.a
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value > 49
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.11.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.11
+					hours = 12
+				}
+			}
+
+		}
+
+		option = { #oh hell nah
+			name = GreeceNewEvents.10.b
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 5
+					has_opinion = {
+						target = FROM
+						value < 25
+					}
+				}
+			}
+
+			event_option_tooltip = GreeceNewEvents.12.a
+
+			FROM = {
+				country_event = {
+					id = GreeceNewEvents.12
+					hours = 12
+				}
+			}
+
+		}
+	}
+
+	country_event = { #UK sells Malta
+		id = GreeceNewEvents.11
+		title = GreeceNewEvents.11.t
+		desc = GreeceNewEvents.11.d
+		picture = GFX_report_event_election_vote
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #great!
+			name = GreeceNewEvents.11.a
+			ai_chance = {
+				base = 10
+			}
+
+			IF = {
+				limit = {
+					ROOT = {
+						has_completed_focus = GRE_islands_for_drachmae
+					}
+				}
+
+				ENG = {
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = ENG
+							NOT = {
+								state = 116
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ROOT = {
+					add_opinion_modifier = {
+						target = FROM
+						modifier = medium_increase
+					}
+
+					random_owned_controlled_state = {
+						limit = {
+							is_core_of = GRE
+							industrial_complex > 2
+						}
+
+						remove_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			116 = {
+				transfer_state_to = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	country_event = {
+		id = GreeceNewEvents.12
+		title = GreeceNewEvents.12.t
+		desc = GreeceNewEvents.12.d
+		picture = GFX_report_event_worker_protests
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = { #then we take it!!
+			name = GreeceNewEvents.12.a
+			ai_chance = {
+				base = 10
+			}
+
+			create_wargoal = {
+				type = take_claimed_state
+				target = FROM
+			}
+			116 = {
+				add_core_of = ROOT
+				add_claim_by = ROOT
+			}
+
+			ROOT = {
+				add_opinion_modifier = {
+					target = FROM
+					modifier = medium_decrease
+				}
+				add_war_support = 0.05
+			}
+
+		}
+	}

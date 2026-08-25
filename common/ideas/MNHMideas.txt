@@ -1,0 +1,735 @@
+ideas = {
+	country = {
+		GreeceManpowerInfinite = {
+			picture = service_by_requirement
+			modifier = {
+				weekly_manpower = 500
+				political_power_factor = 0.1
+				stability_weekly = 0.01
+				consumer_goods_factor = -0.25
+			}
+		}
+	}
+	country = {
+		ZuluLegacy = {
+			allowed = {
+				always = yes
+			}
+			picture = eng_service_overseas
+
+			modifier = {
+				weekly_manpower = 1000
+				political_power_factor = 0.15
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				breakthrough_factor = 0.15
+			}
+		}
+	}
+	country = {
+		FrenchPacifism = {
+			allowed = {
+				always = yes
+			}
+			picture = BEL_the_kings_surrender
+			modifier = {
+				production_speed_arms_factory_factor = -0.25
+			}
+		}		
+	}
+	country = {
+		britishConvoying = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_SOV_surface_warfare_ccp_2d_sov_compatibility
+			modifier = {
+				convoy_escort_efficiency = 0.5
+			}
+		}
+	}
+	country = {
+		PilsudskiIdea = {
+			allowed = {
+				always = yes
+			}
+			picture = PilsudskiIdeaPicture
+			modifier = {
+				army_org_factor = 0.15
+				army_morale_factor = 0.15
+				breakthrough_factor = 0.15
+			}
+		}
+	}
+	country = {
+		Idea_late_war_industry = {
+			picture = ARG_public_works_investment
+			modifier = {
+				global_building_slots = 10
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+	}
+	country = {
+		fascist_economics = {
+			picture = ARG_economic_reactivation
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = 0.2
+			}
+		}
+	}
+	country = {
+		FRA_Rapid_Military_Rearmament = {
+			picture = SOV_rebuild_the_nation_ccp_sov_compatibility
+			modifier = {
+				production_speed_arms_factory_factor = 0.35
+				consumer_goods_factor = -0.2
+			}
+		}
+	}
+	country = {
+		FRA_victors_of_wwi_reformed = {
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_victors_of_ww1
+			modifier = {
+				conscription = -0.003
+				war_support_factor = -0.03
+				land_doctrine_cost_factor = 0.25
+			}
+		}
+	}
+	country = {
+		Colonial_Ambitions = {
+			picture = ast_abandon_the_westminster_system
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_growth = -0.15
+				local_resources_factor = 0.1
+				production_speed_supply_node_factor = 0.15			
+				production_speed_naval_base_factor = 0.15
+				compliance_gain = 0.25	
+			}
+		}
+	}
+	country = {
+		FRA_the_old_enemy_idea = {
+			picture = ARG_anti_british_sentiment
+			targeted_modifier = {
+			    tag = ENG
+			    attack_bonus_against = 0.1
+			    breakthrough_bonus_against = 0.1
+			}
+		}
+	}
+	country = {
+		SOV_the_duma_1 = {
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_drift = 0.05
+				stability_factor = 0.25
+				political_power_factor = -0.15
+			}
+
+			picture = AFG_parliament_building
+			
+			removal_cost = -1
+		}	
+	}
+	country = {
+		SOV_the_duma_2 = {
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.25
+			}
+
+			picture = AFG_parliament_building
+			
+			removal_cost = -1
+		}	
+	}
+	country = {
+		KOR_korean_army = {
+			picture = chi_army_corruption
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = -0.25
+				experience_gain_army_factor = -0.25
+				army_org_factor = -0.25
+			}
+
+		}
+	}
+	country = {
+		USA_limited_intervention_MOJI = {
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = yes
+			}
+			
+			modifier = {
+				join_faction_tension = -0.25
+				send_volunteers_tension = -0.35
+				guarantee_tension = -0.2
+				mobilization_laws_cost_factor = 1.5
+				economy_cost_factor = 0.5
+			}
+		}
+	}
+	country = {
+		KOR_extraction_economy = {
+			picture = export_focus
+
+			allowed = {
+				original_tag = KOR
+			}
+
+			modifier = {
+				autonomy_gain_trade_factor = -0.75
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+				extra_trade_to_overlord_factor = 1.0
+				overlord_trade_cost_factor = -0.25
+			}
+
+		}
+	}
+	country = {
+		RWL_rapid_industrialization = {
+			picture = ARG_economic_reactivation
+			modifier = {
+				political_power_factor = -0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = 0.2
+			}
+		}
+	}
+	country = {
+		RWL_farmers = {
+			picture = ARG_economic_reactivation
+			modifier = {
+				conscription = 0.1
+				consumer_goods_factor = -0.15
+				production_speed_infrastructure_factor = 0.15
+				global_building_slots_factor = 0.15
+			}
+		}
+	}
+	country = {
+		RWL_junta_idea = {
+			picture = generic_infantry_bonus
+			modifier = {
+				neutrality_drift = 0.1
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				army_org_factor = 0.15
+				max_planning_factor = 0.15
+			}
+		}
+	}
+	country = {
+		RWL_democratic_idea = {
+			picture = neutrality_idea
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.15
+			}
+		}
+	}
+	country = {
+		RWL_communist_idea = {
+			picture = trotskyite_plot_purged_nsb_ccp_sov_compatibility
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = -0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.35
+				industrial_capacity_factory = 0.15
+				conscription = 0.05
+				weekly_manpower = 700
+			}
+		}
+	}
+	country = {
+ 
+		# ── Legacy of the Bull Moose ─────────────────────────────────────────
+		USA_bull_moose_interventionism_idea = {
+			picture = FRA_scw_intervention_republicans_focus
+ 
+			allowed = { tag = USA }
+			removal_cost = -1
+ 
+			modifier = {
+				war_support_factor      =  0.06
+				political_power_gain    =  0.10
+				justify_war_goal_time   = -0.15
+				send_volunteers_tension = -0.10
+				guarantee_tension       = -0.10
+				lend_lease_tension      = -0.15
+				join_faction_tension    = -0.10
+			}
+		}
+ 
+		# ── Remember the Panay ────────────────────────────────────────────────
+		USA_remember_the_panay_idea = {
+			picture = ARG_american_allyship
+ 
+			allowed = { tag = USA }
+			removal_cost = -1
+ 
+			modifier = {
+				war_support_factor          =  0.05
+				conscription                =  0.01
+				experience_gain_navy_factor =  0.10
+				justify_war_goal_time       = -0.10
+			}
+		}
+ 
+		# ── A Day of Infamy ───────────────────────────────────────────────────
+		USA_day_of_infamy_idea = {
+			picture = ARG_anti_american_propaganda
+ 
+			allowed = { tag = USA }
+
+			modifier = {
+				war_support_factor                =  0.15
+				stability_factor                  =  0.08
+				conscription                      =  0.03
+				political_power_gain              =  0.15
+				mobilization_speed                =  0.25
+				production_speed_buildings_factor =  0.15
+				training_time_factor              = -0.10
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+	}
+
+    country = {
+        SOV_the_orthodox_church = {
+            allowed = {
+                always = yes
+            }
+            
+            picture = generic_clerical_intellectuals # Or any religious icon you prefer
+            
+            modifier = {
+                political_power_factor = 0.15
+            }
+        }
+		SOV_freedom_of_worship = {
+			allowed = {
+				always = yes
+			}
+			
+			picture = generic_clerical_intellectuals # Or any religious icon you prefer
+			
+			modifier = {
+				compliance_gain = 0.15
+				political_power_factor = 0.05
+			}
+		}
+        SOV_empowered_peasantry_spirit = {
+            allowed = { always = yes }
+            picture = idea_generic_agrarian_reform
+            
+            modifier = {
+				consumer_goods_factor = 0.1
+                conscription = 0.05       # +5% recruitable population factor
+                production_factory_max_efficiency_factor = 0.10 # Happy workforce improves caps
+                war_support_factor = 0.15          # Extra passive stability
+            }
+        }
+		SOV_a_constitutional_czar = {
+			allowed = {
+				always = yes
+			}
+			
+			picture = HUN_hungarian_monarchy_democratic
+			
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.15
+				consumer_goods_factor = -0.25
+				political_power_factor = 0.05
+			}
+		}
+		SOV_belarusian_crackdown = {
+			name = SOV_belarusian_crackdown
+			picture = GFX_idea_generic_oppression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.25
+				conscription = -0.01
+				resistance_growth_on_our_occupied_states = 0.10
+			}
+			removal_cost = -1
+		}
+
+		SOV_ukrainian_crackdown = {
+			name = SOV_ukrainian_crackdown
+			picture = GFX_idea_generic_oppression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.08
+				political_power_gain = -0.25
+				production_speed_buildings_factor = -0.05
+				resistance_growth_on_our_occupied_states = 0.15
+			}
+			removal_cost = -1
+		}
+
+		SOV_transcaucasian_crackdown = {
+			name = SOV_transcaucasian_crackdown
+			picture = GFX_idea_generic_oppression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.50
+				conscription = -0.02
+				production_speed_buildings_factor = -0.10
+				resistance_growth_on_our_occupied_states = 0.20
+			}
+			removal_cost = -1
+		}
+		SOV_turkestan_crackdown = {
+			name = SOV_turkestan_crackdown
+			picture = GFX_idea_generic_oppression
+			allowed = { always = no }
+			modifier = {
+				stability_factor = -0.12
+				political_power_gain = -0.50
+				conscription = -0.02
+				production_speed_buildings_factor = -0.08
+				resistance_growth_on_our_occupied_states = 0.20
+			}
+			removal_cost = -1
+		}
+		SOV_land_redistrubution = {
+			name = SOV_land_redistrubution
+			picture = PRC_land_revolution_expedited
+			allowed = { always = yes }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = -0.15
+			}
+		}
+		SOV_heavy_industry_investment = {
+			name = SOV_heavy_industry_investment
+			picture = idea_generic_industry_investment
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.25
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = 0.25
+			}
+		}
+		SOV_azneft_privatization_idea = {
+			allowed = { always = yes }
+			picture = MEX_oil_concessions
+			removal_cost = -1
+ 
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+				consumer_goods_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+ 
+		SOV_grozneft_privatization_idea = {
+			allowed = { always = yes }
+			picture = RAJ_external_investments
+			removal_cost = -1
+ 
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+ 
+		SOV_embaneft_privatization_idea = {
+			allowed = { always = yes }
+			picture = ARG_economic_reactivation
+			removal_cost = -1
+ 
+			modifier = {
+				stability_factor = -0.05
+				production_speed_infrastructure_factor = 0.25
+				local_resources_factor = 0.15
+			}
+		}
+ 
+		SOV_maikopneft_privatization_idea = {
+			allowed = { always = yes }
+			picture = RAJ_external_investments
+			removal_cost = -1
+ 
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.25
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.05
+			}
+		}
+		SOV_rebuild_the_all_union_highways = {
+			allowed = { always = yes }
+			picture = ARG_invest_in_roads
+			modifier = {
+				production_speed_infrastructure_factor = 0.25
+				consumer_goods_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+			}
+		}
+		SOV_subsidize_ukrainian_agriculture = {
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			modifier = {
+				consumer_goods_factor = 0.15
+				supply_combat_penalties_on_core_factor = -0.15
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		SOV_mechanized_agriculture = {
+			allowed = { always = yes }
+			picture = generic_agrarian_society
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.1
+				industrial_capacity_factory = 0.15
+				production_speed_industrial_complex_factor = 0.25
+			}
+		}
+		the_national_military_industrial_complex = {
+			allowed = { always = yes}
+			picture = SOV_third_five_year_plan_military
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.25
+				production_speed_arms_factory_factor = 0.35
+			}
+		}
+		SOV_complete_industrial_agrarianism_idea = {
+			allowed = { always = yes }
+			picture = generic_production_bonus
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.25
+				compliance_gain = 0.15
+			}
+		}
+		SOV_laissez_faire_idea = {
+			allowed = { always = yes }
+			picture = generic_production_bonus
+			removal_cost = -1
+ 
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = 0.10
+				consumer_goods_factor = -0.05
+				stability_factor = -0.02
+			}
+		}
+		SOV_interventionism_idea = {
+			allowed = { always = yes }
+			picture = fascist_economics
+			removal_cost = -1
+ 
+			modifier = {
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_infrastructure_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = 0.06
+				stability_factor = 0.03
+				political_power_factor = -0.05
+			}
+		}
+		FRA_the_confederation_of_the_rhine = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = generic_monarchist_uprising
+			modifier = {
+				consumer_goods_factor = -0.15
+				cic_to_overlord_factor = 0.75
+				mic_to_overlord_factor = 0.75
+				extra_trade_to_overlord_factor = 0.75
+				master_ideology_drift = 0.1
+				autonomy_gain_trade_factor = -0.75
+				autonomy_manpower_share = -1
+			}
+		}
+
+		SOV_northern_ports_expansion_ns = {
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				production_speed_dockyard_factor = 0.15
+			}
+		}
+
+    }
+
+	country = {
+		MON_hulunbuir_integration_costs = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = idea_generic_agrarian_reform
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		JAP_hulunbuir_sale_windfall = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = idea_generic_industry_investment
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		RNG_japanese_exploitation = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = JAP_japanese_influence_growing
+			modifier = {
+				cic_to_overlord_factor = 0.65
+				mic_to_overlord_factor = 0.25
+				local_resources_factor = 1.75
+				custom_modifier_tooltip = INS_netherlands_most_precious_jewel_tt
+			}
+		}
+		RNG_japanese_trade_concessions = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = JAP_japanese_influence_growing
+
+			modifier = {
+				local_resources_factor = 1.5
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.25
+				mic_to_target_factor = 0.25
+				trade_cost_for_target_factor = -0.75
+			}
+		}
+
+		# Turkish Soviet War
+		TUR_post_war_reconstruction = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = SPR_seize_the_gold_reserves
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		SOV_turkish_war_reparations = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = SPR_relocate_the_gold_reserves
+
+			modifier = {
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		TUR_national_humiliation = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = RAJ_partition_chaos_bad
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		SOV_turkish_soviet_war_victory = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = SOV_soviet_hegemony
+
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+			}
+		}
+
+		# Soviet Romanian War
+		ROM_battle_for_our_nations_survival = {
+			allowed = { always = yes }
+			removal_cost = -1
+			picture = generic_defiant
+
+			rule = {
+				can_join_factions = no
+			}
+
+			modifier = {
+				army_defence_factor = 0.15
+				max_dig_in_factor = 0.15
+				army_morale_factor = 0.1
+			}
+		}
+	}
+
+	industrial_concern = {
+		SOV_democratic_industrial_concern = {
+
+			picture = ARG_resource_extration_focus
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			available = {
+				has_completed_focus = SOV_expand_coal_and_metal_mining
+			}
+
+			visible = {
+				original_tag = SOV
+			}
+
+			cost = 125
+			traits = { national_resource_extraction }
+		}
+	}
+}
+
+

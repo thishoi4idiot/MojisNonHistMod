@@ -1,0 +1,99 @@
+ideas = {
+	country = {
+		Baltic_Idea_1 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = GER
+				breakthrough_bonus_against = 0.10
+				defense_bonus_against = 0.10
+				attack_bonus_against = 0.10
+			}
+			picture = Baltic_German_Ideas
+		}
+		Baltic_Idea_2 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			targeted_modifier = {
+				tag = GER
+				breakthrough_bonus_against = 0.10
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.10
+				weekly_manpower = 500
+			}
+			picture = Baltic_German_Ideas
+		}
+		Baltic_Idea_3 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 1500
+				consumer_goods_factor = -0.15
+				experience_gain_army_factor = 0.15
+			}
+			picture = Baltic_German_Ideas
+			targeted_modifier = {
+				tag = GER
+				breakthrough_bonus_against = 0.15
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+				weekly_manpower = 500
+			}
+		}
+		Baltic_Idea_4 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 2500
+				consumer_goods_factor = -0.15
+				experience_gain_army_factor = 0.25
+				breakthrough_bonus_against = 0.15
+				defense_bonus_against = 0.20
+				attack_bonus_against = 0.15
+			}
+			picture = Baltic_German_Ideas
+			targeted_modifier = {
+				tag = GER
+				breakthrough_bonus_against = 0.20
+				defense_bonus_against = 0.20
+				attack_bonus_against = 0.20
+			}
+		}
+		Agrarian_Reform_Act = {
+			picture = generic_agrarian_reform
+			allowed = {
+				original_tag = LAT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.15
+				neutrality_drift = 0.15
+			}
+		}
+		Riga_Diet_Convenes = {
+			picture = Riga_Diet_Convenes
+			allowed = {
+				original_tag = LAT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.25
+				neutrality_drift = 0.05
+				stability_weekly = 0.0015
+			}
+		}
+	}
+}

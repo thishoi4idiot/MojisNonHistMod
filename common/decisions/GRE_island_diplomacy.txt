@@ -1,0 +1,88 @@
+GRE_island_diplomacy_category = {
+	GRE_offer_dodecanese_purchase = {
+		icon = GFX_decision_generic_political
+
+		visible = {
+			has_completed_focus = GRE_islands_for_drachmae
+		}
+
+		available = {
+			is_subject = no
+			has_country_flag = GRE_megali_idea_approved
+			NOT = {
+				has_war_with = TUR
+				has_war_with = ITA
+			}
+			ITA = {
+				owns_state = 164
+				controls_state = 164
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ITA = {
+				country_event = { id = GreeceNewEvents.4 hours = 6 }
+			}
+		}
+	}
+
+	GRE_offer_cyprus_purchase = {
+		icon = GFX_decision_generic_political
+
+		visible = {
+			has_completed_focus = GRE_islands_for_drachmae
+		}
+
+		available = {
+			is_subject = no
+			has_country_flag = GRE_megali_idea_approved
+			NOT = {
+				has_war_with = TUR
+				has_war_with = ENG
+			}
+			ENG = {
+				owns_state = 183
+				controls_state = 183
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ENG = {
+				country_event = { id = GreeceNewEvents.7 hours = 6 }
+			}
+		}
+	}
+
+	GRE_offer_malta_purchase = {
+		icon = GFX_decision_generic_political
+
+		visible = {
+			has_completed_focus = GRE_islands_for_drachmae
+		}
+
+		available = {
+			is_subject = no
+			has_country_flag = GRE_megali_idea_approved
+			NOT = {
+				has_war_with = TUR
+				has_war_with = ENG
+			}
+			ENG = {
+				owns_state = 116
+				controls_state = 116
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			ENG = {
+				country_event = { id = GreeceNewEvents.10 hours = 6 }
+			}
+		}
+	}
+}

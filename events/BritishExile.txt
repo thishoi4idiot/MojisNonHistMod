@@ -1,0 +1,65 @@
+add_namespace = BritishExile
+
+	country_event = {
+		id = BritishExile.1
+		title = BritishExile.1.t
+		desc = BritishExile.1.d
+
+		picture = GFX_report_event_generic_war
+
+		fire_only_once = yes
+		hidden = yes
+
+		trigger = {
+			tag = ENG
+			has_war_with = GER
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+
+			126 = { is_controlled_by = GER }
+
+			is_in_faction_with = USA
+			USA = { has_war_with = GER }
+			surrender_progress > 0.7
+
+			GER = {
+				OR = {
+					is_faction_leader = yes
+					has_government = neutrality
+				}
+			}
+			has_civil_war = no
+
+			ENG = {
+				any_allied_country = {
+					is_major = yes 
+					has_capitulated = no 
+					has_war_with = GER 
+				}
+			}
+		}
+		immediate = {
+			country_event = BritishExile.2
+		}
+	}
+	country_event = {
+		id = BritishExile.2
+		title = BritishExile.2.t
+		desc = BritishExile.2.d
+
+		fire_only_once = yes
+		trigger = {
+			always = no
+		}
+		
+		picture = GFX_report_event_generic_war
+
+		option = {
+			name = BritishExile.2.a
+		}
+		option = {
+			name = BritishExile.2.b
+		}
+	}

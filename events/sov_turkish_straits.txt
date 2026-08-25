@@ -1,0 +1,142 @@
+add_namespace = sov_turkish_straits
+
+country_event = {
+	id = sov_turkish_straits.1
+	title = sov_turkish_straits.1.t
+	desc = sov_turkish_straits.1.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.1.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				is_in_faction_with = SOV
+			}
+			modifier = {
+				factor = 0.25
+				has_government = fascism
+			}
+		}
+		340 = { set_demilitarized_zone = yes }
+		341 = { set_demilitarized_zone = yes }
+		797 = { set_demilitarized_zone = yes }
+		SOV = {
+			country_event = { id = sov_turkish_straits.2 hours = 6 random_hours = 12 }
+		}
+	}
+	option = {
+		name = sov_turkish_straits.1.b
+		ai_chance = {
+			base = 50
+		}
+		SOV = {
+			country_event = { id = sov_turkish_straits.3 hours = 6 random_hours = 12 }
+		}
+	}
+	option = {
+		name = sov_turkish_straits.1.c
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 8
+				has_added_tension_amount > 50
+			}
+		}
+		SOV = {
+			country_event = { id = sov_turkish_straits.4 hours = 6 random_hours = 12 }
+		}
+	}
+}
+
+country_event = {
+	id = sov_turkish_straits.2
+	title = sov_turkish_straits.2.t
+	desc = sov_turkish_straits.2.d
+	picture = GFX_report_event_generic_naval_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.2.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = sov_turkish_straits.3
+	title = sov_turkish_straits.3.t
+	desc = sov_turkish_straits.3.d
+	picture = GFX_report_event_generic_naval_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.3.a
+	}
+}
+
+country_event = {
+	id = sov_turkish_straits.4
+	title = sov_turkish_straits.4.t
+	desc = sov_turkish_straits.4.d
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.4.a
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				is_in_faction_with = TUR
+			}
+		}
+		give_guarantee = TUR
+		TUR = {
+			country_event = { id = sov_turkish_straits.5 hours = 6 random_hours = 12 }
+		}
+	}
+	option = {
+		name = sov_turkish_straits.4.b
+		ai_chance = {
+			base = 50
+		}
+		TUR = {
+			country_event = { id = sov_turkish_straits.6 hours = 6 random_hours = 12 }
+		}
+	}
+}
+
+country_event = {
+	id = sov_turkish_straits.5
+	title = sov_turkish_straits.5.t
+	desc = sov_turkish_straits.5.d
+	picture = GFX_report_event_generic_naval_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.5.a
+		340 = { set_demilitarized_zone = yes }
+		341 = { set_demilitarized_zone = yes }
+		797 = { set_demilitarized_zone = yes }
+	}
+}
+
+country_event = {
+	id = sov_turkish_straits.6
+	title = sov_turkish_straits.6.t
+	desc = sov_turkish_straits.6.d
+	picture = GFX_report_event_generic_naval_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = sov_turkish_straits.6.a
+	}
+}

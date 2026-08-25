@@ -1,0 +1,33 @@
+	
+leader_traits = {	
+	Protector_of_the_west_slavs = { 
+		sprite = 10
+		random = no
+		stability_factor = 0.10
+		conscription_factor = 0.05
+		neutrality_drift = 0.1
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.05
+	}
+	Offensive_Democracy = { 
+		sprite = 10
+		random = no
+		stability_factor = 0.25
+		offensive_war_stability_factor = 0.3
+		defensive_war_stability_factor = 0.3
+		conscription_factor = 0.25
+		democratic_drift = 0.2
+		army_core_defence_factor = 0.15
+		army_core_attack_factor = 0.05
+	}
+	national_resource_extraction = {
+		local_resources_factor = 0.25
+		consumer_goods_factor = -0.1
+		production_speed_infrastructure_factor = 0.15
+	}
+	integralist_society = {
+		stability_factor = 0.25
+		consumer_goods_factor = 0.05
+		compliance_gain = 0.15
+	}
+}

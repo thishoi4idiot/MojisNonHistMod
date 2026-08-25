@@ -1,0 +1,6 @@
+CroatianIndepedenceCategory = {
+	icon = GFX_decision_category_generic_independence
+	allowed = {
+		tag = YUG
+	}
+}

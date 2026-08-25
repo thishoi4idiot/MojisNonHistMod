@@ -1,0 +1,1069 @@
+FRA_reintegration_of_the_spanish_crown = {
+
+	SPR_eliminate_guerrillas_france = {
+
+		icon = generic_civil_support
+
+		available = {
+			FROM = {
+				compliance > 35
+			}
+			has_equipment = {
+			    infantry_equipment > 2000
+			}
+		}
+
+		state_target = yes
+
+		targets = { 41 165 166 167 168 169 170 171 172 173 174 175 176 177 178 788 789 790 791 792 793 794 }
+
+		target_trigger = {
+			
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		cost = 30
+
+		fire_only_once = yes
+
+		days_remove = 35
+
+		ai_will_do = {
+			base = 200
+		}
+
+		modifier = {
+			weekly_manpower = -300
+		}
+
+		visible = {
+
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+}
+FRA_reistablish_of_the_sister_republics = {
+	
+	FRA_integrate_the_dutch_republic = {
+		visible = {
+			has_completed_focus = FRA_ally_the_netherlands
+			NOT = {has_global_flag = has_denied_allience_to_the_french}
+		}
+		available = {
+			hidden_trigger = {
+			}
+			HOL = {
+				is_puppet_of = FRA
+				has_autonomy_state = autonomy_personal_union
+				controls_state = 6
+				controls_state = 7
+				controls_state = 35
+				controls_state = 36
+				controls_state = 977
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 6
+				state = 7
+				state = 35
+				state = 36
+				state = 977
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 150
+		days_remove = 120
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			annex_country = { target = HOL transfer_troops = yes }
+			hidden_effect = {
+				6 = { add_core_of = FRA}
+				7 = { add_core_of = FRA}
+				35 = { add_core_of = FRA}
+				36 = { add_core_of = FRA}
+				977 = { add_core_of = FRA}
+			}
+		}
+	}
+	FRA_establish_the_dutch_republic = {
+		visible = {
+			OR = {
+				has_completed_focus = FRA_reistablish_the_batavian_republic
+				AND = {
+					has_completed_focus = FRA_ally_the_netherlands
+					has_global_flag = has_denied_allience_to_the_french
+				}
+			}
+			NOT = {has_global_flag = Has_created_republic_dutch}
+		}
+		available = {
+			NOT = {country_exists = HOL}
+			FRA = {
+				controls_state = 7
+				controls_state = 36
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 7
+				state = 36
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			HOL = {
+				transfer_state = 7
+				transfer_state = 36
+			}
+			set_autonomy = {
+				target = HOL
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_dutch
+			}
+		}
+	}
+	FRA_establish_the_swiss_client_state = {
+		visible = {
+			OR = {
+				NOT = {country_exists = SWI}
+				has_global_flag = switzerland_said_no_to_napoleon
+			}
+			NOT = {has_global_flag = Has_created_republic_swiss}
+		}
+		available = {
+			NOT = {country_exists = SWI}
+			FRA = {
+				controls_state = 3
+				controls_state = 151
+				controls_state = 847
+				controls_state = 846
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 3
+				state = 151
+				state = 847
+				state = 846
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			SWI = {
+				transfer_state = 3
+				transfer_state = 151
+				transfer_state = 847
+				transfer_state = 846
+			}
+			set_autonomy = {
+				target = SWI
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_swiss
+			}
+		}
+	}
+	FRA_integrate_the_western_alps = {
+		visible = {
+			OR = {
+				has_global_flag = switzerland_said_no_to_napoleon
+			}
+		}
+		available = {
+			has_global_flag = Has_created_republic_swiss
+			FRA = {
+				controls_state = 845
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 845
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				845 = {add_core_of = FRA}
+			}
+		}
+	}
+	FRA_establish_the_spanish_client_state = {
+		visible = {
+			OR = {
+				AND = {
+					NOT = {country_exists = SPR}
+					NOT = {country_exists = SPA}
+					NOT = {country_exists = SPB}
+					NOT = {country_exists = SPC}
+				}
+				has_global_flag = spain_said_no_to_napoleon
+			}
+			NOT = {has_global_flag = Has_created_republic_spanish}
+		}
+		available = {
+			AND = {
+				NOT = {country_exists = SPR}
+				NOT = {country_exists = SPA}
+				NOT = {country_exists = SPB}
+				NOT = {country_exists = SPC}
+			}
+			FRA = {
+				controls_state = 177 # Islas Baleares
+				controls_state = 167 # Valencia
+				controls_state = 794 # Eastern Aragon
+				controls_state = 166 # Western Aragon
+				controls_state = 172 # Navarra
+				controls_state = 792 # Pais Vasco
+				controls_state = 790 # Asturias
+				controls_state = 171 # Galicia
+				controls_state = 174 # Leon
+				controls_state = 791 # Valladolid
+				controls_state = 176 # Burgos
+				controls_state = 793 # Guadalajara
+				controls_state = 168 # Murcia
+				controls_state = 788 # Salamanca
+				controls_state = 41 # Madrid
+				controls_state = 175 # Ciudad Real
+				controls_state = 170 # Extramadura
+				controls_state = 789 # Cordoba
+				controls_state = 173 # Granada
+				controls_state = 169 # Sevilla
+			}
+				
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 177 # Islas Baleares
+				state = 167 # Valencia
+				state = 794 # Eastern Aragon
+				state = 166 # Western Aragon
+				state = 172 # Navarra
+				state = 792 # Pais Vasco
+				state = 790 # Asturias
+				state = 171 # Galicia
+				state = 174 # Leon
+				state = 791 # Valladolid
+				state = 176 # Burgos
+				state = 793 # Guadalajara
+				state = 168 # Murcia
+				state = 788 # Salamanca
+				state = 41 # Madrid
+				state = 175 # Ciudad Real
+				state = 170 # Extramadura
+				state = 789 # Cordoba
+				state = 173 # Granada
+				state = 169 # Sevilla
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			SPA = {
+				transfer_state = 177 # Islas Baleares
+				transfer_state = 167 # Valencia
+				transfer_state = 794 # Eastern Aragon
+				transfer_state = 166 # Western Aragon
+				transfer_state = 172 # Navarra
+				transfer_state = 792 # Pais Vasco
+				transfer_state = 790 # Asturias
+				transfer_state = 171 # Galicia
+				transfer_state = 174 # Leon
+				transfer_state = 791 # Valladolid
+				transfer_state = 176 # Burgos
+				transfer_state = 793 # Guadalajara
+				transfer_state = 168 # Murcia
+				transfer_state = 788 # Salamanca
+				transfer_state = 41 # Madrid
+				transfer_state = 175 # Ciudad Real
+				transfer_state = 170 # Extramadura
+				transfer_state = 789 # Cordoba
+				transfer_state = 173 # Granada
+				transfer_state = 169 # Sevilla
+			}
+			set_autonomy = {
+				target = SPA
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_spanish
+			}
+		}
+	}
+	FRA_integrate_catalonia = {
+		visible = {
+			OR = {
+				has_global_flag = spain_said_no_to_napoleon
+			}
+		}
+		available = {
+			has_global_flag = Has_created_republic_spanish
+			FRA = {
+				controls_state = 165
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 165
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				165 = {add_core_of = FRA}
+			}
+		}
+	}
+	FRA_integrate_northern_italy = {
+		visible = {
+			has_global_flag = go_kill_italy_france
+			has_completed_focus = FRA_reclaim_italian_sister_republics
+		}
+		available = {
+			FRA = {
+				controls_state = 162
+				controls_state = 158
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 162
+				state = 158
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				162 = {add_core_of = FRA}
+				158 = {add_core_of = FRA}
+			}
+		}
+	}
+	FRA_establish_the_croation_client_state = {
+		visible = {
+			NOT = {country_exists = CRO}
+			NOT = {has_global_flag = Has_created_republic_croatia}
+			has_completed_focus = FRA_reclaim_italian_sister_republics
+		}
+		available = {
+			NOT = {country_exists = CRO}
+			FRA = {
+				controls_state = 160
+				controls_state = 736
+				controls_state = 852
+				controls_state = 103
+				controls_state = 163
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 160
+				state = 736
+				state = 852
+				state = 103
+				state = 163
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			CRO = {
+				transfer_state = 160
+				transfer_state = 736
+				transfer_state = 852
+				transfer_state = 103
+				transfer_state = 163
+			}
+			set_autonomy = {
+				target = CRO
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_croatia
+			}
+		}
+	}
+	FRA_reistablish_the_papal_states = {
+		visible = {
+			NOT = {country_exists = PAP}
+			NOT = {has_global_flag = Has_created_republic_papal_states}
+			has_completed_focus = FRA_reclaim_italian_sister_republics
+		}
+		available = {
+			NOT = {country_exists = PAP}
+			FRA = {
+				controls_state = 161
+				controls_state = 157
+				controls_state = 2
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 161
+				state = 157
+				state = 2
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			PAP = {
+				transfer_state = 161
+				transfer_state = 157
+				transfer_state = 2
+				set_politics = {
+					ruling_party = neutrality
+					last_election = "1932.5.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				create_country_leader = {
+					name = "Papa Pio XI"
+					desc = "sigma_denma_desc"
+					picture = "GFX_portrait_ITA_papa_pio_xi"
+
+					ideology = despotism
+					expire = "1965.1.1"
+				}
+			}
+			set_autonomy = {
+				target = PAP
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_papal_states
+			}
+		}
+	}
+	FRA_reistablish_the_kingdom_of_the_two_sicilies = {
+		visible = {
+			NOT = {country_exists = TTS}
+			NOT = {has_global_flag = Has_created_republic_TTS}
+			has_completed_focus = FRA_reclaim_italian_sister_republics
+		}
+		available = {
+			NOT = {country_exists = TTS}
+			FRA = {
+				controls_state = 115
+				controls_state = 117
+				controls_state = 156
+				controls_state = 849
+				controls_state = 114
+			}	
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 115
+				state = 117
+				state = 156
+				state = 849
+				state = 114
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 0
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			TTS = {
+				transfer_state = 115
+				transfer_state = 117
+				transfer_state = 156
+				transfer_state = 849
+				transfer_state = 114
+			}
+			set_autonomy = {
+				target = TTS
+				autonomy_state = autonomy_personal_union
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_TTS
+			}
+		}
+	}
+	FRA_reistablish_the_grand_duchy_of_warsaw = {
+		visible = {
+			has_completed_focus = FRA_reestablish_eastern_duchys
+			NOT = {has_global_flag = Has_created_republic_Warsaw}
+		}
+		available = {
+			NOT = {country_exists = POL}
+			FRA = {
+				controls_state = 10
+				controls_state = 90
+				controls_state = 92
+				controls_state = 88
+				controls_state = 87
+				controls_state = 98
+				controls_state = 86
+				controls_state = 97
+				controls_state = 67
+				controls_state = 762
+			}	
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+				state = 90
+				state = 92
+				state = 88
+				state = 87
+				state = 98
+				state = 86
+				state = 97
+				state = 67
+				state = 762
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			POL = {
+				transfer_state = 10
+				transfer_state = 90
+				transfer_state = 92
+				transfer_state = 88
+				transfer_state = 87
+				transfer_state = 98
+				transfer_state = 86
+				transfer_state = 97
+				transfer_state = 67
+				transfer_state = 762
+			}
+			set_autonomy = {
+				target = POL
+				autonomy_state = autonomy_personal_union
+			}
+			POL = {set_cosmetic_tag = DUCHY_OF_WARSAW}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_Warsaw
+			}
+		}
+	}
+	FRA_expand_warsaw_into_western_ukraine = {
+		visible = {
+			has_global_flag = Has_created_republic_Warsaw
+			NOT = {has_global_flag = Has_expanded_warsaw_ukraine}
+		}
+		available = {
+			NOT = {has_global_flag = Has_expanded_warsaw_ukraine}
+			FRA = {
+				controls_state = 91
+				controls_state = 89
+				controls_state = 93
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 91
+				state = 89
+				state = 93
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			POL = {
+				transfer_state = 91
+				transfer_state = 89
+				transfer_state = 93
+			}
+			hidden_effect = {
+				set_global_flag = Has_expanded_warsaw_ukraine
+			}
+		}
+	}
+	FRA_reward_kiev_to_the_poles = {
+		visible = {
+			has_global_flag = Has_expanded_warsaw_ukraine
+			NOT = {has_global_flag = Has_rewarded_kiev_to_poles}
+		}
+		available = {
+			NOT = {has_global_flag = Has_rewarded_kiev_to_poles}
+			FRA = {
+				controls_state = 202
+				controls_state = 201
+				controls_state = 198
+				controls_state = 199
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+				state = 201
+				state = 198
+				state = 199
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			POL = {
+				transfer_state = 202
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 199
+			}
+			hidden_effect = {
+				set_global_flag = Has_rewarded_kiev_to_poles
+			}
+		}
+	}
+	FRA_reistablish_the_grand_duchy_of_vilnius = {
+		visible = {
+			has_completed_focus = FRA_reestablish_eastern_duchys
+			NOT = {has_global_flag = Has_created_republic_vilnius}
+		}
+		available = {
+			NOT = {country_exists = LIT}
+			FRA = {
+				controls_state = 188
+				controls_state = 189
+				controls_state = 814
+				controls_state = 815
+				controls_state = 11
+				controls_state = 784
+			}	
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 188
+				state = 189
+				state = 814
+				state = 815
+				state = 11
+				state = 784
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			LIT = {
+				transfer_state = 188
+				transfer_state = 189
+				transfer_state = 814
+				transfer_state = 815
+				transfer_state = 11
+				transfer_state = 784
+			}
+			set_autonomy = {
+				target = LIT
+				autonomy_state = autonomy_personal_union
+			}
+			LIT = {
+				set_cosmetic_tag = DUCHY_OF_VILNIUS
+				set_capital = { state = 784 }
+			}
+			hidden_effect = {
+				set_global_flag = Has_created_republic_vilnius
+			}
+		}
+	}
+	FRA_absorb_belarus_into_vilnius_administration = {
+		visible = {
+			has_global_flag = Has_created_republic_vilnius
+			NOT = {has_global_flag = Has_expanded_vilnius_belarus}
+		}
+		available = {
+			NOT = {has_global_flag = Has_expanded_vilnius_belarus}
+			FRA = {
+				controls_state = 95
+				controls_state = 94
+				controls_state = 96
+				controls_state = 207
+				controls_state = 206
+				controls_state = 204
+				controls_state = 194
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 95
+				state = 94
+				state = 96
+				state = 207
+				state = 206
+				state = 204
+				state = 194
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			LIT = {
+				transfer_state = 95
+				transfer_state = 94
+				transfer_state = 96
+				transfer_state = 207
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 194
+			}
+			hidden_effect = {
+				set_global_flag = Has_expanded_vilnius_belarus
+			}
+		}
+	}
+	FRA_integrate_courland_into_vilnius = {
+		visible = {
+			has_global_flag = Has_expanded_vilnius_belarus
+			NOT = {has_global_flag = Has_integrated_courland_vilnius}
+		}
+		available = {
+			NOT = {has_global_flag = Has_integrated_courland_vilnius}
+			FRA = {
+				controls_state = 190
+				controls_state = 809
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 190
+				state = 809
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			LIT = {
+				transfer_state = 190
+				transfer_state = 809
+			}
+			hidden_effect = {
+				set_global_flag = Has_integrated_courland_vilnius
+			}
+		}
+	}
+	FRA_restore_poland_lithuania = {
+		visible = {
+			has_global_flag = Has_rewarded_kiev_to_poles
+			has_global_flag = Has_integrated_courland_vilnius
+			NOT = {has_global_flag = Has_restored_poland_lithuania}
+		}
+		available = {
+			NOT = {has_global_flag = Has_restored_poland_lithuania}
+			POL = {
+				controls_state = 10
+				controls_state = 90
+				controls_state = 92
+				controls_state = 88
+				controls_state = 87
+				controls_state = 98
+				controls_state = 86
+				controls_state = 97
+				controls_state = 67
+				controls_state = 762
+				controls_state = 91
+				controls_state = 89
+				controls_state = 93
+				controls_state = 202
+				controls_state = 201
+				controls_state = 198
+				controls_state = 199
+			}
+			LIT = {
+				controls_state = 188
+				controls_state = 189
+				controls_state = 814
+				controls_state = 815
+				controls_state = 11
+				controls_state = 784
+				controls_state = 95
+				controls_state = 94
+				controls_state = 96
+				controls_state = 207
+				controls_state = 206
+				controls_state = 204
+				controls_state = 194
+				controls_state = 190
+				controls_state = 809
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+				state = 90
+				state = 92
+				state = 88
+				state = 87
+				state = 98
+				state = 86
+				state = 97
+				state = 67
+				state = 762
+				state = 91
+				state = 89
+				state = 93
+				state = 202
+				state = 201
+				state = 198
+				state = 199
+				state = 188
+				state = 189
+				state = 814
+				state = 815
+				state = 11
+				state = 784
+				state = 95
+				state = 94
+				state = 96
+				state = 207
+				state = 206
+				state = 204
+				state = 194
+				state = 190
+				state = 809
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 100
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			POL = {
+				annex_country = { target = LIT transfer_troops = yes }
+			}
+			POL = {
+				set_cosmetic_tag = GRAND_DUCHY_OF_POLAND_LITHUANIA
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 10
+							state = 90
+							state = 92
+							state = 88
+							state = 87
+							state = 98
+							state = 86
+							state = 97
+							state = 67
+							state = 762
+							state = 91
+							state = 89
+							state = 93
+							state = 202
+							state = 201
+							state = 198
+							state = 199
+							state = 188
+							state = 189
+							state = 814
+							state = 815
+							state = 11
+							state = 784
+							state = 95
+							state = 94
+							state = 96
+							state = 207
+							state = 206
+							state = 204
+							state = 194
+							state = 190
+							state = 809
+						}
+					}
+					add_core_of = POL
+				}
+				set_global_flag = Has_restored_poland_lithuania
+				news_event = {
+					id = mnhm_news.1
+					days = 1
+				}
+			}
+		}
+	}
+	FRA_restore_the_kingdom_of_egypt = {
+		visible = {
+			has_completed_focus = FRA_the_old_enemy
+			NOT = {has_global_flag = Has_restored_kingdom_of_egypt}
+		}
+		available = {
+			NOT = {country_exists = EGY}
+			FRA = {
+				controls_state = 452
+				controls_state = 447
+				controls_state = 907
+				controls_state = 456
+				controls_state = 457
+				controls_state = 453
+				controls_state = 446
+				controls_state = 552
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 452
+				state = 447
+				state = 907
+				state = 456
+				state = 457
+				state = 453
+				state = 446
+				state = 552
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			release = EGY
+			set_autonomy = {
+				target = EGY
+				autonomy_state = autonomy_personal_union
+			}
+			EGY = {
+				set_cosmetic_tag = EGY_fra_puppet
+			}
+			FRA = {
+				transfer_state = 446
+			}
+			hidden_effect = {
+				set_global_flag = Has_restored_kingdom_of_egypt
+			}
+		}
+	}
+	FRA_expand_egyptian_administration_to_sudan = {
+		visible = {
+			has_global_flag = Has_restored_kingdom_of_egypt
+			NOT = {has_global_flag = Has_expanded_egypt_sudan}
+		}
+		available = {
+			NOT = {has_global_flag = Has_expanded_egypt_sudan}
+			FRA = {
+				controls_state = 551
+				controls_state = 549
+				controls_state = 887
+				controls_state = 885
+				controls_state = 884
+				controls_state = 886
+				controls_state = 883
+				controls_state = 767
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 551
+				state = 549
+				state = 887
+				state = 885
+				state = 884
+				state = 886
+				state = 883
+				state = 767
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			EGY = {
+				transfer_state = 551
+				transfer_state = 549
+				transfer_state = 887
+				transfer_state = 885
+				transfer_state = 884
+				transfer_state = 886
+				transfer_state = 883
+				transfer_state = 767
+			}
+			hidden_effect = {
+				set_global_flag = Has_expanded_egypt_sudan
+			}
+		}
+	}
+}

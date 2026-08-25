@@ -1,0 +1,10 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_Baltic_German_Ideas"
+		texturefile = "gfx/interface/ideas/Baltic_German_Ideas.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_Riga_Diet_Convenes"
+		texturefile = "gfx/interface/ideas/Riga_Diet_Convenes.dds"
+	}
+}

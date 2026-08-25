@@ -1,0 +1,85 @@
+add_namespace = hmb_my_hoi4_mod_advisor_focus
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.1
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        original_tag = LUX
+        always = yes
+        has_government = democratic
+    }
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.2
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.3
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        original_tag = LUX
+        always = yes
+        has_government = democratic
+    }
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.4
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.5
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        original_tag = LUX
+        always = yes
+        has_government = democratic
+    }
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.6
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.7
+    hidden = yes
+    is_triggered_only = yes
+    trigger = {
+        original_tag = LUX
+        always = yes
+        has_government = democratic
+    }
+    immediate = {
+    }
+}
+
+country_event = {
+    id = hmb_my_hoi4_mod_advisor_focus.8
+    hidden = yes
+    is_triggered_only = yes
+    immediate = {
+    }
+}

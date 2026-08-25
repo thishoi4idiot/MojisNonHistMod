@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_idea_PilsudskiIdeaPicture"
+        texturefile = "gfx/interface/ideas/idea_portat2.dds"
+    }
+
+}

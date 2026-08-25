@@ -1,0 +1,191 @@
+form_west_slavia_category = {
+
+	form_west_slavia = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+				original_tag = SIL
+			}
+			has_dlc = "Waking the Tiger"
+		}
+
+		visible = {
+			OR = {
+				original_tag = CZE
+				original_tag = SLO
+				original_tag = SIL
+				AND = {
+					original_tag = POL
+					has_completed_focus = POL_proclaim_zapadoslavia
+				}
+			}
+			NOT = { has_global_flag = form_west_slavia_flag }
+		}
+
+		available = {
+			is_subject = no
+			# CZE
+			custom_trigger_tooltip = {
+				tooltip = MNHM_form_country_czechoslovakia_required_states_tt
+				
+				controls_state = 9
+				controls_state = 74
+				controls_state = 75
+				controls_state = 69
+				controls_state = 972
+			}
+			# POL
+			custom_trigger_tooltip = {
+				tooltip = MNHM_form_country_poland_required_states_tt
+				controls_state = 86
+				controls_state = 87
+				controls_state = 88
+				controls_state = 90
+				controls_state = 98
+				controls_state = 10
+				controls_state = 97
+				controls_state = 92
+				controls_state = 91
+				controls_state = 89
+				controls_state = 93
+				controls_state = 94
+				controls_state = 95
+				controls_state = 96
+				controls_state = 784
+			}
+			# SLO
+			custom_trigger_tooltip = {
+				tooltip = form_country_slovakia_required_states_tt
+				controls_state = 70
+				controls_state = 71
+				controls_state = 72
+				controls_state = 73
+				controls_state = 664
+			}
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ZAP_UNIFIED
+			# Czechoslovakia
+			custom_effect_tooltip = MNHM_form_country_czechoslovakia_coring_states_tt
+			hidden_effect = {
+				97 = { add_core_of = ROOT }
+				85 = { add_core_of = ROOT }
+				762 = { add_core_of = ROOT }
+				90 = { add_core_of = ROOT }
+				88 = { add_core_of = ROOT }
+				92 = { add_core_of = ROOT }
+				91 = { add_core_of = ROOT }
+				95 = { add_core_of = ROOT }
+				94 = { add_core_of = ROOT }
+				86 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				89 = { add_core_of = ROOT }
+				10 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+				784 = { add_core_of = ROOT }
+				93 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				9 = { add_core_of = ROOT }
+				73 = { add_core_of = ROOT }
+				71 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+				664 = { add_core_of = ROOT }
+				69 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+				67 = { add_core_of = ROOT }
+				66 = { add_core_of = ROOT }
+				68 = { add_core_of = ROOT }
+				63 = { add_core_of = ROOT }
+				5 = { add_core_of = ROOT }
+			}	
+			POL_karl_albrecht = {
+				add_country_leader_trait = Protector_of_the_west_slavs
+			}
+			# Poland
+			custom_effect_tooltip = MNHM_form_country_poland_coring_states_tt
+			hidden_effect = {
+				97 = { add_core_of = ROOT }
+				85 = { add_core_of = ROOT }
+				762 = { add_core_of = ROOT }
+				90 = { add_core_of = ROOT }
+				88 = { add_core_of = ROOT }
+				92 = { add_core_of = ROOT }
+				91 = { add_core_of = ROOT }
+				95 = { add_core_of = ROOT }
+				94 = { add_core_of = ROOT }
+				86 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				89 = { add_core_of = ROOT }
+				10 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+				784 = { add_core_of = ROOT }
+				93 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				9 = { add_core_of = ROOT }
+				73 = { add_core_of = ROOT }
+				71 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+				664 = { add_core_of = ROOT }
+				69 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+				67 = { add_core_of = ROOT }
+				66 = { add_core_of = ROOT }
+				68 = { add_core_of = ROOT }
+				63 = { add_core_of = ROOT }
+				5 = { add_core_of = ROOT }
+			}
+			# Slovakia
+			custom_effect_tooltip = form_country_slovakia_coring_states_tt
+			hidden_effect = {
+				97 = { add_core_of = ROOT }
+				85 = { add_core_of = ROOT }
+				762 = { add_core_of = ROOT }
+				90 = { add_core_of = ROOT }
+				88 = { add_core_of = ROOT }
+				92 = { add_core_of = ROOT }
+				91 = { add_core_of = ROOT }
+				95 = { add_core_of = ROOT }
+				94 = { add_core_of = ROOT }
+				86 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				89 = { add_core_of = ROOT }
+				10 = { add_core_of = ROOT }
+				96 = { add_core_of = ROOT }
+				784 = { add_core_of = ROOT }
+				93 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				9 = { add_core_of = ROOT }
+				73 = { add_core_of = ROOT }
+				71 = { add_core_of = ROOT }
+				74 = { add_core_of = ROOT }
+				75 = { add_core_of = ROOT }
+				664 = { add_core_of = ROOT }
+				69 = { add_core_of = ROOT }
+				70 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+			}
+			67 = { add_core_of = ROOT }
+			66 = { add_core_of = ROOT }
+			68 = { add_core_of = ROOT }
+			63 = { add_core_of = ROOT }
+			5 = { add_core_of = ROOT }
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}

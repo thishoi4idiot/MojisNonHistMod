@@ -1,0 +1,14 @@
+Proclaim_Greater_Romania = {
+
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		tag = ROM
+	}
+	priority = {
+		base = 100
+	}
+}

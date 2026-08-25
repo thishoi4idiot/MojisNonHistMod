@@ -1,0 +1,21 @@
+TUR_soviet_war_category = {
+
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		always = yes
+	}
+
+	visible_when_empty = no
+
+	visible = {
+		OR = {
+			tag = TUR
+			tag = SOV
+		}
+	}
+
+	priority = {
+		base = 100
+	}
+}
