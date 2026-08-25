@@ -802,7 +802,7 @@
 	focus = {
 		id = FRA_global_integration
 		icon = GFX_goal_generic_construction
-		x = 2
+		x = 0
 		y = 1
 		
 		prerequisite = {focus = FRA_colonial_industry }
@@ -8889,7 +8889,6 @@
 			ELSE = {
 				set_faction_name = FRA_confederation_of_the_rhine
 			}
-
 			if = {
 				limit = {
 					51 = {
@@ -8897,6 +8896,8 @@
 					}
 				}
 				transfer_state = 51
+				51 = {remove_core_of = PRE}
+				51 = {add_core_of = FRA}
 			}
 			if = {
 				limit = {
@@ -8905,6 +8906,8 @@
 					}
 				}
 				transfer_state = 42
+				42 = {remove_core_of = PRE}
+				42 = {add_core_of = FRA}
 			}
 			if = {
 				limit = {
@@ -8924,6 +8927,22 @@
 					transfer_state = 976  
 				}
 				puppet = AUS
+				set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
+			}
+			if = { #give state 972 (South Sudetenland) to Austria if held by France or her subjects
+				limit = {
+					972 = {
+						is_owned_or_subject_trigger = yes
+					}
+				}
+				AUS = {
+					transfer_state = 972
+					add_state_core = 972
+				}
+				972 = {remove_core_of = FRA}
+				972 = {add_core_of = AUS}
+				puppet = AUS
+				set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
 			}
 			if = { #set up Wurtemberg puppet
 				limit = {
@@ -8952,6 +8971,19 @@
 				SAX = {
 					transfer_state = 65
 					add_state_core = 65
+				}
+				puppet = SAX
+				set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
+			}
+			if = { #give state 69 to Saxony if held by France or her subjects
+				limit = {
+					69 = {
+						is_owned_or_subject_trigger = yes
+					}
+				}
+				SAX = {
+					transfer_state = 69
+					add_state_core = 69
 				}
 				puppet = SAX
 				set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
@@ -9072,12 +9104,38 @@
 			else = {
 				every_state = {
 					limit = { 
-						is_core_of = CZE 
+						is_core_of = CZE
+						NOT = {is_core_of = SLO}
 						is_owned_or_subject_trigger = yes
 					}
 					CZE = { transfer_state = PREV }
 				}
 				puppet = CZE
+				set_autonomy = { target = CZE autonomy_state = autonomy_personal_union }
+			}
+			if = {
+				limit = {
+					SLO = { exists = yes }
+					NOT = { has_war_with = SLO }
+				}
+				every_state = {
+					limit = { 
+						is_core_of = SLO 
+						is_owned_or_subject_trigger = yes
+					}
+					SLO = { transfer_state = PREV }
+				}
+			}
+			else = {
+				every_state = {
+					limit = { 
+						is_core_of = SLO
+						is_owned_or_subject_trigger = yes
+					}
+					SLO = { transfer_state = PREV }
+				}
+				puppet = SLO
+				set_autonomy = { target = SLO autonomy_state = autonomy_personal_union }
 			}
 			every_state = {
 				limit = { 
@@ -9156,13 +9214,14 @@
 						tag = THU
 						tag = HES
 						tag = PRE
+						tag = CZE
+						tag = AUS
+						tag = SWI
 					}
 					is_puppet_of = FRA
 				}
 				add_ideas = FRA_the_confederation_of_the_rhine
 			}
-			51 = {add_core_of = FRA}
-			42 = {add_core_of = FRA}
 		}
 	}
 	focus = {

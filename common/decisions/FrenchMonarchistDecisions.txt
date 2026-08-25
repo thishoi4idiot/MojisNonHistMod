@@ -393,18 +393,21 @@ FRA_reistablish_of_the_sister_republics = {
 	}
 	FRA_establish_the_croation_client_state = {
 		visible = {
-			NOT = {country_exists = CRO}
+			NOT = {country_exists = LBV}
 			NOT = {has_global_flag = Has_created_republic_croatia}
 			has_completed_focus = FRA_reclaim_italian_sister_republics
 		}
 		available = {
-			NOT = {country_exists = CRO}
+			NOT = {country_exists = LBV}
 			FRA = {
 				controls_state = 160
 				controls_state = 736
 				controls_state = 852
 				controls_state = 103
 				controls_state = 163
+				controls_state = 159
+				controls_state = 39
+				controls_state = 850
 			}
 		}
 		highlight_states = {
@@ -414,6 +417,9 @@ FRA_reistablish_of_the_sister_republics = {
 				state = 852
 				state = 103
 				state = 163
+				state = 159
+				state = 39
+				state = 850
     		}
     		highlight_color_while_active = 3
     		highlight_color_before_active = 3
@@ -423,15 +429,18 @@ FRA_reistablish_of_the_sister_republics = {
 		fire_only_once = yes
 		remove_effect = {
 			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
-			CRO = {
+			LBV = {
 				transfer_state = 160
 				transfer_state = 736
 				transfer_state = 852
 				transfer_state = 103
 				transfer_state = 163
+				transfer_state = 159
+				transfer_state = 39
+				transfer_state = 850
 			}
 			set_autonomy = {
-				target = CRO
+				target = LBV
 				autonomy_state = autonomy_personal_union
 			}
 			hidden_effect = {
