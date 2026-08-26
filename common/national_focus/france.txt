@@ -49,30 +49,6 @@
 		}
 	}
 	focus = {
-		id = FRA_extra_research_slot_2
-		icon = GFX_focus_research
-		prerequisite = { 
-			focus = FRA_devalue_the_franc
-		}
-		available = {
-			if = {
-				limit = { amount_research_slots > 3 }
-				num_of_factories > 75
-			}
-			amount_research_slots < 5
-		}
-		x = 6
-		y = 1
-		relative_position_id = FRA_devalue_the_franc
-		cost = 10
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	focus = {
 		id = FRA_autoroutes
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 2
@@ -458,11 +434,10 @@
 	}	
 	focus = {
 		id = FRA_invest_in_the_colonies
-		icon = GFX_goal_generic_construct_civilian
+		icon = GFX_The_French_Empire
 		x = 4
 		y = 1
 		
-		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
 		cost = 10
@@ -604,6 +579,11 @@
 						state = 286
 						state = 671
 						state = 670
+						state = 1017
+						state = 1066 
+						state = 1067 
+						state = 1068 
+						state = 1069 
 					}
 					OWNER = { is_owned_or_subject_trigger = yes }	
 					NOT = {
@@ -799,10 +779,35 @@
 			add_research_slot = 1
 		}
 	}
+	
+	focus = {
+		id = FRA_extra_research_slot_2
+		icon = GFX_focus_research
+		prerequisite = { 
+			focus = FRA_colonial_industry
+		}
+		available = {
+			if = {
+				limit = { amount_research_slots > 3 }
+				num_of_factories > 75
+			}
+			amount_research_slots < 5
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_colonial_industry
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
 	focus = {
 		id = FRA_global_integration
 		icon = GFX_goal_generic_construction
-		x = 0
+		x = 2
 		y = 1
 		
 		prerequisite = {focus = FRA_colonial_industry }
@@ -830,8 +835,6 @@
 			add_ideas = { FRA_global_investments }
 		}
 	}	
-
-	#### END ####
 
 	focus = {
 		id = FRA_begin_rearmament
@@ -1343,7 +1346,7 @@
 		prerequisite = { focus = FRA_aggressive_focus }
 		mutually_exclusive = { focus = FRA_air_dominance }
 		relative_position_id = FRA_aggressive_focus
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1893,7 +1896,7 @@
 		prerequisite = { focus = FRA_strengthen_the_unions }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invite_communist_ministers
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2031,7 +2034,6 @@
 			hidden_effect = {
 				news_event = { id = lar_news.9 days = 3 random_days = 5 }
 			}
-			remove_ideas = FrenchPacifism
 		}
 	}
 
@@ -3176,42 +3178,9 @@
 	}
 
 	focus = {
-		id = FRA_dirigisme
-		icon = GFX_focus_generic_the_giant_wakes
-		x = -1
-		y = 1
-		
-		prerequisite = {
-			focus = FRA_general_work_council
-		}
-		relative_position_id = FRA_general_work_council
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = { FRA_dirigisme }
-		}
-	}
-
-	focus = {
 		id = FRA_national_champions
 		icon = GFX_focus_generic_industry_3
-		x = 1
+		x = 0
 		y = 1
 		
 		prerequisite = {
@@ -3318,7 +3287,7 @@
 			focus = FRA_form_the_popular_front
 		}
 		relative_position_id = FRA_form_the_popular_front
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -3342,6 +3311,10 @@
 			add_to_temp_variable = { FRA_rw_support = party_popularity@fascism }
 			multiply_temp_variable = { FRA_rw_support = -0.5 }
 			add_stability = FRA_rw_support
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
 		}
 	}
 
@@ -4155,7 +4128,6 @@
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			remove_worker_shortage_effect = yes
-			remove_ideas = FrenchPacifism
 		}
 	}
 	focus = {
@@ -4372,7 +4344,6 @@
 		completion_reward = {
 			remove_ideas = FRA_disjointed_government
 			set_rule = { can_send_volunteers = yes }
-			remove_ideas = FrenchPacifism
 		}
 	}
 	focus = {
@@ -4954,7 +4925,7 @@
 			focus = FRA_agricultural_protectionism
 		}
 		relative_position_id = FRA_laissez_faire
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4986,7 +4957,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_protect_the_rights_of_man
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5200,7 +5171,7 @@
 			focus = FRA_revive_the_national_bloc
 		}
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -5439,7 +5410,6 @@
 
 		completion_reward = {
 			add_timed_idea = { idea = FRA_anti_decandence days = 365 }
-			remove_ideas = FrenchPacifism
 		}
 	}
 
@@ -7337,7 +7307,6 @@
 		completion_reward = {
 			add_political_power = 120
 			remove_ideas = { FRA_disjointed_government }
-			remove_ideas = FrenchPacifism
 		}
 	}
 
@@ -8841,389 +8810,396 @@
 		}
 	}
 	focus = {
-		id = FRA_disunite_germany
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 2
-		y = 1
-		
-		prerequisite = {
-			focus = FRA_retribution_for_sedan
-		}
-		relative_position_id = FRA_retribution_for_sedan
-		cost = 5
+        id = FRA_disunite_germany
+        icon = GFX_goal_generic_occupy_states_ongoing_war
+        x = 2
+        y = 1
+       
+        prerequisite = {
+            focus = FRA_retribution_for_sedan
+        }
+        relative_position_id = FRA_retribution_for_sedan
+        cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
 
-		available = {
-			is_subject = no
-			is_faction_leader = yes
-			any_state = { 
-				is_core_of = GER
-				is_controlled_by = ROOT
-			}
-			GER = {
-				OR = {
-					exists = no
-					has_capitulated = yes
-				}
-			}
-		}
-		
-		bypass = {
+        ai_will_do = {
+            factor = 1
+        }
 
-		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+        available = {
+            is_subject = no
+            is_faction_leader = yes
+            any_state = {
+                is_core_of = GER
+                is_controlled_by = ROOT
+            }
+            GER = {
+                OR = {
+                    exists = no
+                    has_capitulated = yes
+                }
+            }
+        }
+       
+        bypass = {
 
-		completion_reward = {
-			IF = {
-				limit = {
-					is_in_faction = no
-				}
-				custom_effect_tooltip = FRA_disunite_germany_tt
-			}
-			ELSE = {
-				set_faction_name = FRA_confederation_of_the_rhine
-			}
-			if = {
-				limit = {
-					51 = {
-						is_controlled_by = ROOT
-					}
-				}
-				transfer_state = 51
-				51 = {remove_core_of = PRE}
-				51 = {add_core_of = FRA}
-			}
-			if = {
-				limit = {
-					42 = {
-						is_controlled_by = ROOT
-					}
-				}
-				transfer_state = 42
-				42 = {remove_core_of = PRE}
-				42 = {add_core_of = FRA}
-			}
-			if = {
-				limit = {
-					4 = { is_owned_or_subject_trigger = yes }
-					152 = { is_owned_or_subject_trigger = yes }
-					153 = { is_owned_or_subject_trigger = yes }
-					848 = { is_owned_or_subject_trigger = yes }
-					975 = { is_owned_or_subject_trigger = yes }
-					976 = { is_owned_or_subject_trigger = yes }
-				}
-				AUS = {
-					transfer_state = 4
-					transfer_state = 152
-					transfer_state = 153
-					transfer_state = 848
-					transfer_state = 975
-					transfer_state = 976  
-				}
-				puppet = AUS
-				set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
-			}
-			if = { #give state 972 (South Sudetenland) to Austria if held by France or her subjects
-				limit = {
-					972 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				AUS = {
-					transfer_state = 972
-					add_state_core = 972
-				}
-				972 = {remove_core_of = FRA}
-				972 = {add_core_of = AUS}
-				puppet = AUS
-				set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Wurtemberg puppet
-				limit = {
-					50 = {
-						is_owned_or_subject_trigger = yes
-					}
-					978 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				WUR = {
-					transfer_state = 50
-					add_state_core = 50
-					transfer_state = 978 #BADEN -> BADEN-WURTTEMBERG
-					add_state_core = 978
-				}
-				puppet = WUR
-				set_autonomy = { target = WUR autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Saxony puppet
-				limit = {
-					65 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				SAX = {
-					transfer_state = 65
-					add_state_core = 65
-				}
-				puppet = SAX
-				set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
-			}
-			if = { #give state 69 to Saxony if held by France or her subjects
-				limit = {
-					69 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				SAX = {
-					transfer_state = 69
-					add_state_core = 69
-				}
-				puppet = SAX
-				set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Mecklenburg puppet
-				limit = {
-					61 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				MEK = {
-					transfer_state = 61
-					add_state_core = 61
-				}
-				puppet = MEK
-				set_autonomy = { target = MEK autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Schleswig-Holstein puppet
-				limit = {
-					58 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				SHL = {
-					transfer_state = 58
-					add_state_core = 58
-					transfer_state = 909 #New state of SCHLESWIG
-					add_state_core = 909 #New state of SCHLESWIG
-				}
-				puppet = SHL
-				set_autonomy = { target = SHL autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Hessen puppet
-				limit = {
-					55 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				HES = {
-					transfer_state = 55
-					add_state_core = 55
-				}
-				puppet = HES
-				set_autonomy = { target = HES autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Thuringia puppet
-				limit = {
-					66 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				THU = {
-					transfer_state = 60
-					add_state_core = 60
-				}
-				puppet = THU
-				set_autonomy = { target = THU autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Bavaria puppet
-				limit = {
-					52 = {
-						is_owned_or_subject_trigger = yes
-					}
-					53 = {
-						is_owned_or_subject_trigger = yes
-					}
-					54 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				BAY = {
-					transfer_state = 52
-					transfer_state = 53
-					transfer_state = 54
-					add_state_core = 52
-					add_state_core = 53
-					add_state_core = 54
-				}
-				puppet = BAY
-				set_autonomy = { target = BAY autonomy_state = autonomy_personal_union }
-			}
-			if = { #set up Hanover puppet
-				limit = {
-					59 = {
-						is_owned_or_subject_trigger = yes
-					}
-					56 = {
-						is_owned_or_subject_trigger = yes
-					}
-					57 = {
-						is_owned_or_subject_trigger = yes
-					}
-				}
-				HAN = {
-					transfer_state = 59
-					transfer_state = 56
-					transfer_state = 57
-					add_state_core = 59
-					add_state_core = 56
-					add_state_core = 57
-				}
-				puppet = HAN
-				set_autonomy = { target = HAN autonomy_state = autonomy_personal_union }
-			}
-			if = {
-				limit = {
-					CZE = { exists = yes }
-					NOT = { has_war_with = CZE }
-				}
-				every_state = {
-					limit = { 
-						is_core_of = CZE 
-						is_owned_or_subject_trigger = yes
-					}
-					CZE = { transfer_state = PREV }
-				}
-			}
-			else = {
-				every_state = {
-					limit = { 
-						is_core_of = CZE
-						NOT = {is_core_of = SLO}
-						is_owned_or_subject_trigger = yes
-					}
-					CZE = { transfer_state = PREV }
-				}
-				puppet = CZE
-				set_autonomy = { target = CZE autonomy_state = autonomy_personal_union }
-			}
-			if = {
-				limit = {
-					SLO = { exists = yes }
-					NOT = { has_war_with = SLO }
-				}
-				every_state = {
-					limit = { 
-						is_core_of = SLO 
-						is_owned_or_subject_trigger = yes
-					}
-					SLO = { transfer_state = PREV }
-				}
-			}
-			else = {
-				every_state = {
-					limit = { 
-						is_core_of = SLO
-						is_owned_or_subject_trigger = yes
-					}
-					SLO = { transfer_state = PREV }
-				}
-				puppet = SLO
-				set_autonomy = { target = SLO autonomy_state = autonomy_personal_union }
-			}
-			every_state = {
-				limit = { 
-					is_core_of = PRE 
-					is_owned_or_subject_trigger = yes
-					CONTROLLER = {
-						NOT = {
-							OR = {
-								tag = BAY
-								tag = MEK
-								tag = SAX
-								tag = HAN
-								tag = SHL
-								tag = WUR
-								tag = CZE
-								tag = THU
-								tag = HES
-							}
-						}
-					}
-					NOT = {
-						state = 42 #MOSELLAND
-						state = 51
-						state = 67
-						state = 762
-					}
-				}
-				PRE = {
-					transfer_state = PREV
-					add_state_core = PREV
-				}
-			}
-			if = {
-				limit = {
-					country_exists = PRE
-				}
-				puppet = PRE
-			}
-			if = {
-				limit = {
-					country_exists = PRE
-					PRE = {
-						is_puppet_of = FRA
-					}
-					85 = {
-						is_controlled_by = FRA
-					}
-				}
-				PRE = {
-					transfer_state = 85
-				}
-			}
-			if = {
-				limit = {
-					country_exists = PRE
-					PRE = {
-						is_puppet_of = FRA
-					}
-					807 = {
-						is_controlled_by = FRA
-					}
-				}
-				PRE = {
-					transfer_state = 807
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						tag = BAY
-						tag = MEK
-						tag = SAX
-						tag = HAN
-						tag = SHL
-						tag = WUR
-						tag = THU
-						tag = HES
-						tag = PRE
-						tag = CZE
-						tag = AUS
-						tag = SWI
-					}
-					is_puppet_of = FRA
-				}
-				add_ideas = FRA_the_confederation_of_the_rhine
-			}
-		}
-	}
+
+        }
+
+
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+
+
+        completion_reward = {
+            IF = {
+                limit = {
+                    is_in_faction = no
+                }
+                custom_effect_tooltip = FRA_disunite_germany_tt
+            }
+            ELSE = {
+                set_faction_name = FRA_confederation_of_the_rhine
+            }
+            if = {
+                limit = {
+                    51 = {
+                        is_controlled_by = ROOT
+                    }
+                }
+                transfer_state = 51
+                51 = {remove_core_of = PRE}
+                51 = {add_core_of = FRA}
+            }
+            if = {
+                limit = {
+                    42 = {
+                        is_controlled_by = ROOT
+                    }
+                }
+                transfer_state = 42
+                42 = {remove_core_of = PRE}
+                42 = {add_core_of = FRA}
+            }
+            if = {
+                limit = {
+                    4 = { is_owned_or_subject_trigger = yes }
+                    152 = { is_owned_or_subject_trigger = yes }
+                    153 = { is_owned_or_subject_trigger = yes }
+                    848 = { is_owned_or_subject_trigger = yes }
+                    975 = { is_owned_or_subject_trigger = yes }
+                    976 = { is_owned_or_subject_trigger = yes }
+                }
+                AUS = {
+                    transfer_state = 4
+                    transfer_state = 152
+                    transfer_state = 153
+                    transfer_state = 848
+                    transfer_state = 975
+                    transfer_state = 976  
+                }
+                puppet = AUS
+                set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
+            }
+            if = { #give state 972 (South Sudetenland) to Austria if held by France or her subjects
+                limit = {
+                    972 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                AUS = {
+                    transfer_state = 972
+                    add_state_core = 972
+                }
+                972 = {remove_core_of = FRA}
+                972 = {add_core_of = AUS}
+                puppet = AUS
+                set_autonomy = { target = AUS autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Wurtemberg puppet
+                limit = {
+                    50 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                    978 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                WUR = {
+                    transfer_state = 50
+                    add_state_core = 50
+                    transfer_state = 978 #BADEN -> BADEN-WURTTEMBERG
+                    add_state_core = 978
+                }
+                puppet = WUR
+                set_autonomy = { target = WUR autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Saxony puppet
+                limit = {
+                    65 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                SAX = {
+                    transfer_state = 65
+                    add_state_core = 65
+                }
+                puppet = SAX
+                set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
+            }
+            if = { #give state 69 to Saxony if held by France or her subjects
+                limit = {
+                    69 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                SAX = {
+                    transfer_state = 69
+                    add_state_core = 69
+                }
+                puppet = SAX
+                set_autonomy = { target = SAX autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Mecklenburg puppet
+                limit = {
+                    61 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                MEK = {
+                    transfer_state = 61
+                    add_state_core = 61
+                }
+                puppet = MEK
+                set_autonomy = { target = MEK autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Schleswig-Holstein puppet
+                limit = {
+                    58 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                SHL = {
+                    transfer_state = 58
+                    add_state_core = 58
+                    transfer_state = 909 #New state of SCHLESWIG
+                    add_state_core = 909 #New state of SCHLESWIG
+                }
+                puppet = SHL
+                set_autonomy = { target = SHL autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Hessen puppet
+                limit = {
+                    55 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                HES = {
+                    transfer_state = 55
+                    add_state_core = 55
+                }
+                puppet = HES
+                set_autonomy = { target = HES autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Thuringia puppet
+                limit = {
+                    66 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                THU = {
+                    transfer_state = 60
+                    add_state_core = 60
+                }
+                puppet = THU
+                set_autonomy = { target = THU autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Bavaria puppet
+                limit = {
+                    52 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                    53 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                    54 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                BAY = {
+                    transfer_state = 52
+                    transfer_state = 53
+                    transfer_state = 54
+                    add_state_core = 52
+                    add_state_core = 53
+                    add_state_core = 54
+                }
+                puppet = BAY
+                set_autonomy = { target = BAY autonomy_state = autonomy_personal_union }
+            }
+            if = { #set up Hanover puppet
+                limit = {
+                    59 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                    56 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                    57 = {
+                        is_owned_or_subject_trigger = yes
+                    }
+                }
+                HAN = {
+                    transfer_state = 59
+                    transfer_state = 56
+                    transfer_state = 57
+                    add_state_core = 59
+                    add_state_core = 56
+                    add_state_core = 57
+                }
+                puppet = HAN
+                set_autonomy = { target = HAN autonomy_state = autonomy_personal_union }
+            }
+            if = {
+                limit = {
+                    CZE = { exists = yes }
+                    NOT = { has_war_with = CZE }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = CZE
+                        is_owned_or_subject_trigger = yes
+                    }
+                    CZE = { transfer_state = PREV }
+                }
+            }
+            else = {
+                every_state = {
+                    limit = {
+                        is_core_of = CZE
+                        NOT = {is_core_of = SLO}
+                        is_owned_or_subject_trigger = yes
+                    }
+                    CZE = { transfer_state = PREV }
+                }
+                puppet = CZE
+                set_autonomy = { target = CZE autonomy_state = autonomy_personal_union }
+            }
+            if = {
+                limit = {
+                    SLO = { exists = yes }
+                    NOT = { has_war_with = SLO }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = SLO
+                        is_owned_or_subject_trigger = yes
+                    }
+                    SLO = { transfer_state = PREV }
+                }
+            }
+            else = {
+                every_state = {
+                    limit = {
+                        is_core_of = SLO
+                        is_owned_or_subject_trigger = yes
+                    }
+                    SLO = { transfer_state = PREV }
+                }
+                puppet = SLO
+                set_autonomy = { target = SLO autonomy_state = autonomy_personal_union }
+            }
+            every_state = {
+                limit = {
+                    is_core_of = PRE
+                    is_owned_or_subject_trigger = yes
+                    CONTROLLER = {
+                        NOT = {
+                            OR = {
+                                tag = BAY
+                                tag = MEK
+                                tag = SAX
+                                tag = HAN
+                                tag = SHL
+                                tag = WUR
+                                tag = CZE
+                                tag = THU
+                                tag = HES
+                            }
+                        }
+                    }
+                    NOT = {
+                        state = 42 #MOSELLAND
+                        state = 51
+                        state = 67
+                        state = 762
+                    }
+                }
+                PRE = {
+                    transfer_state = PREV
+                    add_state_core = PREV
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = PRE
+                }
+                puppet = PRE
+            }
+            if = {
+                limit = {
+                    country_exists = PRE
+                    PRE = {
+                        is_puppet_of = FRA
+                    }
+                    85 = {
+                        is_controlled_by = FRA
+                    }
+                }
+                PRE = {
+                    transfer_state = 85
+                }
+            }
+            if = {
+                limit = {
+                    country_exists = PRE
+                    PRE = {
+                        is_puppet_of = FRA
+                    }
+                    807 = {
+                        is_controlled_by = FRA
+                    }
+                }
+                PRE = {
+                    transfer_state = 807
+                }
+            }
+            every_country = {
+                limit = {
+                    OR = {
+                        tag = BAY
+                        tag = MEK
+                        tag = SAX
+                        tag = HAN
+                        tag = SHL
+                        tag = WUR
+                        tag = THU
+                        tag = HES
+                        tag = PRE
+                        tag = CZE
+                        tag = AUS
+                        tag = SWI
+                    }
+                    is_puppet_of = FRA
+                }
+                add_ideas = FRA_the_confederation_of_the_rhine
+            }
+        }
+    }
+
+
 	focus = {
 		id = FRA_reistablish_the_sister_republics
 		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
@@ -10193,3 +10169,4 @@
 		}
 	}
 }
+

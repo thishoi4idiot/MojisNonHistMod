@@ -535,8 +535,8 @@
  MNHM_form_country_poland_coring_states_tt: "Gain cores on all Czech states."
  form_country_slovakia_coring_states_tt: "Gain cores on all §YSlovak§! states."
  MNHM_form_country_czechoslovakia_required_states_tt: "Controls all §YCzech§! States."
- MNHM_form_country_poland_required_states_tt: "Controls all §YSlovak§! States."
- form_country_slovakia_required_states_tt: "Controls all §YPolish§! States."
+ MNHM_form_country_poland_required_states_tt: "Controls all §YPolish§! States."
+ form_country_slovakia_required_states_tt: "Controls all §YSlovak§! States."
 
  ###########################
  # ROMANIA                 #
@@ -696,7 +696,8 @@
  SOV_economic_liberalization: "Economic Liberalization"
  SOV_oligarch_extraction_penalty: "Oligarch Run Economy"
  
- SOV_custom_focus_tooltip: "Adds §G3§W Building Slots and §Y1 Civilian Factory§W in up to §Y10§W fully controlled core states between Moscow and the Urals with at least §Y4§W levels of Infrastructure."
+ SOV_custom_focus_tooltip: "Adds §G3§W Building Slots and §Y1 Civilian Factory§W in up to §Y10§W fully controlled core states between Moscow and the Urals with at least §Y4§W levels of Infrastructure." 
+ FRA_custom_focus_tooltip: "Adds §G2§W Building Slots and §Y1 Civilian Factory§W in up to §Y4§W fully controlled core states with level §Y5§W Infrastructure." 
 
 
  # Focus Descriptions
@@ -2088,4 +2089,45 @@
  CHI_end_exploitation.9.t: "Nanjing Accepts the Terms"
  CHI_end_exploitation.9.d: "Word arrives from the breakaway government: they have accepted our terms. Independence will be recognized, and in exchange our industries will continue to draw on their factories. A quieter, more profitable arrangement than a costly war of reconquest."
  CHI_end_exploitation.9.a: "A satisfactory outcome"
+
+ ###########################
+ # FRANCE ECO TREE         #
+ ###########################
+
+ # Focus Names
+ FRA_implement_austerity_measures: "Implement Austerity Measures"
+ FRA_compulsory_cartelization: "Compulsory Cartelization"
+ FRA_streamline_production_cost: "Streamline Production Cost"
+ FRA_surpress_trade_union_opposition: "Surpress Trade Union Opposition"
+ FRA_adopt_laissez_faire_economics: "Adopt Laissez Faire economics"
+ FRA_copy_the_new_deal: "Copy the New Deal"
+ FRA_fund_hydroelectric_projects: "Fund Hydroelectric Projects"
+ FRA_national_housing_programmes: "National Housing Programmes"
+ FRA_increase_top_marginal_tax_rate: "Increase Top Marginal Tax Rate"
+ FRA_invite_french_settlers: "Invite French Settlers"
+ FRA_combat_colonial_illiteracy: "Combat Colonial illiteracy"
+
+ # Focus Descriptions
+ FRA_implement_austerity_measures_desc: "The only way to get our fiscal situation in order and get out of the depression is by balancing the budget with austerity measures."
+ FRA_compulsory_cartelization_desc: "The depression has revealed many factories to be uncompetitive and inefficient. We must force these uncompetitive factories to combine into larger state-sanctioned cartels."
+ FRA_streamline_production_cost_desc: "We will prioritize production output over quality of our equipment."
+ FRA_surpress_trade_union_opposition_desc: "The trade unions in particular has mounted substantial resistance to our austerity measures in forms of strikes, if we want our factories back up and running, we must crack down on the trade unions."
+ FRA_adopt_laissez_faire_economics_desc: "Laissez faire economics has proven to be the most efficient economic model at fostering economic growth. To not use it would be simply ridiculous."
+ FRA_copy_the_new_deal_desc: "As a result of the great depression, many economists, such as John Keynes have suggested that substantial government spending is the best way to restart an economy. It has already been implemented in the USA via the new deal with great success. We will therefore implement a similar French new deal."
+ FRA_fund_hydroelectric_projects_desc: "As part of the massive public works programmes, we will fund construction of hydroelectric plants which would supply us with significant amounts of energy."
+ FRA_national_housing_programmes_desc: "Another part of our public works programmes will be large scale housing efforts which would also supply the less fortunate with affordable shelter."
+ FRA_increase_top_marginal_tax_rate_desc: "Government spending has increased significantly with the public works programmes and it is becoming unsustainable. We must increase our revenue by taxing those who already have more than enough."
+ FRA_invite_french_settlers_desc: "Inviting French settlers to settle in Algeria would speed up integration efforts."
+ FRA_combat_colonial_illiteracy_desc: "Our colonial empire is plagued with illiteracy which significantly hinders our modernization effort. We must root out colonial illiteracy."
+
+ # Idea Names
+ FRA_great_depression: "Great Depression"
+ FRA_great_depression_franc: "Great Depression"
+ FRA_great_depression_austerity: "Great Depression"
+ FRA_great_depression_production: "Great Depression"
+ FRA_laissez_faire: "Laissez Faire"
+ FRA_great_depression_keynes: "Great Depression"
+ FRA_great_depression_tax: "Great Depression"
+ FRA_hej_dirigisme: "Dirigisme"
+
 

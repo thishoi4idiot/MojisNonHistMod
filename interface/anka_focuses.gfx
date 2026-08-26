@@ -27,4 +27,8 @@ spriteTypes = {
 		name = "GFX_focus_Baltic_German_Focus_15"
 		texturefile = "gfx/interface/goals/Baltic_German_Focus_15.dds"
 	}
+	SpriteType = {
+		name = "GFX_The_French_Empire"
+		texturefile = "gfx/interface/goals/The_French_Empire.dds"
+	}
 }
