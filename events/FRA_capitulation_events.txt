@@ -1,0 +1,43 @@
+add_namespace = fra_capitulation
+
+country_event = {
+	id = fra_capitulation.1
+	title = fra_capitulation.1.t
+
+	desc = {
+		text = fra_capitulation.1.d_collapse
+		trigger = {
+			has_country_flag = FRA_franc_collapse_flag
+		}
+	}
+	desc = {
+		text = fra_capitulation.1.d_default
+		trigger = {
+			always = yes
+		}
+	}
+
+	picture = GFX_report_event_worried_french
+
+	is_triggered_only = yes
+
+	option = {
+		name = fra_capitulation.1.a
+		set_country_flag = FRA_has_ever_capitulated
+		if = {
+			limit = {
+				has_idea = FRA_the_fortress_franc
+			}
+			remove_ideas = FRA_the_fortress_franc
+		}
+		else_if = {
+			limit = {
+				has_idea = FRA_austerity_measures
+			}
+			add_ideas = FRA_franc_collapse
+			remove_ideas = FRA_austerity_measures
+			set_country_flag = FRA_franc_collapse_flag
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}

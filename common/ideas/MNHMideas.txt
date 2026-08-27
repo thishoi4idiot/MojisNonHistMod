@@ -27,6 +27,46 @@ ideas = {
 		}
 	}
 	country = {
+		FRA_the_fortress_franc = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_AFG_a_modern_economy
+			modifier = {
+				consumer_goods_factor = -0.25
+				industrial_capacity_factory = 0.25
+				stability_factor = 0.15
+				political_power_gain = 0.35
+			}
+		}
+	}
+	country = {
+		FRA_post_crisis_holdover = {
+			allowed = {
+				always = yes
+			}
+			cancel = {
+				has_capitulated = no
+			}
+			picture = GFX_focus_usa_reestablish_the_gold_standard
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+	country = {
+		FRA_inflation = {
+			allowed = {
+				always = yes
+			}
+			picture = NOR_printing_money
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+	}
+	country = {
 		FrenchPacifism = {
 			allowed = {
 				always = yes
@@ -35,7 +75,192 @@ ideas = {
 			modifier = {
 				production_speed_arms_factory_factor = -0.25
 			}
-		}		
+		}
+	}
+	country = {
+		FRA_uphold_the_gold_bloc = {
+			allowed = {
+				always = yes
+			}
+			picture = SPR_seize_the_gold_reserves
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.25
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.1
+			}
+		}
+	}
+	country = {
+		FRA_road_to_recovery = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_generic_economic_recovery
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	country = {
+		FRA_foreign_loans = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_generic_currency_reforms
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.1
+				political_power_gain = -0.1
+			}
+		}
+	}
+	country = {
+		FRA_franc_collapse = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_economic_crisis
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = 0.45
+				industrial_capacity_factory = -0.15
+			}
+		}
+	}
+	country = {
+		FRA_austerity_measures = {
+			allowed = {
+				always = yes
+			}
+			picture = NOR_printing_money
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = -0.05
+				political_power_gain = 0.15
+			}
+		}
+	}
+	country = {
+		FRA_recovering_economy = {
+			allowed = {
+				always = yes
+			}
+			picture = ARG_economic_reactivation
+			modifier = {
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+	}
+	country = {
+		FRA_recovering_economy_2 = {
+			allowed = {
+				always = yes
+			}
+			picture = ARG_economic_reactivation
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+	}
+	country = {
+		FRA_recovering_economy_3 = {
+			allowed = {
+				always = yes
+			}
+			picture = ARG_economic_reactivation
+			modifier = {
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	}
+	country = {
+		FRA_cut_business_taxes = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_generic_currency_reforms
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+	}
+	country = {
+		FRA_lifted_financial_regulations = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_DEN_limited_regulations
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				stability_factor = -0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_idea = FRA_recovering_economy
+					}
+					remove_ideas = FRA_recovering_economy
+					add_ideas = FRA_recovering_economy_2
+				}
+				else_if = {
+					limit = {
+						has_idea = FRA_recovering_economy_2
+					}
+					remove_ideas = FRA_recovering_economy_2
+					add_ideas = FRA_recovering_economy_3
+				}
+				else_if = {
+					limit = {
+						has_idea = FRA_recovering_economy_3
+					}
+					remove_ideas = FRA_recovering_economy_3
+				}
+			}
+		}
+	}
+	country = {
+		FRA_crack_down_on_trade_unions = {
+			allowed = {
+				always = yes
+			}
+			picture = GFX_focus_ARG_crackdown_on_corruption
+			modifier = {
+				stability_factor = -0.1
+				communism_drift = -0.1
+				industrial_capacity_factory = 0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_idea = FRA_recovering_economy
+					}
+					remove_ideas = FRA_recovering_economy
+					add_ideas = FRA_recovering_economy_2
+				}
+				else_if = {
+					limit = {
+						has_idea = FRA_recovering_economy_2
+					}
+					remove_ideas = FRA_recovering_economy_2
+					add_ideas = FRA_recovering_economy_3
+				}
+				else_if = {
+					limit = {
+						has_idea = FRA_recovering_economy_3
+					}
+					remove_ideas = FRA_recovering_economy_3
+				}
+			}
+		}
 	}
 	country = {
 		britishConvoying = {
