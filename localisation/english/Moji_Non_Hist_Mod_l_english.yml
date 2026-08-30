@@ -1610,6 +1610,7 @@
  ###########################
 
  AmongusMan: "Red (Very Sus)"
+ GAMEPLAY_RULES: "Gameplay Rules"
  free_templates_rule: "Free Army Templates"
  free_templates_rule_desc: "Determines whether changing division templates consumes Army Experience."
  free_templates_rule_DISABLED: "Disabled"
@@ -1617,8 +1618,8 @@
  free_templates_rule_ENABLED: "Enabled"
  free_templates_rule_ENABLED_desc: "All modifications and additions to division templates cost zero Army XP."
  Mojis_Boon: "Moji's Boon"
- Mojis_Boon_desc: "Our officers redesign divisions and equipment on the fly, free of charge to the army's training budget."
- Mojis_Boon_tt: "§YMoji§!, against his wishes, has granted you the ability to have free templates and designs."
+ Mojis_Boon_desc: " \"Those who are free were never as strong as those who wore chains\" -Moji (after drinking)"
+ Mojis_Boon_tt: " §YMoji§!, against his wishes, has granted you the ability to have free templates and designs."
  FrenchPacifism: "French Pacifism"
  MOJI_ALASKA_RELEASE_NATION_TOOLTIP: "§YThe United States§! may not release §YAlaska§."
  a_strong_successor_to_the_fuhrer: "A strong successor to the fuhrer"
