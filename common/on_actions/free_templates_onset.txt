@@ -1,0 +1,18 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = {
+                        rule = free_templates_rule
+                        option = ENABLED
+                    }
+                }
+                # Applies the 0 XP cost globally to every single spawned nation
+                every_country = {
+                    add_ideas = Mojis_Boon
+                }
+            }
+        }
+    }
+}

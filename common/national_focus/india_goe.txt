@@ -2566,18 +2566,6 @@ focus_tree = {
         ai_will_do = {
             factor = 1
         }
-
-        available = {
-			has_full_control_of_state = 415
-			has_full_control_of_state = 267
-			has_full_control_of_state = 1007
-			has_full_control_of_state = 1005
-			has_full_control_of_state = 1006
-			has_full_control_of_state = 619
-			has_full_control_of_state = 287
-			has_full_control_of_state = 617
-			has_full_control_of_state = 759
-        }
         
         bypass = {
 

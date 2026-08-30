@@ -252,7 +252,6 @@ if = {
 	complete_national_focus = FRA_defensive_focus
 	complete_national_focus = FRA_firepower_kills
 	complete_national_focus = FRA_go_with_britain
-	complete_national_focus = FRA_devalue_the_franc
 	complete_national_focus = FRA_invest_in_the_metropole
 
 	give_guarantee = POL
@@ -428,13 +427,21 @@ set_popularities = {
 add_ideas = {
 	FRA_victors_of_wwi
 	FRA_disjointed_government
-	FrenchPacifism
 	FRA_protected_by_the_maginot_line
 	limited_conscription
 	FRA_full_employment
 	FRA_political_violence
 	FRA_inefficient_economy_2
 }
+
+set_variable = { var = FRA_gd_consumer_goods value = 0.5 }
+set_variable = { var = FRA_gd_ind_complex value = -0.3 }
+set_variable = { var = FRA_gd_arms_factory value = -0.3 }
+set_variable = { var = FRA_gd_stability value = -0.1 }
+set_variable = { var = FRA_gd_pp_cost value = 0.3 }
+set_variable = { var = FRA_gd_conscription value = -0.1 }
+set_variable = { var = FRA_gd_ind_cap_factory value = -0.3 }
+add_dynamic_modifier = { modifier = FRA_great_depression }
 
 give_guarantee = CZE
 give_guarantee = YUG

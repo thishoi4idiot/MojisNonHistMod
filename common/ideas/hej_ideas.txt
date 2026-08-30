@@ -594,53 +594,11 @@ ideas = {
 		}
 	}
 	country = {
-		FRA_great_depression = {
-			picture = great_depression
+		FRA_devalue_the_franc = {
+			picture = generic_economic_increase
 			modifier = {
-				consumer_goods_factor = 0.5
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				stability_factor = -0.2
-				political_power_cost = 0.3
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.3
-			}
-		}
-	}
-	country = {
-		FRA_great_depression_franc = {
-			picture = great_depression
-			modifier = {
-				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				stability_factor = -0.2
-				political_power_cost = 0.3
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.3
-			}
-		}
-	}
-	country = {
-		FRA_great_depression_austerity = {
-			picture = great_depression
-			modifier = {
-				consumer_goods_factor = -0.3
-				production_speed_buildings_factor = -0.4
-				stability_factor = -0.2
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.4
-			}
-		}
-	}
-	country = {
-		FRA_great_depression_production = {
-			picture = great_depression
-			modifier = {
-				consumer_goods_factor = -0.3
-				production_speed_buildings_factor = -0.4
-				stability_factor = -0.3
-				conscription_factor = -0.1
+				consumer_goods_factor = -0.1
+				stability_factor = -0.05
 			}
 		}
 	}
@@ -648,38 +606,9 @@ ideas = {
 		FRA_laissez_faire = {
 			picture = generic_economic_increase
 			modifier = {
-				production_speed_buildings_factor = 0.3
-				stability_factor = 0.1
-				political_power_gain = 0.1
-			}
-		}
-	}
-	country = {
-		FRA_great_depression_keynes = {
-			picture = great_depression
-			modifier = {
-				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = 0.3
-				production_speed_infrastructure_factor = 0.3
-				production_speed_arms_factory_factor = -0.3
-				stability_factor = 0.2
-				political_power_cost = 0.3
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.3
-			}
-		}
-	}
-	country = {
-		FRA_great_depression_tax = {
-			picture = great_depression
-			modifier = {
-				production_speed_industrial_complex_factor = 0.3
-				production_speed_infrastructure_factor = 0.3
-				production_speed_arms_factory_factor = -0.3
-				stability_factor = 0.2
-				political_power_cost = 0.3
-				conscription_factor = -0.1
-				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = 0.15
+				stability_factor = 0.15
+				political_power_factor = 0.15
 			}
 		}
 	}
@@ -687,11 +616,35 @@ ideas = {
 		FRA_hej_dirigisme = {
 			picture = generic_nationalization
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
 				production_speed_infrastructure_factor = 0.15
-				production_speed_arms_factory_factor = 0.1
+				production_speed_arms_factory_factor = 0.2
 				stability_factor = 0.1
 				political_power_cost = 0.1
+			}
+		}
+	}
+	country = {
+		FRA_national_housing_programmes_idea_tier1 = {
+			picture = chi_hyper_inflation
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+	}
+	country = {
+		FRA_national_housing_programmes_idea_tier2 = {
+			picture = chi_hyper_inflation2
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+	}
+	country = {
+		FRA_national_housing_programmes_idea_tier3 = {
+			picture = chi_hyper_inflation3
+			modifier = {
+				consumer_goods_factor = 0.45
 			}
 		}
 	}

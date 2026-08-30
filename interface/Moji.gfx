@@ -3,5 +3,8 @@ spriteTypes = {
         name = "GFX_idea_PilsudskiIdeaPicture"
         texturefile = "gfx/interface/ideas/idea_portat2.dds"
     }
-
+    spriteType = {
+        name = "GFX_idea_Mojis_Boon"
+        texturefile = "gfx/interface/ideas/Moji.dds"
+    }
 }

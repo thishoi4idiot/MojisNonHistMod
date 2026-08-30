@@ -19,7 +19,7 @@ ENG_10_year_policy = {
 		always = yes
 	}
 	icon = GFX_idea_SOV_third_five_year_plan
-	
+
 	remove_trigger = {
 		OR = {
 			GER = {
@@ -142,3 +142,18 @@ SOV_the_kalinin_agreement = {
 	stability_factor = the_kalinin_agreement_c
 	industrial_capacity_factory = the_kalinin_agreement_d
 }
+
+FRA_great_depression = {
+	enable = { always = yes }
+	icon = GFX_idea_great_depression
+	consumer_goods_factor = FRA_gd_consumer_goods
+	production_speed_industrial_complex_factor = FRA_gd_ind_complex
+	production_speed_arms_factory_factor = FRA_gd_arms_factory
+	production_speed_buildings_factor = FRA_gd_buildings
+	production_speed_infrastructure_factor = FRA_gd_infrastructure
+	stability_factor = FRA_gd_stability
+	political_power_cost = FRA_gd_pp_cost
+	conscription_factor = FRA_gd_conscription
+	industrial_capacity_factory = FRA_gd_ind_cap_factory
+}
+

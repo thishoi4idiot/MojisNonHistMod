@@ -27,46 +27,6 @@ ideas = {
 		}
 	}
 	country = {
-		FRA_the_fortress_franc = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_AFG_a_modern_economy
-			modifier = {
-				consumer_goods_factor = -0.25
-				industrial_capacity_factory = 0.25
-				stability_factor = 0.15
-				political_power_gain = 0.35
-			}
-		}
-	}
-	country = {
-		FRA_post_crisis_holdover = {
-			allowed = {
-				always = yes
-			}
-			cancel = {
-				has_capitulated = no
-			}
-			picture = GFX_focus_usa_reestablish_the_gold_standard
-			modifier = {
-				stability_factor = -0.15
-				consumer_goods_factor = 0.1
-			}
-		}
-	}
-	country = {
-		FRA_inflation = {
-			allowed = {
-				always = yes
-			}
-			picture = NOR_printing_money
-			modifier = {
-				stability_factor = -0.05
-			}
-		}
-	}
-	country = {
 		FrenchPacifism = {
 			allowed = {
 				always = yes
@@ -74,191 +34,6 @@ ideas = {
 			picture = BEL_the_kings_surrender
 			modifier = {
 				production_speed_arms_factory_factor = -0.25
-			}
-		}
-	}
-	country = {
-		FRA_uphold_the_gold_bloc = {
-			allowed = {
-				always = yes
-			}
-			picture = SPR_seize_the_gold_reserves
-			modifier = {
-				stability_factor = 0.1
-				political_power_gain = 0.25
-				consumer_goods_factor = 0.2
-				industrial_capacity_factory = -0.1
-			}
-		}
-	}
-	country = {
-		FRA_road_to_recovery = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_generic_economic_recovery
-			modifier = {
-				stability_factor = 0.1
-				consumer_goods_factor = -0.1
-				industrial_capacity_factory = 0.05
-			}
-		}
-	}
-	country = {
-		FRA_foreign_loans = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_generic_currency_reforms
-			modifier = {
-				production_speed_buildings_factor = 0.15
-				stability_factor = -0.1
-				political_power_gain = -0.1
-			}
-		}
-	}
-	country = {
-		FRA_franc_collapse = {
-			allowed = {
-				always = yes
-			}
-			removal_cost = -1
-			picture = generic_economic_crisis
-			modifier = {
-				stability_factor = -0.15
-				consumer_goods_factor = 0.45
-				industrial_capacity_factory = -0.15
-			}
-		}
-	}
-	country = {
-		FRA_austerity_measures = {
-			allowed = {
-				always = yes
-			}
-			picture = NOR_printing_money
-			modifier = {
-				consumer_goods_factor = 0.1
-				stability_factor = -0.05
-				political_power_gain = 0.15
-			}
-		}
-	}
-	country = {
-		FRA_recovering_economy = {
-			allowed = {
-				always = yes
-			}
-			picture = ARG_economic_reactivation
-			modifier = {
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
-			}
-		}
-	}
-	country = {
-		FRA_recovering_economy_2 = {
-			allowed = {
-				always = yes
-			}
-			picture = ARG_economic_reactivation
-			modifier = {
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
-			}
-		}
-	}
-	country = {
-		FRA_recovering_economy_3 = {
-			allowed = {
-				always = yes
-			}
-			picture = ARG_economic_reactivation
-			modifier = {
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-			}
-		}
-	}
-	country = {
-		FRA_cut_business_taxes = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_generic_currency_reforms
-			modifier = {
-				industrial_capacity_factory = 0.1
-				production_factory_efficiency_gain_factor = 0.1
-				stability_factor = -0.05
-			}
-		}
-	}
-	country = {
-		FRA_lifted_financial_regulations = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_DEN_limited_regulations
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				stability_factor = -0.1
-			}
-			on_remove = {
-				if = {
-					limit = {
-						has_idea = FRA_recovering_economy
-					}
-					remove_ideas = FRA_recovering_economy
-					add_ideas = FRA_recovering_economy_2
-				}
-				else_if = {
-					limit = {
-						has_idea = FRA_recovering_economy_2
-					}
-					remove_ideas = FRA_recovering_economy_2
-					add_ideas = FRA_recovering_economy_3
-				}
-				else_if = {
-					limit = {
-						has_idea = FRA_recovering_economy_3
-					}
-					remove_ideas = FRA_recovering_economy_3
-				}
-			}
-		}
-	}
-	country = {
-		FRA_crack_down_on_trade_unions = {
-			allowed = {
-				always = yes
-			}
-			picture = GFX_focus_ARG_crackdown_on_corruption
-			modifier = {
-				stability_factor = -0.1
-				communism_drift = -0.1
-				industrial_capacity_factory = 0.1
-			}
-			on_remove = {
-				if = {
-					limit = {
-						has_idea = FRA_recovering_economy
-					}
-					remove_ideas = FRA_recovering_economy
-					add_ideas = FRA_recovering_economy_2
-				}
-				else_if = {
-					limit = {
-						has_idea = FRA_recovering_economy_2
-					}
-					remove_ideas = FRA_recovering_economy_2
-					add_ideas = FRA_recovering_economy_3
-				}
-				else_if = {
-					limit = {
-						has_idea = FRA_recovering_economy_3
-					}
-					remove_ideas = FRA_recovering_economy_3
-				}
 			}
 		}
 	}
@@ -930,6 +705,172 @@ ideas = {
 				army_defence_factor = 0.15
 				max_dig_in_factor = 0.15
 				army_morale_factor = 0.1
+			}
+		}
+
+		Mojis_Boon = {
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			picture = GFX_idea_Mojis_Boon
+
+			modifier = {
+				custom_modifier_tooltip = Mojis_Boon_tt
+
+				hidden_modifier = {
+					# Division template design costs - infantry & mobile battalions
+					unit_infantry_design_cost_factor = -1
+					unit_bicycle_battalion_design_cost_factor = -1
+					unit_marine_design_cost_factor = -1
+					unit_mountaineers_design_cost_factor = -1
+					unit_ranger_battalion_design_cost_factor = -1
+					unit_paratrooper_design_cost_factor = -1
+					unit_motorized_design_cost_factor = -1
+					unit_mechanized_design_cost_factor = -1
+					unit_fake_intel_unit_design_cost_factor = -1
+					unit_penal_battalion_design_cost_factor = -1
+					unit_irregular_infantry_design_cost_factor = -1
+					unit_militia_design_cost_factor = -1
+					unit_cavalry_design_cost_factor = -1
+					unit_camelry_design_cost_factor = -1
+					unit_elephantry_design_cost_factor = -1
+					unit_armored_car_design_cost_factor = -1
+					unit_sturmtruppe_battalion_design_cost_factor = -1
+					unit_blackshirt_assault_battalion_design_cost_factor = -1
+
+					# Division template design costs - armor battalions
+					unit_light_armor_design_cost_factor = -1
+					unit_medium_armor_design_cost_factor = -1
+					unit_heavy_armor_design_cost_factor = -1
+					unit_super_heavy_armor_design_cost_factor = -1
+					unit_modern_armor_design_cost_factor = -1
+
+					# Division template design costs - artillery & support battalions
+					unit_artillery_design_cost_factor = -1
+					unit_rocket_artillery_design_cost_factor = -1
+					unit_super_heavy_artillery_design_cost_factor = -1
+					unit_self_propelled_super_heavy_artillery_design_cost_factor = -1
+					unit_engineer_design_cost_factor = -1
+					unit_pioneer_support_design_cost_factor = -1
+					unit_jungle_pioneers_support_design_cost_factor = -1
+					unit_assault_engineer_design_cost_factor = -1
+					unit_armored_engineer_design_cost_factor = -1
+					unit_anti_air_design_cost_factor = -1
+					unit_anti_tank_design_cost_factor = -1
+					unit_field_hospital_design_cost_factor = -1
+					unit_helicopter_field_hospital_design_cost_factor = -1
+					unit_fire_support_design_cost_factor = -1
+					unit_mot_fire_support_design_cost_factor = -1
+					unit_field_guns_design_cost_factor = -1
+					unit_rocket_battery_design_cost_factor = -1
+					unit_anti_air_battery_design_cost_factor = -1
+					unit_anti_tank_battery_design_cost_factor = -1
+					unit_light_flame_tank_design_cost_factor = -1
+					unit_medium_flame_tank_design_cost_factor = -1
+					unit_heavy_flame_tank_design_cost_factor = -1
+					unit_helicopter_brigade_design_cost_factor = -1
+					unit_land_cruiser_design_cost_factor = -1
+					unit_logistics_company_design_cost_factor = -1
+					unit_helicopter_transport_design_cost_factor = -1
+					unit_maintenance_company_design_cost_factor = -1
+					unit_armored_maintenance_design_cost_factor = -1
+					unit_military_police_design_cost_factor = -1
+					unit_motorized_military_police_design_cost_factor = -1
+					unit_railway_gun_design_cost_factor = -1
+					unit_super_heavy_railway_gun_design_cost_factor = -1
+					unit_recon_design_cost_factor = -1
+					unit_mot_recon_design_cost_factor = -1
+					unit_armored_car_recon_design_cost_factor = -1
+					unit_light_tank_recon_design_cost_factor = -1
+					unit_airborne_light_armor_design_cost_factor = -1
+					unit_rangers_support_design_cost_factor = -1
+					unit_northern_territory_recon_support_design_cost_factor = -1
+					unit_winter_logistics_support_design_cost_factor = -1
+					unit_long_range_patrol_support_design_cost_factor = -1
+					unit_helicopter_recon_design_cost_factor = -1
+					unit_signal_company_design_cost_factor = -1
+					unit_armored_signal_design_cost_factor = -1
+
+					# Division template design costs - motorized/mechanized brigades
+					unit_artillery_brigade_design_cost_factor = -1
+					unit_mot_artillery_brigade_design_cost_factor = -1
+					unit_rocket_artillery_brigade_design_cost_factor = -1
+					unit_mot_rocket_artillery_brigade_design_cost_factor = -1
+					unit_motorized_rocket_brigade_design_cost_factor = -1
+					unit_anti_air_brigade_design_cost_factor = -1
+					unit_mot_anti_air_brigade_design_cost_factor = -1
+					unit_anti_tank_brigade_design_cost_factor = -1
+					unit_mot_anti_tank_brigade_design_cost_factor = -1
+
+					# Division template design costs - self-propelled/armored brigades
+					unit_light_sp_artillery_brigade_design_cost_factor = -1
+					unit_medium_sp_artillery_brigade_design_cost_factor = -1
+					unit_heavy_sp_artillery_brigade_design_cost_factor = -1
+					unit_super_heavy_sp_artillery_brigade_design_cost_factor = -1
+					unit_modern_sp_artillery_brigade_design_cost_factor = -1
+					unit_light_sp_anti_air_brigade_design_cost_factor = -1
+					unit_medium_sp_anti_air_brigade_design_cost_factor = -1
+					unit_heavy_sp_anti_air_brigade_design_cost_factor = -1
+					unit_super_heavy_sp_anti_air_brigade_design_cost_factor = -1
+					unit_modern_sp_anti_air_brigade_design_cost_factor = -1
+					unit_light_sp_anti_air_support_design_cost_factor = -1
+					unit_medium_sp_anti_air_support_design_cost_factor = -1
+					unit_heavy_sp_anti_air_support_design_cost_factor = -1
+					unit_modern_sp_anti_air_support_design_cost_factor = -1
+					unit_light_tank_destroyer_brigade_design_cost_factor = -1
+					unit_medium_tank_destroyer_brigade_design_cost_factor = -1
+					unit_heavy_tank_destroyer_brigade_design_cost_factor = -1
+					unit_super_heavy_tank_destroyer_brigade_design_cost_factor = -1
+					unit_modern_tank_destroyer_brigade_design_cost_factor = -1
+					unit_light_tank_destroyer_support_design_cost_factor = -1
+					unit_medium_tank_destroyer_support_design_cost_factor = -1
+					unit_heavy_tank_destroyer_support_design_cost_factor = -1
+					unit_modern_tank_destroyer_support_design_cost_factor = -1
+
+					# Army HQ template design costs
+					unit_hq_support_company_design_cost_factor = -1
+					unit_hq_engineer_design_cost_factor = -1
+					unit_hq_recon_design_cost_factor = -1
+					unit_hq_military_police_design_cost_factor = -1
+					unit_hq_maintenance_design_cost_factor = -1
+					unit_hq_field_hospital_design_cost_factor = -1
+					unit_hq_logistics_design_cost_factor = -1
+					unit_hq_signal_design_cost_factor = -1
+					unit_hq_naval_liaison_design_cost_factor = -1
+					unit_hq_air_liaison_design_cost_factor = -1
+					unit_hq_specops_design_cost_factor = -1
+					unit_hq_infantry_design_cost_factor = -1
+					unit_hq_motorized_design_cost_factor = -1
+					unit_hq_paratrooper_design_cost_factor = -1
+					unit_hq_light_armor_design_cost_factor = -1
+					unit_hq_medium_armor_design_cost_factor = -1
+					unit_hq_heavy_armor_design_cost_factor = -1
+
+					# Naval hull design costs
+					ship_hull_light_design_cost_factor = -1
+					ship_hull_cruiser_design_cost_factor = -1
+					ship_hull_heavy_design_cost_factor = -1
+					ship_hull_carrier_design_cost_factor = -1
+					ship_hull_submarine_design_cost_factor = -1
+
+					# Air airframe / bomber design costs
+					small_plane_cas_airframe_design_cost_factor = -1
+					cv_small_plane_cas_airframe_design_cost_factor = -1
+					medium_plane_airframe_design_cost_factor = -1
+					large_plane_airframe_design_cost_factor = -1
+					tac_bomber_equipment_design_cost_factor = -1
+					jet_tac_bomber_equipment_design_cost_factor = -1
+					strat_bomber_equipment_design_cost_factor = -1
+					jet_strat_bomber_equipment_design_cost_factor = -1
+
+					# Equipment upgrade/module XP costs
+					land_equipment_upgrade_xp_cost = -1
+					naval_equipment_upgrade_xp_cost = -1
+					air_equipment_upgrade_xp_cost = -1
+					equipment_upgrade_xp_cost = -1
+				}
 			}
 		}
 	}

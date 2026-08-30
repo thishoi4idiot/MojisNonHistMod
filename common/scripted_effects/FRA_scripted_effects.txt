@@ -672,8 +672,69 @@ FRA_transfer_western_africa_effect = {
 	}
 	else_if = {
 		limit = {
-			557 = { CONTROLLER = { original_tag = FRA } }	
+			557 = { CONTROLLER = { original_tag = FRA } }
 		}
 		transfer_state = 557
+	}
+}
+
+FRA_national_housing_programmes_recalculate_idea_effect = {
+	if = {
+		limit = { has_idea = FRA_national_housing_programmes_idea_tier1 }
+		remove_ideas = FRA_national_housing_programmes_idea_tier1
+	}
+	else_if = {
+		limit = { has_idea = FRA_national_housing_programmes_idea_tier2 }
+		remove_ideas = FRA_national_housing_programmes_idea_tier2
+	}
+	else_if = {
+		limit = { has_idea = FRA_national_housing_programmes_idea_tier3 }
+		remove_ideas = FRA_national_housing_programmes_idea_tier3
+	}
+	if = {
+		limit = {
+			has_country_flag = FRA_housing_programmes_in_progress_1
+			has_country_flag = FRA_housing_programmes_in_progress_2
+			has_country_flag = FRA_housing_programmes_in_progress_3
+		}
+		add_timed_idea = {
+			idea = FRA_national_housing_programmes_idea_tier3
+			days = 70
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					has_country_flag = FRA_housing_programmes_in_progress_1
+					has_country_flag = FRA_housing_programmes_in_progress_2
+				}
+				AND = {
+					has_country_flag = FRA_housing_programmes_in_progress_1
+					has_country_flag = FRA_housing_programmes_in_progress_3
+				}
+				AND = {
+					has_country_flag = FRA_housing_programmes_in_progress_2
+					has_country_flag = FRA_housing_programmes_in_progress_3
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = FRA_national_housing_programmes_idea_tier2
+			days = 70
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_country_flag = FRA_housing_programmes_in_progress_1
+				has_country_flag = FRA_housing_programmes_in_progress_2
+				has_country_flag = FRA_housing_programmes_in_progress_3
+			}
+		}
+		add_timed_idea = {
+			idea = FRA_national_housing_programmes_idea_tier1
+			days = 70
+		}
 	}
 }
