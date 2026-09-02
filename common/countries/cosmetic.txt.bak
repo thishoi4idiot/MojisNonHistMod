@@ -2,82 +2,66 @@ MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
 }
-
 YUG_KingdomofSerbiaandMontenegro = {
 	color = { 73  73  126 }
 	color_ui = { 73  73  126 }
 }
-
 ITA_Central_Mediterranean_Socialist_Republics = {
 	color = rgb { 60 105 48}
 	color_ui = rgb { 60 105 48}
 }
-
 HAW_US_Pacific_Fleet = {
 	color = rgb {0 0 128}
 	color_ui = rgb {0 0 128}
 }
-
 Angevin_Empire = {
 	color = rgb {128 16 8}
 	color_ui = rgb {128 16 8}
 }
-
 UKR_Ukrainian_peooples_republic = {
 	color = rgb { 171 96 96 }
 	color_ui = rgb { 171 96 96 }
 }
-
 POL_West_Russian_Volunteer_Army = {
 	color = rgb { 120 99 35}
 	color_ui = rgb { 120 99 35}
 }
-
 USA_American_Empire = {
 	color = rgb { 34 56 89 }
 	color_ui = rgb { 34 56 89 }
 }
-
 TheKingdomofCroatia = {
 	color = { 245  70  70 }
 	color_ui = { 245  70  70 }
 }
-
-MNHM_YUG_greater_yugoslavia = {
+YUG_greater_yugoslavia = {
 	color = rgb {45 47 105}
 	color_ui = rgb {45 47 105}
 }
-
 ZAP_UNIFIED = {
 	color = rgb { 64 60 105 }
 	color_ui = rgb { 64 60 105 }
 }
-
 DUCHY_OF_WARSAW = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
-
 GRAND_DUCHY_OF_POLAND_LITHUANIA = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
-
 EGY_fra_puppet = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
-
 SOV_the_russian_republic = {
 	color = rgb {81 158 5}
 	color_ui = rgb {81 158 5}
 }
-
 SOV_the_russian_federation = {
 	color = rgb {81 158 5}
 	color_ui = rgb {81 158 5}
 }
-
 GREATER_ROMANIA = {
 	color = rgb { 196 181 82 }
 	color_ui = rgb { 196 181 82 }
@@ -297,12 +281,10 @@ CHI_warlord_leader = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
 	color_ui = hsv { 0.18 0.3 0.9 }
 }
-
 MAN_restored = {
 	color = rgb { 237 152 18 }
 	color_ui = rgb { 224 139 5 }
 }
-
 JAP_showa_restoration = {
 	color = rgb { 230 230 230 }
 	color_ui = rgb { 230 230 230 }
@@ -387,17 +369,14 @@ SPR_nationalist_spain = {
 	color = rgb { 200 100 31 }
 	color_ui = rgb { 245 123 38 }
 }
-
 SPR_carlist_spain = {
 	color = rgb { 255 128 0 }
 	color_ui = rgb { 255 255 122 }
 }
-
 SPR_anarchist_spain = {
 	color = rgb { 204 0 0 }
 	color_ui = rgb { 35 35 35 }
 }
-
 SPR_republican_spain = {
 	color = rgb { 242 205 94 }
 	color_ui = rgb { 255 255 122 }
@@ -487,6 +466,7 @@ POR_empire = {
 	color = rgb { 128  160  15 }
 	color_ui = rgb { 19  83  180 }
 }
+
 
 GRE_dem_monarchy = {
 	color = rgb { 93 181 227 }
@@ -773,7 +753,6 @@ POL_SANATION = {
 	color = rgb { 212  33  61 }
 	color_ui = rgb { 212  33  61 }
 }
-
 POL_PEASANT = {
 	color = rgb { 62  180  61 }
 	color_ui = rgb { 62  180  61 }
@@ -783,17 +762,14 @@ POL_KINGDOM = {
 	color = rgb { 176 81 111 }
 	color_ui = rgb { 176 81 111 }
 }
-
 POL_KINGDOM_RUS = {
 	color = rgb { 193 208 241 }
 	color_ui = rgb { 193 208 241 }
 }
-
 PLC_UNIFIED_RUS = {
 	color = rgb { 193 208 241 }
 	color_ui = rgb { 193 208 241 }
 }
-
 POL_ROM_UNION = {
 	color = rgb { 222 107 53 }
 	color_ui = rgb { 222 107 53 }
@@ -803,27 +779,22 @@ GREATER_LIT = {
 	color = rgb { 154  69  116 }
 	color_ui = rgb { 154  69  116 }
 }
-
 OSTLAND = {
 	color = rgb { 86  78  112 }
 	color_ui = rgb { 86  78  112 }
 }
-
 LAT_MIL = {
 	color = rgb { 106  70  227 }
 	color_ui = rgb { 106  70  227 }
 }
-
 LIT_belarus = {
 	color = rgb { 141  2  31 }
 	color_ui = rgb { 141  2  31 }
 }
-
 LAT_belarus = {
 	color = rgb { 141  2  31 }
 	color_ui = rgb { 141  2  31 }
 }
-
 EST_belarus = {
 	color = rgb { 141  2  31 }
 	color_ui = rgb { 141  2  31 }
@@ -850,8 +821,8 @@ EST_UGRA = {
 }
 
 SOV_ROME = {
-	color = rgb { 128 0 128 }
-	color_ui = rgb { 128 0 128 }
+	color = rgb { 230 225 165 }
+	color_ui = rgb { 230 225 165 }
 }
 
 SOV_PANSLAVIC = {
@@ -889,16 +860,10 @@ SOV_PROVISIONAL = {
     color_ui = rgb { 242 242 242 }
 }
 
-SOV_siberian_republics = {
-	color = rgb { 88 9 17 }
-	color_ui = rgb { 115 12 22 }
-}
-
 WGR = {
     color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
     color_ui = rgb { 225 255 255 }
 }
-
 DDR = {
     color = rgb { 120 150 80 }
     color_ui = rgb { 150 180 120 }
@@ -918,17 +883,18 @@ SOV_right_opposition = {
 	color = rgb { 230 0 0 }
 	color_ui = rgb { 255 51 51 }
 }
-
 russian_empire = {
 	color = rgb { 64 128 0 }
 	color_ui = rgb { 51 204 51 }
 }
-
+SOV_ROME = {
+	color = rgb { 128 0 128 }
+	color_ui = rgb { 128 0 128 }
+}
 ETH_African_Union_communism = {
 	color = rgb { 186 46 46 }
 	color_ui = rgb { 255 73 121 }
 }
-
 ETH_ethiopian_federation = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
@@ -1162,7 +1128,7 @@ NOR_SOV_communism = {
 	color = rgb { 180 40 40 }
 	color_ui = rgb { 255 120 120 }
 }
-
+ 
 NOR_trotsky_communism = {
 	color = rgb { 205 69 0 }
 	color_ui = rgb { 122 145 93 }
@@ -1178,7 +1144,6 @@ NOR_neutrality_purple_flag = {
 	color_ui = rgb { 92 6 67 }
 
 }
-
 NOR_GER_fascism = {
 	color = rgb { 115 115 115 }
 	color_ui = rgb { 122 145 93 }
@@ -1866,21 +1831,6 @@ XIC_new_fengtian_clique = {
 	color_ui = rgb { 224 139 5 }
 }
 
-GDC_guangzhou_authority = {
-	color = rgb { 140 68 63 }
-	color_ui = rgb { 140 68 63 }
-}
-
-SIK_xinjiang_border_authority = {
-	color = rgb { 179 103 98 }
-	color_ui = rgb { 179 103 98 }
-}
-
-RNG_reformed_government = {
-	color = rgb { 112 60 56 }
-	color_ui = rgb { 112 60 56 }
-}
-
 TSR_empire_of_china = {
 	color = rgb { 237 152 18 }
 	color_ui = rgb { 224 139 5 }
@@ -1921,130 +1871,3 @@ JAP_pacific_union = {
 	color_ui = rgb { 230 184 0 }
 }
 
-
-
-# ---- Added from base-game cosmetic.txt (missing tags) ----
-
-
-
-INS_HOL_FLAG = {
-    color = rgb { 176 90 70 }
-    color_ui = rgb { 176 90 70 }
-}
-
-INS_UNION = {
-	color = rgb { 240  166  139 }
-	color_ui = rgb { 240  166  139 }
-}
-
-INS_REP_UNION = {
-    color = rgb { 176 24 35 }
-    color_ui = rgb { 176 24 35 }
-}
-
-INS_aslia = {
-	color = rgb { 101 163 145 }
-	color_ui = rgb { 101 163 145 }
-}
-
-SPR_habsburg = {
-	color = rgb { 255 128 0 }
-	color_ui = rgb { 255 255 122 }
-}
-
-HND_UNIFIED = {
-	color = rgb { 204 102 0 }
-	color_ui = rgb { 128 64 0 }
-}
-
-neo_mesopotamia = {
-	color = rgb { 204 51 0 }
-	color_ui = rgb { 153 38 0 }
-}
-
-CHI_great_yuan = {
-	color = rgb { 45 80 10 }
-	color_ui = rgb { 13 26 0 }
-}
-
-CHI_panthay_empire = {
-	color = rgb { 0 102 153 }
-	color_ui = rgb { 0 51 77 }
-}
-
-CHI_great_ma = {
-	color = rgb { 0 102 153 }
-	color_ui = rgb { 0 51 77 }
-}
-
-SIA_thailand = { #Mandate 1, Phibun, historical
-	color = rgb { 244 25 2 }
-	color_ui = rgb { 244 25 2 }
-}
-
-SIA_great_thai_empire = { #Mandate 1, Phibun, historical
-	color = rgb { 252 253 254 }
-	color_ui = rgb { 252 253 254 }
-}
-
-CZE_puppet = {
-	color = rgb { 54 167 156 }
-	color_ui = rgb { 70 217 203 }
-}
-
-CZE_CEF = {
-	color = rgb { 85 200 203 }
-	color_ui = rgb { 85 200 203 }
-}
-
-CZE_CEF_puppet = {
-	color = rgb { 85 200 203 }
-	color_ui = rgb { 85 200 203 }
-}
-
-CZE_SLO_bohemia_expansion = {
-	color = rgb { 255 166 2 }
-	color_ui = rgb { 255 166 2 }
-}
-
-CZE_union_expanded = {
-	color = rgb { 11 11 11 }
-	color_ui = rgb { 11 11 11 }
-}
-
-CZE_union_expanded_puppet = {
-	color = rgb { 11 11 11 }
-	color_ui = rgb { 11 11 11 }
-}
-
-CZE_great_moravia = {
-	color = rgb { 245 135 45 }
-	color_ui = rgb { 245 135 45 }
-}
-
-CZE_fascist_color = {
-	color = rgb { 47 141 130 }
-	color_ui = rgb { 47 141 130 }
-}
-
-CZE_first_monarchy_color = {
-	color = rgb { 111 110 137 }
-	color_ui = rgb { 111 110 137 }
-}
-
-AST_australasia = {
-	color = rgb { 0 102 180 }
-	color_ui = rgb { 0 102 180 }
-}
-
-# ---- Added from Kasane Teto's United Baltic Duchy Mod ----
-
-Teutonic = {
-	color = rgb { 85 85 85 }
-	color_ui = rgb { 85 85 85 }
-}
-
-Livonian = {
-	color = rgb { 85 85 85 }
-	color_ui = rgb { 85 85 85 }
-}
