@@ -1,0 +1,113 @@
+characters = {
+    ire_character_1 = {
+        name = ire_character_1
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_1
+                small = GFX_idea_hazz_irish_rework_ire_character_1
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ire_character_1
+            cost = 150
+            allowed = {
+                original_tag = IRE
+                always = yes
+            }
+            traits = { agrarian_nationalist }
+        }
+    }
+    ire_character_2 = {
+        name = ire_character_2
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_2
+                small = GFX_idea_hazz_irish_rework_ire_character_2
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ire_character_2
+            cost = 150
+            allowed = {
+                original_tag = IRE
+                always = yes
+            }
+            traits = { leftist_independent }
+        }
+    }
+    ire_character_3 = {
+        name = ire_character_3
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_3
+                small = GFX_idea_hazz_irish_rework_ire_character_3
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = ire_character_3
+            cost = 250
+            allowed = {
+                original_tag = IRE
+                always = yes
+            }
+            traits = { captain_of_industry financial_expert }
+        }
+    }
+    ire_character_4 = {
+        name = ire_character_4
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_4
+                small = GFX_idea_hazz_irish_rework_ire_character_4
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = ire_character_4
+            cost = 100
+            allowed = {
+                original_tag = IRE
+            }
+            traits = { army_infantry_2 }
+        }
+    }
+    ire_character_5 = {
+        name = ire_character_5
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_5
+                small = GFX_idea_hazz_irish_rework_ire_character_5
+            }
+        }
+        advisor = {
+            slot = high_command
+            idea_token = ire_character_5
+            cost = 100
+            allowed = {
+                original_tag = IRE
+            }
+            traits = { army_armored_2 }
+        }
+    }
+    ire_character_6 = {
+        name = ire_character_6
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazz_irish_rework_ire_character_6
+                small = GFX_idea_hazz_irish_rework_ire_character_6
+            }
+        }
+        advisor = {
+            slot = theorist
+            idea_token = ire_character_6
+            cost = 100
+            allowed = {
+                original_tag = IRE
+            }
+            traits = { naval_theorist }
+        }
+    }
+}

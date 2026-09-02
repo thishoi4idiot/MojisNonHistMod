@@ -1,0 +1,306 @@
+add_namespace = sigmaevent
+
+country_event = {
+    id = sigmaevent.68
+    title = sigmaevent.68.t
+    desc = sigmaevent.68.d
+    picture = GFX_report_event_second_vienna_award_pact
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.68.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+              transfer_state = 119
+           }
+        ENG = {
+              white_peace = IRE
+            }
+    }
+    option = {
+        name = sigmaevent.68.b
+        ai_chance = {
+            factor = 0
+        }
+        add_stability = -0.10
+        add_war_support = -0.10
+    }
+}
+
+country_event = {
+    id = sigmaevent.67
+    title = sigmaevent.67.t
+    desc = sigmaevent.67.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.67.a
+        ai_chance = {
+            factor = 1
+        }
+        ENG = {
+              white_peace = IRE
+            }
+    }
+    option = {
+        name = sigmaevent.67.b
+        ai_chance = {
+            factor = 0
+        }
+        add_stability = -0.30
+        add_war_support = -0.30
+    }
+}
+
+country_event = {
+    id = sigmaevent.32
+    title = sigmaevent.32.t
+    desc = sigmaevent.32.d
+    picture = GFX_report_event_degaulle_churchill
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.32.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+            transfer_state = 119
+        ENG = {
+         add_to_faction = IRE
+             }
+        }
+    }
+    option = {
+        name = sigmaevent.32.b
+        ai_chance = {
+            factor = 0
+        }
+        add_war_support = -0.02
+        add_stability = -0.02
+    }
+}
+
+country_event = {
+    id = sigmaevent.420
+    title = sigmaevent.420.t
+    desc = sigmaevent.420.d
+    picture = GFX_report_event_spain_civil_war_volunteers_02
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.420.a
+        ai_chance = {
+            factor = 1
+        }
+        SPA = {
+         add_to_faction = IRE
+             }
+    }
+    option = {
+        name = sigmaevent.420.b
+        ai_chance = {
+            factor = 0
+        }
+        add_war_support = 0.02
+    }
+}
+
+country_event = {
+    id = sigmaevent.67000
+    title = sigmaevent.67000.t
+    desc = sigmaevent.67000.d
+    picture = GFX_report_event_ast_navy
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.67000.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+              transfer_state = 700
+           }
+    }
+    option = {
+        name = sigmaevent.67000.b
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+              transfer_state = 274
+           }
+    }
+    option = {
+        name = sigmaevent.67000.c
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 10
+    }
+}
+
+country_event = {
+    id = sigmaevent.67001
+    title = sigmaevent.67001.t
+    desc = sigmaevent.67001.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.67001.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+            transfer_state = 119
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = sigmaevent.67001.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+    }
+}
+
+country_event = {
+    id = sigmaevent.6700111
+    title = sigmaevent.6700111.t
+    desc = sigmaevent.6700111.d
+    picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.6700111.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+              transfer_state = 14
+           }
+        113 = {
+        add_extra_state_shared_building_slots=-2
+                add_building_construction={
+                type=industrial_complex
+                level=-2
+                instant_build=yes
+              }
+            }
+        15 = {
+        add_extra_state_shared_building_slots=2
+                add_building_construction={
+                type=industrial_complex
+                level=2
+                instant_build=yes
+              }
+            }
+    }
+    option = {
+        name = sigmaevent.6700111.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+    }
+}
+
+country_event = {
+    id = sigmaevent.670011122
+    title = sigmaevent.670011122.t
+    desc = sigmaevent.670011122.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.670011122.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+            add_to_faction = FRA
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = sigmaevent.670011122.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+    }
+}
+
+country_event = {
+    id = sigmaevent.67001167676767
+    title = sigmaevent.67001167676767.t
+    desc = sigmaevent.67001167676767.d
+    picture = GFX_report_event_germany_politician_handshake
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.67001167676767.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+            add_to_faction = GER
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = sigmaevent.67001167676767.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+        add_war_support = 0.02
+    }
+}
+
+country_event = {
+    id = sigmaevent.12345
+    title = sigmaevent.12345.t
+    desc = sigmaevent.12345.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.12345.a
+        ai_chance = {
+            factor = 1
+        }
+        IRE = {
+        annex_country = { 
+        target = AST
+        transfer_troops = yes
+        }}
+    }
+    option = {
+        name = sigmaevent.12345.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+    }
+}
+
+country_event = {
+    id = sigmaevent.1234567676767
+    title = sigmaevent.1234567676767.t
+    desc = sigmaevent.1234567676767.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = sigmaevent.1234567676767.a
+        ai_chance = {
+            factor = 1
+        }
+        give_resource_rights = {
+          receiver = IRE
+          state = 422
+        }
+    }
+    option = {
+        name = sigmaevent.1234567676767.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = 25
+    }
+}

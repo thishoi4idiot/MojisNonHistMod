@@ -1,0 +1,50 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_1
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_1_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_1
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_1_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_2
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_2_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_2
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_2_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_3
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_3_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_3
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_3_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_4
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_4_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_4
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_4_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_5
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_5_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_5
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_5_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazz_irish_rework_ire_character_6
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_6_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazz_irish_rework_ire_character_6
+        texturefile = "gfx/leaders/hazz_irish_rework/hazz_irish_rework_ire_character_6_small.dds"
+    }
+}
