@@ -2048,3 +2048,28 @@ Livonian = {
 	color = rgb { 85 85 85 }
 	color_ui = rgb { 85 85 85 }
 }
+
+G7B = {
+    color = rgb { 33 66 58 }
+    color_ui = rgb { 33 66 58 }
+}
+IRE_cosmetic2 = {
+    color = rgb { 159 34 48 }
+    color_ui = rgb { 159 34 48 }
+}
+IRE_cosmetic3 = {
+    color = rgb { 70 97 153 }
+    color_ui = rgb { 70 97 153 }
+}
+IRE_cosmetic4 = {
+    color = rgb { 30 8 159 }
+    color_ui = rgb { 30 8 159 }
+}
+Sigmas_rise_communisssssst = {
+    color = rgb { 200 63 8 }
+    color_ui = rgb { 200 63 8 }
+}
+Sigmas_rise_fascismo = {
+    color = rgb { 33 66 38 }
+    color_ui = rgb { 33 66 38 }
+}

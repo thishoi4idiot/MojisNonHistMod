@@ -1,0 +1,2657 @@
+focus_tree = {
+    id = new_focus_tree
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 1000
+            tag = IRE
+        }
+    }
+    continuous_focus_position = { x = -1310 y = 1592 }
+
+    focus = {
+        id = hazz_irish_rework_negotiate
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_negotiate
+        x = 5
+        y = 1
+        cost = 5
+        mutually_exclusive = { focus = hazz_irish_rework_new_focus_tree_focus_2 }
+        completion_reward = {
+            add_stability = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_cattle
+        icon = GFX_focus_CHL_focus_on_cattle_and_wool
+        x = 5
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_negotiate }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_focus_tree_focus_2
+        icon = GFX_focus_generic_north_atlantic_fleet
+        x = -3
+        y = 1
+        cost = 10
+        mutually_exclusive = { focus = hazz_irish_rework_negotiate }
+        completion_reward = {
+            add_political_power = 100
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_alttra
+        icon = GFX_focus_POL_support_global_falangism
+        x = -3
+        y = 2
+        cost = 15
+        prerequisite = { focus = hazz_irish_rework_new_focus_tree_focus_2 }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=3
+                    add_building_construction={
+                    type=industrial_complex
+                    level=3
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_natdevelo
+        icon = GFX_focus_AFG_a_modern_economy
+        x = -3
+        y = 3
+        cost = 15
+        prerequisite = { focus = hazz_irish_rework_alttra }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_ideas = Sigmas_rise_down
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_eireact
+        icon = GFX_focus_generic_british_trade
+        x = 7
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_cattle }
+        completion_reward = {
+            remove_ideas = Sigmas_rise_up
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }}
+            			add_ideas = export_focus
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_focus_tree_focus_14
+        icon = GFX_focus_generic_monetary_union
+        x = 5
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_cattle }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            135 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_millitisation
+        icon = GFX_focus_JAP_army_weapons_administration_hq
+        x = 5
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_new_focus_tree_focus_14 }
+        completion_reward = {
+            134 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=arms_factory
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            135 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=arms_factory
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            113 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=arms_factory
+                    level=1
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ecoexp
+        icon = GFX_focus_hol_abandon_the_gold_standard
+        x = 5
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_millitisation }
+        completion_reward = {
+            134 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=industrial_complex
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            135 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=industrial_complex
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            113 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=industrial_complex
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            add_tech_bonus = {
+            name = Industry_boost
+            bonus = 0.5
+            uses = 2
+            category = industry
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_natrea
+        icon = GFX_focus_ARG_develop_the_electricity_sector
+        x = 6
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_ecoexp }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+            				name = Research_Investment
+            				bonus = 0.75
+            				uses = 2
+            				category = electronics
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_devlein
+        icon = GFX_goal_generic_construction
+        x = -5
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_natdevelo }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_devmun
+        icon = GFX_focus_generic_industry_investment
+        x = -3
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_natdevelo }
+        completion_reward = {
+            135 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=industrial_complex
+                    level=1
+                    instant_build=yes
+                  }
+                }
+            135 = {
+            add_extra_state_shared_building_slots=1
+                    add_building_construction={
+                    type=arms_factory
+                    level=1
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_armconn
+        icon = GFX_goal_generic_construct_mil_factory
+        x = -1
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_natdevelo }
+        completion_reward = {
+            134 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=arms_factory
+                    level=2
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_expandbuild
+        icon = GFX_focus_CZE_coalition_building
+        x = 1
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_cattle focus = hazz_irish_rework_alttra }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=4 }
+            135 = {
+            add_extra_state_shared_building_slots=4 }
+            134 = {
+            add_extra_state_shared_building_slots=4 }
+            add_tech_bonus = {
+            name = Industry_boost
+            bonus = 1.0
+            uses = 2
+            category = industry
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_countryside
+        icon = GFX_focus_AFG_fruit_processing
+        x = 1
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_expandbuild }
+        completion_reward = {
+            134 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                add_manpower = 50000
+            }
+            135 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+                 add_manpower = 50000
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_industrialeco
+        icon = GFX_focus_generic_industry_3
+        x = -3
+        y = 5
+        cost = 15
+        prerequisite = { focus = hazz_irish_rework_devmun }
+        prerequisite = { focus = hazz_irish_rework_devlein }
+        prerequisite = { focus = hazz_irish_rework_armconn }
+        prerequisite = { focus = hazz_irish_rework_countryside }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+            135 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+            134 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+            add_tech_bonus = {
+            name = Industry_boost
+            bonus = 1.0
+            uses = 1
+            category = industry
+            ahead_reduction = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ecowonder
+        icon = GFX_focus_usa_reestablish_the_gold_standard
+        x = 1
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_industrialeco focus = hazz_irish_rework_ecoexp }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = 0.10
+            135 = {
+                add_extra_state_shared_building_slots = 5
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            134 = {
+                add_extra_state_shared_building_slots = 5
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            113 = {
+                add_extra_state_shared_building_slots = 5
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_timed_idea = {
+                idea = Sigmas_rise_meow
+                days = 365
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_investscien
+        icon = GFX_focus_research2
+        x = -4
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_industrialeco }
+        available = {
+            industrial_complex > 34
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_ideas = Sigmas_rise_howl
+            add_tech_bonus = {
+            				name = Research_Investment
+            				bonus = 1
+            				uses = 1
+            				category = electronics
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_peacearmy
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_peacearmy
+        x = 12
+        y = 1
+        cost = 5
+        completion_reward = {
+            add_stability = 0.05
+            army_experience = 25
+            navy_experience = 25
+            air_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_idf
+        icon = GFX_focus_CZE_army_reform
+        x = 10
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_peacearmy }
+        completion_reward = {
+            add_ideas = Sigmas_rise_skibidi
+            134 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_macs
+        icon = GFX_focus_generic_navy_battleship2
+        x = 14
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_peacearmy }
+        completion_reward = {
+            add_ideas = Sigmas_rise_tikitiki 
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            navy_experience = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_airreasearch
+        icon = GFX_goal_generic_air_fighter2
+        x = 18
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_peacearmy }
+        completion_reward = {
+            add_tech_bonus = {
+            name = IRE_Air_bonus
+            bonus = 0.75
+            uses = 5
+            category = air_equipment
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_radardev
+        icon = GFX_goal_generic_radar
+        x = 18
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_airreasearch }
+        completion_reward = {
+            add_tech_bonus = {
+                name = IRE_Radar_bonus
+                bonus = 1
+                uses = 2
+                category = radar_tech
+                }
+            air_experience=50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_aircorps
+        icon = GFX_focus_generic_aircraft_production
+        x = 18
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_radardev }
+        completion_reward = {
+            add_ideas = Sigmas_rise_Big
+            134 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_muirchu
+        icon = GFX_focus_generic_refit_civilian_ships
+        x = 14
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_macs }
+        available = {
+            date < 1947.5.8
+        }
+        completion_reward = {
+            add_ideas = Sigmas_rise_loryyyyy
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            navy_experience = 25
+            create_equipment_variant = {
+                name = Muirchu
+                type = ship_hull_light_2
+                parent_version = 0
+                modules = {
+                    fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+                    fixed_ship_battery_slot = ship_light_battery_1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_navadv
+        icon = GFX_focus_PHI_gunboat_diplomacy
+        x = 14
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_muirchu }
+        bypass_if_unavailable = yes
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                } 
+             }
+            135 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                } 
+             }
+            134 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                } 
+             }
+            add_tech_bonus = {
+            name = Naval_boost
+            bonus = 2.0
+            uses = 2
+            category = naval_equipment
+            }
+            			navy_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_marineservice
+        icon = GFX_focus_PHI_war_for_the_oceans
+        x = 14
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_navadv }
+        completion_reward = {
+            add_ideas = Sigmas_rise_Clown
+            remove_ideas = Sigmas_rise_tikitiki
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_catchuptogp
+        icon = GFX_focus_ARG_reach_out_to_the_great_powers
+        x = 10
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_idf }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = IRE_Research_Catchup
+            bonus = 1.0
+            uses = 2
+            category = infantry_weapons
+            ahead_reduction = 1
+            }
+            army_experience = 10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_coopbritishexp
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_new_coopbritishexp
+        x = 7
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_eireact }
+        prerequisite = { focus = hazz_irish_rework_catchuptogp }
+        available = {
+            is_in_faction_with = eng
+        }
+        completion_reward = {
+            add_tech_bonus = {
+            name = Industry_boost
+            bonus = 1.0
+            uses = 1
+            category = infantry_weapons
+            ahead_reduction = 1
+            }
+            add_tech_bonus = {
+            name = Industry_boost
+            bonus = 1.0
+            uses = 1
+            category = industry
+            ahead_reduction = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_jointairnav
+        icon = GFX_focus_generic_air_carrier
+        x = 16
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_aircorps }
+        prerequisite = { focus = hazz_irish_rework_navadv }
+        completion_reward = {
+            add_tech_bonus = {
+            name = IRE_Air_bonus
+            bonus = 1.0
+            uses = 1
+            ahead_reduction = 2
+            category = air_equipment
+            }
+            add_tech_bonus = {
+            name = IRE_Naval_bonus
+            bonus = 1.0
+            uses = 1
+            ahead_reduction = 2
+            category = naval_equipment
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_artydev
+        icon = GFX_focus_generic_anti_tank_guns
+        x = 10
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_catchuptogp }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = IRE_Research_Artillery_Development
+            bonus = 1.0
+            uses = 2
+            category = artillery
+            ahead_reduction = 0.5
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_expedarmy
+        icon = GFX_focus_eng_global_defense
+        x = 9
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_artydev }
+        mutually_exclusive = { focus = hazz_irish_rework_innoarmy }
+        completion_reward = {
+            remove_ideas = Sigmas_rise_skibidi
+            add_ideas = Sigmas_rise_Hej
+            army_experience=25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_innoarmy
+        icon = GFX_focus_generic_naval_invasion_tank
+        x = 11
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_artydev }
+        mutually_exclusive = { focus = hazz_irish_rework_expedarmy }
+        completion_reward = {
+            remove_ideas = Sigmas_rise_skibidi
+            add_ideas = Sigmas_rise_Jo
+            army_experience=100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_navalservice
+        icon = GFX_focus_SIA_river_patrols
+        x = 14
+        y = 6
+        cost = 20
+        prerequisite = { focus = hazz_irish_rework_marineservice }
+        available = {
+            OR = {
+                has_war = yes
+                date = 1946.9.1
+            }
+        }
+        completion_reward = {
+            add_ideas = Sigmas_rise_ludd
+            remove_ideas = Sigmas_rise_Clown
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_tankdevelopm
+        icon = GFX_focus_SIA_reverse_engineer_allied_tanks
+        x = 12
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_idf }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = IRE_Research_Tank_Development
+            bonus = 1.0
+            uses = 3
+            category = armor
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = the_irish_free_state
+        icon = GFX_focus_PRC_petition_for_freedom
+        x = 29
+        y = 1
+        cost = 5
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_valway7
+        icon = GFX_focus_AFG_parliamentary_democracy
+        x = 29
+        y = 3
+        cost = 5
+        prerequisite = { focus = the_irish_free_state }
+        mutually_exclusive = { focus = hazz_irish_rework_alternativedirection }
+        completion_reward = {
+            add_ideas = Sigmas_rise_bb
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ireconsti
+        icon = GFX_focus_AUS_lawmaking_leniency
+        x = 27
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_valway7 }
+        completion_reward = {
+            set_cosmetic_tag = IRE_cosmetic
+            add_stability = 0.10
+            add_political_power = 100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_selsuf
+        icon = GFX_focus_INS_eventual_autonomy
+        x = 31
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_valway7 }
+        completion_reward = {
+            			add_ideas = autarkic_economy
+            modify_building_resources = {
+                    	   building = synthetic_refinery
+                    	   resource = rubber
+                    	   amount = 2
+                    	}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_monopoly
+        icon = GFX_goal_continuous_non_factory_construct
+        x = 31
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_selsuf }
+        completion_reward = {
+            add_stability = -0.15
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_nateco
+        icon = GFX_focus_GER_factories_for_resources
+        x = 33
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_selsuf }
+        completion_reward = {
+            random_core_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            				}
+            				prioritize = { 135 }
+            				add_resource = {
+            					type = tungsten
+            					amount = 8
+            				}
+            				add_resource = {
+            					type = chromium
+            					amount = 4
+            				}
+            				add_resource = {
+            					type = steel
+            					amount = 6
+            				}
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_iresteel
+        icon = GFX_focus_generic_steel_mill
+        x = 33
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_monopoly }
+        prerequisite = { focus = hazz_irish_rework_nateco }
+        mutually_exclusive = { focus = hazz_irish_rework_downiresteel }
+        available = {
+            num_of_civilian_factories = 20
+        }
+        completion_reward = {
+            random_core_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            				}
+            				prioritize = { 135 }
+            				add_resource = {
+            					type = steel
+            					amount = 28
+            				}
+            }
+            add_tech_bonus = {
+            				name = IRE_invest_in_Irish_Steel
+            				bonus = 1
+            				uses = 1
+            				category = excavation_tech
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_downiresteel
+        icon = GFX_focus_ITA_devaluate_the_lire
+        x = 31
+        y = 6
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_monopoly }
+        prerequisite = { focus = hazz_irish_rework_nateco }
+        mutually_exclusive = { focus = hazz_irish_rework_iresteel }
+        completion_reward = {
+            113 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_neutrality
+        icon = GFX_goal_generic_neutrality_focus
+        x = 29
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_downiresteel focus = hazz_irish_rework_ireconsti focus = hazz_irish_rework_iresteel }
+        completion_reward = {
+            add_ideas = Sigmas_rise_neutral
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_reworkcontrolofeco
+        icon = GFX_focus_GER_integrated_economies
+        x = 28
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_neutrality }
+        completion_reward = {
+            134 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            135 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            113 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_political_power = -150
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_macdonald
+        icon = GFX_focus_AST_the_irish_anti-britain_pact
+        x = 26
+        y = 10
+        cost = 5
+        prerequisite = { focus = hazz_irish_reworkcontrolofeco }
+        mutually_exclusive = { focus = hazz_irish_rework_engdifficulty }
+        available = {
+            is_ai = no
+        }
+        bypass = {
+            controls_state = 119
+        }
+        completion_reward = {
+            remove_ideas = Sigmas_rise_neutral
+            remove_ideas = Sigmas_rise_up
+            ENG = {
+            country_event = { 
+                id = sigmaevent.32
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_emergencypowact
+        icon = GFX_focus_NOR_empower_sivorg
+        x = 30
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_neutrality }
+        completion_reward = {
+            add_political_power = -100
+            add_stability = 0.10
+            add_war_support = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_alternativedirection
+        icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+        x = 43
+        y = 3
+        cost = 5
+        prerequisite = { focus = the_irish_free_state }
+        mutually_exclusive = { focus = hazz_irish_rework_valway7 }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            add_timed_idea = {
+                idea = Sigmas_rise_ddd
+                days = 365
+                add_stability = -0.10
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_republicantown
+        icon = GFX_focus_YUG_pan_slavic_congress
+        x = 37
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_alternativedirection }
+        mutually_exclusive = { focus = hazz_irish_rework_rallyblueshirts }
+        completion_reward = {
+            add_political_power = 50
+            add_popularity = {
+                ideology = communism
+                popularity = 0.10
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_peoplesrevolt
+        icon = GFX_focus_PRC_land_revolution_expedited
+        x = 38
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_republicantown }
+        mutually_exclusive = { focus = hazz_irish_rework_commicoup }
+        available = {
+            has_government = communism
+        }
+        completion_reward = {
+            set_cosmetic_tag = Sigmas_rise_communisssssst
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_commicoup
+        icon = GFX_focus_PHI_partido_komunista_ng_pilipinas_coup
+        x = 36
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_republicantown }
+        mutually_exclusive = { focus = hazz_irish_rework_peoplesrevolt }
+        completion_reward = {
+            IRE = {
+                set_politics = {
+                    ruling_party = communism
+                }
+                set_cosmetic_tag = IRE_cosmetic2
+            }
+            add_popularity = {
+                ideology = communism
+                popularity = 0.50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_cpi
+        icon = GFX_focus_AUS_danubian_socialist_communes
+        x = 37
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_peoplesrevolt focus = hazz_irish_rework_commicoup }
+        completion_reward = {
+            add_political_power = 100
+            add_ideas = Sigmas_rise_comm
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_tradeunions
+        icon = GFX_focus_CHL_union_of_hispanic_republics
+        x = 37
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_cpi }
+        completion_reward = {
+            random_core_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            				}
+            				prioritize = { 135 }
+            				add_resource = {
+            					type = steel
+            					amount = 16
+            				}
+            }		
+            113 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_volspainrep
+        icon = GFX_focus_generic_invite_republican_spanish_exiles
+        x = 35
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_cpi }
+        completion_reward = {
+            add_ideas = Sigmas_rise_halp
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ourwilllll
+        icon = GFX_focus_PRC_revolutionary_war_of_the_masses
+        x = 39
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_peoplesrevolt }
+        prerequisite = { focus = hazz_irish_rework_cpi }
+        completion_reward = {
+            add_ideas = Sigmas_rise_willllll
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_spreadrevolution
+        icon = GFX_focus_SOV_proclaim_soviet_hegemony
+        x = 37
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_tradeunions focus = hazz_irish_rework_volspainrep focus = hazz_irish_rework_ourwilllll }
+        completion_reward = {
+            add_ideas = Sigmas_rise_moo
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_engdifficulty
+        icon = GFX_focus_RAJ_clamp_down_on_corruption
+        x = 32
+        y = 10
+        cost = 15
+        prerequisite = { focus = hazz_irish_rework_emergencypowact focus = hazz_irish_rework_spreadrevolution }
+        mutually_exclusive = { focus = hazz_irish_rework_macdonald }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            remove_ideas = Sigmas_rise_neutral
+            declare_war_on = {
+                target = ENG
+                type = annex_everything
+            }
+            add_timed_idea = {
+                idea = Sigmas_rise_angry
+                days = 180
+            }
+            add_stability = -0.15
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_happyire
+        icon = GFX_focus_AUS_womens_education_initiative
+        x = 29
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_neutrality }
+        prerequisite = { focus = hazz_irish_rework_emergencypowact }
+        prerequisite = { focus = hazz_irish_reworkcontrolofeco }
+        available = {
+            industrial_complex > 44
+        }
+        completion_reward = {
+            add_ideas = Sigmas_rise_areyoureadingthis
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irewinner
+        icon = GFX_focus_BEL_legacy_of_the_great_war
+        x = 33
+        y = 12
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_engdifficulty }
+        mutually_exclusive = { focus = hazz_irish_rework_freeenglishppl }
+        mutually_exclusive = { focus = hazz_irish_rework_irewhitepeace }
+        bypass_if_unavailable = yes
+        available = {
+            has_war_with = ENG
+        }
+        completion_reward = {
+            ENG = {
+            country_event = {
+                id = sigmaevent.68
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irewhitepeace
+        icon = GFX_focus_generic_world_peace
+        x = 31
+        y = 12
+        cost = 2
+        prerequisite = { focus = hazz_irish_rework_engdifficulty }
+        mutually_exclusive = { focus = hazz_irish_rework_freeenglishppl }
+        mutually_exclusive = { focus = hazz_irish_rework_irewinner }
+        available = {
+            has_war_with = ENG
+        }
+        completion_reward = {
+            ENG = {
+            country_event = {
+                id = sigmaevent.67
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_devni
+        icon = GFX_focus_generic_expand_gold_mining
+        x = -1
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_ecowonder }
+        available = {
+            controls_state = 119
+        }
+        completion_reward = {
+            119 = {
+            add_extra_state_shared_building_slots=8
+                    add_building_construction={
+                    type=industrial_complex
+                    level=4
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ecoenvy
+        icon = GFX_focus_CONGO_gold_and_diamonds
+        x = 3
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_ecowonder }
+        available = {
+            industrial_complex > 59
+        }
+        completion_reward = {
+            add_ideas = Sigmas_rise_mephilles
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_rallyblueshirts
+        icon = GFX_focus_ITA_generic_fascist_workers
+        x = 49
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_alternativedirection }
+        mutually_exclusive = { focus = hazz_irish_rework_republicantown }
+        completion_reward = {
+            add_war_support = 0.05
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.10
+            }
+            add_stability = -0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_eoin
+        icon = GFX_focus_RAJ_union_busting
+        x = 55
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_rallyblueshirts }
+        mutually_exclusive = { focus = hazz_irish_rework_iremonarchist }
+        available = {
+            has_government = fascism
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+            add_stability = -0.15
+            set_cosmetic_tag = Sigmas_rise_fascismo
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_iremonarchist
+        icon = GFX_focus_generic_monarchist_sentiment
+        x = 43
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_rallyblueshirts }
+        mutually_exclusive = { focus = hazz_irish_rework_eoin }
+        completion_reward = {
+            add_stability = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_iloveenglishpeople
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_iloveenglishpeople
+        x = 41
+        y = 6
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_iremonarchist }
+        completion_reward = {
+            add_political_power = 50
+            add_stability = 0.05
+            ENG = {
+               add_political_power = 50
+            add_stability = 0.05
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_freeenglishppl
+        icon = GFX_focus_ICE_infiltrating_the_british_isles
+        x = 37
+        y = 12
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_spreadrevolution }
+        prerequisite = { focus = hazz_irish_rework_engdifficulty }
+        mutually_exclusive = { focus = hazz_irish_rework_irewinner }
+        mutually_exclusive = { focus = hazz_irish_rework_irewhitepeace }
+        available = {
+            SCO = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+            WLS = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+        }
+        completion_reward = {
+            IRE = { 
+               release = WLS
+               set_autonomy = {
+                    target = WLS
+                    autonomous_state = autonomy_integrated_puppet
+                  }
+            }
+            IRE = { 
+               release = SCO
+               set_autonomy = {
+                    target = SCO
+                    autonomous_state = autonomy_integrated_puppet
+                  }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_lovesussysoviets
+        icon = GFX_focus_AFG_defender_of_central_asia
+        x = 35
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_volspainrep }
+        completion_reward = {
+            SOV = {
+               add_equipment_to_stockpile = {
+                  type = infantry_equipment_1
+                  amount = 7500
+                  producer = IRE
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_gatewaytoeuropa
+        icon = GFX_focus_hol_gateway_to_europe
+        x = 39
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_spreadrevolution }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = HOL
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_allyspain
+        icon = GFX_focus_generic_befriend_communist_spain_focus
+        x = 40
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_gatewaytoeuropa }
+        mutually_exclusive = { focus = hazz_irish_rework_ihatespanishpeople }
+        completion_reward = {
+              set_rule = {
+               can_create_factions = yes
+            }
+            create_faction = "Irish Spanish Bloc"
+            SPR = {
+                country_event = {
+                    id = sigmaevent.420
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ihatespanishpeople
+        icon = GFX_focus_focus_fra_intervention_spain
+        x = 38
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_gatewaytoeuropa }
+        completion_reward = {
+              set_rule = {
+               can_create_factions = yes
+            }
+            create_wargoal = {
+            type = annex_everything
+            target = SPA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_altalliancewithfra
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_altalliancewithfra
+        x = 45
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_iremonarchist }
+        completion_reward = {
+            set_rule = {
+                can_create_factions = yes    
+            }
+            IRE = {
+                set_politics = {
+                    ruling_party = neutrality
+                }
+            }
+            create_faction = "Franco Irish Alliance"
+            FRA = {
+                country_event = {
+                    id = sigmaevent.670011122
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_axisallies
+        icon = GFX_focus_JAP_sea_tripartite_pact
+        x = 54
+        y = 6
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_eoin }
+        mutually_exclusive = { focus = hazz_irish_rework_natguard }
+        completion_reward = {
+              set_rule = {
+               can_create_factions = yes
+            }
+            GER = {
+                country_event = {
+                    id = sigmaevent.67001167676767
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_axisgold
+        icon = GFX_focus_generic_german_trade
+        x = 51
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_axisallies }
+        completion_reward = {
+            add_ideas = Sigmas_rise_yaratikiavbaxis
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_overseainvest
+        icon = GFX_focus_generic_scandinavia_flags
+        x = 43
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_altalliancewithfra focus = hazz_irish_rework_iloveenglishpeople }
+        available = {
+            has_government = neutrality
+        }
+        completion_reward = {
+            113 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }}
+            135 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }}
+            134 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_engpuppy
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_engpuppy
+        x = 41
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_iloveenglishpeople }
+        completion_reward = {
+            ENG = { 
+               set_autonomy = {
+                    target = IRE
+                    autonomous_state = autonomy_dominion
+                  }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_restoresco
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_restoresco
+        x = 45
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_altalliancewithfra }
+        available = {
+            SCO = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+        }
+        completion_reward = {
+            IRE = { 
+               release = SCO
+               set_autonomy = {
+                    target = SCO
+                    autonomous_state = autonomy_integrated_puppet
+                  }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_natguard
+        icon = GFX_focus_FIN_national_fanatism
+        x = 56
+        y = 6
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_eoin }
+        mutually_exclusive = { focus = hazz_irish_rework_axisallies }
+        completion_reward = {
+               set_rule = {
+               can_create_factions = yes
+            }
+            add_ideas = Sigmas_rise_yaratikiavbwolfhowll
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_corporatism
+        icon = GFX_focus_CHL_domestic_production_of_the_willys_mb
+        x = 55
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_axisallies focus = hazz_irish_rework_natguard }
+        completion_reward = {
+            113 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }}
+            135 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }}
+            134 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = dockyard
+                    level = 3
+                    instant_build = yes
+                }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_focus_tree_focus_78
+        icon = GFX_focus_CHI_punish_the_signatories
+        x = 47
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_overseainvest focus = hazz_irish_rework_corporatism }
+        mutually_exclusive = { focus = hazz_irish_rework_celticheritage }
+        completion_reward = {
+            add_ideas = Sigmas_rise_diasdias
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_celticheritage
+        icon = GFX_focus_generic_soldier_salute
+        x = 50
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_overseainvest focus = hazz_irish_rework_corporatism }
+        mutually_exclusive = { focus = hazz_irish_rework_new_focus_tree_focus_78 }
+        completion_reward = {
+            set_cosmetic_tag = IRE_cosmetic4
+            add_stability = 0.05
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_fasireind
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_fasireind
+        x = 57
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_natguard }
+        completion_reward = {
+            135 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_empowergovgen
+        icon = GFX_focus_NOR_continue_nygaardsvold_government
+        x = 41
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_engpuppy }
+        completion_reward = {
+            IRE = {
+                set_politics = {
+                    ruling_party = neutrality
+                }
+            }
+            add_popularity = {
+                ideology = neutrality
+                popularity = 0.45
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_requestafricanland
+        icon = GFX_goal_tfv_saf_secure_interests_in_africa
+        x = 43
+        y = 9
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_empowergovgen }
+        completion_reward = {
+            ENG = {
+            country_event = {
+                id = sigmaevent.67000
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_volspanat
+        icon = GFX_focus_ARG_invite_spanish_nationalists
+        x = 53
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_axisallies }
+        completion_reward = {
+            add_ideas = Sigmas_rise_halp
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_volforces
+        icon = GFX_focus_CHI_formalise_training_regime
+        x = 25
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_neutrality }
+        completion_reward = {
+            set_rule = {
+               can_send_volunteers = yes
+            }
+            add_ideas = Sigmas_rise_halp
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_fascireaut
+        icon = GFX_focus_GER_autarky_ambitions
+        x = 59
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_natguard }
+        completion_reward = {
+            			add_ideas = autarkic_economy
+            modify_building_resources = {
+                    	   building = synthetic_refinery
+                    	   resource = rubber
+                    	   amount = 4
+                    	}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_aidbarb
+        icon = GFX_focus_GER_war_with_the_ussr
+        x = 55
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_corporatism }
+        completion_reward = {
+            GER = {
+               add_equipment_to_stockpile = {
+                  type = infantry_equipment_1
+                  amount = 7500
+                  producer = IRE
+            }
+            }
+            create_wargoal = {
+            type = annex_everything
+            target = SOV
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irefam1
+        icon = GFX_focus_AST_rural_concessions
+        x = 23
+        y = 1
+        cost = 3
+        completion_reward = {
+            add_ideas = Sigmas_rise_are
+            remove_ideas = Sigmas_rise_ar
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irefam2
+        icon = GFX_focus_generic_modernizing_agriculture
+        x = 21
+        y = 2
+        cost = 3
+        prerequisite = { focus = hazz_irish_rework_irefam1 }
+        completion_reward = {
+            add_ideas = Sigmas_rise_aret
+            remove_ideas = Sigmas_rise_are
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_encimm
+        icon = GFX_goal_hazz_irish_rework_hazz_irish_rework_encimm
+        x = 25
+        y = 2
+        cost = 3
+        prerequisite = { focus = hazz_irish_rework_irefam1 }
+        completion_reward = {
+            add_ideas = Sigmas_rise_teqooooo
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_takerefugues
+        icon = GFX_focus_SWE_refuge_from_war
+        x = 24
+        y = 3
+        cost = 3
+        prerequisite = { focus = hazz_irish_rework_encimm }
+        completion_reward = {
+            add_manpower = 50000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_foreigncommun
+        icon = GFX_focus_generic_forest_brothers
+        x = 25
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_encimm }
+        prerequisite = { focus = hazz_irish_rework_takerefugues }
+        completion_reward = {
+            add_ideas = Sigmas_rise_hazzium
+            add_manpower = 100000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irefam3
+        icon = GFX_focus_generic_workers
+        x = 22
+        y = 3
+        cost = 3
+        prerequisite = { focus = hazz_irish_rework_irefam2 }
+        completion_reward = {
+            add_ideas = Sigmas_rise_arety
+            remove_ideas = Sigmas_rise_aret
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_irefam4
+        icon = GFX_focus_INS_expand_batavia_med_school
+        x = 21
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_irefam2 }
+        prerequisite = { focus = hazz_irish_rework_irefam3 }
+        completion_reward = {
+            add_ideas = Sigmas_rise_aretyu
+            remove_ideas = Sigmas_rise_arety
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = a_new_ireland
+        icon = GFX_focus_generic_improve_the_administration_2
+        x = 23
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_foreigncommun }
+        prerequisite = { focus = hazz_irish_rework_takerefugues }
+        prerequisite = { focus = hazz_irish_rework_irefam3 }
+        prerequisite = { focus = hazz_irish_rework_irefam4 }
+        completion_reward = {
+            add_ideas = Sigmas_rise_aretyui
+            remove_ideas = Sigmas_rise_aretyu
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_largewelfarespending
+        icon = GFX_focus_generic_blue_flags
+        x = 23
+        y = 2
+        cost = 3
+        prerequisite = { focus = hazz_irish_rework_irefam1 }
+        completion_reward = {
+            add_timed_idea = {
+                idea = Sigmas_rise_yaratikiavb
+                days = 180
+                add_stability = 0.03
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_armydevelop
+        icon = GFX_focus_research
+        x = 12
+        y = 4
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_tankdevelopm }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+            				name = IRE_Research_Army_Investment
+            				bonus = 1
+            				uses = 2
+            				category = motorized_equipment
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_ihatefrenchpeople
+        icon = GFX_focus_focus_fra_revolution_utmost
+        x = 39
+        y = 12
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_ihatespanishpeople focus = hazz_irish_rework_allyspain }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = FRA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_freethem
+        icon = GFX_focus_attack_france
+        x = 39
+        y = 13
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_new_ihatefrenchpeople }
+        available = {
+            BRI = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+            OCC = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+        }
+        completion_reward = {
+            IRE = { 
+               release = BRI
+               set_autonomy = {
+                    target = BRI
+                    autonomous_state = autonomy_integrated_puppet
+                  }
+            }
+            IRE = { 
+               release = OCC
+               set_autonomy = {
+                    target = OCC
+                    autonomous_state = autonomy_integrated_puppet
+                  }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_doesmojilikepie
+        icon = GFX_focus_generic_africa_naval
+        x = 43
+        y = 10
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_requestafricanland }
+        completion_reward = {
+            declare_war_on = {
+                target = LIB
+                type = annex_everything
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_requestnorthirelandmonarch
+        icon = GFX_focus_AST_the_irish_anti-britain_pact
+        x = 41
+        y = 9
+        cost = 1
+        prerequisite = { focus = hazz_irish_rework_empowergovgen }
+        bypass = {
+            controls_state = 119
+        }
+        completion_reward = {
+            ENG = {
+            country_event = { 
+                id = sigmaevent.67001
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_purchasebrittany
+        icon = GFX_focus_generic_money_for_equipment
+        x = 47
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_altalliancewithfra }
+        completion_reward = {
+            FRA = {
+            country_event = {
+                id = sigmaevent.6700111
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_engrubber
+        icon = GFX_focus_generic_rubber
+        x = 25
+        y = 11
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_macdonald }
+        available = {
+            controls_state = 119
+            ENG = {
+            controls_state = 422
+            }
+        }
+        completion_reward = {
+            ENG = {
+            country_event = { 
+                id = sigmaevent.1234567676767
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_angloireindus
+        icon = GFX_focus_ARG_capitalize_the_beef_industry
+        x = 27
+        y = 11
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_macdonald }
+        available = {
+            controls_state = 119
+        }
+        completion_reward = {
+            113 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+            119 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+            126 = {
+            add_extra_state_shared_building_slots=2
+                    add_building_construction={
+                    type=industrial_complex
+                    level=2
+                    instant_build=yes
+                  }
+                }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_engiretrain
+        icon = GFX_focus_AFG_mountain_training
+        x = 26
+        y = 12
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_angloireindus focus = hazz_irish_rework_engrubber }
+        completion_reward = {
+            add_ideas = Sigmas_rise_yaratikiavballiestrain
+            army_experience = 25
+            ENG = {
+            add_ideas = Sigmas_rise_yaratikiavballiestrain
+            army_experience = 25
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ourownpath
+        icon = GFX_focus_generic_sympathetic_judges
+        x = 25
+        y = 9
+        cost = 5
+        prerequisite = { focus = hazz_irish_rework_volforces }
+        available = {
+            is_ai = no
+        }
+        completion_reward = {
+            set_rule = {
+                can_create_factions = yes
+                add_political_power = 50
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_new_claimaustralia
+        icon = GFX_focus_AST_australia_first
+        x = 42
+        y = 11
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_requestnorthirelandmonarch }
+        completion_reward = {
+            AST = {
+            country_event = {
+                id = sigmaevent.12345
+                days = 1
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_ireastunion
+        icon = GFX_focus_AST_anzac_spirit
+        x = 45
+        y = 12
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_new_claimaustralia }
+        prerequisite = { focus = hazz_irish_rework_new_focus_tree_focus_78 }
+        available = {
+            AST = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+        }
+        completion_reward = {
+            set_cosmetic_tag = IRE_cosmetic3
+            every_state = {    
+            limit = {
+                is_core_of = AST
+                }
+                add_core_of = IRE
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_celticeng
+        icon = GFX_focus_AST_out_of_the_den
+        x = 50
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_celticheritage }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = ENG   
+            }
+             add_state_core = 122
+             add_state_core = 123
+             add_state_core = 933
+             add_state_core = 136
+             add_state_core = 121 
+             add_state_core = 133
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_celticspr
+        icon = GFX_focus_generic_attack_nationalist_spain_focus
+        x = 48
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_celticeng }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = SPA
+            }
+            add_state_core = 171
+            add_state_core = 174
+            add_state_core = 790
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_celticfra
+        icon = GFX_focus_attack_france
+        x = 52
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_celticeng }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = FRA   
+            }
+            add_state_core = 14
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazz_irish_rework_gaulllllls
+        icon = GFX_focus_focus_fra_border
+        x = 50
+        y = 11
+        cost = 10
+        prerequisite = { focus = hazz_irish_rework_celticspr }
+        prerequisite = { focus = hazz_irish_rework_celticfra }
+        available = {
+            FRA = {
+                all_core_state = {
+                    is_fully_controlled_by = IRE
+                }
+            }
+        }
+        completion_reward = {
+            set_cosmetic_tag = G7B
+            every_state = {    
+            limit = {
+                is_core_of = FRA
+                }
+                add_core_of = IRE
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
