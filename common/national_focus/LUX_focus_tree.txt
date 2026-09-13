@@ -20,6 +20,7 @@ focus_tree = {
         available_if_capitulated = yes
         available = {
             controls_state = 8
+            always = no
         }
         completion_reward = {
             add_ideas = lux_new_industry
@@ -2668,6 +2669,7 @@ focus_tree = {
             NOT = {
                 has_idea = reform_lux
             }
+            always = no
         }
         completion_reward = {
             set_rule = { can_declare_war_on_same_ideology = no }
@@ -3597,7 +3599,7 @@ focus_tree = {
         prerequisite = { focus = my_hoi4_mod_LUX_focus_tree_focus_124 }
         completion_reward = {
             add_timed_idea = {
-                idea = FRA_devalue_the_franc
+                idea = MNHM_FRA_devalue_the_franc
                 days = 365
             }
         }

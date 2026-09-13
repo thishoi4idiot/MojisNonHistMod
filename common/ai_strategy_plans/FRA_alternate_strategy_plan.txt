@@ -131,12 +131,12 @@ FRA_alternate_plan_2 = {
 		FRA_extra_research_slot 					#September 10 1939	
 		FRA_heavy_armor_focus 						#July 10 1938	
 		FRA_improved_screen_ships 					#November 30 1938
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_invest_in_syria
 		FRA_invest_in_indochina
 		FRA_invest_in_west_africa
 		FRA_colonial_industry
-		FRA_invite_french_settlers 						#June 30 1939
+		FRA_algerie_france 						#June 30 1939
 		FRA_naval_doctrine 							#November 20 1939	
 		FRA_alpine_forts 							#January 30 1940
 		FRA_extend_the_maginot_line 				#April 10 1940
@@ -297,11 +297,11 @@ FRA_alternate_plan_3_lar = {
 		FRA_infantry_focus 							#July 10 1938	
 		FRA_artillery_focus 						#September 20 1938
 		FRA_heavy_armor_focus 						#November 30 1938
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_invest_in_syria
 		FRA_invest_in_indochina
 		FRA_colonial_industry 						#September 10 1939	
-		FRA_invite_french_settlers 						#February 10 1939	
+		FRA_algerie_france 						#February 10 1939	
 		FRA_extra_research_slot 					#January 30 1940
 		FRA_naval_doctrine 							#April 10 1940
 		FRA_alpine_forts 							#June 20 1940	
@@ -432,11 +432,11 @@ FRA_alternate_plan_4_lar = {
 		FRA_infantry_focus 							#July 10 1938	
 		FRA_artillery_focus 						#September 20 1938
 		FRA_heavy_armor_focus 						#November 30 1938
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_invest_in_syria
 		FRA_invest_in_indochina
 		FRA_colonial_industry 						#September 10 1939	
-		FRA_invite_french_settlers 						#February 10 1939	
+		FRA_algerie_france 						#February 10 1939	
 		FRA_extra_research_slot 					#January 30 1940
 		FRA_naval_doctrine 							#April 10 1940
 		FRA_alpine_forts 							#June 20 1940	
@@ -526,7 +526,7 @@ FRA_alternate_plan_little_entente = {
 		FRA_adopt_laissez_faire_economics
 		FRA_algerie_france
 		#FRA_colonial_industry
-		FRA_invite_french_settlers
+		FRA_algerie_france
 		FRA_extra_research_slot
 		#1938
 		FRA_defensive_strategems
@@ -541,7 +541,7 @@ FRA_alternate_plan_little_entente = {
 		FRA_heavy_armor_focus
 		#1940
 		FRA_army_reform
-		FRA_combat_colonial_illiteracy
+		FRA_grow_the_empire
 	}			
 	research = {
 
@@ -596,8 +596,8 @@ FRA_alternate_plan_fascist_regular = {
 		#FRA_initiate_government_reform
 		FRA_implement_austerity_measures
 		FRA_adopt_laissez_faire_economics
-		FRA_invite_french_settlers
-		FRA_combat_colonial_illiteracy
+		FRA_algerie_france
+		FRA_grow_the_empire
 		#1937
 		FRA_algerie_france
 		#FRA_colonial_industry
@@ -688,7 +688,7 @@ FRA_alternate_plan_fascist_lar = {
 		FRA_towards_a_new_europe
 		#1939
 		FRA_aggressive_focus
-		FRA_invite_french_settlers
+		FRA_algerie_france
 		FRA_political_unity
 		FRA_establish_spheres_of_influence
 		FRA_align_belgium
@@ -758,7 +758,7 @@ FRA_alternate_plan_communist_regular = {
 		#FRA_colonial_industry
 		#1938
 		FRA_aggressive_focus
-		FRA_invite_french_settlers
+		FRA_algerie_france
 		FRA_leftist_rhetoric
 		#1939
 		FRA_national_mobilization
@@ -845,7 +845,7 @@ FRA_alternate_plan_communist_lar = {
 		FRA_invest_in_indochina
 		FRA_colonial_industry
 		FRA_force_the_issue
-		FRA_invite_french_settlers
+		FRA_algerie_france
 		FRA_reconciliation
 		#1942
 		FRA_constitutional_convention
@@ -921,7 +921,7 @@ FRA_alternate_plan_monarchist_orleans = {
 		#1940
 		FRA_army_reform
 		FRA_repeal_the_law_of_exile
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_orleanist_restoration
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
@@ -1003,7 +1003,7 @@ FRA_alternate_plan_monarchist_legitimate = {
 		#1940
 		FRA_army_reform
 		FRA_repeal_the_law_of_exile
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_the_legitimate_heir
 		#1941
 		FRA_invest_in_indochina
@@ -1069,7 +1069,7 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		FRA_aggressive_focus
 		#1938
 		FRA_compulsory_cartelization
-		FRA_invest_in_the_colonies
+		FRA_our_empire
 		FRA_repeal_the_law_of_exile
 		FRA_proclaim_the_third_empire
 		FRA_algerie_france

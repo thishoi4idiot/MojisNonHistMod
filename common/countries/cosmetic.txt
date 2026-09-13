@@ -2053,6 +2053,10 @@ G7B = {
     color = rgb { 33 66 58 }
     color_ui = rgb { 33 66 58 }
 }
+IRE_cosmetic = {
+    color = rgb { 80 159 90 }
+    color_ui = rgb { 80 159 90 }
+}
 IRE_cosmetic2 = {
     color = rgb { 159 34 48 }
     color_ui = rgb { 159 34 48 }

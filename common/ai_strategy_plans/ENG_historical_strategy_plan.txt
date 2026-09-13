@@ -67,7 +67,7 @@ ENG_historical_plan = {
 		uk_convoy_focus#January 10
 		ENG_chiefs_of_staff_committee	#March 20 1942
 		maud_focus#May 30 1942	
-		uk_mediterranean_focus#August 10 1942
+		uk_rock_focus#August 10 1942
 		uk_carrier_focus#October 20 1942	
  		#December 30 1942	
  		uk_iraq_focus#March 10 1943

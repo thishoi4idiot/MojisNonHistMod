@@ -890,7 +890,7 @@ focus_tree = {
         available = {
             OR = {
                 has_war = yes
-                date = 1946.9.1
+                date > 1946.9.1
             }
         }
         completion_reward = {
@@ -1056,7 +1056,7 @@ focus_tree = {
         prerequisite = { focus = hazz_irish_rework_nateco }
         mutually_exclusive = { focus = hazz_irish_rework_downiresteel }
         available = {
-            num_of_civilian_factories = 20
+            num_of_civilian_factories > 20
         }
         completion_reward = {
             random_core_state = {
@@ -1723,6 +1723,7 @@ focus_tree = {
         y = 10
         cost = 10
         prerequisite = { focus = hazz_irish_rework_gatewaytoeuropa }
+        mutually_exclusive = { focus = hazz_irish_rework_allyspain }
         completion_reward = {
               set_rule = {
                can_create_factions = yes
@@ -2506,8 +2507,8 @@ focus_tree = {
         completion_reward = {
             set_rule = {
                 can_create_factions = yes
-                add_political_power = 50
             }
+            add_political_power = 50
         }
         ai_will_do = {
             factor = 1

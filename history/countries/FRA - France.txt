@@ -252,7 +252,7 @@ if = {
 	complete_national_focus = FRA_defensive_focus
 	complete_national_focus = FRA_firepower_kills
 	complete_national_focus = FRA_go_with_britain
-	complete_national_focus = FRA_invest_in_the_metropole
+	complete_national_focus = FRA_industrial_collectivization
 
 	give_guarantee = POL
 	ENG = { add_to_faction = FRA }
@@ -441,7 +441,6 @@ set_variable = { var = FRA_gd_stability value = -0.1 }
 set_variable = { var = FRA_gd_pp_cost value = 0.3 }
 set_variable = { var = FRA_gd_conscription value = -0.1 }
 set_variable = { var = FRA_gd_ind_cap_factory value = -0.3 }
-add_dynamic_modifier = { modifier = FRA_great_depression }
 
 give_guarantee = CZE
 give_guarantee = YUG

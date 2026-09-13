@@ -1,7 +1,5 @@
 free_templates_rule = {
     name = "free_templates_rule"
-    desc = "free_templates_rule_desc"
-    required_dlc = { }
     group = "GAMEPLAY_RULES" # Places it in the gameplay section
 
     default = {

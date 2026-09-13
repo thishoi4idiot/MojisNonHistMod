@@ -594,7 +594,7 @@ ideas = {
 		}
 	}
 	country = {
-		FRA_devalue_the_franc = {
+		MNHM_FRA_devalue_the_franc = {
 			picture = generic_economic_increase
 			modifier = {
 				consumer_goods_factor = -0.1

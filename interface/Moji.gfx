@@ -7,4 +7,8 @@ spriteTypes = {
         name = "GFX_idea_Mojis_Boon"
         texturefile = "gfx/interface/ideas/Moji.dds"
     }
+    spriteType = {
+        name = "Leader-paul-faure"
+        texturefile = "gfx/leaders/france/paul-faure.dds"
+    }
 }

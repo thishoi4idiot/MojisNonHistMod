@@ -13,6 +13,23 @@
  ###########################
 
  # Focuses
+ uk_newfoundland_focus: "Develop Newfoundland"
+ uk_newfoundland_focus_desc: "Newfoundland remains one of the least developed corners of the Empire. Investment in local industry and shipbuilding will strengthen our position in the North Atlantic."
+ uk_malaya_focus: "Develop British Malaya"
+ uk_malaya_focus_desc: "The rubber and tin of Malaya are vital to the war economy. Investing in local industry and the shipyards of Singapore will fortify our position in the Far East."
+ uk_develop_burma_focus: "Develop Burma"
+ uk_develop_burma_focus_desc: "Burma guards the eastern approaches to India and the Bay of Bengal. Developing her industry will strengthen the Empire's frontier against any advance from the east."
+ uk_ireland_focus: "Develop Ireland"
+ uk_ireland_focus_desc: "Should Ireland stand with us as a partner in the Commonwealth, we can invest in her industry and shipyards, binding the Irish economy ever closer to the Empire."
+ uk_egypt_focus: "Develop Egypt"
+ uk_egypt_focus_desc: "Egypt is the linchpin of our position in the Mediterranean and the guardian of the Suez route. Expanding industry around Cairo and Alexandria will secure our hold on the region."
+ uk_commonwealth_industrial_dividend: "Imperial Industrial Dividend"
+ uk_commonwealth_industrial_dividend_desc: "The industry we have raised across the Dominions and colonies now pays its return to the mother country. For every colonial economy we have developed, offshore production will flow home to fuel the war effort."
+ uk_commonwealth_industrial_dividend_tt: "For every colony we have invested in, we will gain §G1 civilian factory§! (built off-map)"
+ uk_commonwealth_military_dividend: "Imperial Military Dividend"
+ uk_commonwealth_military_dividend_desc: "Beyond the factories that feed our economy, the developed industry of the Empire can be turned to the production of arms. Each colonial economy we have raised will yield its share of military production to the war effort."
+ uk_commonwealth_military_dividend_tt: "For every colony we have invested in, we will gain §G1 military factory§! (built off-map)"
+ ENG_dominion_development_complete_tt: "Has completed the development focus for every one of the §GDominions§! (Australia, Canada, South Africa and New Zealand)"
  ENG_abandon_the_ten_year_policy: "The Ten Year Policy"
  ENG_collective_security_doctrine: "Collective security Doctrine"
  ENG_Developing_The_Royal_Armoured_Corps: "Developing The Royal Armoured Corps"
@@ -136,7 +153,7 @@
  ###########################
 
  FRA_our_empire: "Our Empire"
-
+ FRA_our_empire_desc: "France's influence stretches far beyond the borders of Europe. By consolidating our overseas territories and expanding our colonial reach, we can ensure that the French Empire remains a dominant global power, capable of projecting strength and securing resources across the world."
  
  # Eastern Grand Duchies Decisions (Warsaw & Vilnius expansion chain)
  FRA_reistablish_the_grand_duchy_of_warsaw: "Reestablish the Grand Duchy of Warsaw"
@@ -207,6 +224,9 @@
  FRA_French_Resistance: "French Resistance"
 
  # Focus Descriptions
+ FRA_develop_metropolitan_france: "Develop Metropolitan France"
+ FRA_develop_metropolitan_france_desc: "France's heartland is the foundation of our nation. By investing in infrastructure, industry, and regional development, we can strengthen the economic and social fabric of Metropolitan France, ensuring prosperity and stability for generations to come."
+
  FRA_ally_the_netherlands_desc: "We have an opportunity to make strong allies out of the Netherlands with an offer of giving them the Flemish portion of the failed Belgian state, building stronger ties than ever, and safe-guarding the lowlands as two allies strengthening each other against a resurgent German state....."
  FRA_ally_the_netherlands_tt: "Following this path, granting initial concessions will allow us to integrate them later."
  FRA_bring_back_the_helvetic_republic_desc: "Helveticia was carved by French hands to guard the Empire's heart. Its so-called neutrality is a betrayal of history. The Alps must once more echo with the authority of France."
@@ -2162,6 +2182,8 @@
 
  # Idea Descriptions
  FRA_devalue_the_franc_desc: "By breaking from the gold standard and devaluing the franc, our exports have become more competitive, though the shock has unsettled the public and strained the cost of living."
+ MNHM_FRA_devalue_the_franc: "Devalued Franc"
+ MNHM_FRA_devalue_the_franc_desc: "By breaking from the gold standard and devaluing the franc, our exports have become more competitive, though the shock has unsettled the public and strained the cost of living."
  FRA_national_housing_programmes_idea_tier1_desc: "A single national housing programme is underway, diverting a modest amount of consumer goods towards the effort."
  FRA_national_housing_programmes_idea_tier2_desc: "Two national housing programmes are underway simultaneously, diverting a moderate share of consumer goods towards the effort."
  FRA_national_housing_programmes_idea_tier3_desc: "Housing construction is underway across the entire mainland at once, diverting a large share of consumer goods towards the effort."
@@ -2185,7 +2207,7 @@
  ire_character_6: "Joseph Vize"
 
  new_character_1: "Greta Baumann"
- new_character_1: "Bruno"
+ new_character_10: "Bruno"
  new_character_11: "Akari Walton"
  new_character_12: "Suzanne Cooke"
  new_character_13: "Steffan Villegas"
@@ -2198,4 +2220,3 @@
  new_character_7: "Mackenzie Flynn"
  new_character_8: "Charles Delacruz"
  new_character_9: "Levi Ponce"
-

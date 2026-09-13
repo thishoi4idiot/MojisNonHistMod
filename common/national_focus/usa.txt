@@ -3879,7 +3879,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 		    show_ideas_tooltip = charles_coughlin
-		    add_popularity = { ideology = fascism popularity = 0.05 }
+		    add_popularity = { ideology = fascism popularity = 0.1 }
 		     if = {
 		    	limit = {
 		    		is_ai = yes
@@ -3893,6 +3893,7 @@ focus_tree = {
 		    	}
 		    	add_ideas = charles_coughlin
 		    }
+			add_political_power = 150
 		}
 	}
 	focus = {

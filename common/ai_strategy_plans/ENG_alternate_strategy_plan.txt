@@ -262,7 +262,7 @@ ENG_alternate_unaligned_plan = {
 		ENG_bring_the_dominions_back_into_the_fold
 		uk_service_focus
 		uk_colonial_focus
-		uk_mediterranean_focus
+		uk_rock_focus
 		ENG_special_air_service
 		naval_rearmament_focus
 		ENG_chiefs_of_staff_committee
@@ -375,7 +375,7 @@ ENG_alternate_fascist_plan = {
 		ENG_bring_the_dominions_back_into_the_fold
 		uk_service_focus
 		uk_colonial_focus
-		uk_mediterranean_focus
+		uk_rock_focus
 		ENG_special_air_service
 		naval_rearmament_focus
 		ENG_chiefs_of_staff_committee
