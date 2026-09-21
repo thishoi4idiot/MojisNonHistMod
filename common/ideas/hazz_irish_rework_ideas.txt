@@ -171,11 +171,11 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_buildings_factor = 0.20
+                production_speed_buildings_factor = 0.10
                 consumer_goods_factor = -0.15
                 research_speed_factor = 0.10
-                industrial_capacity_factory = 0.05
-                industrial_capacity_dockyard = 0.05
+                industrial_capacity_factory = 0.025
+                industrial_capacity_dockyard = 0.025
             }
         }
         Sigmas_rise_bb = {
@@ -195,6 +195,7 @@ ideas = {
             modifier = {
                 stability_weekly = 0.005
                 war_support_weekly = 0.005
+                political_power_gain = 0.10
             }
         }
         Sigmas_rise_ar = {
@@ -404,6 +405,28 @@ ideas = {
                 non_core_manpower = 0.35
                 compliance_gain = 0.10
                 resistance_growth = -0.10
+            }
+        }
+        Sigmas_rise_yaarawarrfa = {
+            picture = SIA_desperate_gambit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = 0.20
+                industrial_capacity_factory = 0.10
+                industrial_capacity_dockyard = 0.10
+                production_speed_buildings_factor = -0.20
+                stability_weekly = -0.005
+            }
+        }
+        national_spirit_convoy = {
+            picture = merchant_mariners_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                convoy_retreat_speed = 0.10
             }
         }
     }
