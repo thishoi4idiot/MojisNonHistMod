@@ -484,7 +484,12 @@
  ###########################
  # POLAND                  #
  ###########################
-
+ poland_meme_events.1.t: "Poland Takes Jerusalem"
+ poland_meme_events.1.d: "Poland has taken control of Jerusalem, a city of great historical and religious significance. As we now control the city our founding father Pilsudski decends from the heavens to bless our new dominion."
+ poland_meme_events.1.a: "God Bless Poland"
+ poland_meme_events.2.t: "The Great Leader Comes West"
+ poland_meme_events.2.d: "With Polish troops standing on cores of a shattered Korea, our comrades have made contact with Kim Il-sung, the Great Leader of the Korean communist movement. Stripped of a homeland to lead, he has agreed to lend his revolutionary genius to the Polish cause instead - offering himself as the new leader of our people's republic."
+ poland_meme_events.2.a: "Welcome the Great Leader"
  # Focuses
  POL_ally_russia: "Ally Russia"
  POL_proclaim_zapadoslavia: "Proclaim Zapadoslavia"
