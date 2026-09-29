@@ -364,36 +364,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_class_war
-		icon = GFX_focus_spr_class_war
-		x = -2
-		y = 1
-		prerequisite = { focus = USA_destroy_the_counterrevolutionaries }
-		
-		relative_position_id = USA_destroy_the_counterrevolutionaries
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			add_ideas = SPR_class_war_1
-		}
-	}
-	focus = {
 		id = USA_eliminate_decadence
 		icon = GFX_focus_generic_strike_at_democracy3
 		x = -1
@@ -421,37 +391,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = FRA_anti_decandence
-		}
-	}
-	focus = {
-		id = USA_state_atheism
-		icon = GFX_focus_mex_triumph_over_the_cristeros
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_eliminate_decadence }
-		prerequisite = { focus = USA_destroy_the_counterrevolutionaries }
-		
-		relative_position_id = USA_destroy_the_counterrevolutionaries
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			add_ideas = MEX_church_power_1
 		}
 	}
 	focus = {

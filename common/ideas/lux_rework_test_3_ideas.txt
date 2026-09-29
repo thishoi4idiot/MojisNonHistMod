@@ -6,7 +6,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_buildings_factor = 0.15
+                production_speed_buildings_factor = 0.1
             }
         }
         lux_research = {
@@ -25,7 +25,6 @@ ideas = {
             }
             modifier = {
                 production_speed_arms_factory_factor = 0.1
-                industrial_capacity_factory = 0.1
             }
         }
         kid_in_factory = {
@@ -34,7 +33,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                industrial_capacity_factory = 0.25
+                industrial_capacity_factory = 0.1
                 conscription_factor = -0.3
             }
         }
@@ -44,7 +43,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                consumer_goods_factor = -0.3
+                consumer_goods_factor = -0.15
             }
         }
         grain_tax_lux = {
@@ -53,17 +52,17 @@ ideas = {
                 always = yes
             }
             modifier = {
-                consumer_goods_factor = -0.3
-                political_power_cost = 0.1
+                consumer_goods_factor = -0.2
+                political_power_cost = 0.05
             }
         }
         mining_lux = {
-            picture = my_hoi4_mod_mining_lux
+            picture = lux_rework_test_3_mining_lux
             allowed = {
                 always = yes
             }
             modifier = {
-                local_resources_factor = 0.3
+                local_resources_factor = 0.1
             }
         }
         lux_feud = {
@@ -72,9 +71,9 @@ ideas = {
                 always = yes
             }
             modifier = {
-                political_power_gain = 0.3
+                political_power_gain = 0.25
                 army_core_defence_factor = 0.1
-                conscription_factor = 1
+                conscription = 0.05
             }
         }
         arty_focus_lux = {
@@ -83,7 +82,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_artillery_attack_factor = 0.15
+                army_artillery_attack_factor = 0.1
             }
         }
         tank_focus_lux = {
@@ -130,7 +129,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                weekly_manpower = 1000
+                weekly_manpower = 800
             }
         }
         neutral_lux = {
@@ -151,7 +150,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_bunker_factor = 0.5
+                production_speed_bunker_factor = 0.2
                 land_bunker_effectiveness_factor = 0.1
                 consumer_goods_factor = 0.1
             }
@@ -171,7 +170,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_industrial_complex_factor = 0.15
+                production_speed_industrial_complex_factor = 0.1
             }
         }
         miltary_lux_ind = {
@@ -180,7 +179,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_arms_factory_factor = 0.1
+                production_speed_arms_factory_factor = 0.05
             }
         }
         great_power_lux = {
@@ -189,8 +188,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_defence_against_major_factor = 0.2
-                industrial_capacity_factory = 0.05
+                army_defence_against_major_factor = 0.15
             }
         }
         lux_commune = {
@@ -208,7 +206,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_strength_factor = 0.1
+                army_strength_factor = 0.05
                 communism_drift = 0.035
             }
         }
@@ -220,7 +218,6 @@ ideas = {
             modifier = {
                 communism_drift = 0.1
                 stability_factor = 0.1
-                industrial_capacity_factory = 0.05
             }
         }
         liberation_lux = {
@@ -240,7 +237,7 @@ ideas = {
             }
             modifier = {
                 production_speed_arms_factory_factor = -0.1
-                production_speed_industrial_complex_factor = 0.25
+                production_speed_industrial_complex_factor = 0.15
                 consumer_goods_factor = -0.1
             }
         }
@@ -250,7 +247,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_arms_factory_factor = 0.2
+                production_speed_arms_factory_factor = 0.1
                 production_speed_industrial_complex_factor = -0.2
                 production_factory_max_efficiency_factor = -0.05
             }
@@ -304,7 +301,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                consumer_goods_factor = -0.15
+                consumer_goods_factor = -0.05
             }
         }
         europe_lux = {
@@ -313,8 +310,8 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_attack_factor = 0.1
-                compliance_growth = 0.2
+                army_attack_factor = 0.05
+                compliance_growth = 0.05
             }
         }
         beacon_lux = {
@@ -324,10 +321,8 @@ ideas = {
             }
             modifier = {
                 communism_drift = 0.2
-                production_speed_buildings_factor = 0.10
                 consumer_goods_factor = -0.05
-                industrial_capacity_factory = 0.2
-                production_factory_max_efficiency_factor = 0.1
+                industrial_capacity_factory = 0.1
             }
         }
         lux_fascism = {
@@ -364,7 +359,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_speed_arms_factory_factor = 0.3
+                production_speed_arms_factory_factor = 0.15
                 consumer_goods_factor = 0.3
             }
         }
@@ -383,8 +378,8 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_factory_max_efficiency_factor = 0.10
-                stability_factor = -0.1
+                production_factory_max_efficiency_factor = 0.05
+                stability_factor = -0.075
             }
         }
         anti_communist_idea_lux = {
@@ -414,11 +409,10 @@ ideas = {
                 always = yes
             }
             modifier = {
-                political_power_gain = 0.5
-                compliance_growth = 0.35
+                political_power_gain = 0.2
+                compliance_growth = 0.3
                 initiative_factor = 0.2
                 army_attack_factor = 0.05
-                industrial_capacity_factory = 0.05
             }
         }
         sealion_lux = {
@@ -428,7 +422,7 @@ ideas = {
             }
             modifier = {
                 production_speed_dockyard_factor = 0.2
-                industrial_capacity_dockyard = 0.10
+                industrial_capacity_dockyard = 0.1
             }
         }
         reform_lux = {
@@ -450,7 +444,7 @@ ideas = {
             modifier = {
                 command_power_gain = 0.2
                 command_abilities_cost_factor = -0.5
-                max_command_power = 200
+                max_command_power = 100
             }
         }
         bourbon_realm = {
@@ -459,7 +453,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                political_power_factor = 0.2
+                political_power_factor = 0.1
                 stability_weekly = 0.001
                 research_speed_factor = 0.10
             }
@@ -470,7 +464,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                justify_war_goal_time = -0.8
+                justify_war_goal_time = -0.5
                 non_core_manpower = 0.02
                 conscription = 0.03
                 training_time_factor = -0.2
@@ -484,7 +478,7 @@ ideas = {
             }
             modifier = {
                 global_building_slots_factor = 0.2
-                production_speed_buildings_factor = 0.1
+                production_speed_buildings_factor = 0.05
                 stability_factor = 0.05
             }
         }
@@ -505,7 +499,7 @@ ideas = {
             modifier = {
                 research_speed_factor = 0.06
                 research_sharing_per_country_bonus = 0.10
-                production_factory_max_efficiency_factor = -0.035
+                production_factory_max_efficiency_factor = -0.03
             }
         }
         labour_force_lux = {
@@ -514,8 +508,8 @@ ideas = {
                 always = yes
             }
             modifier = {
-                production_factory_max_efficiency_factor = 0.08
-                research_speed_factor = -0.06
+                production_factory_max_efficiency_factor = 0.05
+                research_speed_factor = -0.05
             }
         }
         place_europe_lux = {
@@ -524,17 +518,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                industrial_capacity_factory = 0.10
-            }
-        }
-        gold_mine_lux = {
-            picture = SPR_seize_the_gold_reserves
-            allowed = {
-                always = yes
-            }
-            modifier = {
-                consumer_goods_factor = -0.25
-                industrial_capacity_factory = 0.1
+                industrial_capacity_factory = 0.05
             }
         }
         french_lux = {
@@ -552,7 +536,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_attack_against_major_factor = 0.10
+                army_attack_against_major_factor = 0.05
                 army_breakthrough_against_major_factor = 0.10
             }
         }
@@ -562,10 +546,10 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_speed_factor = 0.3
-                compliance_gain = 0.001
-                industrial_capacity_factory = 0.10
-                production_speed_buildings_factor = 0.10
+                army_speed_factor = 0.15
+                compliance_gain = 0.0002
+                industrial_capacity_factory = 0.05
+                production_speed_buildings_factor = 0.05
             }
         }
         merchant_lux = {
@@ -576,10 +560,7 @@ ideas = {
             modifier = {
                 resource_trade_cost_bonus_per_factory = 8
                 min_export = 0.9
-                production_speed_buildings_factor = 0.2
-                cic_construction_boost_factor = 1
                 trade_opinion_factor = 1
-                local_resources_factor = 0.3
             }
         }
         tall_lux = {
@@ -597,7 +578,7 @@ ideas = {
                 always = yes
             }
             modifier = {
-                army_core_defence_factor = 0.10
+                army_core_defence_factor = 0.1
                 land_bunker_effectiveness_factor = 0.25
             }
         }
@@ -609,11 +590,8 @@ ideas = {
             modifier = {
                 consumer_goods_factor = -0.2
                 resource_trade_cost_bonus_per_factory = 8
-                cic_construction_boost_factor = 1
                 trade_opinion_factor = 1
-                local_resources_factor = 0.3
-                stability_weekly = 0.004
-                war_support_weekly = 0.002
+                local_resources_factor = 0.05
             }
         }
     }

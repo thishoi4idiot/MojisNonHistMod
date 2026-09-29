@@ -22229,7 +22229,17 @@ focus_tree = {
 			add_to_variable = { GER_military_experience_gain_army_factor = -0.1 tooltip = experience_gain_army_factor_tt }
 			add_to_variable = { GER_military_minimum_training_level = -0.1 tooltip = minimum_training_level_tt }
 
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = GER_innovative_warfare
+				#bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				category = armor
+				category = artillery
+				category = naval_equipment
+				category = air_equipment
+			}
 		}
 	}
 	focus = {
@@ -25928,7 +25938,17 @@ focus_tree = {
 					add_ideas = GER_pool_technical_know_how
 				}
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = GER_innovative_warfare
+				#bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				category = armor
+				category = artillery
+				category = naval_equipment
+				category = air_equipment
+			}
 		}
 	}
 
@@ -26682,7 +26702,18 @@ focus_tree = {
 				GER_military_army_artillery_defence_factor = 0.05
 				tooltip = army_artillery_defence_factor_tt
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = GER_innovative_warfare
+				#bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = armor
+				category = artillery
+				category = naval_equipment
+				category = air_equipment
+			}
+		
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_chief_of_army
@@ -26709,7 +26740,9 @@ focus_tree = {
 			add_ideas = GER_fan_prussian_militarism_idea
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
+			add_ideas = extensive_conscription
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			IF = {
 				limit = {
 					BAY = {
@@ -26993,6 +27026,27 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = GER_all_for_the_front_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+                limit = {
+                    NOT = { has_idea = scraping_the_barrel }
+                    NOT = { has_idea = all_adults_serve }
+                    NOT = { has_idea = service_by_requirement }
+					NOT = { has_idea = extensive_conscription }
+                }
+                add_ideas = extensive_conscription
+            }
+            else_if = {
+                limit = {
+                    NOT = { has_idea = service_by_requirement }
+                    NOT = { has_idea = all_adults_serve }
+					NOT = { has_idea = scraping_the_barrel }
+                }
+                add_ideas = service_by_requirement
+            }
+            else = {
+                add_political_power = 150
+            }
 		}
 	}
 

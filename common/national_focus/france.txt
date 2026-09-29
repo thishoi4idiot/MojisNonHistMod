@@ -9207,6 +9207,11 @@
 		y = 1
 		completion_reward = {
 			custom_effect_tooltip = FRA_reestablish_eastern_duchys_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			create_wargoal = {
+				target = SOV
+				type = topple_government
+			}
 		}
 	}
 	focus = {

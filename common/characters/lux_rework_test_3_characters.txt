@@ -3,8 +3,8 @@ characters = {
         name = new_character_1
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_1
-                small = GFX_idea_my_hoi4_mod_new_character_1
+                large = GFX_portrait_lux_rework_test_3_new_character_1
+                small = GFX_idea_lux_rework_test_3_new_character_1
             }
         }
         advisor = {
@@ -13,7 +13,6 @@ characters = {
             cost = 150
             allowed = {
                 original_tag = LUX
-                has_government = democratic
             }
             traits = { my_hoi4_mod_political_trait_1 }
         }
@@ -31,8 +30,8 @@ characters = {
         name = new_character_2
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_2
-                small = GFX_idea_my_hoi4_mod_new_character_2
+                large = GFX_portrait_lux_rework_test_3_new_character_2
+                small = GFX_idea_lux_rework_test_3_new_character_2
             }
         }
         advisor = {
@@ -58,8 +57,8 @@ characters = {
         name = new_character_3
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_3
-                small = GFX_idea_my_hoi4_mod_new_character_3
+                large = GFX_portrait_lux_rework_test_3_new_character_3
+                small = GFX_idea_lux_rework_test_3_new_character_3
             }
         }
         advisor = {
@@ -85,8 +84,8 @@ characters = {
         name = new_character_4
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_4
-                small = GFX_idea_my_hoi4_mod_new_character_4
+                large = GFX_portrait_lux_rework_test_3_new_character_4
+                small = GFX_idea_lux_rework_test_3_new_character_4
             }
         }
         advisor = {
@@ -104,7 +103,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_5
+                small = GFX_idea_lux_rework_test_3_new_character_5
             }
         }
         advisor = {
@@ -122,7 +121,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_6
+                small = GFX_idea_lux_rework_test_3_new_character_6
             }
         }
         advisor = {
@@ -140,7 +139,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_7
+                small = GFX_idea_lux_rework_test_3_new_character_7
             }
         }
         advisor = {
@@ -158,7 +157,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_8
+                small = GFX_idea_lux_rework_test_3_new_character_8
             }
         }
         advisor = {
@@ -176,7 +175,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_9
+                small = GFX_idea_lux_rework_test_3_new_character_9
             }
         }
         advisor = {
@@ -193,8 +192,8 @@ characters = {
         name = new_character_10
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_10
-                small = GFX_idea_my_hoi4_mod_new_character_10
+                large = GFX_portrait_lux_rework_test_3_new_character_10
+                small = GFX_idea_lux_rework_test_3_new_character_10
             }
         }
         advisor = {
@@ -221,7 +220,7 @@ characters = {
         portraits = {
             civilian = {
                 large = GFX_portrait_unknown
-                small = GFX_idea_my_hoi4_mod_new_character_11
+                small = GFX_idea_lux_rework_test_3_new_character_11
             }
         }
         advisor = {
@@ -238,8 +237,8 @@ characters = {
         name = new_character_12
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_12
-                small = GFX_idea_my_hoi4_mod_new_character_12
+                large = GFX_portrait_lux_rework_test_3_new_character_12
+                small = GFX_idea_lux_rework_test_3_new_character_12
             }
         }
         advisor = {
@@ -265,8 +264,8 @@ characters = {
         name = new_character_13
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_13
-                small = GFX_idea_my_hoi4_mod_new_character_13
+                large = GFX_portrait_lux_rework_test_3_new_character_13
+                small = GFX_idea_lux_rework_test_3_new_character_13
             }
         }
         advisor = {
@@ -283,8 +282,8 @@ characters = {
         name = new_character_14
         portraits = {
             civilian = {
-                large = GFX_portrait_my_hoi4_mod_new_character_14
-                small = GFX_idea_my_hoi4_mod_new_character_14
+                large = GFX_portrait_lux_rework_test_3_new_character_14
+                small = GFX_idea_lux_rework_test_3_new_character_14
             }
         }
         advisor = {

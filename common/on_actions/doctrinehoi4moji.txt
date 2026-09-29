@@ -12,6 +12,10 @@ on_actions = {
 					amount = 20
 					folder = land
 				}
+				add_mastery = {
+					amount = 20
+					folder = special_forces
+				}
 			}
 			if = {
 				limit = {
@@ -24,6 +28,10 @@ on_actions = {
 					amount = 20
 					folder = naval
 				}
+				add_mastery = {
+					amount = 20
+					folder = special_forces
+				}
 			}
 			if = {
 				limit = {
@@ -35,6 +43,10 @@ on_actions = {
 				add_mastery = {
 					amount = 20
 					folder = air
+				}
+				add_mastery = {
+					amount = 20
+					folder = special_forces
 				}
 			}
 		}

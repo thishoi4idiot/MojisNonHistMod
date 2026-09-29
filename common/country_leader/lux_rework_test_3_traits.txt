@@ -1,7 +1,7 @@
 leader_traits = {
     my_hoi4_mod_political_trait_1 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         political_power_factor = 0.2
         democratic_drift = 0.1
         ai_will_do = {
@@ -9,8 +9,8 @@ leader_traits = {
         }
     }
     my_hoi4_mod_political_trait_2 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         stability_factor = 0.15
         war_support_factor = 0.05
         ai_will_do = {
@@ -18,86 +18,83 @@ leader_traits = {
         }
     }
     my_hoi4_mod_political_trait_3 = {
-        random = no
-        sprite = 5
-        production_speed_buildings_factor = 0.10
-        industrial_capacity_factory = 0.05
+        random = yes
+        sprite = 1
+        production_speed_buildings_factor = 0.05
+        industrial_capacity_factory = 0.025
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_4 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         weekly_manpower = 1000
         recruitable_population_factor = 0.10
-        communism_drift = 0.1
         ai_will_do = {
-            factor = 1
+            factor = 0
         }
     }
     my_hoi4_mod_political_trait_5 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         consumer_goods_factor = -0.1
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_6 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         compliance_growth = 0.05
-        fascism_drift = 0.1
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_7 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         research_speed_factor = 0.1
-        neutrality_drift = 0.1
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_8 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         min_export = 0.3
-        industrial_capacity_factory = 0.15
+        industrial_capacity_factory = 0.05
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_9 = {
-        random = no
-        sprite = 5
-        production_factory_max_efficiency_factor = 0.075
+        random = yes
+        sprite = 1
+        production_factory_max_efficiency_factor = 0.05
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_10 = {
-        random = no
-        sprite = 5
-        production_speed_buildings_factor = 0.15
+        random = yes
+        sprite = 1
+        production_speed_buildings_factor = 0.1
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_11 = {
-        random = no
-        sprite = 5
-        local_resources_factor = 0.2
+        random = yes
+        sprite = 1
+        local_resources_factor = 0.1
         ai_will_do = {
             factor = 1
         }
     }
     my_hoi4_mod_political_trait_12 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         air_agility_factor = 0.10
         max_command_power = 20
         ai_will_do = {
@@ -105,8 +102,8 @@ leader_traits = {
         }
     }
     my_hoi4_mod_political_trait_13 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         mechanized_attack_factor = 0.10
         mechanized_defence_factor = 0.15
         max_command_power = 20
@@ -115,8 +112,8 @@ leader_traits = {
         }
     }
     my_hoi4_mod_political_trait_14 = {
-        random = no
-        sprite = 5
+        random = yes
+        sprite = 1
         army_org_regain = 0.15
         max_command_power = 20
         ai_will_do = {

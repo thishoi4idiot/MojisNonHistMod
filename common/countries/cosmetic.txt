@@ -2077,3 +2077,19 @@ Sigmas_rise_fascismo = {
     color = rgb { 33 66 38 }
     color_ui = rgb { 33 66 38 }
 }
+LUX_cosmetic1 = {
+    color = rgb { 112 164 179 }
+    color_ui = rgb { 112 164 179 }
+}
+LUX_cosmetic67 = {
+    color = rgb { 112 164 179 }
+    color_ui = rgb { 112 164 179 }
+}
+LUX_cosmetic = {
+    color = rgb { 65 179 167 }
+    color_ui = rgb { 65 179 167 }
+}
+LUX_cosmetic_nap = {
+    color = rgb { 65 179 167 }
+    color_ui = rgb { 65 179 167 }
+}
