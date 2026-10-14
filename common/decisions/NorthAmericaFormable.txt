@@ -1,0 +1,364 @@
+NorthAmericaFormableCategory = {
+
+	NorthAmericaFormable = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = USA
+			}
+		}
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = MNHM_USA_north_american_dominion
+			NOT = { has_global_flag = formed_north_america }
+		}
+
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_usa_required_states_tt
+				controls_state = 357
+				controls_state = 358
+				controls_state = 359
+				controls_state = 360
+				controls_state = 361
+				controls_state = 362
+				controls_state = 363
+				controls_state = 364
+				controls_state = 365
+				controls_state = 366
+				controls_state = 367
+				controls_state = 368
+				controls_state = 369
+				controls_state = 370
+				controls_state = 371
+				controls_state = 372
+				controls_state = 373
+				controls_state = 374
+				controls_state = 375
+				controls_state = 376
+				controls_state = 377
+				controls_state = 378
+				controls_state = 379
+				controls_state = 380
+				controls_state = 381
+				controls_state = 382
+				controls_state = 383
+				controls_state = 384
+				controls_state = 385
+				controls_state = 386
+				controls_state = 387
+				controls_state = 388
+				controls_state = 389
+				controls_state = 390
+				controls_state = 391
+				controls_state = 392
+				controls_state = 393
+				controls_state = 394
+				controls_state = 395
+				controls_state = 396
+				controls_state = 816
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_canada_required_states_tt
+				controls_state = 464
+				controls_state = 465
+				controls_state = 466
+				controls_state = 467
+				controls_state = 468
+				controls_state = 469
+				controls_state = 470
+				controls_state = 471
+				controls_state = 472
+				controls_state = 473
+				controls_state = 682
+				controls_state = 683
+				controls_state = 740
+				controls_state = 860
+				controls_state = 861
+				controls_state = 862
+				controls_state = 863
+				controls_state = 864
+				controls_state = 865
+				controls_state = 866
+				controls_state = 867
+				controls_state = 331
+				controls_state = 332
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_mexico_required_states_tt
+				controls_state = 277
+				controls_state = 474
+				controls_state = 475
+				controls_state = 476
+				controls_state = 477
+				controls_state = 478
+				controls_state = 479
+				controls_state = 480
+				controls_state = 481
+				controls_state = 482
+				controls_state = 483
+				controls_state = 484
+				controls_state = 485
+			}
+			controls_state = 101
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = USA_American_Empire
+			custom_effect_tooltip = form_country_canada_coring_states_tt
+			custom_effect_tooltip = form_country_mexico_coring_states_tt
+			101 = {add_core_of = USA}
+			463 = {add_core_of = USA}
+			315 = {add_core_of = USA}
+			685 = {add_core_of = USA}
+			hidden_effect = {
+				set_global_flag = formed_north_america
+				357 = { add_core_of = USA }
+				358 = { add_core_of = USA }
+				359 = { add_core_of = USA }
+				360 = { add_core_of = USA }
+				361 = { add_core_of = USA }
+				362 = { add_core_of = USA }
+				363 = { add_core_of = USA }
+				364 = { add_core_of = USA }
+				365 = { add_core_of = USA }
+				366 = { add_core_of = USA }
+				367 = { add_core_of = USA }
+				368 = { add_core_of = USA }
+				369 = { add_core_of = USA }
+				370 = { add_core_of = USA }
+				371 = { add_core_of = USA }
+				372 = { add_core_of = USA }
+				373 = { add_core_of = USA }
+				374 = { add_core_of = USA }
+				375 = { add_core_of = USA }
+				376 = { add_core_of = USA }
+				377 = { add_core_of = USA }
+				378 = { add_core_of = USA }
+				379 = { add_core_of = USA }
+				380 = { add_core_of = USA }
+				381 = { add_core_of = USA }
+				382 = { add_core_of = USA }
+				383 = { add_core_of = USA }
+				384 = { add_core_of = USA }
+				385 = { add_core_of = USA }
+				386 = { add_core_of = USA }
+				387 = { add_core_of = USA }
+				388 = { add_core_of = USA }
+				389 = { add_core_of = USA }
+				390 = { add_core_of = USA }
+				391 = { add_core_of = USA }
+				392 = { add_core_of = USA }
+				393 = { add_core_of = USA }
+				394 = { add_core_of = USA }
+				395 = { add_core_of = USA }
+				396 = { add_core_of = USA }
+				816 = { add_core_of = USA }
+				464 = { add_core_of = USA }
+				465 = { add_core_of = USA }
+				466 = { add_core_of = USA }
+				467 = { add_core_of = USA }
+				468 = { add_core_of = USA }
+				469 = { add_core_of = USA }
+				470 = { add_core_of = USA }
+				471 = { add_core_of = USA }
+				472 = { add_core_of = USA }
+				473 = { add_core_of = USA }
+				682 = { add_core_of = USA }
+				683 = { add_core_of = USA }
+				740 = { add_core_of = USA }
+				860 = { add_core_of = USA }
+				861 = { add_core_of = USA }
+				862 = { add_core_of = USA }
+				863 = { add_core_of = USA }
+				864 = { add_core_of = USA }
+				865 = { add_core_of = USA }
+				866 = { add_core_of = USA }
+				867 = { add_core_of = USA }
+				331 = { add_core_of = USA }
+				332 = { add_core_of = USA }
+				277 = { add_core_of = USA }
+				474 = { add_core_of = USA }
+				475 = { add_core_of = USA }
+				476 = { add_core_of = USA }
+				477 = { add_core_of = USA }
+				478 = { add_core_of = USA }
+				479 = { add_core_of = USA }
+				480 = { add_core_of = USA }
+				481 = { add_core_of = USA }
+				482 = { add_core_of = USA }
+				483 = { add_core_of = USA }
+				484 = { add_core_of = USA }
+				485 = { add_core_of = USA }
+				101 = { add_core_of = USA }
+			}
+		}
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	annex_puppet_caribbean_central_america = {
+        icon = generic_political_actions
+        
+        allowed = {
+            original_tag = USA  # or whatever your unifier tag is
+        }
+        
+        available = {
+            is_subject = no
+            any_subject_country = {
+                OR = {
+                    original_tag = CUB
+                    original_tag = HAI
+                    original_tag = DOM
+                    original_tag = GUA
+					original_tag = CAN
+					original_tag = MEX
+                }
+            }
+        }
+        
+        visible = {
+            any_subject_country = {
+                OR = {
+                    original_tag = CUB
+                    original_tag = HAI
+                    original_tag = DOM
+                    original_tag = GUA
+					original_tag = CAN
+					original_tag = MEX
+                }
+            }
+			has_completed_focus = MNHM_USA_north_american_dominion
+        }
+        
+        cost = 25
+        days_remove = 35
+        
+        target_trigger = {
+            FROM = {
+                is_subject_of = ROOT
+                OR = {
+                    original_tag = CUB
+                    original_tag = HAI
+                    original_tag = DOM
+                    original_tag = GUA
+					original_tag = CAN
+					original_tag = MEX
+                }
+            }
+        }
+        
+        remove_effect = {
+			
+            # Give cores on all of FROM's states if not already owned
+            every_state = {
+                limit = {
+                    is_owned_by = FROM
+                    NOT = { is_core_of = USA }
+                }
+                add_core_of = ROOT
+            }
+            annex_country = {
+                target = FROM
+                transfer_troops = yes
+            }
+        }
+        
+        ai_will_do = {
+            factor = 0
+        }
+	}
+	tell_off_colonial_powers = {
+		icon = generic_political_actions
+
+		allowed = {
+			original_tag = USA
+		}
+
+		visible = {
+			is_subject = no
+			has_global_flag = formed_north_america
+			any_country = {
+				OR = {
+					original_tag = ENG
+					original_tag = FRA
+					original_tag = HOL
+				}
+				any_owned_state = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+			}
+			has_completed_focus = MNHM_USA_north_american_dominion
+		}
+
+		available = {
+			is_subject = no
+			any_country = {
+				OR = {
+					original_tag = ENG
+					original_tag = FRA
+					original_tag = HOL
+				}
+				any_owned_state = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+			}
+		}
+
+		cost = 100
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					original_tag = ENG
+					original_tag = FRA
+					original_tag = HOL
+				}
+				any_owned_state = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = FROM
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+					NOT = { is_core_of = ROOT }
+				}
+				add_claim_by = ROOT
+				owner = {
+					country_event = {id = usa_demands.4 hours = 6}
+				}
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

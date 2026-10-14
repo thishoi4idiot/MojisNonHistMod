@@ -1,0 +1,499 @@
+form_scandinavia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_scandinavia
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			has_dlc = "Arms Against Tyranny"
+		}
+	}
+}
+form_nordic_league_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_nordic_league
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			has_dlc = "Arms Against Tyranny"
+		}
+	}
+}
+form_north_sea_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_north_sea_empire
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+form_baltic_sea_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_north_sea_empire
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+form_gran_colombia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_gran_colombia
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_austria_hungary_category = {
+	icon = GFX_decision_cat_generic_austria_hungary_icon
+	picture = GFX_decision_cat_generic_austria_hungary
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_commonwealth_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_commonwealth
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			has_dlc = "No Step Back"
+		}
+	}
+}
+form_united_netherlands_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_united_netherlands
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			AND = {
+				has_dlc = "Man the Guns"
+				tag = HOL
+			}
+		}
+	}
+}
+form_united_central_america_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_united_central_america
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_baltic_federation_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_baltic_federation
+	allowed = {
+		has_dlc = "Waking the Tiger"
+		not = {
+			has_cosmetic_tag = UBD
+		}
+	}
+}
+form_ottoman_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_ottoman_empire
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_european_union_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_european_union
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			has_dlc = "Man the Guns"
+		}
+	}
+}
+form_mutapa_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_mutapa
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_roman_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_roman_empire
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_persian_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_persian_empire
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_byzantine_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_byzantine_empire
+	allowed = {
+		OR = {
+			has_dlc = "Waking the Tiger"
+			has_dlc = "Battle for the Bosporus"
+		}
+	}
+}
+form_arabia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_arabia
+	allowed = {
+		OR = {
+			original_tag = IRQ
+			original_tag = SAU
+			original_tag = YEM
+			original_tag = OMA
+			original_tag = EGY
+			original_tag = LBA
+			original_tag = JOR
+			original_tag = PAL
+			original_tag = LEB
+			original_tag = SYR
+			original_tag = KUW
+			original_tag = UAE
+			original_tag = QAT
+			original_tag = TUN
+			original_tag = ALG
+			original_tag = MOR
+			original_tag = WES
+			original_tag = MRT
+			original_tag = SUD
+			original_tag = BHR
+			original_tag = FSA
+			original_tag = IMO
+			original_tag = RIF
+		}
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_majapahit_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_majapahit_empire
+	allowed = {
+		OR = {
+			original_tag = INS
+			original_tag = MAL
+			original_tag = TML
+			original_tag = SNG
+			original_tag = WPG
+			original_tag = SAR
+			original_tag = SAB
+			original_tag = BRN
+			original_tag = TNE
+			original_tag = GOW
+			original_tag = BLI
+			original_tag = POK
+			original_tag = SSI
+			original_tag = ATJ
+		}
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_rattanakosin_kingdom_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_rattanakosin_kingdom
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_hre_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_hre
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_greater_german_reich_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_greater_german_reich
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+form_greater_german_state_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_greater_proletarian_germany
+	allowed = {
+		has_dlc = "Gotterdammerung"
+	}
+}
+form_andalusia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_arabia
+	allowed = {
+		has_dlc = "La Resistance"
+	}
+}
+form_polynesia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_generic_polynesia
+}
+form_greater_greece_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_greater_greece
+	allowed = {}
+}
+form_turan_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_turan
+	allowed = {}
+}
+form_macedonian_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_byzantine_empire
+	allowed = {}
+}
+form_turkestan_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_turan
+}
+form_mountainous_republic_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_mountainous_republic
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+}
+form_transcaucasus_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_transcaucasian_republic
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+}
+form_siberia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_siberian_republic
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+}
+form_idel_ural_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_idel_uralic_republic
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+}
+form_ethiopian_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_ethiopian_empire
+	allowed = {
+		has_dlc = "By Blood Alone"
+	}
+}
+form_east_africa_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_east_africa
+	allowed = {
+		OR = {
+			original_tag = KEN
+			original_tag = UGA
+			original_tag = TZN
+			original_tag = RWA
+			original_tag = BRD
+			original_tag = COG
+		}
+	}
+}
+form_horn_of_africa_africa_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_the_horn_of_africa
+	allowed = {
+		has_dlc = "By Blood Alone"
+	}
+}
+greater_italy_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_greater_italy
+	allowed = {}
+}
+form_sweden_hungary_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_generic_sweden_hungary
+	allowed = {
+		original_tag = HUN
+	}
+}
+antilles_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_generic_unified_antilles
+	allowed = {
+		OR = {
+			original_tag = HAI
+			original_tag = DOM
+			original_tag = PUE
+			original_tag = CUB
+			original_tag = JAM
+			original_tag = BAH
+			original_tag = GDL
+			original_tag = BAS
+		}
+	}
+}
+hispaniola_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_generic_unified_hispaniola
+	allowed = {
+		OR = {
+			original_tag = HAI
+			original_tag = DOM
+		}
+	}
+}
+peru_bolivia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_PER_unified_peru_bolivia
+	allowed = {
+		OR = {
+			original_tag = PRU
+			original_tag = BOL
+		}
+	}
+}
+guianas_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_generic_united_guiana
+	allowed = {
+		OR = {
+			original_tag = GYA
+			original_tag = SUR
+			original_tag = CAY
+		}
+	}
+}
+latin_africa_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_generic_unified_latin_africa
+	allowed = {
+		OR = {
+			original_tag = COG
+			original_tag = KAT
+			original_tag = RCG
+			original_tag = RWA
+			original_tag = BRD
+			original_tag = ANG
+			original_tag = GAB
+			original_tag = EQG
+			original_tag = CMR
+			original_tag = CHA
+			original_tag = CAR
+		}
+	}
+}
+maghreb_formable_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_maghreb
+	allowed = {
+		OR = {
+			original_tag = ALG
+			original_tag = TUN
+			original_tag = LBA
+			original_tag = MOR
+			original_tag = RIF
+			original_tag = WES
+			original_tag = MRT
+		}
+	}
+}
+germany_formable_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_unite_germany
+	allowed = {
+		OR = {
+			original_tag = PRE
+			original_tag = MEK
+			original_tag = VGE
+			original_tag = SHL
+			original_tag = HAN
+			original_tag = HES
+			original_tag = RHI
+			original_tag = WUR
+			original_tag = BAY
+			original_tag = THU
+			original_tag = SAX
+			original_tag = DNZ
+			original_tag = WGR
+			original_tag = DDR
+			original_tag = UBD
+			original_tag = LUX
+		}
+	}
+}
+greater_mongolia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_greater_mongolia
+	allowed = {
+		OR = {
+			original_tag = MON
+			original_tag = BYA
+			original_tag = MEN
+			original_tag = KUM
+			original_tag = KAL
+		}
+	}
+}
+greater_hui_state_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_united_hui_state
+	allowed = {
+		OR = {
+			original_tag = XSM
+			original_tag = GSM
+			original_tag = KHM
+			original_tag = NXM
+		}
+	}
+}
+neo_assyrian_empire_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_neo_assyrian_empire
+	allowed = {
+		original_tag = ASY
+	}
+}
+GOE_form_hindustan_category = {
+	icon = generic_formable_nations
+	picture = GFX_form_hindustan_category_icon
+	allowed = {
+		has_dlc = "Graveyard of Empires"
+	}
+}
+raj_formable_cat = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = RAJ
+	}
+}
+neo_mesopotamia_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_neo_assyrian_empire
+	allowed = {
+		OR = {
+			original_tag = KUR
+			original_tag = IRQ
+			original_tag = SYR
+			original_tag = PAL
+			original_tag = EGY
+			original_tag = KUW
+			original_tag = LEB
+			original_tag = ASY
+		}
+	}
+}
+form_maphilindo_category = {
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_form_maphilindo
+	allowed = {
+		original_tag = PHI
+		has_dlc = "No Compromise, No Surrender"
+	}
+}
+AST_australia_formables_category = {
+	icon = generic_formable_nations
+	visible_when_empty = no
+	allowed = {
+		original_tag = AST
+		has_dlc = "Thunder at Our Gates"
+	}
+}

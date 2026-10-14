@@ -1,0 +1,105 @@
+ENG_ten_year_policy_category = {
+
+	# Looping mission unlocked by Collective Security Doctrine.
+	# Every 30 days it adds 2% consumer goods (mirroring the MEFO Bills mission)
+	# and re-arms itself, unless Britain is at war with Germany or has
+	# already reached the 100% consumer goods cap.
+	ENG_collective_security_spending_mission = {
+
+		icon = GFX_decision_generic_decision
+
+		allowed = { always = no }
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 30
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { has_dynamic_modifier = { modifier = ENG_10_year_policy } }
+					has_war_with = GER
+					check_variable = { var = ENG_consumer_goods_factor value = 1 compare = greater_than_or_equals }
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = { has_war_with = GER }
+					check_variable = { var = ENG_consumer_goods_factor value = 1 compare = less_than }
+				}
+				custom_effect_tooltip = TenYear
+				if = {
+					limit = {
+						check_variable = { var = ENG_consumer_goods_factor value = 0.98 compare = greater_than }
+					}
+					set_variable = { var = ENG_consumer_goods_factor value = 1 }
+				}
+				else = {
+					add_to_variable = {
+						ENG_consumer_goods_factor = 0.02
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { var = ENG_consumer_goods_factor value = 1 compare = less_than }
+					}
+					custom_effect_tooltip = ENG_ten_year_policy_effect_in_days
+					hidden_effect = {
+						activate_mission = ENG_collective_security_spending_mission
+					}
+				}
+				else = {
+					custom_effect_tooltip = ENG_ten_year_policy_maxed_tt
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 200
+		}
+	}
+
+	# Manually shuts the whole policy down early: trades the growing consumer
+	# goods bonus for a year of severe stability/war support penalties.
+	ENG_call_early_end_to_rearmament = {
+
+		icon = GFX_decision_generic_decision
+
+		allowed = {
+			original_tag = ENG
+		}
+
+		available = {
+		}
+
+		cost = 0
+
+		fire_only_once = no
+
+		visible = {
+			has_dynamic_modifier = { modifier = ENG_10_year_policy }
+		}
+
+		cancel_if_not_visible = yes
+
+		ai_will_do = {
+			base = 0
+		}
+
+		complete_effect = {
+			remove_dynamic_modifier = { modifier = ENG_10_year_policy }
+			add_timed_idea = { idea = ENG_failed_rearmament days = 365 }
+			custom_effect_tooltip = ENG_call_early_end_to_rearmament_tt
+		}
+	}
+}

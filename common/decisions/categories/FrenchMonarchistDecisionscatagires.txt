@@ -1,0 +1,26 @@
+FRA_reintegration_of_the_spanish_crown = {
+
+	priority = 20
+
+	icon = generic_industry
+	
+	allowed = {
+		tag = FRA
+	}
+	visible = {
+		has_completed_focus = FRA_integrating_the_spanish_crown
+	}	
+}
+FRA_reistablish_of_the_sister_republics = {
+
+	priority = 20
+
+	icon = generic_industry
+	
+	allowed = {
+		tag = FRA
+	}
+	visible = {
+		has_completed_focus = FRA_reistablish_the_sister_republics
+	}
+}

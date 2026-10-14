@@ -1,0 +1,39 @@
+add_namespace = GCMP_Latvia
+country_event = {
+	id = GCMP_Latvia.1
+	title = GCMP_Latvia.1.t
+	desc = GCMP_Latvia.1.d
+	is_triggered_only = yes
+	option = {
+		name = GCMP_Latvia.1.a
+		add_stability = 0.05
+		add_political_power = -20
+		create_country_leader = {
+			name = "Heinrich zu Dohna-Schlobitten"
+			desc = "POLITICS_ALF_LANDON_DESC"
+			picture = GFX_portrait_LAT_heinrich_schlobitten
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = { Paternalistic_Aristocrat }
+		}
+		promote_character = LAT_heinrich_schlobitten
+	}
+	timeout_days = 14
+}
+country_event = {
+	id = GCMP_Latvia.2
+	title = GCMP_Latvia.2.t
+	desc = GCMP_Latvia.2.d
+	is_triggered_only = yes
+	option = {
+		name = GCMP_Latvia.2.a
+		set_cosmetic_tag = Livonian
+		complete_national_focus = Baltic_German_Focus_15
+	}
+	timeout_days = 14
+	option = {
+		name = GCMP_Latvia.2.b
+		set_cosmetic_tag = Teutonic
+		complete_national_focus = Baltic_German_Focus_16
+	}
+}

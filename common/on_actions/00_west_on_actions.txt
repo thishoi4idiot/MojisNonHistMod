@@ -1,0 +1,146 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = { state = 378 }
+				}
+				if = {
+					limit = {
+						ROOT = { original_tag = CAL }
+					}
+					add_victory_points = { province = 9713 value = 30 }
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM = { state = 463 }
+				}
+				if = {
+					limit = {
+						ROOT = { original_tag = ALK }
+					}
+					add_victory_points = { province = 13203 value = 3 }
+				}
+			}
+		}
+	}
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ALK
+						is_subject_of = SOV
+						SOV = { NOT = { has_government = communism } }
+					}
+				}
+				if = {
+					limit = { SOV = { has_government = fascism } }
+					retire_ideology_leader = fascism
+				}
+				else_if = {
+					limit = { SOV = { has_government = neutrality } }
+					retire_ideology_leader = neutrality
+				}
+				set_cosmetic_tag = ALK_SOV
+			}
+		}
+	}
+
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Britain releasing Egypt)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ALK
+						is_subject_of = SOV
+						SOV = { NOT = { has_government = communism } }
+					}
+				}
+				if = {
+					limit = { SOV = { has_government = fascism } }
+					retire_ideology_leader = fascism
+				}
+				else_if = {
+					limit = { SOV = { has_government = neutrality } }
+					retire_ideology_leader = neutrality
+				}
+				set_cosmetic_tag = ALK_SOV
+			}
+		}
+	}
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = SOV
+						has_government = neutrality
+					}
+					FROM = {
+						original_tag = SOV
+						has_government = communism
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = FROM
+					}
+					transfer_state_to = ROOT
+				}
+			}
+		}
+	}
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						tag = USA
+						has_government = democratic
+						has_civil_war = yes
+						always = no # stops it
+					}
+				}
+				release = HAW
+				release = ALK
+				every_country = {
+					limit = {
+						tag = HAW
+					}
+					transfer_state = 632
+					transfer_state = 685
+					transfer_state = 686
+					transfer_state = 638
+
+					set_cosmetic_tag = HAW_US_Pacific_Fleet
+
+					create_country_leader = {
+						name = "USA_chester_w_nimitz"
+						desc = "USA_chester_w_nimitz_desc"
+						picture = "GFX_portrait_USA_chester_w_nimitz"
+						traits = {
+							JAP_moderate_navy_leader
+						}
+						ideology = despotism
+						expire = "1966.1.1"
+					}
+				}
+				every_country = {
+					limit = {
+						original_tag = USA
+					}
+					transfer_navy = {
+						target = HAW
+					}
+				}
+			}
+		}
+	}
+}
+

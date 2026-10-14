@@ -1,0 +1,635 @@
+###########################
+# Mongolia Events
+###########################
+
+add_namespace = MongolianSubmitionEvent
+country_event = {
+
+    	id = MongolianSubmitionEvent.1
+    	title = MongolianSubmitionEvent.1.t
+	    desc = MongolianSubmitionEvent.1.d
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+
+	    picture = GFX_report_event_generic_diplomatic
+
+		option = {
+			name = MongolianSubmitionEvent.1.a
+			SOV = { country_event = { id = MongolianSubmitionEvent.2 days = 3 } }
+			ai_chance = {factor = 65}
+		}
+		option = {
+			name = MongolianSubmitionEvent.1.b
+			SOV = { country_event = { id = MongolianSubmitionEvent.3 days = 3 } }
+			ai_chance = {factor = 35}
+		}
+	}
+	country_event = {
+		id = MongolianSubmitionEvent.2
+		title = MongolianSubmitionEvent.2.t
+	    desc = MongolianSubmitionEvent.2.d
+		fire_only_once = yes
+		is_triggered_only = yes
+
+	    picture = GFX_report_event_generic_diplomatic
+		option = {
+			name = MongolianSubmitionEvent.2.a
+			annex_country = {
+				target = MON
+			}
+			ai_chance = {factor = 100}
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_compliance = 50
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 50
+		}
+	}
+	country_event = {
+		id = MongolianSubmitionEvent.3
+		title = MongolianSubmitionEvent.3.t
+	    desc = MongolianSubmitionEvent.3.d
+		fire_only_once = yes
+		is_triggered_only = yes
+
+	    picture = GFX_report_event_generic_diplomatic
+		option = {
+
+			name = MongolianSubmitionEvent.3.a
+			add_war_support = 0.05
+
+			remove_from_faction = MON
+
+			ai_chance = {factor = 50}
+			SOV = {
+				declare_war_on = {
+					target = MON
+					type = annex_everything
+				}
+			}
+			hidden_effect = {
+				MON = {
+					add_ideas = MEN_mongol_banners_idea
+					set_popularities = {
+						fascism = 10
+						communism = 50
+						neutrality = 40
+					}
+					set_politics = {
+						ruling_party =  neutrality
+						elections_allowed = no
+					}
+
+					division_template = {
+						name = "Mongolian Militia"
+						priority = 1
+						is_locked = yes
+						regiments = {
+							militia = { x = 0 y = 0 }
+							militia = { x = 0 y = 1 }
+							militia = { x = 0 y = 2 }
+
+							militia = { x = 1 y = 0 }
+							militia = { x = 1 y = 1 }
+							militia = { x = 1 y = 2 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+						}
+					}
+					every_state = {
+						limit = {
+							is_controlled_by = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						create_unit = {
+							division = "name = \"Mongolian Militia\" division_template = \"Mongolian Militia\" start_experience_factor = 0.6"
+							owner = MON
+						}
+						add_dynamic_modifier = {
+							modifier = unplanned_offensive
+							days = 120
+						}
+					}
+				}
+				MON = {
+					add_ideas = war_economy
+					add_ideas = extensive_conscription
+				}
+			}
+		}
+		option = {
+			name = MongolianSubmitionEvent.3.b
+			ai_chance = {factor = 50}
+			add_war_support = -0.1
+			add_stability = -0.1
+			every_state = {
+				limit = {
+					is_core_of = MON
+				}
+				add_claim_by = SOV
+			}
+		}
+	}
+
+add_namespace = MON_TAN_annex_event
+
+# Sent to Tannu Tuva after Mongolia completes MON_annex_tannu_tuva
+country_event = {
+	id = MON_TAN_annex_event.1
+	title = MON_TAN_annex_event.1.t
+	desc = MON_TAN_annex_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_TAN_annex_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_TAN_annex_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_TAN_annex_event.1.b
+		MON = {
+			country_event = { id = MON_TAN_annex_event.2 days = 3 }
+		}
+	}
+}
+
+# Tannu Tuva declines the offer
+country_event = {
+	id = MON_TAN_annex_event.2
+	title = MON_TAN_annex_event.2.t
+	desc = MON_TAN_annex_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_TAN_annex_event.2.a
+	}
+}
+
+# Tannu Tuva accepts the offer
+country_event = {
+	id = MON_TAN_annex_event.3
+	title = MON_TAN_annex_event.3.t
+	desc = MON_TAN_annex_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_TAN_annex_event.3.a
+		annex_country = {
+			target = TAN
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = TAN
+			}
+			add_core_of = MON
+		}
+	}
+}
+
+add_namespace = MON_SIK_annex_event
+
+# Sent to Sinkiang after Mongolia completes MON_union_with_sinkiang
+country_event = {
+	id = MON_SIK_annex_event.1
+	title = MON_SIK_annex_event.1.t
+	desc = MON_SIK_annex_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_SIK_annex_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_SIK_annex_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_SIK_annex_event.1.b
+		MON = {
+			country_event = { id = MON_SIK_annex_event.2 days = 3 }
+		}
+	}
+}
+
+# Sinkiang declines the offer
+country_event = {
+	id = MON_SIK_annex_event.2
+	title = MON_SIK_annex_event.2.t
+	desc = MON_SIK_annex_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SIK_annex_event.2.a
+	}
+}
+
+# Sinkiang accepts the offer
+country_event = {
+	id = MON_SIK_annex_event.3
+	title = MON_SIK_annex_event.3.t
+	desc = MON_SIK_annex_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SIK_annex_event.3.a
+		annex_country = {
+			target = SIK
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = SIK
+			}
+			add_core_of = MON
+		}
+	}
+}
+
+add_namespace = MON_SOV_align_event
+
+# Sent to the Soviet Union after Mongolia completes MON_closer_alignment_with_the_soviets
+country_event = {
+	id = MON_SOV_align_event.1
+	title = MON_SOV_align_event.1.t
+	desc = MON_SOV_align_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_SOV_align_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_SOV_align_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_SOV_align_event.1.b
+		MON = {
+			country_event = { id = MON_SOV_align_event.2 days = 3 }
+		}
+	}
+}
+
+# The Soviet Union declines closer integration
+country_event = {
+	id = MON_SOV_align_event.2
+	title = MON_SOV_align_event.2.t
+	desc = MON_SOV_align_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_align_event.2.a
+	}
+}
+
+# The Soviet Union accepts closer integration
+country_event = {
+	id = MON_SOV_align_event.3
+	title = MON_SOV_align_event.3.t
+	desc = MON_SOV_align_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_align_event.3.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+		SOV = {
+			set_autonomy = {
+				target = MON
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+}
+
+add_namespace = MON_SOV_zhukov_event
+
+# Sent to the Soviet Union after Mongolia completes MON_invite_soviet_generals
+country_event = {
+	id = MON_SOV_zhukov_event.1
+	title = MON_SOV_zhukov_event.1.t
+	desc = MON_SOV_zhukov_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_SOV_zhukov_event.1.a
+		ai_chance = { factor = 100 }
+		retire_character = SOV_georgy_zhukov
+		MON = {
+			country_event = { id = MON_SOV_zhukov_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_SOV_zhukov_event.1.b
+		MON = {
+			country_event = { id = MON_SOV_zhukov_event.2 days = 3 }
+		}
+	}
+}
+
+# The Soviet Union refuses to transfer Zhukov
+country_event = {
+	id = MON_SOV_zhukov_event.2
+	title = MON_SOV_zhukov_event.2.t
+	desc = MON_SOV_zhukov_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_zhukov_event.2.a
+	}
+}
+
+# Zhukov is transferred to Mongolia
+country_event = {
+	id = MON_SOV_zhukov_event.3
+	title = MON_SOV_zhukov_event.3.t
+	desc = MON_SOV_zhukov_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_zhukov_event.3.a
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+add_namespace = MON_SOV_bastion_event
+
+# Sent to the Soviet Union after Mongolia completes MON_bastion_against_the_japanese_menace
+country_event = {
+	id = MON_SOV_bastion_event.1
+	title = MON_SOV_bastion_event.1.t
+	desc = MON_SOV_bastion_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_SOV_bastion_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_SOV_bastion_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_SOV_bastion_event.1.b
+		MON = {
+			country_event = { id = MON_SOV_bastion_event.2 days = 3 }
+		}
+	}
+}
+
+# The Soviet Union refuses to cede the Far East
+country_event = {
+	id = MON_SOV_bastion_event.2
+	title = MON_SOV_bastion_event.2.t
+	desc = MON_SOV_bastion_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_bastion_event.2.a
+	}
+}
+
+# The Soviet Union cedes the Far East to Mongolia
+country_event = {
+	id = MON_SOV_bastion_event.3
+	title = MON_SOV_bastion_event.3.t
+	desc = MON_SOV_bastion_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_SOV_bastion_event.3.a
+		add_ideas = MON_bastion_against_the_japanese_menace
+		transfer_state = 564
+		transfer_state = 563
+		transfer_state = 561
+		transfer_state = 657
+		transfer_state = 560
+		transfer_state = 409
+		transfer_state = 408
+		transfer_state = 655
+		add_state_core = 564
+		add_state_core = 563
+		add_state_core = 561
+		add_state_core = 657
+		add_state_core = 560
+		add_state_core = 409
+		add_state_core = 408
+		add_state_core = 655
+	}
+}
+
+add_namespace = MON_KUM_annex_event
+
+# Sent to the Kumul Khanate after Mongolia completes MON_integrate_the_kumul_khanate
+country_event = {
+	id = MON_KUM_annex_event.1
+	title = MON_KUM_annex_event.1.t
+	desc = MON_KUM_annex_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_KUM_annex_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_KUM_annex_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_KUM_annex_event.1.b
+		MON = {
+			country_event = { id = MON_KUM_annex_event.2 days = 3 }
+		}
+	}
+}
+
+# The Kumul Khanate refuses to submit
+country_event = {
+	id = MON_KUM_annex_event.2
+	title = MON_KUM_annex_event.2.t
+	desc = MON_KUM_annex_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_KUM_annex_event.2.a
+		create_wargoal = {
+			target = KUM
+			type = annex_everything
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUM
+			}
+			add_core_of = MON
+		}
+	}
+}
+
+# The Kumul Khanate submits to Mongolia
+country_event = {
+	id = MON_KUM_annex_event.3
+	title = MON_KUM_annex_event.3.t
+	desc = MON_KUM_annex_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_KUM_annex_event.3.a
+		annex_country = {
+			target = KUM
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = KUM
+			}
+			add_core_of = MON
+		}
+	}
+}
+
+add_namespace = MON_JAP_hulunbuir_event
+
+# Sent to Japan after Mongolia completes MON_purchase_hulunbuir
+country_event = {
+	id = MON_JAP_hulunbuir_event.1
+	title = MON_JAP_hulunbuir_event.1.t
+	desc = MON_JAP_hulunbuir_event.1.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MON_JAP_hulunbuir_event.1.a
+		ai_chance = { factor = 100 }
+		MON = {
+			country_event = { id = MON_JAP_hulunbuir_event.3 days = 3 }
+		}
+	}
+	option = { # Refuse
+		name = MON_JAP_hulunbuir_event.1.b
+		MON = {
+			country_event = { id = MON_JAP_hulunbuir_event.2 days = 3 }
+		}
+	}
+}
+
+# Japan refuses to sell Hulunbuir
+country_event = {
+	id = MON_JAP_hulunbuir_event.2
+	title = MON_JAP_hulunbuir_event.2.t
+	desc = MON_JAP_hulunbuir_event.2.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_JAP_hulunbuir_event.2.a
+	}
+}
+
+# Japan agrees to sell Hulunbuir to Mongolia
+country_event = {
+	id = MON_JAP_hulunbuir_event.3
+	title = MON_JAP_hulunbuir_event.3.t
+	desc = MON_JAP_hulunbuir_event.3.d
+	picture = GFX_report_event_generic_diplomatic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = MON_JAP_hulunbuir_event.3.a
+		transfer_state = 761
+		add_timed_idea = {
+			idea = MON_hulunbuir_integration_costs
+			days = 365
+		}
+		JAP = {
+			add_timed_idea = {
+				idea = JAP_hulunbuir_sale_windfall
+				days = 365
+			}
+		}
+	}
+}

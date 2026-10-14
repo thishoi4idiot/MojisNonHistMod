@@ -1,0 +1,117 @@
+SOV_polish_territory = {
+	SOV_return_states_to_poland = {
+		icon = generic_form_nation
+
+		available = {
+
+		}
+
+		visible = {
+			has_government = communism
+			POL = {
+				exists = yes
+				is_subject_of = ROOT
+				NOT = { has_completed_focus = POL_surrender_the_east }
+			}
+			any_owned_state = {
+				is_core_of = POL
+				OR = {
+
+					any_country_with_core = {
+						not = { tag = POL }
+					}
+					state = 97
+				}
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			base = 50
+			modifier = {
+				NOT = {
+					has_war_with = GER
+				}
+				factor = 5
+			}
+		}
+
+		complete_effect = {
+			POL = {
+				country_event = {
+					id = soviet.74
+					hours = 4
+					random_hours = 4
+				}
+				custom_effect_tooltip = if_they_accept_newline_tt
+				effect_tooltip = {
+					ROOT = {
+						add_stability = 0.05
+					}
+					POL = {
+						add_autonomy_score = {
+							value = -250
+							localization = POL_accepted_states
+						}
+						add_popularity = {
+							ideology = FROM
+							popularity = 0.05
+						}
+					}
+					ROOT  ={
+						every_owned_state = {
+							limit = {
+								is_core_of = POL
+								OR = {
+									# Białystok
+									state = 97
+									# Uncontested Polish Cores
+									NOT = {
+										any_country_with_core = {
+											NOT = { tag = POL }
+										}
+									}
+								}
+
+							}
+							transfer_state_to = POL
+						}
+					}
+				}
+				custom_effect_tooltip = if_they_refuse_newline_tt
+				effect_tooltip = {
+					POL = {
+						add_autonomy_score = {
+							value = 250
+							localization = POL_refused_states
+						}
+					}
+					ROOT = {
+						every_owned_state = {
+							limit = {
+								is_core_of = POL
+								OR = {
+									# Białystok
+									state = 97
+									# Uncontested Polish Cores
+									NOT = {
+										any_country_with_core = {
+											NOT = { tag = POL }
+										}
+									}
+								}
+
+							}
+							remove_core_of = POL
+							add_core_of = SOV
+							add_claim_by = POL
+						}
+					}
+				}
+			}
+		}
+
+	}
+}

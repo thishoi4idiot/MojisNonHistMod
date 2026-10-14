@@ -1,0 +1,65 @@
+characters = {
+	
+	KHI_junaid_khan = {
+		name = "Junaid Khan (Muhammet-Kurban Serdar)" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/KHI/Portrait_KHI_Junaid_Khan.png"
+				small = "gfx/interface/ideas/idea_KHI_Junaid_Khan.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				trickster
+				cavalry_leader
+				trait_reckless
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		
+	}
+	
+	KHI_Azis_Khan = {
+		name = "Azis Khan Chapykov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KHI/Portrait_KHI_Azis_Khan.png"
+				small = "gfx/interface/ideas/idea_KHI_Azis_Khan.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_leader
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	KHI_Eshi_Khan = {
+		name = "Eshi Khan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KHI/Portrait_KHI_Eshi_Khan.png"
+				small = "gfx/interface/ideas/idea_KHI_Eshi_Khan.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+}
+	

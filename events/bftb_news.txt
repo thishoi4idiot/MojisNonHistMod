@@ -1,0 +1,95 @@
+###########################
+# BFTB News Events
+###########################
+
+add_namespace = bftb_news
+
+#Turkey survives the Soviet invasion
+news_event = {
+	id = bftb_news.401
+	title = bftb_news.401.t
+	desc = bftb_news.401.d
+	picture = GFX_news_event_turkey_affirms_interest_in_protecting_balkans
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bftb_news.401.a
+		trigger = { tag = TUR }
+	}
+
+	option = {
+		name = bftb_news.401.b
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = bftb_news.401.c
+		trigger = {
+			NOT = { tag = TUR }
+			NOT = { tag = SOV }
+		}
+	}
+}
+
+#Turkey surrenders the Straits and Trabzon to Moscow
+news_event = {
+	id = bftb_news.402
+	title = bftb_news.402.t
+	desc = bftb_news.402.d
+	picture = GFX_news_event_SOV_supreme_soviet
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bftb_news.402.a
+		trigger = { tag = TUR }
+	}
+
+	option = {
+		name = bftb_news.402.b
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = bftb_news.402.c
+		trigger = {
+			NOT = { tag = TUR }
+			NOT = { tag = SOV }
+		}
+	}
+}
+
+#Turkey falls to the Soviet Union
+news_event = {
+	id = bftb_news.403
+	title = bftb_news.403.t
+	desc = bftb_news.403.d
+	picture = GFX_news_event_soviet_soldiers_ruins
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = bftb_news.403.a
+		trigger = { tag = TUR }
+	}
+
+	option = {
+		name = bftb_news.403.b
+		trigger = { tag = SOV }
+	}
+
+	option = {
+		name = bftb_news.403.c
+		trigger = {
+			NOT = { tag = TUR }
+			NOT = { tag = SOV }
+		}
+	}
+}

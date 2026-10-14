@@ -1,0 +1,155 @@
+# Aleksandra Kollontay has an unsed portrait
+# Viktor Baydalakov has an unused portrait
+
+characters = {
+
+                                                                                       
+
+	
+	
+	
+	
+	
+	
+	BLR_Francisak_Kusal= { 
+		name = "Francisak Kusal"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Francisak_Kusal.png"
+				small = "gfx/interface/ideas/idea_WHR_Francisak_Kusal.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	BLR_Hasan_Kanapatski= { 
+		name = "Hasan Kanapatski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Hasan_Kanapatski.png"
+				small = "gfx/interface/ideas/idea_WHR_Hasan_Kanapatski.dds"
+			}
+		}
+		corps_commander = {
+		traits = {
+			old_guard
+		}
+		skill = 3
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 2
+		}
+	}
+
+	BLR_Kanstancin_Jezavitau= { 
+		name = "Kanstancin Jezavitau"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Kanstancin_Jezavitau.png"
+				small = "gfx/interface/ideas/idea_WHR_Kanstancin_Jezavitau.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+		
+	BLR_Mikalaj_Janicki= { 
+		name = "Mikalaj Janicki"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Mikalaj_Janicki.png"
+				small = "gfx/interface/ideas/idea_WHR_Mikalaj_Janicki.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+		
+	BLR_Paval_Vent= { 
+		name = "Paval Vent"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Paval_Vent.png"
+				small = "gfx/interface/ideas/idea_WHR_Paval_Vent.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_engineer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	BLR_Timokh_Khvedashchenya = { 
+		name = "Tomokh Khvedashchenya"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Timokh_Khvedashchenya.png"
+				small = "gfx/interface/ideas/idea_WHR_Timokh_Khvedashchenya.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				guerilla_fighter
+				trickster
+				swamp_fox
+			}
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+	BLR_Vital_Kazlou = { 
+		name = "Vital Kazlou"
+		portraits = {
+			army = {
+				large = "gfx/leaders/BLR/Portrait_WHR_Vital_Kazlou.png"
+				small = "gfx/interface/ideas/idea_WHR_Vital_Kazlou.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_cautious
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+
+}

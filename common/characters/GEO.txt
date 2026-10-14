@@ -1,0 +1,107 @@
+# Aleksandra Kollontay has an unsed portrait
+# Viktor Baydalakov has an unused portrait
+
+characters = {
+
+                                                                                       
+
+	
+	
+	
+	
+	
+	
+	GEO_Giorgi_Mazniashvili = { # historically gets purged in '37 but whatever.
+		name = "Giorgi Mazniashvili"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEO/Portrait_GEO_Giorgi_Mazniashvili.png"
+				small = "gfx/interface/ideas/idea_GEO_Giorgi_Mazniashvili.dds"
+			}
+		}
+		field_marshal = {
+			traits = { war_hero unyielding_defender }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	GEO_Shalva_Maglakelidze= {
+		name = "Shalva Maglakelidze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEO/Portrait_GEO_Shalva_Maglakelidze.png"
+				small = "gfx/interface/ideas/idea_GEO_Shalva_Maglakelidze.dds"
+			}
+		}
+		corps_commander = {
+			traits = { harsh_leader  }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	GEO_Vladimer_Goguadze= {
+		name = "Vladimer Goguadze"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEO/Portrait_GEO_Vladimer_Goguadze.png"
+				small = "gfx/interface/ideas/idea_GEO_Vladimer_Goguadze.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			traits = {
+				armor_officer
+				trickster
+				trait_engineer
+			}
+		}
+	}
+	GEO_valerian_tevzadze = {
+		name = GEO_valerian_tevzadze
+		portraits = {
+
+			army = {
+				large = "gfx/leaders/GEO/Portrait_GEO_Valerian_Tevzadze.png"
+				small = "gfx/interface/ideas/idea_GEO_Valerian_Tevzadze.png"
+			}
+		}
+		corps_commander = {
+			traits = { commando }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+		
+
+	GEO_giorgi_abashvili= {
+		name = "Giorgi Abashvili"
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEO/Portrait_GEO_Giorgi_Abashvili.png"
+				small = "gfx/interface/ideas/idea_GEO_Giorgi_Abashvili.dds"
+			}
+		}
+		navy_leader = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {}
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+GRE_island_diplomacy_category = {
+	priority = 100
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		tag = GRE
+	}
+
+	visible = {
+		has_completed_focus = GRE_islands_for_drachmae
+	}
+}

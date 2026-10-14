@@ -1,0 +1,635 @@
+add_namespace = frenchdemandsofchina
+add_namespace = netherlandsfrenchallience
+add_namespace = frenchspanishdemands
+add_namespace = frenchswissdemands
+
+#Events for France to make demands of China
+
+	country_event = {#The event sent to China
+    	id = frenchdemandsofchina.1
+    	title = frenchdemandsofchina.1.t
+	    desc = frenchdemandsofchina.1.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = frenchdemandsofchina.1.a
+			ai_chance = {factor = 90}
+			FROM = {
+				country_event = {id = frenchdemandsofchina.2}
+			}
+		}
+		option = {
+			name = frenchdemandsofchina.1.b # Refuse
+			ai_chance = {factor = 10}
+			FROM = {
+				country_event = {id = frenchdemandsofchina.3}	
+			}
+		}
+	}
+	country_event = {#They accept!
+    	id = frenchdemandsofchina.2
+    	title = frenchdemandsofchina.2.t
+	    desc = frenchdemandsofchina.2.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = frenchdemandsofchina.2.a
+			ai_chance = {factor = 90}
+			FRA = {
+				add_war_support = 0.05
+				transfer_state = 594
+				transfer_state = 591
+				transfer_state = 1033
+			}
+		}
+	}
+	country_event = {#They Deny :(
+    	id = frenchdemandsofchina.3
+    	title = frenchdemandsofchina.3.t
+	    desc = frenchdemandsofchina.3.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = frenchdemandsofchina.3.a
+			ai_chance = {factor = 90}
+			FRA = {
+				add_war_support = -0.1
+				create_wargoal = {
+					target = CHI
+					type = topple_government
+				}
+			}
+		}
+	}
+
+#Events for France to ask the netherlands for an alliance
+
+	country_event = {#The event sent to the Netherlands
+    	id = netherlandsfrenchallience.1
+    	title = netherlandsfrenchallience.1.t
+	    desc = netherlandsfrenchallience.1.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.1.a
+			ai_chance = {base = 30}
+			FROM = {
+				country_event = {id = netherlandsfrenchallience.2}
+			}
+		}
+		option = {
+			name = netherlandsfrenchallience.1.b
+			ai_chance = {base = 10}
+			FROM = {
+				country_event = {id = netherlandsfrenchallience.3}	
+			}
+		}
+	}
+	country_event = {#They accept!
+    	id = netherlandsfrenchallience.2
+    	title = netherlandsfrenchallience.2.t
+	    desc = netherlandsfrenchallience.2.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.2.a
+			ai_chance = {base = 90}
+			if = {
+				limit = {
+					INS = {
+						exists = yes
+						is_puppet_of = HOL
+					}
+				}
+				puppet = INS
+				hidden_effect = {
+					ENG = {
+						country_event = {
+							id = netherlandsfrenchallience.4
+							days = 3
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					HOL = {
+						controls_state = 695
+					}
+				}
+				transfer_state = 695
+				hidden_effect = {
+					VEN = {
+						country_event = {
+							id = netherlandsfrenchallience.8
+							days = 30
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					HOL = {
+						controls_state = 309
+					}
+				}
+				transfer_state = 309
+				hidden_effect = {
+					ENG = {
+						country_event = {
+							id = netherlandsfrenchallience.6
+							days = 12
+						}
+					}
+				}
+			}
+			puppet = HOL
+			HOL = {			
+				transfer_state = 977
+				transfer_state = 6
+			}
+			977 = {add_core_of = HOL}
+			6 = {add_core_of = HOL}
+			set_autonomy = {
+				target = HOL
+				autonomy_state = autonomy_personal_union
+			}
+		}
+	}
+	country_event = {#They deny :(
+    	id = netherlandsfrenchallience.3
+    	title = netherlandsfrenchallience.3.t
+	    desc = netherlandsfrenchallience.3.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.3.a
+			ai_chance = {base = 90}
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 6
+						state = 35
+						state = 977
+					}
+				}
+				add_core_of = FRA
+			}
+			hidden_effect = {
+				set_global_flag = has_denied_allience_to_the_french
+			}
+		}
+	}
+	country_event = {#They accepted so England gets the ability to seizes the East Indies 
+    	id = netherlandsfrenchallience.4
+    	title = netherlandsfrenchallience.4.t
+	    desc = netherlandsfrenchallience.4.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.4.a
+			ai_chance = {factor = 90}
+			set_autonomy = {
+				target = INS
+				autonomy_state = autonomy_dominion
+			}
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = netherlandsfrenchallience.5
+						days = 1
+					}
+				}
+			}
+		}
+		option = {
+			name = netherlandsfrenchallience.4.b
+			ai_chance = {factor = 10}		
+		}
+	}
+	country_event = {#They take them so France gets an event
+    	id = netherlandsfrenchallience.5
+    	title = netherlandsfrenchallience.5.t
+	    desc = netherlandsfrenchallience.5.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.4.a		
+		}
+	}
+	country_event = {#They accepted so England gets the ability to seizes the Suriname 
+    	id = netherlandsfrenchallience.6
+    	title = netherlandsfrenchallience.6.t
+	    desc = netherlandsfrenchallience.6.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.6.a
+			ai_chance = {factor = 90}
+			ENG = {
+				transfer_state = 309
+			}
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = netherlandsfrenchallience.7
+						days = 1
+					}
+				}
+			}
+		}
+		option = {
+			name = netherlandsfrenchallience.6.b
+			ai_chance = {factor = 10}		
+		}
+	}
+	country_event = {#They take them so France gets an event
+    	id = netherlandsfrenchallience.7
+    	title = netherlandsfrenchallience.7.t
+	    desc = netherlandsfrenchallience.7.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.7.a
+			add_stability = -0.05	
+		}
+	}
+	country_event = {#They accepted so in the chaos Venezuela gets the ability to seizes the Curacao
+    	id = netherlandsfrenchallience.8
+    	title = netherlandsfrenchallience.8.t
+	    desc = netherlandsfrenchallience.8.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.8.a
+			ai_chance = {factor = 90}
+			VEN = {
+				transfer_state = 695
+			}
+			hidden_effect = {
+				FRA = {
+					country_event = {
+						id = netherlandsfrenchallience.9
+						days = 1
+					}
+				}
+			}
+		}
+		option = {
+			name = netherlandsfrenchallience.8.b
+			ai_chance = {factor = 10}	
+			add_stability = 0.05	
+		}
+	}
+	country_event = {#France can either go to war or decide its not worth the trouble
+    	id = netherlandsfrenchallience.9
+    	title = netherlandsfrenchallience.9.t
+	    desc = netherlandsfrenchallience.9.d
+	    picture = GFX_report_event_generic_diplomatic
+
+	    is_triggered_only = yes
+
+		option = {
+			name = netherlandsfrenchallience.9.a
+			add_stability = -0.05		
+		}
+		option = {
+			name = netherlandsfrenchallience.9.b
+			create_wargoal = {
+				target = VEN
+				type = topple_government
+			}
+			695 = {add_claim_by = FRA}
+			add_stability = -0.25
+		}
+	}
+
+#Events for France that demands Spain become their client and give up Catalonia
+
+	country_event = {#Events for Spain to decide to become their client and give up Catalonia or Fight
+		id = frenchspanishdemands.1
+		title = frenchspanishdemands.1.t
+		desc = frenchspanishdemands.1.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = frenchspanishdemands.1.a
+			ai_chance = {
+				base = 10
+				modifier = {
+					OR = {
+						AND = {
+							tag = SPB
+							NOT = { has_war_with = FRA}
+						}
+						is_puppet_of = FRA
+						AND = {
+							has_war = yes
+							NOT = { has_war_with = FRA}
+						}
+					}
+					add = 500
+				}
+				modifier = {
+					add = -25
+					FRA = { has_army_size = { size < 80 } }
+				}
+				modifier = {
+					add = 100
+					FRA = { has_army_size = { size > 79 } }
+				}
+				modifier = {
+					add = 20
+					is_in_faction_with = FRA
+				}
+				modifier = {
+					factor = 0.1
+					is_in_faction = yes
+					NOT = { is_in_faction_with = FRA }
+				}
+				modifier = {
+					factor = 0
+					has_civil_war = yes
+				}
+			}
+			FRA = {
+				country_event = {
+					id = frenchspanishdemands.2
+					days = 7
+				}
+			}
+		}
+		option = {
+			name = frenchspanishdemands.1.b
+			ai_chance = {
+				base = 60
+				modifier = {
+					factor = 10
+					has_civil_war = yes
+				}
+			}
+			FRA = {
+				country_event = {
+					id = frenchspanishdemands.3
+					days = 7
+				}
+			}
+		}
+	}
+	country_event = {#They said yes and wow that worked...
+		id = frenchspanishdemands.2
+		title = frenchspanishdemands.2.t
+		desc = frenchspanishdemands.2.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = frenchspanishdemands.2.a
+			FRA = {
+				if = {
+					limit = {
+						country_exists = SPR
+					}
+					set_autonomy = {
+						target = SPR
+						autonomy_state = autonomy_personal_union
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPA
+					}
+					set_autonomy = {
+						target = SPR
+						autonomy_state = autonomy_personal_union
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPB
+					}
+					set_autonomy = {
+						target = SPR
+						autonomy_state = autonomy_personal_union
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPC
+					}
+					set_autonomy = {
+						target = SPR
+						autonomy_state = autonomy_personal_union
+					}
+				}
+				165 = {
+					add_core_of = FRA
+				}
+				transfer_state = 165
+				transfer_state = 290
+				transfer_state = 297
+				transfer_state = 699
+				transfer_state = 783
+				
+				
+			}
+		}
+	}
+	country_event = {#No way they denied us this means war!
+		id = frenchspanishdemands.3
+		title = frenchspanishdemands.3.t
+		desc = frenchspanishdemands.3.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = frenchspanishdemands.3.a
+			FRA = {
+				if = {
+					limit = {
+						country_exists = SPR
+					}
+					create_wargoal = {
+						target = SPR
+						type = topple_government
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPA
+					}
+					create_wargoal = {
+						target = SPA
+						type = topple_government
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPB
+					}
+					create_wargoal = {
+						target = SPB
+						type = topple_government
+					}
+				}
+				else_if = {
+					limit = {
+						country_exists = SPC
+					}
+					create_wargoal = {
+						target = SPC
+						type = topple_government
+					}
+				}
+				165 = {
+					add_claim_by = FRA
+				}
+				hidden_effect = {
+					set_global_flag = spain_said_no_to_napoleon
+				}		
+			}
+		}
+	}
+
+#Events for France that demands Switzerland become their client and give up Their gains in the Western Alps
+
+	country_event = {#Events for Switzerland to become their client and give up or Fight off the French!
+		id = frenchswissdemands.1
+		title = frenchswissdemands.1.t
+		desc = frenchswissdemands.1.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = frenchswissdemands.1.a
+			ai_chance = {
+				base = 30
+				modifier = {
+					add = -25
+					FRA = { has_army_size = { size < 40 } }
+				}
+				modifier = {
+					add = 100
+					FRA = { has_army_size = { size > 39 } }
+				}
+				modifier = {
+					add = 20
+					is_in_faction_with = FRA
+				}
+				modifier = {
+					factor = 0.1
+					is_in_faction = yes
+					NOT = { is_in_faction_with = FRA }
+				}
+			}
+			FRA = {
+				country_event = {
+					id = frenchswissdemands.2
+					days = 7
+				}
+			}
+			effect_tooltip = {
+				FRA = {
+					transfer_state = 845
+					set_autonomy = {
+						target = SWI
+						autonomy_state = autonomy_personal_union
+					}
+				}
+			}
+		}
+		option = {
+			name = frenchswissdemands.1.b
+			ai_chance = {
+				base = 15
+			}
+			FRA = {
+				country_event = {
+					id = frenchswissdemands.3
+					days = 7
+				}
+				effect_tooltip = {
+					FRA = {
+						845 = {
+							add_claim_by = FRA
+						}
+						create_wargoal = {
+							target = SWI
+							type = annex_everything
+						}	
+					}
+				}
+			}
+		}
+	}
+	country_event = {#The gains were made Switzerland is now ours...
+		id = frenchswissdemands.2
+		title = frenchswissdemands.2.t
+		desc = frenchswissdemands.2.d
+
+		is_triggered_only = yes
+
+		option = {
+			
+			name = frenchswissdemands.2.a
+			845 = {add_core_of = FRA}
+			FRA = {
+				transfer_state = 845
+				set_autonomy = {
+					target = SWI
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			
+		}
+	}
+	country_event = {#They said no... ok then
+		id = frenchswissdemands.3
+		title = frenchswissdemands.3.t
+		desc = frenchswissdemands.3.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = frenchswissdemands.3.a
+			FRA = {
+				845 = {
+					add_claim_by = FRA
+				}
+				create_wargoal = {
+					target = SWI
+					type = annex_everything
+				}	
+			}
+			hidden_effect = {
+				set_global_flag = switzerland_said_no_to_napoleon
+			}
+		}
+	}

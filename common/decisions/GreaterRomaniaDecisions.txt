@@ -1,0 +1,86 @@
+Proclaim_Greater_Romania = {
+	Proclaim_Greater_Romania_L = {
+		icon = GFX_decision_generic_decision
+		visible = {
+			NOT = {has_country_flag = DIDITROMANIA}
+		}
+		allowed = {
+			always = yes
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 764
+				controls_state = 154
+				controls_state = 73
+				controls_state = 89
+				controls_state = 834
+
+				controls_state = 76
+				controls_state = 77
+				controls_state = 78
+				controls_state = 79
+				controls_state = 80
+				controls_state = 81
+				controls_state = 82
+				controls_state = 83
+				controls_state = 84
+				controls_state = 46
+				controls_state = 766
+				controls_state = 971
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 764
+				state = 154
+				state = 73
+				state = 89
+				state = 834
+				state = 76
+				state = 77
+				state = 78
+				state = 79
+				state = 80
+				state = 81
+				state = 82
+				state = 83
+				state = 84
+				state = 46
+				state = 766
+				state = 971
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DIDITROMANIA
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			set_cosmetic_tag = GREATER_ROMANIA
+			hidden_effect = {
+				764 = {add_core_of = ROM}
+				154 = {add_core_of = ROM}
+				73 = {add_core_of = ROM}
+				89 = {add_core_of = ROM}
+				834 = {add_core_of = ROM}
+				76 = {add_core_of = ROM}
+				77 = {add_core_of = ROM}
+				78 = {add_core_of = ROM}
+				79 = {add_core_of = ROM}
+				80 = {add_core_of = ROM}
+				81 = {add_core_of = ROM}
+				82 = {add_core_of = ROM}
+				83 = {add_core_of = ROM}
+				84 = {add_core_of = ROM}
+				46 = {add_core_of = ROM}
+				766 = {add_core_of = ROM}
+				971 = {add_core_of = ROM}
+			}
+		}
+	}
+}

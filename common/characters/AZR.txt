@@ -1,0 +1,67 @@
+# Aleksandra Kollontay has an unsed portrait
+# Viktor Baydalakov has an unused portrait
+
+characters = {
+
+                                                                                       
+
+	
+	
+	
+	
+#	AZR_Drastamat_Kanayan = { # can't find a fascist leader anywhere looks like PDX made up the fascist party as well, so I don't think there is anyone who could fit this role
+#		name = "Drastmat Kanyan"
+#		portraits = {
+#			civilian = {
+#				large = "gfx/leaders/AZR/Portrait_AZR_Drastamat_Kanayan.png"
+#			}
+#		}
+#		country_leader = {
+#			ideology = fascism_ideology
+#			traits = {  }
+#			expire = "1953.3.1.1"
+#			id = -1
+#		}
+#	}
+	
+	AZR_Aliheydar_Garayev= { # historically purged in '38
+		name = "Aliheydar Garayev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AZR/Portrait_Azerbaijan_Aliheydar_Garayev.png"
+				small = "gfx/interface/ideas/idea_Azerbaijan_Aliheydar_Garayev.dds"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	AZR_Jamshid_Nakhchivanski= { # also purged in '38
+		name = "Jamshid Nakhchivanski"
+		portraits = {
+			army = {
+				large = "gfx/leaders/AZR/Portrait_Azerbaijan_Jamshid_Nakhchivanski.png"
+				small = "gfx/interface/ideas/idea_Azerbaijan_Jamshid_Nakhchivanski.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+		
+
+
+}

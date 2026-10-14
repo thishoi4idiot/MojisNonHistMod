@@ -1,0 +1,13 @@
+FRA_national_housing_programmes_category = {
+	priority = 20
+
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		tag = FRA
+	}
+
+	visible = {
+		has_completed_focus = FRA_national_housing_programmes
+	}
+}

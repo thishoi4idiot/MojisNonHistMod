@@ -1,0 +1,306 @@
+spriteTypes = {
+#focus icons
+	spriteType = {
+		name = "GFX_goal_RUS_flag"
+		texturefile = "gfx/interface/goals/RUS_flag.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_parliament"
+		texturefile = "gfx/interface/goals/generic_parliament.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_red_tinted_democracy"
+		texturefile = "gfx/interface/goals/red_tinted_democracy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_tsar_peter"
+		texturefile = "gfx/interface/goals/tsar_peter.png"
+	}
+	spriteType = {
+		name = "GFX_goal_orthodox_state"
+		texturefile = "gfx/interface/goals/orthodox_state.png"
+	}
+	spriteType = {
+		name = "GFX_goal_rus_orthodoxy"
+		texturefile = "gfx/interface/goals/focus_rus_orthodoxy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_generic_schools"
+		texturefile = "gfx/interface/goals/generic_schools.png"
+	}
+	spriteType = {
+		name = "GFX_goal_OTT_Islamic_Education"
+		texturefile = "gfx/interface/goals/OTT_Islamic_Education.png"
+	}
+	spriteType = {
+		name = "GFX_goal_focus_rus_rnsma"
+		texturefile = "gfx/interface/goals/focus_rus_rnsma.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_focus_rus_solidarists"
+		texturefile = "gfx/interface/goals/focus_rus_solidarists.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_purge_opposition"
+		texturefile = "gfx/interface/goals/purge_opposition.png"
+	}
+
+	spriteType = {
+		name = "GFX_goal_RUS_eurasia_focus"
+		texturefile = "gfx/interface/goals/RUS_eurasia_focus.png"
+	}
+	spriteType = {
+		name = "GFX_goal_RUS_white_legacy"
+		texturefile = "gfx/interface/goals/RUS_white_legacy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_RUS_monarchy"
+		texturefile = "gfx/interface/goals/RUS_monarchy.png"
+	}
+	spriteType = {
+		name = "GFX_goal_RUS_black_hundred"
+		texturefile = "gfx/interface/goals/RUS_black_hundred.png"
+	}
+	
+
+
+#ideas
+
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_loyal"
+		texturefile = "gfx/interface/ideas/idea_DEM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_empowered"
+		texturefile = "gfx/interface/ideas/idea_DEM.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_disloyal_1"
+		texturefile = "gfx/interface/ideas/idea_DEM_disloyal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_disloyal_2"
+		texturefile = "gfx/interface/ideas/idea_DEM_disloyal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_disloyal_3"
+		texturefile = "gfx/interface/ideas/idea_DEM_disloyal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_disloyal_4"
+		texturefile = "gfx/interface/ideas/idea_DEM_disloyal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_DEM_crushed"
+		texturefile = "gfx/interface/ideas/idea_DEM_crushed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_loyal"
+		texturefile = "gfx/interface/ideas/idea_ROVS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_empowered"
+		texturefile = "gfx/interface/ideas/idea_ROVS.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_disloyal_1"
+		texturefile = "gfx/interface/ideas/idea_ROVS_disloyal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_disloyal_2"
+		texturefile = "gfx/interface/ideas/idea_ROVS_disloyal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_disloyal_3"
+		texturefile = "gfx/interface/ideas/idea_ROVS_disloyal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_disloyal_4"
+		texturefile = "gfx/interface/ideas/idea_ROVS_disloyal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_ROVS_crushed"
+		texturefile = "gfx/interface/ideas/idea_ROVS_crushed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_loyal"
+		texturefile = "gfx/interface/ideas/idea_FASC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_empowered"
+		texturefile = "gfx/interface/ideas/idea_FASC.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_disloyal_1"
+		texturefile = "gfx/interface/ideas/idea_FASC_disloyal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_disloyal_2"
+		texturefile = "gfx/interface/ideas/idea_FASC_disloyal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_disloyal_3"
+		texturefile = "gfx/interface/ideas/idea_FASC_disloyal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_disloyal_4"
+		texturefile = "gfx/interface/ideas/idea_FASC_disloyal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_FASC_crushed"
+		texturefile = "gfx/interface/ideas/idea_FASC_crushed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_multi_religious_empire_new"
+		texturefile = "gfx/interface/ideas/idea_SOV_church_and_mosque.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_multi_religious_empire_2"
+		texturefile = "gfx/interface/ideas/idea_SOV_church_and_mosque.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_black_hundreds"
+		texturefile = "gfx/interface/ideas/idea_RUS_black_hundreds.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_WRE_black_hundreds_2"
+		texturefile = "gfx/interface/ideas/idea_RUS_black_hundreds.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rally_the_exiles_1"
+		texturefile = "gfx/interface/ideas/RUS_Yunarmiya.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rally_the_exiles_2"
+		texturefile = "gfx/interface/ideas/RUS_Yunarmiya.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_rally_the_exiles_3"
+		texturefile = "gfx/interface/ideas/RUS_Yunarmiya.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_federal_integration"
+		texturefile = "gfx/interface/ideas/SOV_panslavic_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_federal_integration_tfv"
+		texturefile = "gfx/interface/ideas/SOV_panslavic_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_kirill_romanov"
+		texturefile = "gfx/interface/ideas/idea_kirill_romanov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_dmitry_romanov"
+		texturefile = "gfx/interface/ideas/idea_dmitry_romanov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_boris_romanov"
+		texturefile = "gfx/interface/ideas/idea_boris_romanov.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_SOV_vsevolod_i"
+		texturefile =  "gfx/interface/ideas/tsar_vsevolod.dds"
+	}
+	
+	
+	
+
+#modifier icons
+
+	spriteType = {
+		name = "GFX_modifiers_compliance"
+		texturefile = "gfx/interface/modifiers/modifier_compliance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_modifiers_resistance"
+		texturefile = "gfx/interface/modifiers/modifier_resistance.dds"
+	}
+	
+# traits
+	spriteType = {
+		name = "GFX_trait_ROVS_member"
+		texturefile = "gfx/interface/traits/personal/trait_ROVS.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_FASC_member"
+		texturefile = "gfx/interface/traits/personal/trait_FASC.dds"
+	}	
+	spriteType = {
+		name = "GFX_trait_DEM_member"
+		texturefile = "gfx/interface/traits/personal/trait_DEM.dds"
+	}	
+	
+# event pictures
+	spriteType = {
+		name = "GFX_report_event_black_hundreds"
+		texturefile = "gfx/event_pictures/report_event_black_hundreds.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_cossack_parade"
+		texturefile = "gfx/event_pictures/report_event_cossack_parade.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_kaminski_brigade"
+		texturefile = "gfx/event_pictures/report_event_kaminski_brigade.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_russian_liberation_army"
+		texturefile = "gfx/event_pictures/report_event_russian_liberation_army.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_siberian_recruits"
+		texturefile = "gfx/event_pictures/report_event_siberian_recruits.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sov_royal_speech"
+		texturefile = "gfx/event_pictures/report_event_sov_royal_speech.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_state_duma"
+		texturefile = "gfx/event_pictures/report_event_state_duma.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_volunteer_army"
+		texturefile = "gfx/event_pictures/report_event_volunteer_army.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_orthodox_priests"
+		texturefile = "gfx/event_pictures/report_event_orthodox_priests.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_black_hundreds"
+		texturefile = "gfx/event_pictures/news_event_SOV_black_hundreds.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_coronation"
+		texturefile = "gfx/event_pictures/news_event_SOV_coronation.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_duma"
+		texturefile = "gfx/event_pictures/news_event_SOV_duma.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_fascists"
+		texturefile = "gfx/event_pictures/news_event_SOV_fascists.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_orthodox_priests"
+		texturefile = "gfx/event_pictures/news_event_SOV_orthodox_priests.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_sov_vlasov_troops"
+		texturefile = "gfx/event_pictures/news_event_SOV_vlasov_troops.png"
+	}
+	
+	# agency logo
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_SOV_exiles"
+		texturefile = "gfx/interface/operatives/agencies/agency_logo_KR_Russia.png"
+		noOfFrames = 2
+	}
+}	

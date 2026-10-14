@@ -1,0 +1,28 @@
+add_namespace = YugoEvents
+country_event = {
+	id = YugoEvents.1
+	title = YugoEvents.1.t
+	desc = YugoEvents.1.d
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	picture = GFX_report_event_generic_diplomatic
+
+	option = {
+		name = YugoEvents.1.a
+		ai_chance = {factor = 100}
+		add_stability = -0.25
+		CRO = {
+			add_stability = 0.15
+			add_war_support = 0.25
+		}
+		YUG = {
+			set_autonomy = {
+				target = CRO
+				autonomy_state = autonomy_free
+			}
+		}
+	}
+}

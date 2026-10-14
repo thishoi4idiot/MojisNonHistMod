@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		SOV_russian_economic_dominance = {
+			picture = eng_service_overseas
+			allowed = {
+				always = no
+			}
+			modifier = {
+				cic_to_overlord_factor = 0.8
+				mic_to_overlord_factor = 0.8
+			}
+		}
+	}
+}

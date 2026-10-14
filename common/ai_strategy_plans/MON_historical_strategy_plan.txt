@@ -1,0 +1,80 @@
+MON_historical = {
+	name = "Mongolian Stalinist plan"
+	desc = "Mongolia stays the course of Marxist-Leninist orthodoxy, embracing Stalinist doctrine and building up a command economy under Soviet tutelage."
+
+	allowed = {
+		original_tag = MON
+	}
+	enable = {
+
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#Ideological fork - stay communist
+		MON_continue_marxist_ideals
+
+		#Go hardline Stalinist instead of liberalizing the trade unions
+		MON_follow_stalinist_doctrine
+		MON_political_commissars
+		MON_build_a_cult_of_personality
+
+		#Command economy buildout
+		MON_mongolian_economic_reforms
+		MON_indoctrination
+		MON_enforce_atheism
+		MON_mass_collectivization
+		MON_construct_the_taishir_hydro_power_station
+		MON_expand_mining_operations
+		MON_electrify_the_steppe
+
+		#Now that both doctrine and reforms are done, rapid militarization is unlocked
+		MON_rapid_militarization
+
+		#Build up the Red Army and the party
+		MON_the_peoples_army
+		MON_asian_socialist_exiles
+		MON_fight_the_bourgeoisi
+
+		#Further industrialization
+		MON_expand_heavy_industries
+		MON_socialist_economic_institute
+		MON_integrate_the_mongol_rail_system
+		MON_develop_the_capital
+
+		#Deepen the alliance with the Soviet Union (conditional on being in a faction with them)
+		MON_aid_the_soviet_union
+		MON_fund_the_siberian_war_machine
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	focus_factors = {
+		#Break the tie against the monarchist/restorationist branch
+		MON_continue_marxist_ideals = 10
+
+		#Break the tie against the trade-union/democratic branch
+		MON_follow_stalinist_doctrine = 10
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

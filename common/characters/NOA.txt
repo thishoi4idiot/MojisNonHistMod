@@ -1,0 +1,30 @@
+characters = {
+	
+	
+	NOA_Issa_Pliyev = {
+		name = "Issa Pliyev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/MTR/Portrait_NOA_Issa_Pliyev.png"
+				small = "gfx/interface/ideas/idea_NOA_Issa_Pliyev.dds"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer hidden_sympathies }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				SOV = {
+					NOT = {	
+						has_character = SOV_issa_pliyev
+					}
+				}
+			}
+		}
+	}
+		
+}
+	

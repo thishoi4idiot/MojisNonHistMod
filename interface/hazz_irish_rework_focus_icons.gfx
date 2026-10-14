@@ -1,0 +1,308 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_negotiate
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_negotiate.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_negotiate_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_negotiate.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_negotiate.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_negotiate.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_peacearmy
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_peacearmy.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_peacearmy_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_peacearmy.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_peacearmy.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_peacearmy.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_new_coopbritishexp
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_new_coopbritishexp.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_new_coopbritishexp_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_new_coopbritishexp.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_new_coopbritishexp.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_new_coopbritishexp.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_iloveenglishpeople
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_iloveenglishpeople.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_iloveenglishpeople_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_iloveenglishpeople.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_iloveenglishpeople.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_iloveenglishpeople.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_altalliancewithfra
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_altalliancewithfra.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_altalliancewithfra_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_altalliancewithfra.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_altalliancewithfra.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_altalliancewithfra.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_engpuppy
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_engpuppy.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_engpuppy_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_engpuppy.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_engpuppy.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_engpuppy.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_restoresco
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_restoresco.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_restoresco_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_restoresco.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_restoresco.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_restoresco.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_fasireind
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_fasireind.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_fasireind_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_fasireind.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_fasireind.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_fasireind.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_encimm
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_encimm.dds"
+    }
+    spriteType = {
+        name = GFX_goal_hazz_irish_rework_hazz_irish_rework_encimm_shine
+        texturefile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_encimm.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_encimm.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/hazz_irish_rework/hazz_irish_rework_hazz_irish_rework_encimm.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+    }
+}

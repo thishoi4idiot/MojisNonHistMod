@@ -1,0 +1,602 @@
+soviet_coring_decisions_catagory = {
+	CoringBessarabia = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 78
+				controls_state = 766
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				78 = {compliance > 80}
+				766 = {compliance > 80}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 78
+				state = 766
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 50
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				78 = { add_core_of = SOV}
+				766 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringUkraine = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 80
+				controls_state = 89
+				controls_state = 73
+				controls_state = 91
+				controls_state = 93
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				80 = {compliance > 80}
+				89 = {compliance > 80}
+				73 = {compliance > 80}
+				91 = {compliance > 80}
+				93 = {compliance > 80}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 80
+				state = 89
+				state = 73
+				state = 91
+				state = 93
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 100
+		days_remove = 125
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			hidden_effect = {
+				custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+				80 = { add_core_of = SOV}
+				89 = { add_core_of = SOV}
+				73 = { add_core_of = SOV}
+				91 = { add_core_of = SOV}
+				93 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringBelarus = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 784
+				controls_state = 96
+				controls_state = 95
+				controls_state = 94
+				controls_state = 97
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				784 = {compliance > 80}
+				96 = {compliance > 80}
+				95 = {compliance > 80}
+				94 = {compliance > 80}
+				97 = {compliance > 80}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 784
+				state = 96
+				state = 95
+				state = 94
+				state = 97
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 100
+		days_remove = 125
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				784 = { add_core_of = SOV}
+				96 = { add_core_of = SOV}
+				95 = { add_core_of = SOV}
+				94 = { add_core_of = SOV}
+				97 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringLithuania = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 814
+				controls_state = 11
+				controls_state = 815
+				controls_state = 189
+				controls_state = 188
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				814 = {compliance > 80}
+				11 = {compliance > 80}
+				815 = {compliance > 80}
+				189 = {compliance > 80}
+				188 = {compliance > 80}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 814
+				state = 11
+				state = 815
+				state = 189
+				state = 188
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 75
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				814 = { add_core_of = SOV}
+				11 = { add_core_of = SOV}
+				815 = { add_core_of = SOV}
+				189 = { add_core_of = SOV}
+				188 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringLatvia = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 12
+				controls_state = 190
+				controls_state = 808
+				controls_state = 809
+				controls_state = 810
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				12 = {compliance > 80}
+				190 = {compliance > 80}
+				808 = {compliance > 80}
+				809 = {compliance > 80}
+				810 = {compliance > 80}
+			}
+			
+			
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 12
+				state = 190
+				state = 808
+				state = 809
+				state = 810
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 75
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				12 = { add_core_of = SOV}
+				190 = { add_core_of = SOV}
+				808 = { add_core_of = SOV}
+				809 = { add_core_of = SOV}
+				810 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringEstonia = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 13
+				controls_state = 191
+				controls_state = 811
+				controls_state = 812
+				controls_state = 813
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				13 = {compliance > 80}
+				191 = {compliance > 80}
+				811 = {compliance > 80}
+				812 = {compliance > 80}
+				813 = {compliance > 80}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 13
+				state = 191
+				state = 811
+				state = 812
+				state = 813
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 75
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				13 = { add_core_of = SOV}
+				191 = { add_core_of = SOV}
+				811 = { add_core_of = SOV}
+				812 = { add_core_of = SOV}
+				813 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringFinland = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 146
+				controls_state = 928
+				controls_state = 111
+				controls_state = 926
+				controls_state = 927
+				controls_state = 930
+				controls_state = 149
+				controls_state = 929
+				controls_state = 148
+				controls_state = 722
+				controls_state = 147
+				controls_state = 150
+				controls_state = 145
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				146 = { compliance > 80 }
+				928 = { compliance > 80 }
+				111 = { compliance > 80 }
+				926 = { compliance > 80 }
+				927 = { compliance > 80 }
+				930 = { compliance > 80 }
+				149 = { compliance > 80 }
+				929 = { compliance > 80 }
+				148 = { compliance > 80 }
+				722 = { compliance > 80 }
+				147 = { compliance > 80 }
+				150 = { compliance > 80 }
+				145 = { compliance > 80 }
+			}		
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 146
+				state = 928
+				state = 111
+				state = 926
+				state = 927
+				state = 930
+				state = 149
+				state = 929
+				state = 148
+				state = 722
+				state = 147
+				state = 150
+				state = 145
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 100
+		days_remove = 200
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				146 = { add_core_of = SOV }
+				928 = { add_core_of = SOV }
+				111 = { add_core_of = SOV }
+				926 = { add_core_of = SOV }
+				927 = { add_core_of = SOV }
+				930 = { add_core_of = SOV }
+				149 = { add_core_of = SOV }
+				929 = { add_core_of = SOV }
+				148 = { add_core_of = SOV }
+				722 = { add_core_of = SOV }
+				147 = { add_core_of = SOV }
+				150 = { add_core_of = SOV }
+				145 = { add_core_of = SOV }
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringMongolia = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			has_completed_focus = SOV_Integration_of_the_far_east
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 817
+				controls_state = 818
+				controls_state = 819
+				controls_state = 820
+				controls_state = 330
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				817 = {compliance > 80}
+				818 = {compliance > 80}
+				819 = {compliance > 80}
+				820 = {compliance > 80}
+				330 = {compliance > 80}
+			}
+			
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 817
+				state = 818
+				state = 819
+				state = 820
+				state = 330
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 100
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				817 = { add_core_of = SOV}
+				818 = { add_core_of = SOV}
+				819 = { add_core_of = SOV}
+				820 = { add_core_of = SOV}
+				330 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringSinkiang = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			has_completed_focus = SOV_Integration_of_the_far_east
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 617
+				controls_state = 618
+				controls_state = 619
+				controls_state = 760
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_compliance_over_all_highlighted_states_greater_than_80_tt
+				617 = {compliance > 80}
+				618 = {compliance > 80}
+				619 = {compliance > 80}
+				760 = {compliance > 80}
+			}
+			
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 617
+				state = 618
+				state = 619
+				state = 760
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 100
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				617 = { add_core_of = SOV}
+				618 = { add_core_of = SOV}
+				619 = { add_core_of = SOV}
+				760 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+		}
+	}
+	CoringJapan = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			always = yes
+		}
+		available = {
+
+			has_completed_focus = SOV_Integration_of_the_far_east
+			hidden_trigger = {
+				NOT = {has_country_flag = DoingCoring}
+			}
+			custom_trigger_tooltip = {
+				tooltip = has_control_over_all_highlighted_states_tt
+
+				controls_state = 555
+				controls_state = 537
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+        		state = 555
+				state = 537
+    		}
+    		highlight_color_while_active = 3
+    		highlight_color_before_active = 3
+		}
+		cost = 50
+		days_remove = 25
+		fire_only_once = yes
+		visible = {
+			
+		}
+		complete_effect = {
+			set_country_flag = DoingCoring
+		}
+		remove_effect = {
+			custom_effect_tooltip = gain_cores_on_the_highlighted_states_tt
+			hidden_effect = {
+				555 = { add_core_of = SOV}
+				537 = { add_core_of = SOV}
+				clr_country_flag = DoingCoring
+			}
+			
+		}
+	}
+}

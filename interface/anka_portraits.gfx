@@ -1,0 +1,10 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_portrait_LAT_heinrich_schlobitten"
+		texturefile = "gfx/leaders/LAT/portrait_LAT_heinrich_schlobitten.dds"
+	}
+	SpriteType = {
+		name = "GFX_portrait_LAT_heinrich_schlobitten_small"
+		texturefile = "gfx/leaders/LAT/portrait_LAT_heinrich_schlobitten_small.dds"
+	}
+}

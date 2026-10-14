@@ -1,0 +1,153 @@
+###########################
+# Poland-Russia Event Chain
+###########################
+
+add_namespace = pol_russia
+
+# -----------------------------------------------
+# EVENT 1: Poland decides what to ask Russia
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.1
+	title = pol_russia.1.t
+	desc = pol_russia.1.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes  # Fire this however you like (focus, decision, etc.)
+
+	option = {
+		name = pol_russia.1.a  # "Seek an alliance with Russia"
+		SOV = {country_event = { id = pol_russia.2 days = 1 }}  # Send to Russia
+		
+	}
+
+	option = {
+		name = pol_russia.1.b  # "Request to be annexed by Russia"
+		SOV = {country_event = { id = pol_russia.3 days = 1 }}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+}
+
+# -----------------------------------------------
+# EVENT 2: Russia receives the alliance offer
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.2
+	title = pol_russia.2.t
+	desc = pol_russia.2.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	# Russia accepts
+	option = {
+		name = pol_russia.2.a  # "We welcome this partnership."
+		POL = { country_event = { id = pol_russia.4 days = 1 } }
+	}
+
+	# Russia refuses
+	option = {
+		name = pol_russia.2.b  # "We have no interest in this."
+		POL = { country_event = { id = pol_russia.5 days = 1 } }
+	}
+}
+
+# -----------------------------------------------
+# EVENT 3: Russia receives the annexation offer
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.3
+	title = pol_russia.3.t
+	desc = pol_russia.3.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	# Russia accepts
+	option = {
+		name = pol_russia.3.a  # "Poland shall become part of Mother Russia."
+		POL = { country_event = { id = pol_russia.6 days = 1 } }
+	}
+
+	# Russia refuses
+	option = {
+		name = pol_russia.3.b  # "We will not absorb Poland at this time."
+		POL = { country_event = { id = pol_russia.7 days = 1 } }
+	}
+}
+
+# -----------------------------------------------
+# EVENT 4: Poland — Alliance Accepted (1 button)
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.4
+	title = pol_russia.4.t
+	desc = pol_russia.4.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = pol_russia.4.a  # "Long live the Russo-Polish friendship!"
+		# Create faction (Russia leads it)
+		SOV = {  # Change SOV to RUS if using a Russia tag mod
+			create_faction = "The Bermontian Pact"
+			add_to_faction = POL
+		}
+		set_cosmetic_tag = POL_KINGDOM_RUS
+	}
+}
+
+# -----------------------------------------------
+# EVENT 5: Poland — Alliance Rejected (1 button)
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.5
+	title = pol_russia.5.t
+	desc = pol_russia.5.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = pol_russia.5.a  # "We must seek other allies..."
+		set_cosmetic_tag = POL_KINGDOM_RUS
+	}
+}
+
+# -----------------------------------------------
+# EVENT 6: Poland — Annexation Accepted (1 button)
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.6
+	title = pol_russia.6.t
+	desc = pol_russia.6.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = pol_russia.6.a  # "Poland yields to Russia."
+		# Russia annexes Poland
+		SOV = {
+			annex_country = { target = POL transfer_troops = yes } 
+		}
+	}
+}
+
+# -----------------------------------------------
+# EVENT 7: Poland — Annexation Rejected (1 button)
+# -----------------------------------------------
+country_event = {
+	id = pol_russia.7
+	title = pol_russia.7.t
+	desc = pol_russia.7.d
+	picture = GFX_report_event_gathering_protest
+
+	is_triggered_only = yes
+
+	option = {
+		name = pol_russia.7.a  # "Russia will not protect us... we are on our own."
+		set_cosmetic_tag = POL_KINGDOM_RUS
+	}
+}

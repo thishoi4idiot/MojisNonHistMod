@@ -1,0 +1,78 @@
+Great_Southern_Railways = {
+include = generic_train_organization
+name = "Great Southern Railways"
+icon = GFX_idea_GER_henschel_civilian
+
+allowed = {
+tag = IRE
+}
+}
+Ireland_Tank_Plant = {
+include = generic_tank_refurbishment_plant_organization
+name = "Vickers-Armstrong Ireland"
+icon = GFX_idea_vickers_armstrong_eng
+
+allowed = {
+tag = IRE
+}
+}
+Ireland_Tank_Designer = {
+
+include = generic_infantry_tank_organization
+name = "Landsverk Irish Variant"
+icon = GFX_idea_SWE_landsverk
+ 	allowed = {
+ 		tag = IRE
+ 		has_dlc = "No Compromise, No Surrender"
+ 	}
+
+ 	available = {
+ 		IRE = { 
+ 			has_completed_focus = hazz_irish_rework_irelandsverk
+ 		}
+ 		}
+ 	}
+Ireland_Convoy_Designer = {
+
+include = generic_submarine_organization
+name = "Harland & Wolff"
+icon = GFX_idea_ITA_cantieri_navali_tosi
+ 	allowed = {
+ 		tag = IRE
+ 		has_dlc = "No Compromise, No Surrender"
+ 	}
+ 	available = {
+ 		IRE = { 
+ 			has_completed_focus = hazz_irish_rework_convoyspiritfocus
+    }
+}
+}
+Ireland_Air_Cas = {
+include = generic_cas_aircraft_organization
+name = "Aer Lingus Cas"
+icon = GFX_idea_generic_air_manufacturer_3
+
+allowed = {
+tag = IRE
+}
+}		
+Ireland_Air_Fighter = {
+include = generic_range_focused_aircraft_organization
+name = "Aer Lingus"
+icon = GFX_generic_mio_department_icon_plane_fighter_engine
+
+allowed = {
+tag = IRE
+ 		has_dlc = "No Compromise, No Surrender"
+ 	}
+ 	available = {
+ 		IRE = { 
+ 			has_completed_focus = hazz_irish_rework_aircorps
+    }
+}
+}
+
+
+
+
+

@@ -1,0 +1,330 @@
+add_namespace = LetsSplitFrance
+
+#initial event for Germany - France wants to split up spheres of interest in the benelux
+country_event = {
+	id = LetsSplitFrance.1
+	title = LetsSplitFrance.1.t
+	desc = LetsSplitFrance.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+		name = LetsSplitFrance.1.a #agree
+		ai_chance = {
+			factor = 70
+		}
+		ENG = {
+			country_event = LetsSplitFrance.2
+		}
+		effect_tooltip = {
+			GER = {
+				add_state_claim = 29
+				add_state_claim = 28 
+				add_state_claim = 17 
+				add_state_claim = 18 
+				add_state_claim = 785 
+				add_state_claim = 27 
+				add_state_claim = 26
+				add_state_claim = 22 
+				add_state_claim = 20 
+				add_state_claim = 32
+				add_state_claim = 21
+				add_state_claim = 851
+				add_state_claim = 735
+			}
+			ENG = {	
+				add_state_claim = 1		
+				add_state_claim = 14
+				add_state_claim = 30
+				add_state_claim = 15
+				add_state_claim = 16
+				add_state_claim = 24
+				add_state_claim = 23
+				add_state_claim = 33
+				add_state_claim = 25
+				add_state_claim = 31
+				add_state_claim = 19
+				add_state_claim = 806
+			}
+		}
+	}
+
+	option = {
+		name = LetsSplitFrance.1.b #refuse
+		ai_chance = {
+			factor = 30
+		}
+		ENG = {
+			country_event = LetsSplitFrance.3
+			set_country_flag = LetsSplitFrance_germany_refused_spheres
+		}
+	}
+}
+
+# rasponse event for France - country agrees
+country_event = {
+	id = LetsSplitFrance.2
+	title = LetsSplitFrance.2.t
+	desc = LetsSplitFrance.2.d
+	picture = GFX_report_event_german_speech
+	is_triggered_only = yes
+	option = {
+		name = LetsSplitFrance.2.a #agree
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			add_state_claim = 29
+			add_state_claim = 28 
+			add_state_claim = 17 
+			add_state_claim = 18 
+			add_state_claim = 785 
+			add_state_claim = 27 
+			add_state_claim = 26
+			add_state_claim = 22 
+			add_state_claim = 20 
+			add_state_claim = 32
+			add_state_claim = 21
+			add_state_claim = 851
+			add_state_claim = 735
+		}
+		ENG = {	
+			add_state_claim = 1		
+			add_state_claim = 14
+			add_state_claim = 30
+			add_state_claim = 15
+			add_state_claim = 16
+			add_state_claim = 24
+			add_state_claim = 23
+			add_state_claim = 33
+			add_state_claim = 25
+			add_state_claim = 31
+			add_state_claim = 19
+			add_state_claim = 806
+		}
+	}
+}
+#response event for France - country refuses
+country_event = {
+	id = LetsSplitFrance.3
+	title = LetsSplitFrance.3.t
+	desc = LetsSplitFrance.3.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = LetsSplitFrance.3.a #agree
+		ai_chance = {
+			factor = 80
+		}
+		add_state_claim = 1		
+		add_state_claim = 14
+		add_state_claim = 30
+		add_state_claim = 15
+		add_state_claim = 16
+		add_state_claim = 24
+		add_state_claim = 23
+		add_state_claim = 33
+		add_state_claim = 25
+		add_state_claim = 31
+		add_state_claim = 19
+		add_state_claim = 806
+	}
+}
+
+add_namespace = ItalyGetsFreeStates
+
+country_event = {
+	id = ItalyGetsFreeStates.1
+	title = ItalyGetsFreeStates.1.t
+	desc = ItalyGetsFreeStates.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+	option = {
+	name = ItalyGetsFreeStates.1.a #agree
+		ai_chance = {
+			factor = 100
+		}
+		151 = {add_core_of = ITA}
+		848 = {add_core_of = ITA}
+		846 = {add_core_of = ITA}
+		153 = {add_core_of = ITA}
+		976 = {add_core_of = ITA}
+		847 = {add_core_of = ITA}
+		735 = {add_core_of = ITA}
+	}
+}
+
+add_namespace = SeekAllianceWithItaly
+
+country_event = {
+    id = SeekAllianceWithItaly.1
+    title = SeekAllianceWithItaly.1.t
+    desc = SeekAllianceWithItaly.1.d
+    picture = GFX_report_event_diplomatic_talks
+
+    is_triggered_only = yes
+
+    # Option A — Send the offer
+    option = {
+        name = SeekAllianceWithItaly.1.a
+        ITA = {
+            country_event = { id = SeekAllianceWithItaly.2 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = SeekAllianceWithItaly.2
+    title = SeekAllianceWithItaly.2.t
+    desc = SeekAllianceWithItaly.2.d
+    picture = GFX_report_event_diplomatic_talks
+
+    is_triggered_only = yes
+
+    # Option A — Yes, we accept
+    option = {
+        name = SeekAllianceWithItaly.2.a
+        ENG = {
+            country_event = { id = SeekAllianceWithItaly.4 days = 1 }
+        }
+    }
+
+    # Option B — No, we refuse
+    option = {
+        name = SeekAllianceWithItaly.2.b
+        ENG = {
+            country_event = { id = SeekAllianceWithItaly.3 days = 1 }
+        }
+    }
+
+    # Option C — Yes, but only if you grant our Mediterranean claims
+    option = {
+        name = SeekAllianceWithItaly.2.c
+        ENG = {
+            country_event = { id = SeekAllianceWithItaly.5 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = SeekAllianceWithItaly.3
+    title = SeekAllianceWithItaly.3.t
+    desc = SeekAllianceWithItaly.3.d
+    picture = GFX_report_event_diplomatic_failed
+
+    is_triggered_only = yes
+
+    option = {
+        name = SeekAllianceWithItaly.3.a
+        # No alliance — nothing further happens
+    }
+}
+
+
+country_event = {
+    id = SeekAllianceWithItaly.4
+    title = SeekAllianceWithItaly.4.t
+    desc = SeekAllianceWithItaly.4.d
+    picture = GFX_report_event_diplomatic_success
+
+    is_triggered_only = yes
+
+    option = {
+        name = SeekAllianceWithItaly.4.a
+		ENG = { add_to_faction = ITA }
+        # Alliance already formed in event 2 — this is just the notification
+		hidden_effect = {
+			news_event = { id = SeekAllianceWithItaly.100 hours = 6 }
+		}
+    }
+}
+country_event = {
+    id = SeekAllianceWithItaly.5
+    title = SeekAllianceWithItaly.5.t
+    desc = SeekAllianceWithItaly.5.d
+    picture = GFX_report_event_diplomatic_talks
+
+    is_triggered_only = yes
+
+    # Option A — We agree to Italy's Mediterranean claims
+    option = {
+        name = SeekAllianceWithItaly.5.a
+        ITA = {
+            country_event = { id = SeekAllianceWithItaly.7 days = 1 }
+        }
+        # Add any territory/claims effects here, e.g.:
+        # ITA = { set_country_flag = ENG_granted_med_claims }
+    }
+
+    # Option B — We reject Italy's demands
+    option = {
+        name = SeekAllianceWithItaly.5.b
+        ITA = {
+            country_event = { id = SeekAllianceWithItaly.8 days = 1 }
+        }
+    }
+}
+
+country_event = {
+    id = SeekAllianceWithItaly.7
+    title = SeekAllianceWithItaly.7.t
+    desc = SeekAllianceWithItaly.7.d
+    picture = GFX_report_event_diplomatic_success
+
+    is_triggered_only = yes
+
+    option = {
+        name = SeekAllianceWithItaly.7.a
+        ENG = { add_to_faction = ITA }
+		ITA = {
+			transfer_state = 183
+			transfer_state = 116
+			transfer_state = 118
+		}
+		hidden_effect = {
+			news_event = { id = SeekAllianceWithItaly.100 hours = 6 }
+		}
+    }
+}
+
+country_event = {
+    id = SeekAllianceWithItaly.8
+    title = SeekAllianceWithItaly.8.t
+    desc = SeekAllianceWithItaly.8.d
+    picture = GFX_report_event_diplomatic_failed
+
+    is_triggered_only = yes
+
+    option = {
+        name = SeekAllianceWithItaly.8.a
+        # No deal — Italy remains unaligned
+    }
+}
+
+news_event = {
+    id = SeekAllianceWithItaly.100
+    title = SeekAllianceWithItaly.100.t
+    desc = SeekAllianceWithItaly.100.d
+    picture = GFX_news_event_diplomatic_talks
+
+    major = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = SeekAllianceWithItaly.100.a
+        trigger = { tag = ENG }
+    }
+
+    option = {
+        name = SeekAllianceWithItaly.100.b
+        trigger = { tag = ITA }
+    }
+
+    option = {
+        name = SeekAllianceWithItaly.100.c
+        trigger = {
+            NOT = { tag = ENG }
+            NOT = { tag = ITA }
+        }
+    }
+}

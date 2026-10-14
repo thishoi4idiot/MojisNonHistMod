@@ -1,0 +1,173 @@
+# Aleksandra Kollontay has an unsed portrait
+# Viktor Baydalakov has an unused portrait
+
+characters = {
+
+                                                                                       
+
+	
+	
+	
+	UKR_pavlo_skoropadsky = {
+		name = "Pavlo Skoropadsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Pavlo_Skoropadsky.png"
+			}
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Pavlo_Skoropadsky_army.png"
+				small = "gfx/interface/ideas/idea_UKR_Pavlo_Skoropadsky.dds"
+			}
+		}
+		
+		field_marshal = {
+			traits = { organizer thorough_planner old_guard cavalry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+		}
+		
+	}
+	
+		
+	UKR_yevhen_konovalets = {
+		name = "Yevhen Konovalets"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Yevhen_Konovalets.png"
+				small = "gfx/interface/ideas/idea_UKR_Yevhen_Konovalets.dds"
+			}
+		}
+		corps_commander= { 	
+			traits = { winter_specialist hill_fighter politically_connected }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	UKR_mykhailo_omelianovych_pavlenko = {
+		name = "Mykhailo Omelianovych-Pavlenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.png"
+				small = "gfx/interface/ideas/idea_UKR_Mykhailo_Omelianovych_Pavlenko.dds"
+			}
+		}
+		corps_commander = {
+			traits = { fortress_buster }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	UKR_Mykola_Kapustyanskyi= {
+		name = "Mykola Kapustyanskyi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Mykola_Kapustyanskyi.png"
+				small = "gfx/interface/ideas/idea_UKR_Mykola_Kapustyanskyi.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	UKR_Andriy_Melnyk= {
+		name = "Mykola Kapustyanskyi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_Ukraine_Andriy_Melnyk.png"
+				small = "gfx/interface/ideas/idea_Ukraine_Andriy_Melnyk.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	UKR_Hnat_Stefaniv= {
+		name = "Hnat Stefaniv"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_Ukraine_Hnat_Stefaniv.png"
+				small = "gfx/interface/ideas/idea_Ukraine_Hnat_Stefaniv.dds"
+			}
+		}
+		corps_commander = {
+			traits = { commando organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	UKR_Ivan_Poltavets_Ostrianytsia= {
+		name = "Ivan Poltavets-Ostrianytsia"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Ivan_Poltavets_Ostrianytsia.png"
+				small = "gfx/interface/ideas/idea_UKR_Ivan_Poltavets_Ostrianytsia.dds"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	UKR_Andriy_Pokrovsky= {
+		name = "Andriy Pokrovsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_Ukraine_Andriy_Pokrovsky.png"
+				small = "gfx/interface/ideas/idea_Ukraine_Andriy_Pokrovsky.dds"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy superior_tactician }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 3
+		}
+	}
+	UKR_Sviatoslav_Shramchenko= {
+		name = "Sviatoslav Shramchenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UKR/Portrait_UKR_Sviatoslav_Shramchenko.png"
+				small = "gfx/interface/ideas/idea_UKR_Sviatoslav_Shramchenko.dds"
+			}
+		}
+		navy_leader = {
+			traits = { spotter }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+		
+
+
+}

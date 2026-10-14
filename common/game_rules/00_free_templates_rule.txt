@@ -1,0 +1,16 @@
+free_templates_rule = {
+    name = "free_templates_rule"
+    group = "GAMEPLAY_RULES" # Places it in the gameplay section
+
+    default = {
+        name = "DISABLED"
+        text = "free_templates_rule_DISABLED"
+        desc = "free_templates_rule_DISABLED_desc"
+    }
+
+    option = {
+        name = "ENABLED"
+        text = "free_templates_rule_ENABLED"
+        desc = "free_templates_rule_ENABLED_desc"
+    }
+}

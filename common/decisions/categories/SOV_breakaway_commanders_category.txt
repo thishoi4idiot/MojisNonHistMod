@@ -1,0 +1,15 @@
+SOV_breakaway_commanders_category = {
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		always = yes
+	}
+	visible_when_empty = no
+	visible = {
+		original_tag = SOV
+		has_completed_focus = SOV_integrate_breakaway_commanders
+	}
+	priority = {
+		base = 100
+	}
+}

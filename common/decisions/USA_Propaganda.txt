@@ -1,0 +1,197 @@
+USA_Propaganda_Category = {
+
+	# Rally in Washington
+	rally_in_washington = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		visible = {
+			has_completed_focus = USA_war_propaganda
+		}
+		available = {
+			always = yes
+			hidden_trigger = {
+				NOT = { has_country_flag = DoingDecisionUSAPropaganda }
+			}
+		}
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = DoingDecisionUSAPropaganda
+			add_stability = -0.05
+		}
+		remove_effect = {
+			clr_country_flag = DoingDecisionUSAPropaganda
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+	}
+
+	# Legacy of the Bull Moose
+	legacy_of_the_bull_moose = {
+		icon = GFX_decision_eng_propaganda_campaigns
+ 
+		visible = {
+			has_completed_focus = USA_war_propaganda
+			NOT = { has_country_flag = USA_Propaganda_Bull_Moose_Used }
+		}
+		available = {
+			always = yes
+			hidden_trigger = {
+				NOT = { has_country_flag = DoingDecisionUSAPropaganda }
+			}
+		}
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = DoingDecisionUSAPropaganda
+			add_stability = -0.04
+		}
+		remove_effect = {
+			clr_country_flag = DoingDecisionUSAPropaganda
+			set_country_flag = USA_Propaganda_Bull_Moose_Used
+ 
+			add_war_support = 0.10
+			add_political_power = 75
+ 
+			add_ideas = USA_bull_moose_interventionism_idea
+ 
+		}
+	}
+
+	# Denounce Fascism
+	denounce_fascism = {
+		icon = GFX_decision_eng_propaganda_campaigns
+
+		visible = {
+			has_completed_focus = USA_war_propaganda
+			NOT = { has_country_flag = USA_Propaganda_Denounced_Fascism }
+		}
+		available = {
+			always = yes
+			hidden_trigger = {
+				NOT = { has_country_flag = DoingDecisionUSAPropaganda }
+			}
+		}
+		days_remove = 70
+		complete_effect = {
+			set_country_flag = DoingDecisionUSAPropaganda
+			add_stability = -0.1
+			custom_effect_tooltip = USA_Propaganda_Denounce_Fascism_Tooltip
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							AND = {
+								JAP = {
+									OR = {
+										has_government = fascism
+										has_government = neutrality
+									}
+								}
+								OR = {
+									tag = JAP
+									is_in_faction_with = JAP
+								}
+							}
+							AND = {
+								GER = {has_government = fascism}
+								OR = {
+									tag = GER
+									is_in_faction_with = GER
+								}
+							}
+							AND = {
+								ITA = {
+									OR = {
+										has_government = fascism
+										has_government = neutrality
+									}
+								}
+								OR = {
+									tag = ITA
+									is_in_faction_with = ITA
+								}
+							}
+							AND = {
+								is_major = yes
+								NOT = { tag = USA }
+								has_government = fascism
+							}
+						}
+					}
+					ROOT = { send_embargo = PREV }
+				}
+			}			
+		}
+		remove_effect = {
+			clr_country_flag = DoingDecisionUSAPropaganda
+			set_country_flag = USA_Propaganda_Denounced_Fascism
+			add_political_power = 75
+			add_stability = 0.05
+			add_war_support = 0.05
+			
+		}
+	}
+
+	# Remember the Panay
+	remember_the_panay = {
+		icon = GFX_decision_panay_incident
+
+		visible = {
+			has_completed_focus = USA_war_propaganda
+			has_country_flag = USA_panay_incident_happened
+			NOT = { has_country_flag = USA_Propaganda_Panay_Used }
+		}
+		available = {
+			always = yes
+			hidden_trigger = {
+				NOT = { has_country_flag = DoingDecisionUSAPropaganda }
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			set_country_flag = DoingDecisionUSAPropaganda
+			add_stability = -0.03
+		}
+		remove_effect = {
+			clr_country_flag = DoingDecisionUSAPropaganda
+			set_country_flag = USA_Propaganda_Panay_Used
+			add_war_support = 0.12
+			add_stability = 0.06
+			add_manpower = 15000
+			add_ideas = USA_remember_the_panay_idea
+			add_political_power = 50
+		}
+	}
+
+	# A Day of Infamy
+	MNHM_day_of_infamy = {
+		icon = GFX_decision_day_of_infamy
+
+		visible = {
+			has_completed_focus = USA_war_propaganda
+			has_defensive_war_with = JAP
+			NOT = { has_country_flag = USA_Propaganda_Day_of_Infamy }
+		}
+		available = {
+			always = yes
+			hidden_trigger = {
+				NOT = { has_country_flag = DoingDecisionUSAPropaganda }
+			}
+		}
+		days_remove = 45
+		complete_effect = {
+			set_country_flag = DoingDecisionUSAPropaganda
+			add_stability = -0.08
+		}
+		remove_effect = {
+			clr_country_flag = DoingDecisionUSAPropaganda
+			set_country_flag = USA_Propaganda_Day_of_Infamy
+			add_war_support = 0.20
+			add_stability = 0.18
+			add_political_power = 100
+			add_timed_idea = {
+				idea = USA_day_of_infamy_idea
+				days = 365
+			}
+		}
+	}
+}

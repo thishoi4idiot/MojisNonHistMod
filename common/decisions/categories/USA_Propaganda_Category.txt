@@ -1,0 +1,7 @@
+USA_Propaganda_Category = {
+	icon = GFX_decision_category_SOV_propaganda
+	allowed = {
+		tag = USA
+	}
+	priority = 100
+}

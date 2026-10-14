@@ -1,0 +1,50 @@
+characters = {
+	
+	
+	
+	
+	CIN_Vassan_Girey = {
+		name = "Vassan-Girey Dzhabagiyev" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MTR/Portrait_CIN_Vassan_Girey.png"
+			}
+			army = {
+				large = "gfx/leaders/MTR/Portrait_CIN_Vassan_Girey_army.png"
+				small = "gfx/interface/ideas/idea_CIN_Vassan_Girey_army.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}	
+		
+	}
+	CIN_Dzhalav_Tonayev = {
+		name = "Dzhalav Tonayev" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/MTR/Portrait_CIN_Tonayev.png"
+				small = "gfx/interface/ideas/idea_CIN_Tonayev.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				trait_mountaineer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+}
+	

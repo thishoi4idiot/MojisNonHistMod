@@ -1,0 +1,54 @@
+characters = {
+	
+	
+	DAG_Haidar_Bammatov = {
+		name = "Haidar Bammatov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MTR/Portrait_DAG_Haidar_Bammatov.png"
+			}
+			army = {
+				large = "gfx/leaders/MTR/Portrait_DAG_Haidar_Bammatov_army.png"
+				small = "gfx/interface/ideas/idea_DAG_Haidar_Bammatov_army.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+				trait_reckless
+				trickster
+				cavalry_leader
+				trait_mountaineer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		
+	}
+	
+	DAG_Shamkhal_Nukh_Bek_Tarkovsky = {
+		name = "Nukh-Bek Tarkovsky" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/MTR/Portrait_DAG_Shamkhal_Nukh_Bek_Tarkovsky.png"
+				small = "gfx/interface/ideas/idea_DAG_Shamkhal_Nukh_Bek_Tarkovsky.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+				cavalry_officer
+				trait_mountaineer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}
+	

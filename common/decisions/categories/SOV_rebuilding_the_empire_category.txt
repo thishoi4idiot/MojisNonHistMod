@@ -1,0 +1,18 @@
+SOV_rebuilding_the_empire_category = {
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		always = yes
+	}
+	visible_when_empty = yes
+	visible = {
+		original_tag = SOV
+		OR = {
+			has_completed_focus = SOV_romanov_reconstruction
+			has_completed_focus = SOV_westward_bound
+		}
+	}
+	priority = {
+		base = 100
+	}
+}

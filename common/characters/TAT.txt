@@ -1,0 +1,23 @@
+characters = {
+	
+	
+	TAT_Gainan_kurmashev = {
+		name = "Gainan Kurmashev"
+		portraits = {
+			army = {
+				large=  "gfx/leaders/TAT/Portrait_TAT_Gainan_Nurievich_Kurmashev.png"
+				small = "gfx/interface/ideas/idea_TAT_Gainan_Nurievich_Kurmashev.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+			
+}
+	

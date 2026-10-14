@@ -1,0 +1,930 @@
+SOV_rebuilding_the_empire_category = {
+	SOV_reestablish_congressional_poland = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_secure_poland
+				controls_state = 10
+				controls_state = 90
+				controls_state = 92
+				controls_state = 88
+				controls_state = 87
+				controls_state = 98
+				controls_state = 91
+				controls_state = 89
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+				state = 90
+				state = 92
+				state = 88
+				state = 87
+				state = 98
+				state = 91
+				state = 89
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			if = {
+				limit = { country_exists = POL }
+				create_dynamic_country = {
+					original_tag = POL
+					10 = {
+						transfer_state_to = PREV
+					}
+					90 = {
+						transfer_state_to = PREV
+					}
+					92 = {
+						transfer_state_to = PREV
+					}
+					88 = {
+						transfer_state_to = PREV
+					}
+					87 = {
+						transfer_state_to = PREV
+					}
+					98 = {
+						transfer_state_to = PREV
+					}
+					91 = {
+						transfer_state_to = PREV
+					}
+					89 = {
+						transfer_state_to = PREV
+					}
+					set_cosmetic_tag = SOV_CONGRESSIONAL_POLAND
+					add_ideas = SOV_russian_economic_dominance
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_personal_union
+						}
+					}
+				}
+			}
+			else = {
+				10 = {
+					transfer_state_to = POL
+				}
+				90 = {
+					transfer_state_to = POL
+				}
+				92 = {
+					transfer_state_to = POL
+				}
+				88 = {
+					transfer_state_to = POL
+				}
+				87 = {
+					transfer_state_to = POL
+				}
+				98 = {
+					transfer_state_to = POL
+				}
+				91 = {
+					transfer_state_to = POL
+				}
+				89 = {
+					transfer_state_to = POL
+				}
+				POL = {
+					set_cosmetic_tag = SOV_CONGRESSIONAL_POLAND
+					add_ideas = SOV_russian_economic_dominance
+				}
+				set_autonomy = {
+					target = POL
+					autonomy_state = autonomy_personal_union
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	SOV_reestablish_baltic_governates = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_secure_the_baltics
+				controls_state = 12
+				controls_state = 808
+				controls_state = 810
+				controls_state = 809
+				controls_state = 190
+				controls_state = 13
+				controls_state = 191
+				controls_state = 811
+				controls_state = 812
+				controls_state = 813
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 12
+				state = 808
+				state = 810
+				state = 809
+				state = 190
+				state = 13
+				state = 191
+				state = 811
+				state = 812
+				state = 813
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			810 = {
+				add_core_of = ROOT
+			}
+			if = {
+				limit = { country_exists = UBD }
+				create_dynamic_country = {
+					original_tag = UBD
+					12 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					808 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					809 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					190 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					13 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					191 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					811 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					812 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					813 = {
+						transfer_state_to = PREV
+						add_core_of = PREV
+					}
+					set_cosmetic_tag = SOV_BALTIC_GOVERNANCE
+					add_ideas = SOV_russian_economic_dominance
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_personal_union
+						}
+					}
+				}
+			}
+			else = {
+				12 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				808 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				809 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				190 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				13 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				191 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				811 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				812 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				813 = {
+					transfer_state_to = UBD
+					add_core_of = UBD
+				}
+				UBD = {
+					set_cosmetic_tag = SOV_BALTIC_GOVERNANCE
+					add_ideas = SOV_russian_economic_dominance
+				}
+				set_autonomy = {
+					target = UBD
+					autonomy_state = autonomy_personal_union
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	SOV_reestablish_grand_duchy_of_finland = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_secure_finland
+				controls_state = 111
+				controls_state = 928
+				controls_state = 146
+				controls_state = 926
+				controls_state = 927
+				controls_state = 930
+				controls_state = 150
+				controls_state = 149
+				controls_state = 929
+				controls_state = 148
+				controls_state = 147
+				controls_state = 145
+				controls_state = 722
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 111
+				state = 928
+				state = 146
+				state = 926
+				state = 927
+				state = 930
+				state = 150
+				state = 149
+				state = 929
+				state = 148
+				state = 147
+				state = 145
+				state = 722
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		days_remove = 30
+		fire_only_once = yes
+		complete_effect = {
+		}
+		remove_effect = {
+			if = {
+				limit = { country_exists = FIN }
+				create_dynamic_country = {
+					original_tag = FIN
+					111 = {
+						transfer_state_to = PREV
+					}
+					928 = {
+						transfer_state_to = PREV
+					}
+					146 = {
+						transfer_state_to = PREV
+					}
+					926 = {
+						transfer_state_to = PREV
+					}
+					927 = {
+						transfer_state_to = PREV
+					}
+					930 = {
+						transfer_state_to = PREV
+					}
+					150 = {
+						transfer_state_to = PREV
+					}
+					149 = {
+						transfer_state_to = PREV
+					}
+					929 = {
+						transfer_state_to = PREV
+					}
+					148 = {
+						transfer_state_to = PREV
+					}
+					147 = {
+						transfer_state_to = PREV
+					}
+					145 = {
+						transfer_state_to = PREV
+					}
+					722 = {add_core_of = SOV}
+					set_cosmetic_tag = SOV_GRAND_DUCHY_OF_FINLAND
+					add_ideas = SOV_russian_economic_dominance
+					ROOT = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_personal_union
+						}
+					}
+				}
+			}
+			else = {
+				111 = {
+					transfer_state_to = FIN
+				}
+				928 = {
+					transfer_state_to = FIN
+				}
+				146 = {
+					transfer_state_to = FIN
+				}
+				926 = {
+					transfer_state_to = FIN
+				}
+				927 = {
+					transfer_state_to = FIN
+				}
+				930 = {
+					transfer_state_to = FIN
+				}
+				150 = {
+					transfer_state_to = FIN
+				}
+				149 = {
+					transfer_state_to = FIN
+				}
+				929 = {
+					transfer_state_to = FIN
+				}
+				148 = {
+					transfer_state_to = FIN
+				}
+				147 = {
+					transfer_state_to = FIN
+				}
+				145 = {
+					transfer_state_to = FIN
+				}
+				722 = {
+					transfer_state_to = FIN
+				}
+				FIN = {
+					set_cosmetic_tag = SOV_GRAND_DUCHY_OF_FINLAND
+					add_ideas = SOV_russian_economic_dominance
+				}
+				set_autonomy = {
+					target = FIN
+					autonomy_state = autonomy_personal_union
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	SOV_pressure_romania = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_completed_focus = SOV_westward_bound
+		}
+		targets = { ROM }
+		target_trigger = {
+			FROM = {
+				OR = {
+					owns_state = 78
+					owns_state = 766
+				}
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			has_completed_focus = SOV_westward_bound
+		}
+		available = {
+			NOT = { has_war_with = FROM }
+		}
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 78
+				state = 766
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_pressure_romania.1 }
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	SOV_give_autonomy_to_the_cossacks = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_lessons_from_the_past
+			controls_state = 236
+			controls_state = 237
+			controls_state = 238
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 236
+				state = 237
+				state = 238
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		complete_effect = {
+			236 = {
+				transfer_state_to = DON
+				add_core_of = DON
+			}
+			237 = {
+				transfer_state_to = DON
+				add_core_of = DON
+			}
+			238 = {
+				transfer_state_to = DON
+				add_core_of = DON
+			}
+			set_autonomy = {
+				target = DON
+				autonomy_state = autonomy_personal_union
+			}
+			DON = {
+				add_ideas = SOV_russian_economic_dominance
+			}
+			set_country_flag = SOV_don_autonomy_given_flag
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_give_autonomy_to_the_kuban_cossacks = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_lessons_from_the_past
+			controls_state = 233
+			controls_state = 234
+			controls_state = 235
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 233
+				state = 234
+				state = 235
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		complete_effect = {
+			233 = {
+				transfer_state_to = KUB
+				add_core_of = KUB
+			}
+			234 = {
+				transfer_state_to = KUB
+				add_core_of = KUB
+			}
+			235 = {
+				transfer_state_to = KUB
+				add_core_of = KUB
+			}
+			set_autonomy = {
+				target = KUB
+				autonomy_state = autonomy_personal_union
+			}
+			KUB = {
+				add_ideas = SOV_russian_economic_dominance
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_reach_out_to_bulgaria = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_completed_focus = SOV_westward_bound
+		}
+		targets = { BUL }
+		target_trigger = {
+			FROM = {
+				NOT = { is_in_faction_with = ROOT }
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			has_completed_focus = SOV_westward_bound
+		}
+		available = {
+			is_faction_leader = yes
+			NOT = { has_war_with = FROM }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_reach_bulgaria.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_request_bulgarian_vassalage = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		targets = { BUL }
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_bulgarian_vassalage.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_press_bulgarian_claims_to_dobruja = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_country_flag = SOV_bulgaria_in_faction_flag
+		}
+		targets = { ROM }
+		target_trigger = {
+			FROM = {
+				owns_state = 77
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			has_country_flag = SOV_bulgaria_in_faction_flag
+		}
+		available = {
+			BUL = { is_in_faction_with = ROOT }
+			NOT = { has_war_with = FROM }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 77
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_dobruja.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_restart_the_great_game = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_the_new_great_game
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = SOV_great_game_restarted_flag
+			custom_effect_tooltip = SOV_restart_the_great_game_unlock_tt
+			if = {
+				limit = { country_exists = PER }
+				PER = {
+					country_event = { id = SOV_great_game.1 }
+				}
+			}
+			if = {
+				limit = { country_exists = AFG }
+				AFG = {
+					country_event = { id = SOV_great_game.1 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_reintegrate_belarus_and_lithuania = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_romanov_reconstruction
+		}
+		available = {
+			has_completed_focus = SOV_secure_the_baltics
+			controls_state = 189
+			controls_state = 815
+			controls_state = 11
+			controls_state = 814
+			controls_state = 784
+			controls_state = 96
+			controls_state = 95
+			controls_state = 97
+			controls_state = 94
+			controls_state = 93
+			189 = {
+				compliance > 20
+			}
+			815 = {
+				compliance > 20
+			}
+			11 = {
+				compliance > 20
+			}
+			814 = {
+				compliance > 20
+			}
+			784 = {
+				compliance > 20
+			}
+			96 = {
+				compliance > 20
+			}
+			95 = {
+				compliance > 20
+			}
+			97 = {
+				compliance > 20
+			}
+			94 = {
+				compliance > 20
+			}
+			93 = {
+				compliance > 20
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 189
+				state = 815
+				state = 11
+				state = 814
+				state = 784
+				state = 96
+				state = 95
+				state = 97
+				state = 94
+				state = 93
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		complete_effect = {
+			189 = {
+				add_core_of = ROOT
+			}
+			815 = {
+				add_core_of = ROOT
+			}
+			11 = {
+				add_core_of = ROOT
+			}
+			814 = {
+				add_core_of = ROOT
+			}
+			784 = {
+				add_core_of = ROOT
+			}
+			96 = {
+				add_core_of = ROOT
+			}
+			95 = {
+				add_core_of = ROOT
+			}
+			97 = {
+				add_core_of = ROOT
+			}
+			94 = {
+				add_core_of = ROOT
+			}
+			93 = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	SOV_demand_afghani_submission = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_country_flag = SOV_great_game_restarted_flag
+		}
+		targets = { AFG }
+		target_trigger = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+		}
+		available = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			NOT = { has_war_with = FROM }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_afghan_demand.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_demand_persian_submission = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_country_flag = SOV_great_game_restarted_flag
+		}
+		targets = { PER }
+		target_trigger = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+		}
+		available = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			NOT = { has_war_with = FROM }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_persian_demand.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_pressure_the_turks = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		target_root_trigger = {
+			has_country_flag = SOV_great_game_restarted_flag
+		}
+		targets = { TUR }
+		target_trigger = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			FROM = {
+				owns_state = 354
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		visible = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+		}
+		available = {
+			ROOT = { has_country_flag = SOV_great_game_restarted_flag }
+			NOT = { has_war_with = FROM }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 354
+			}
+			highlight_color_while_active = 3
+			highlight_color_before_active = 3
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				country_event = { id = SOV_turkey_demand.1 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	SOV_end_communism_in_the_far_east = {
+		icon = GFX_decision_generic_decision
+		allowed = {
+			original_tag = SOV
+		}
+		visible = {
+			has_completed_focus = SOV_reestablish_influence_in_the_east
+		}
+		available = {
+			NOT = { has_war_with = TAN }
+			NOT = { has_war_with = MON }
+		}
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = { country_exists = TAN }
+				TAN = {
+					country_event = { id = SOV_far_east.1 }
+				}
+			}
+			if = {
+				limit = { country_exists = MON }
+				MON = {
+					country_event = { id = SOV_far_east.2 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+}

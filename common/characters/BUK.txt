@@ -1,0 +1,50 @@
+characters = {
+	BUK_mohammed_alim_khan = {
+		name = "Sayyid Mir Muhammad Alim Khan" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BUK/Portrait_BUK_Mohammed_Alim.png"
+				small = "gfx/interface/ideas/idea_BUK_Mohammed_Alim.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				old_guard
+				politically_connected
+				cavalry_officer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				has_government = neutrality
+			}
+		}
+		
+	}
+	
+	
+	BUK_Shahmurad_khan = { # son of muhammad alim
+		name = "Shahmurad Khan" 
+		portraits = {
+			army = {
+				large = "gfx/leaders/BUK/Portrait_BUK_Shahmurad_Khan.png"
+				small = "gfx/interface/ideas/idea_BUK_Shahmurad_Khan.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		
+	}
+}
+	
