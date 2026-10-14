@@ -3557,7 +3557,7 @@ country_event = {
 				}
 			}
 			modifier = {
-				factor = 0.01
+				factor = 0
 				original_tag = YUG
 				FROM = { original_tag = ITA }
 			}
