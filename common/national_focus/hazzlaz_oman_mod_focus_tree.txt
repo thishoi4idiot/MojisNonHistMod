@@ -1,5 +1,5 @@
 focus_tree = {
-    id = new_focus_tree
+    id = hazzlaz_oman_mod_focus_tree
     default = no
     country = {
         factor = 0
@@ -195,8 +195,8 @@ focus_tree = {
                     level = 2
                     instant_build = yes
                 }
-                add_ideas = national_spirit_omaninavy1
             }
+                add_ideas = national_spirit_omaninavy1
         }
         ai_will_do = {
             factor = 1
@@ -226,10 +226,6 @@ focus_tree = {
             					type = anti_air_building
             					level = 1
             					instant_build = yes
-            					province = {
-            						all_provinces = yes
-            						limit_to_naval_base = yes
-            					}
             				}
             	}
         }
@@ -710,19 +706,23 @@ focus_tree = {
         cost = 5
         prerequisite = { focus = hazzlaz_oman_mod_legnav }
         completion_reward = {
-            limit = { has_dlc = "Man the Guns" }
+            if = {
+                limit = { has_dlc = "Man the Guns" }
             				add_tech_bonus = {
             					name = OMA_naval_guns
             					bonus = 1.0
             					uses = 1
             					category = cat_ship_heavy_battery
             }
-            limit = { has_dlc = "Man the Guns" }
+            }
+            if = {
+                limit = { has_dlc = "Man the Guns" }
             				add_tech_bonus = {
             					name = OMA_naval_guns
             					bonus = 1.0
             					uses = 1
             					category = cat_ship_light_battery
+            }
             }
             navy_experience = 50
         }
@@ -1084,10 +1084,7 @@ focus_tree = {
         cost = 5
         prerequisite = { focus = my_hoi4_mod_fishy }
         available = {
-            has_navy_size = {
-                type = destroyer
-                size > 1
-            }
+            has_navy_size = { size > 1 }
         }
         completion_reward = {
             add_political_power = 150
@@ -1786,7 +1783,7 @@ focus_tree = {
             					category = special_forces_doctrine
             				}
             custom_effect_tooltip = GRE_mountain_training_effect
-            						hidden_effect = { set_technology {mountain_warfare = 1 } }
+            						hidden_effect = { set_technology = { mountain_warfare = 1 } }
             		custom_effect_tooltip = generic_skip_one_line_tt
             random_army_leader = {
             			limit = { #General/FM doesn't have a terrain trait already
@@ -2005,7 +2002,7 @@ focus_tree = {
                 name = OMA_intensify_torpedo_manufacturing
                 bonus = 0.1
                 days = 180
-                track = naval_carrier
+                track = carriers
             }
         }
         ai_will_do = {

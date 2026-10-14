@@ -1,3 +1,0 @@
-OMA = "countries/Oman.txt"
-LBA = "countries/Libya.txt"
-ENG = "countries/United Kingdom.txt"
