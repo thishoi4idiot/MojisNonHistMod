@@ -1,0 +1,4098 @@
+focus_tree = {
+    id = new_focus_tree
+    default = no
+    country = {
+        factor = 0
+        modifier = {
+            add = 1000
+            tag = OMA
+        }
+    }
+    continuous_focus_position = { x = 34 y = 1072 }
+
+    focus = {
+        id = my_hoi4_mod_isolateco
+        icon = GFX_focus_INS_guided_economy
+        x = 2
+        y = -1
+        cost = 5
+        completion_reward = {
+            add_political_power = 25
+            add_stability = 0.03
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sultmao
+        icon = GFX_focus_generic_islamic_propaganda
+        x = 20
+        y = -1
+        cost = 5
+        completion_reward = {
+            add_political_power = 75
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_stateofmils
+        icon = GFX_focus_SMB_atacama_training
+        x = 46
+        y = -1
+        cost = 2
+        completion_reward = {
+            add_war_support = 0.02
+            army_experience = 25
+            navy_experience = 25
+            air_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_new_awayfromagra
+        icon = GFX_focus_SIA_the_hammers_that_strike
+        x = -2
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_isolateco }
+        mutually_exclusive = { focus = my_hoi4_mod_ruralcomm }
+        completion_reward = {
+            add_political_power = -100
+            add_stability = -0.05
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_ruralcomm
+        icon = GFX_focus_AFG_contact_rural_loyalists
+        x = 6
+        y = 0
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_isolateco }
+        mutually_exclusive = { focus = my_hoi4_mod_new_awayfromagra }
+        completion_reward = {
+            add_political_power = 75
+            add_stability = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_education
+        icon = GFX_focus_AFG_education_reform
+        x = 18
+        y = 0
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_sultmao }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_pooreducation
+                add_idea = national_spirit_pooreducation2
+            }
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_newwayfowards
+        icon = GFX_focus_AFG_promote_the_counter_elite
+        x = 22
+        y = 0
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_sultmao }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_decline
+                add_idea = national_spirit_seekfuture
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_muscatinfb
+        icon = GFX_focus_generic_military_mission
+        x = 31
+        y = 0
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_stateofmils }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_reconstructarmyoma }
+        completion_reward = {
+            add_manpower = 2500
+            add_stability = 0.03
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_reconstructarmyoma
+        icon = GFX_focus_RAJ_a_private_military
+        x = 39
+        y = 0
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_stateofmils }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_muscatinfb }
+        completion_reward = {
+            294 = {
+                add_building_construction = {
+                    type = land_facility
+                    province = 4993
+                    level = 1
+                    instant_build = yes
+                }   
+            }
+            army_experience = 75
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_legnav
+        icon = GFX_focus_SWE_coastal_support
+        x = 46
+        y = 0
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_stateofmils }
+        completion_reward = {
+            294 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+                add_ideas = national_spirit_omaninavy1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_aaomafocus
+        icon = GFX_focus_PER_construct_air_defenses
+        x = 52
+        y = 0
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_stateofmils }
+        completion_reward = {
+            			add_tech_bonus = {
+            				name = OMA_anti_air
+            			    bonus = 0.75
+            			    uses = 3
+            			    category = cat_anti_air
+            	}
+            	every_owned_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            					naval_base > 0
+            				}
+            				add_building_construction = {
+            					type = anti_air_building
+            					level = 1
+            					instant_build = yes
+            					province = {
+            						all_provinces = yes
+            						limit_to_naval_base = yes
+            					}
+            				}
+            	}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_britisaid
+        icon = GFX_focus_generic_british_trade
+        x = -4
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_new_awayfromagra }
+        bypass_if_unavailable = yes
+        completion_reward = {
+            1016 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_greateresearch
+        icon = GFX_goal_generic_scientific_exchange
+        x = -2
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_new_awayfromagra }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+            NOT = {
+                has_idea = national_spirit_pooreducation
+            }
+        }
+        completion_reward = {
+            add_ideas = national_spirit_leftsideresearch
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_genericeco
+        icon = GFX_goal_generic_construction
+        x = 0
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_new_awayfromagra }
+        completion_reward = {
+            add_stability = -0.05
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_fruitind
+        icon = GFX_focus_AFG_fruit_processing
+        x = 4
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_ruralcomm }
+        completion_reward = {
+            add_stability = 0.10
+            294 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_traderaj
+        icon = GFX_focus_generic_camel_corps
+        x = 6
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_ruralcomm }
+        completion_reward = {
+            add_ideas = national_spirit_camels
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_fishy
+        icon = GFX_focus_INS_just_a_fisherman
+        x = 8
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_ruralcomm }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+            type = convoy_1
+            amount = 25
+            producer = OMA
+            }
+            294 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_buildnewschooluwu
+        icon = GFX_focus_generic_university_3
+        x = 15
+        y = 1
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_education }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+        }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_pooreducation2
+                add_idea = national_spirit_pooreducation3
+            }
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_welovetax
+        icon = GFX_focus_RAJ_war_taxes
+        x = 17
+        y = 1
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_education }
+        completion_reward = {
+                add_timed_idea = {
+                    idea = new_national_spirit_mojitaxes
+                    days = 365
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_intergrateinterior
+        icon = GFX_focus_SIA_the_duty_of_the_thai_people_during_the_war_act
+        x = 23
+        y = 1
+        cost = 3
+        prerequisite = { focus = hazzlaz_oman_mod_newwayfowards }
+        completion_reward = {
+            1015 = {
+            add_compliance = 20
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omanispartofushappy
+        icon = GFX_goal_hazzlaz_oman_mod_hazzlaz_oman_mod_omanispartofushappy
+        x = 25
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_newwayfowards }
+        available = {
+            1015 = {
+            is_core_of = oma
+            }
+        }
+        completion_reward = {
+            1015 = {
+            set_demilitarized_zone = no
+            }
+            1015 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_merc1
+        icon = GFX_focus_CZE_army_reform
+        x = 28
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_muscatinfb }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_muscatiinf
+                add_idea = national_spirit_muscatiinf2    
+            }
+            add_ideas = national_spirit_recruitconscoma
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_romaniantactics
+        icon = GFX_focus_generic_arms_trade
+        x = 30
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_muscatinfb }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_stealresources }
+        completion_reward = {
+            add_ideas = national_spirit_stealequipmentlikejosteelsmyhoi4games
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_stealresources
+        icon = GFX_focus_SIA_steel_arteries
+        x = 32
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_muscatinfb }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_romaniantactics }
+        completion_reward = {
+            add_ideas = national_spirit_resourceisssuearmy
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_improveweaponlines1
+        icon = GFX_focus_FIN_weapon_caches
+        x = 34
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_muscatinfb }
+        completion_reward = {
+            1013 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+            }
+            add_ideas = national_spirit_cutcornersproduc
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_overhalll
+        icon = GFX_goal_generic_allies_build_infantry
+        x = 36
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_reconstructarmyoma }
+        available = {
+            has_equipment = {
+            infantry_equipment > 999
+            			}
+        }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = OMA_Research_Catchup
+            bonus = 1.0
+            uses = 2
+            category = infantry_weapons
+            ahead_reduction = 1
+            }
+            add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -1000
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_mechwar
+        icon = GFX_focus_generic_mechanized
+        x = 38
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_reconstructarmyoma }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = OMA_Research_Mech
+            bonus = 1.0
+            uses = 1
+            category = motorized_equipment
+            }
+            army_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_rightsiderecruitoma
+        icon = GFX_focus_generic_army_attack
+        x = 40
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_reconstructarmyoma }
+        completion_reward = {
+            add_ideas = national_spirit_recruitconscoma
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omamob
+        icon = GFX_focus_generic_full_social_mobilization
+        x = 42
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_reconstructarmyoma }
+        available = {
+            NOT = { has_idea = undisturbed_isolation }
+        }
+        completion_reward = {
+            add_war_support = 0.15
+            if = {
+                limit = {
+                    NOT = {
+                        has_idea = partial_economic_mobilisation
+                    }
+                    NOT = {
+                        has_idea = war_economy
+                    }
+                    NOT = {
+                        has_idea = tot_economic_mobilisation
+                    }
+                }
+                add_ideas = partial_economic_mobilisation    
+            }
+            else_if = {
+                limit = {
+                    NOT = {
+                        has_idea = war_economy
+                    }
+                    NOT = {
+                        has_idea = tot_economic_mobilisation
+                    }
+                }
+                add_ideas = war_economy
+            }
+            else = {
+                add_political_power = 150
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_marine
+        icon = GFX_goal_generic_amphibious_assault
+        x = 44
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_legnav }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = OMA_marine_bonus
+            				bonus = 1.0
+            				uses = 1
+            				category = marine_tech
+            }
+            add_tech_bonus = {
+            				name = OMA_transport
+            				bonus = 1.0
+            				uses = 1
+            				category = tp_tech
+            }
+            	add_doctrine_cost_reduction = {
+            					name = OMA_specialforces
+            					cost_reduction = 0.5
+            					uses = 1
+            					category = special_forces_doctrine
+            				}
+            add_mastery_bonus = {
+            						name = OMA_marines_1
+            						bonus = 0.1
+            						days = 240
+            						sub_doctrine = marines_1
+            					}
+            					add_mastery_bonus = {
+            						name = OMA_marines_2
+            						bonus = 0.1
+            						days = 240
+            						sub_doctrine = marines_2
+            					}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_navfirepower
+        icon = GFX_focus_generic_battleship_guns
+        x = 46
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_legnav }
+        completion_reward = {
+            limit = { has_dlc = "Man the Guns" }
+            				add_tech_bonus = {
+            					name = OMA_naval_guns
+            					bonus = 1.0
+            					uses = 1
+            					category = cat_ship_heavy_battery
+            }
+            limit = { has_dlc = "Man the Guns" }
+            				add_tech_bonus = {
+            					name = OMA_naval_guns
+            					bonus = 1.0
+            					uses = 1
+            					category = cat_ship_light_battery
+            }
+            navy_experience = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_port
+        icon = GFX_goal_generic_construct_naval_dockyard
+        x = 48
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_legnav }
+        completion_reward = {
+            294 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            }
+            294 = {
+            add_building_construction = {
+            type = naval_base
+            province = 1947
+            level = 1
+            instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omaweloveoil
+        icon = GFX_focus_IRQ_nationalize_the_anglo_iraqi_oil_company
+        x = 52
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_aaomafocus }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = Oma_IPC
+            				bonus = 1
+            				uses = 1
+            				category = excavation_tech	
+            }
+            random_core_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            				}
+            				add_resource = {
+            					type = oil
+            					amount = 8
+            				}
+            				prioritize = {1015}
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_airfocus1oma
+        icon = GFX_goal_generic_air_fighter2
+        x = 54
+        y = 1
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_aaomafocus }
+        completion_reward = {
+            add_tech_bonus = {
+                name = OMA_Air_bonus
+                bonus = 0.25
+                uses = 8
+                category = air_equipment
+            }
+            air_experience = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_airfocus2oma
+        icon = GFX_focus_generic_air_research_boost
+        x = 56
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_aaomafocus }
+        bypass_if_unavailable = yes
+        completion_reward = {
+            add_tech_bonus = {
+                name = OMA_Air_bonus
+                bonus = 1
+                uses = 1
+                category = air_equipment
+            }
+            1015 = {
+                add_building_construction = {
+                    type = air_facility
+                    province = 2018
+                    level = 1
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_tourismoma
+        icon = GFX_focus_SMB_purchase_aircraft
+        x = 58
+        y = 1
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_aaomafocus }
+        available = {
+            has_equipment = {
+            				transport_plane_equipment > 74
+            			}
+        }
+        completion_reward = {
+            add_ideas = national_spiritcomcercialair
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_millindustry
+        icon = GFX_focus_generic_military_industry
+        x = -5
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_britisaid }
+        completion_reward = {
+            1013 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_ruraid
+        icon = GFX_focus_generic_befriend_turkey
+        x = -3
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_greateresearch }
+        mutually_exclusive = { focus = my_hoi4_mod_sauaid }
+        completion_reward = {
+            294 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            }
+            294 = {    
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_sauaid
+        icon = GFX_focus_generic_befriend_saudi_arabia
+        x = -1
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_greateresearch }
+        mutually_exclusive = { focus = my_hoi4_mod_ruraid }
+        completion_reward = {
+            1015 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_heavyindust
+        icon = GFX_focus_CHI_planned_economy
+        x = 1
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_genericeco }
+        completion_reward = {
+            add_stability = -0.10
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_incomefarm
+        icon = GFX_focus_generic_farmland
+        x = 3
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_fruitind }
+        completion_reward = {
+            add_political_power = 50
+            1013 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = industrial_complex
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_cattlewool
+        icon = GFX_focus_CHL_focus_on_cattle_and_wool
+        x = 5
+        y = 2
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_traderaj }
+        mutually_exclusive = { focus = my_hoi4_mod_profitregionaltrade }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_profitregionaltrade
+        icon = GFX_goal_generic_construct_infrastructure
+        x = 7
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_traderaj }
+        mutually_exclusive = { focus = my_hoi4_mod_cattlewool }
+        completion_reward = {
+            294 = {
+            add_extra_state_shared_building_slots = 5
+            add_building_construction = {
+                type = industrial_complex
+                level = 1
+                instant_build = yes
+            }
+            }
+            1015 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            1013 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_navaltrade
+        icon = GFX_focus_PER_persian_gulf_fleet
+        x = 9
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_fishy }
+        available = {
+            has_navy_size = {
+                type = destroyer
+                size > 1
+            }
+        }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = 0.10
+            add_war_support = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_abroad
+        icon = GFX_focus_PER_university_of_isfahan
+        x = 14
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_buildnewschooluwu }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_tech_bonus = {
+                name = electronics_bonus
+                bonus = 0.75
+                uses = 1
+                category = electronics
+            }
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = oman_mod_modernizewestresearch
+        icon = GFX_focus_generic_approach_the_west
+        x = 16
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_buildnewschooluwu }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+            1015 = {
+            is_core_of = oma
+            }
+        }
+        completion_reward = {
+            remove_ideas = national_spirit_pooreducation3
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_placeinregionoma
+        icon = GFX_focus_PER_march_to_nile
+        x = 20
+        y = 2
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_education }
+        prerequisite = { focus = hazzlaz_oman_mod_newwayfowards }
+        completion_reward = {
+            add_political_power = 25
+            add_war_support = 0.05
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_merc2
+        icon = GFX_focus_GER_support_the_proletarian_uprising
+        x = 28
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_merc1 }
+        completion_reward = {
+            add_war_support = 0.10
+            		if = {
+            				limit = {
+            					NOT = { has_idea = scraping_the_barrel }
+            					NOT = { has_idea = all_adults_serve }
+            					NOT = { has_idea = service_by_requirement }
+            NOT = { has_idea = extensive_conscription }
+            				}
+            				add_ideas = extensive_conscription      
+            			}
+            			else_if = {
+            				limit = {
+            					NOT = { has_idea = service_by_requirement }
+            					NOT = { has_idea = all_adults_serve }
+            NOT = { has_idea = scraping_the_barrel }
+            				}
+            				add_ideas = service_by_requirement
+            			}
+                        else = {
+                            add_political_power = 150
+                        }            
+                       swap_ideas = {
+                remove_idea = "national_spirit_muscatiinf2"
+                add_idea = national_spirit_muscatiinf3
+            }
+            swap_ideas = {
+                remove_idea = national_spirit_recruitconscoma
+                add_idea = national_spirit_recruitconscoma2    
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_begusalikeisreal
+        icon = GFX_focus_PHI_small_arms_and_artillery_requisition
+        x = 30
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_stealresources focus = hazzlaz_oman_mod_romaniantactics }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_gertanksoma }
+        available = {
+            USA = {
+               has_opinion = {
+                  target = OMA
+                value > 79
+               }
+            }
+        }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 7500
+            producer = USA
+            }
+            add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 500
+            producer = USA
+            }
+            add_equipment_to_stockpile = {
+            type = motorized_equipment_1
+            amount = 220
+            producer = USA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_gertanksoma
+        icon = GFX_focus_BRA_acquire_german_tanks
+        x = 32
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_romaniantactics focus = hazzlaz_oman_mod_stealresources }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_begusalikeisreal }
+        available = {
+            GER = {
+               has_opinion = {
+                  target = OMA
+                value > 79
+               }
+            }
+        }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = GER_Research_Tank_Development
+            bonus = 1.0
+            uses = 1
+            category = armor
+            }
+            add_equipment_to_stockpile = {
+            type = light_tank_chassis_1
+            amount = 360
+            producer = GER
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_improveweaponsline2
+        icon = GFX_focus_SOV_merge_plants
+        x = 34
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_improveweaponlines1 }
+        available = {
+            arms_factory > 14
+        }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_cutcornersproduc
+                add_idea = national_spirit_cutcornersproduc2
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_logistics
+        icon = GFX_focus_SOV_the_road_of_life
+        x = 36
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_overhalll }
+        available = {
+            has_equipment = {
+            				motorized_equipment > 249
+            			}
+        }
+        completion_reward = {
+            add_ideas = national_spirit_transportsupp
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_tankwar
+        icon = GFX_focus_generic_army_tanks2
+        x = 38
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_mechwar }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = Modern_Research_Tank_Development
+            bonus = 1.0
+            uses = 2
+            category = armor
+            ahead_reduction = 1
+            }
+            army_experience = 100
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omatrainarmy
+        icon = GFX_focus_SMB_special_forces_option_1
+        x = 40
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_rightsiderecruitoma }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = "national_spirit_muscatiinf"
+                add_idea = national_spirit_muscatregimental
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_coastart
+        icon = GFX_focus_PHI_beach_defense_strategy
+        x = 42
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_marine }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = OMA_Research_Artillery_Development
+            bonus = 1.0
+            uses = 1
+            category = artillery
+            ahead_reduction = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_forts
+        icon = GFX_goal_generic_fortify_city
+        x = 44
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_marine }
+        completion_reward = {
+            		IF = {
+            				limit = {
+            					has_dlc = "Gotterdammerung"
+            				}
+            				IF = {
+            					limit = {
+            						NOT = { is_special_project_completed = sp:sp_land_stronghold_network }
+            					}
+            					complete_special_project = sp:sp_land_stronghold_network
+            				}
+            				IF = {
+            					limit = {
+            					294 = { #Muscat
+            							is_fully_controlled_by = ROOT
+            							stronghold_network < 1
+            							free_building_slots = {
+            								building = industrial_complex
+            								size > 0
+            								include_locked = yes
+            							}
+            						}
+            					}
+            					294 = { #Muscat
+            						add_extra_state_shared_building_slots = 1
+            						add_building_construction = {
+            							type = stronghold_network
+            							level = 1
+            							instant_build = yes
+            						}
+            					}	
+            				}}
+            	every_owned_state = {
+            				limit = {
+            					is_fully_controlled_by = ROOT
+            					naval_base > 0
+            				}
+            				add_building_construction = {
+            					type = coastal_bunker
+            					level = 2
+            					instant_build = yes
+            					province = {
+            						all_provinces = yes
+            						limit_to_naval_base = yes
+            					}
+            				}
+            			}
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_complexnavdev
+        icon = GFX_focus_generic_midget_submarines
+        x = 46
+        y = 2
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_navfirepower }
+        completion_reward = {
+            1013 = {
+                add_building_construction = {
+                    type = naval_facility
+                    province = 13369
+                    level = 1
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_concessnavyyay
+        icon = GFX_focus_generic_concessions
+        x = 48
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_port }
+        available = {
+            has_political_power > 150
+        }
+        completion_reward = {
+            1013 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }   
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = dockyard
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            add_political_power = -150
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sauomanav
+        icon = GFX_focus_generic_befriend_saudi_arabia
+        x = 50
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_port }
+        available = {
+            SAU = {
+               has_opinion = {
+                  target = OMA
+                value > 79
+               }
+            }
+        }
+        bypass = {
+            SAU = {
+            exists = no
+            }
+        }
+        completion_reward = {
+            1016 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            }
+            678 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_airfocus3oma
+        icon = GFX_focus_generic_cas_aircraft
+        x = 54
+        y = 2
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_airfocus1oma }
+        completion_reward = {
+            add_tech_bonus = {
+                name = OMA_Air_bonus
+                bonus = 1
+                uses = 1
+                category = air_equipment
+                ahead_reduction = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_minorcentralise
+        icon = GFX_focus_generic_central_planning
+        x = -4
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_millindustry }
+        completion_reward = {
+            add_ideas = national_spirit_centralisedindustry
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_openoureco
+        icon = GFX_focus_generic_devaluation
+        x = -2
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_sauaid focus = my_hoi4_mod_ruraid }
+        available = {
+            has_political_power > 200
+        }
+        completion_reward = {
+            remove_ideas = national_spirit_isolationeco
+            add_ideas = free_trade
+            add_ideas = civilian_economy
+            add_political_power = -200
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_modernizeind
+        icon = GFX_focus_JAP_the_five_great_cities
+        x = 0
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_heavyindust }
+        completion_reward = {
+            add_stability = -0.15
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_tech_bonus = {
+            name = industrial_bonus
+            bonus = 1
+            uses = 2
+            category = industry
+             }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_dammm
+        icon = GFX_focus_generic_hydroelectric_energy
+        x = 2
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_incomefarm focus = hazzlaz_oman_mod_heavyindust }
+        completion_reward = {
+            294 = {
+                add_building_construction = {
+                    type = dam
+                    province = 4993
+                    level = 1
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_agrisubsid
+        icon = GFX_focus_generic_agricultural_subsidies
+        x = 4
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_incomefarm }
+        completion_reward = {
+            1013 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_textileind
+        icon = GFX_focus_CHL_enlarge_the_textile_industries
+        x = 6
+        y = 3
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_cattlewool focus = my_hoi4_mod_profitregionaltrade }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_expandtrade
+        icon = GFX_goal_generic_trade
+        x = 8
+        y = 3
+        cost = 5
+        prerequisite = { focus = my_hoi4_mod_navaltrade }
+        completion_reward = {
+            remove_ideas = national_spirit_isolationeco
+            add_ideas = limited_exports
+            add_ideas = civilian_economy
+            add_tech_bonus = {
+            name = industrial_bonus
+            bonus = 0.75
+            uses = 1
+            category = industry
+             }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_demoandcom
+        icon = GFX_focus_ARG_defense_and_democracy
+        x = 14
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_placeinregionoma }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_fascandnonal }
+        completion_reward = {
+            add_political_power = 100
+            add_stability = 0.10
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fascandnonal
+        icon = GFX_focus_AFG_against_kabul
+        x = 26
+        y = 3
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_placeinregionoma }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_demoandcom }
+        completion_reward = {
+            add_political_power = 100
+            add_war_support = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omamountaintac
+        icon = GFX_focus_generic_mountain_troops
+        x = 33
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_improveweaponsline2 focus = hazzlaz_oman_mod_logistics }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_omadeserttac }
+        completion_reward = {
+            	add_doctrine_cost_reduction = {
+            					name = OMA_specialforces
+            					cost_reduction = 0.5
+            					uses = 1
+            					category = special_forces_doctrine
+            				}
+            custom_effect_tooltip = GRE_mountain_training_effect
+            						hidden_effect = { set_technology {mountain_warfare = 1 } }
+            		custom_effect_tooltip = generic_skip_one_line_tt
+            random_army_leader = {
+            			limit = { #General/FM doesn't have a terrain trait already
+            				NOT = {
+            					has_trait = desert_fox
+            					has_trait = swamp_fox
+            					has_trait = trait_mountaineer
+            					has_trait = hill_fighter
+            					has_trait = jungle_rat
+            					has_trait = ranger
+            					has_trait = urban_assault_specialist
+            					has_trait = winter_specialist
+            				}
+            			}
+            			add_unit_leader_trait = hill_fighter
+            			add_skill_level = 1
+            			add_logistics = 1
+            			add_defense = 1
+            			add_planning = 1
+            		}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omadeserttac
+        icon = GFX_focus_generic_desert_training
+        x = 37
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_improveweaponsline2 focus = hazzlaz_oman_mod_logistics }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_omamountaintac }
+        completion_reward = {
+            	add_doctrine_cost_reduction = {
+            					name = OMA_specialforces
+            					cost_reduction = 0.5
+            					uses = 1
+            					category = special_forces_doctrine
+            				}
+            custom_effect_tooltip = {
+            			localization_key = generic_enables_tech_tt
+            			TECH_EFFECT = tech_effect|desert_training_tech
+            			TECH_NAME = desert_training_tech
+            		}
+            		hidden_effect = { set_technology = { desert_training_tech = 1 } }
+            		custom_effect_tooltip = generic_skip_one_line_tt
+            		random_army_leader = {
+            			limit = { #General/FM doesn't have a terrain trait already
+            				NOT = {
+            					has_trait = desert_fox
+            					has_trait = swamp_fox
+            					has_trait = trait_mountaineer
+            					has_trait = hill_fighter
+            					has_trait = jungle_rat
+            					has_trait = ranger
+            					has_trait = urban_assault_specialist
+            					has_trait = winter_specialist
+            				}
+            			}
+            			add_unit_leader_trait = desert_fox
+            			add_skill_level = 1
+            			add_logistics = 1
+            			add_defense = 1
+            			add_planning = 1
+            		}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fundsfleet
+        icon = GFX_focus_ARG_study_the_battle_of_the_river_plate
+        x = 40
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_coastart }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_defunctnav }
+        completion_reward = {
+            add_ideas = national_spirit_overfundednavy
+            294 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = dockyard
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_defunctnav
+        icon = GFX_focus_SWE_italian_destroyers
+        x = 42
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_coastart }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_fundsfleet }
+        completion_reward = {
+            add_ideas = national_spirit_defunctnavyspend
+            1015 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_royalnavoma
+        icon = GFX_focus_ger_accept_british_naval_dominance
+        x = 44
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_complexnavdev }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_gersubbies }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_flamejapan }
+        completion_reward = {
+            swap_ideas = {
+                    remove_idea = national_spirit_omaninavy1
+                    add_idea = national_spirit_omaninavy2eng
+                }
+            add_tech_bonus = {
+                name = OMA_ddbonus
+                bonus = 1.0
+                uses = 1
+                category = dd_tech
+                ahead_reduction = 1    
+            }
+            add_mastery_bonus = {
+                name = OMA_screenbonus
+                bonus = 0.2
+                days = 180
+                track = screens
+            }
+            add_mastery_bonus = {
+                name = OMA_capitalbonus
+                bonus = 0.2
+                days = 180
+                track = capital_ships
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_gersubbies
+        icon = GFX_focus_BRA_german_submarine_development
+        x = 46
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_complexnavdev }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_flamejapan }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_royalnavoma }
+        completion_reward = {
+            swap_ideas = {
+                    remove_idea = national_spirit_omaninavy1
+                    add_idea = national_spirit_omaninavy3ger
+                }
+            add_tech_bonus = {
+                name = GER_u_boat_efforts
+                bonus = 1.0
+                uses = 1
+                category = ss_tech    
+                ahead_reduction = 1 
+            }
+            add_mastery_bonus = {
+                name = OMA_intensify_torpedo_manufacturing
+                bonus = 0.1
+                days = 180
+                track = submarines
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_flamejapan
+        icon = GFX_focus_JAP_strengthen_the_kido_butai
+        x = 48
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_complexnavdev }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_gersubbies }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_royalnavoma }
+        completion_reward = {
+            swap_ideas = {
+                    remove_idea = national_spirit_omaninavy1
+                    add_idea = national_spirit_omaninavy4jap
+                }
+            add_tech_bonus = {
+                name = OMA_proper_carriers
+                bonus = 1.0
+                uses = 1
+                category = cv_tech
+                ahead_reduction = 1    
+            }
+            add_mastery_bonus = {
+                name = OMA_intensify_torpedo_manufacturing
+                bonus = 0.1
+                days = 180
+                track = naval_carrier
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_dockeffici
+        icon = GFX_goal_continuous_naval_production
+        x = 50
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_sauomanav }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_expandshipbuildss }
+        completion_reward = {
+            add_ideas = national_spirit_dockyoutput5
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_expandshipbuildss
+        icon = GFX_focus_POL_develop_polish_shipbuilding
+        x = 52
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_sauomanav }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_dockeffici }
+        completion_reward = {
+            1013 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                type = dockyard
+                level = 3
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_airfocus4oma
+        icon = GFX_focus_PER_luftwaffe_planes
+        x = 55
+        y = 3
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_airfocus2oma }
+        prerequisite = { focus = hazzlaz_oman_mod_airfocus3oma }
+        completion_reward = {
+            add_ideas = national_spirit_modernair
+            add_doctrine_cost_reduction = {
+                name = OMA_air
+                cost_reduction = 1
+                uses = 1
+                category = air_doctrine    
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_industrialisedpower
+        icon = GFX_focus_SIA_a_modern_economy
+        x = -3
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_minorcentralise }
+        prerequisite = { focus = hazzlaz_oman_mod_openoureco }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_factoryspan }
+        completion_reward = {
+            add_stability = -0.20
+            remove_ideas = national_spirit_agrarian
+            1015 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            1013 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_factoryspan
+        icon = GFX_focus_generic_industry_investment
+        x = -1
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_modernizeind }
+        prerequisite = { focus = hazzlaz_oman_mod_openoureco }
+        mutually_exclusive = { focus = my_hoi4_mod_industrialisedpower }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sugar
+        icon = GFX_focus_AFG_sugar_factory
+        x = 5
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_agrisubsid }
+        prerequisite = { focus = my_hoi4_mod_textileind }
+        mutually_exclusive = { focus = my_hoi4_mod_stableeco }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = my_hoi4_mod_stableeco
+        icon = GFX_focus_generic_modernizing_agriculture
+        x = 7
+        y = 4
+        cost = 10
+        prerequisite = { focus = my_hoi4_mod_textileind }
+        prerequisite = { focus = my_hoi4_mod_expandtrade }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_sugar }
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = national_spirit_agrarian
+                add_idea = national_spirit_paying_stable_economy
+            }
+            add_research_slot = 1
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_killhim
+        icon = GFX_focus_PER_communist_afghanistan_intervention
+        x = 10
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_demoandcom }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_welovedemoc }
+        available = {
+            NOT = { 
+            has_completed_focus = my_hoi4_mod_isolateco
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_stateofmils
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_buildnewschooluwu
+            }
+            NOT = { 
+            has_government = communism
+            }
+        }
+        completion_reward = {
+            kill_country_leader = yes
+            add_stability = -0.10
+            add_popularity = {
+                ideology = communism
+                popularity = 0.15
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_welovedemoc
+        icon = GFX_focus_AFG_parliamentary_democracy
+        x = 18
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_demoandcom }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_killhim }
+        available = {
+            democratic > 0.3
+        }
+        completion_reward = {
+            set_politics = {
+                    ruling_party = democratic
+                    elections_allowed = yes
+                 }
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.20
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_nonall
+        icon = GFX_focus_hol_the_foundations_of_defense
+        x = 22
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_fascandnonal }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_fascismgrr }
+        completion_reward = {
+            add_ideas = national_spirit_stabil
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fascismgrr
+        icon = GFX_focus_CZE_unify_the_fascist_parties
+        x = 30
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_fascandnonal }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_nonall }
+        available = {
+            fascism > 0.3
+        }
+        completion_reward = {
+            set_politics = {
+                    ruling_party = fascism
+                    elections_allowed = no
+                 }
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.20
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_academynav
+        icon = GFX_focus_generic_sway_navy
+        x = 45
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_royalnavoma focus = hazzlaz_oman_mod_gersubbies focus = hazzlaz_oman_mod_flamejapan }
+        completion_reward = {
+            add_ideas = national_spirit_academynaval
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_navaldesi
+        icon = GFX_focus_generic_navy_research_bonus
+        x = 47
+        y = 4
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_royalnavoma focus = hazzlaz_oman_mod_gersubbies focus = hazzlaz_oman_mod_flamejapan }
+        completion_reward = {
+            add_doctrine_cost_reduction = {
+            					name = OMA_naval_designs
+            					cost_reduction = 1
+            					uses = 1
+            					category = naval_doctrine
+            				}
+            add_tech_bonus = {
+            name = Naval_boost
+            bonus = 0.5
+            uses = 4
+            category = naval_equipment
+            }
+            			navy_experience = 25
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sovaidowo
+        icon = GFX_focus_chi_mission_to_the_soviet_union
+        x = 9
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_killhim }
+        available = {
+            NOT = { 
+            has_completed_focus = my_hoi4_mod_isolateco
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_stateofmils
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_buildnewschooluwu
+            }
+            NOT = { 
+            has_government = communism
+            }
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.10
+            }
+            add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 10000
+            producer = SOV
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_commipe
+        icon = GFX_focus_ITA_peasants_rise
+        x = 11
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_killhim }
+        available = {
+            NOT = { 
+            has_completed_focus = my_hoi4_mod_isolateco
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_stateofmils
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_buildnewschooluwu
+            }
+            NOT = { 
+            has_government = communism
+            }
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.15
+            }
+            1016 = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+                type = arms_factory
+                level = 1
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_britihshgov
+        icon = GFX_focus_eng_the_sun_never_sets
+        x = 17
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_welovedemoc }
+        completion_reward = {
+            add_stability = 0.10
+            add_popularity = {
+                ideology = democratic
+                popularity = 0.05
+            }
+            remove_ideas = national_spirit_seekfuture
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_ihateinvesting
+        icon = GFX_focus_generic_economic_recovery
+        x = 19
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_welovedemoc }
+        completion_reward = {
+            add_timed_idea = {
+                idea = national_spirit_investlongtermindustry
+                days = 365
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_nonallindus
+        icon = GFX_focus_generic_military_industry
+        x = 21
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_nonall }
+        completion_reward = {
+            OMA = {
+                country_event = {
+                    id = questionofindustry.1
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_wayinregi
+        icon = GFX_focus_GER_align_middle_east
+        x = 23
+        y = 5
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_nonall }
+        completion_reward = {
+            remove_ideas = national_spirit_seekfuture
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fascita
+        icon = GFX_focus_ITA_italian_hegemony
+        x = 29
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_fascismgrr }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_fascjap }
+        completion_reward = {
+            add_stability = 0.10
+            ITA = {
+                add_political_power = 100    
+            }
+            remove_ideas = national_spirit_seekfuture
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fascjap
+        icon = GFX_focus_JAP_new_order_in_east_asia
+        x = 31
+        y = 5
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_fascismgrr }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_fascita }
+        completion_reward = {
+            add_war_support = 0.10
+            JAP = {
+                add_political_power = 100    
+            }
+            remove_ideas = national_spirit_seekfuture
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_legacyrestored
+        icon = GFX_focus_SIA_use_ships_as_generators
+        x = 46
+        y = 5
+        cost = 15
+        prerequisite = { focus = hazzlaz_oman_mod_academynav }
+        prerequisite = { focus = hazzlaz_oman_mod_navaldesi }
+        available = {
+            has_navy_size = {    
+                size > 74
+            }
+        }
+        completion_reward = {
+            294 = {
+            add_extra_state_shared_building_slots = 4
+            add_building_construction = {
+                type = dockyard
+                level = 4
+                instant_build = yes
+            }
+            }
+            1016 = {
+            add_extra_state_shared_building_slots = 4
+            add_building_construction = {
+                type = dockyard
+                level = 4
+                instant_build = yes
+            }
+            }
+            1013 = {
+            add_extra_state_shared_building_slots = 4
+            add_building_construction = {
+                type = dockyard
+                level = 4
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = oman_mod_revoltdhofar
+        icon = GFX_focus_generic_spur_communist_revolutions
+        x = 10
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_commipe }
+        prerequisite = { focus = hazzlaz_oman_mod_sovaidowo }
+        available = {
+            num_divisions > 1
+            NOT = { 
+            has_completed_focus = my_hoi4_mod_isolateco
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_stateofmils
+            }
+            NOT = { 
+            has_completed_focus = hazzlaz_oman_mod_buildnewschooluwu
+            }
+            NOT = { 
+            has_government = communism
+            }
+            
+        }
+        completion_reward = {
+            start_civil_war = {
+                ideology = neutrality   
+                capital = 294
+                size = 0.5
+            states = {
+            1015
+            294
+            }
+            }    
+            set_politics = {
+                    ruling_party = communism
+                    elections_allowed = no
+                 }
+            hidden_effect = {
+            add_ideas = national_spirit_muscatiinf
+                add_ideas = national_spirit_agrarian
+                add_ideas = national_spirit_pooreducation2
+                add_ideas = national_spirit_isolationeco
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_demoresearch1
+        icon = GFX_focus_research
+        x = 14
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_britihshgov }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+            has_completed_focus = oman_mod_modernizewestresearch
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_britiprotec
+        icon = GFX_goal_tfv_strengthen_commonwealth_ties
+        x = 16
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_britihshgov }
+        available = {
+            OR = {
+            has_stability > 0.75
+            
+            industrial_complex > 14
+            }
+        }
+        completion_reward = {
+            ENG = {
+                set_autonomy = {
+                    target = OMA
+                    autonomous_state = autonomy_dominion
+                }    
+            }
+            add_ideas = national_spirit_dominionofbritshhh
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_welovelabour
+        icon = GFX_focus_RAJ_special_economic_zones
+        x = 18
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_britihshgov }
+        prerequisite = { focus = hazzlaz_oman_mod_ihateinvesting }
+        available = {
+            NOT = { has_idea = national_spirit_investlongtermindustry }
+        }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 5
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 5
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_urbnonalanddemo
+        icon = GFX_focus_PRC_urbanization
+        x = 20
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_ihateinvesting focus = hazzlaz_oman_mod_britihshgov focus = hazzlaz_oman_mod_nonallindus }
+        completion_reward = {
+            add_tech_bonus = {
+            name = industrial_bonus
+            bonus = 0.50
+            uses = 3
+            category = industry 
+            }
+            1015 = {
+                add_extra_state_shared_building_slots = 3       
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 3  
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 3     
+            }
+            1013 = {
+                add_extra_state_shared_building_slots = 3
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_nonallfreefromeng
+        icon = GFX_focus_ARG_cut_ties_with_britain
+        x = 22
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_nonallindus }
+        prerequisite = { focus = hazzlaz_oman_mod_wayinregi }
+        available = {
+            1015 = {
+            is_core_of = oma
+            }
+            is_puppet_of = ENG
+        }
+        bypass = {
+            NOT = {
+            is_puppet_of = ENG
+            }
+        }
+        completion_reward = {
+            if = {
+            				limit = {
+            					is_subject = yes
+            				}
+            				OVERLORD = {
+            					set_autonomy = {
+            						target = OMA
+            						autonomy_state = autonomy_free
+            					}
+            				}
+            			}
+            			ENG = { remove_from_faction = ROOT }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_armytur
+        icon = GFX_focus_generic_befriend_turkey
+        x = 24
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_wayinregi }
+        completion_reward = {
+            add_tech_bonus = {
+            				name = TUR_Research_Catchup
+            bonus = 1.0
+            uses = 1
+            category = infantry_weapons
+            ahead_reduction = 1
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_itaind
+        icon = GFX_focus_ITA_italian_irredentism
+        x = 28
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fascita }
+        completion_reward = {
+            294 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            1013 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }    
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_faarabia
+        icon = GFX_focus_ETH_an_arabic_base
+        x = 30
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fascjap focus = hazzlaz_oman_mod_fascita }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = SAU
+            }
+            create_wargoal = {
+            type = annex_everything
+            target = YEM
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_japomanav
+        icon = GFX_focus_JAP_expand_navy_technical_department
+        x = 32
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fascjap }
+        completion_reward = {
+            1016 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                type = dockyard
+                level = 3
+                instant_build = yes
+            }
+            }
+            282 = {
+            add_extra_state_shared_building_slots = 3
+            add_building_construction = {
+                type = dockyard
+                level = 3
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_158_2
+        icon = GFX_focus_JAP_the_imperial_defense_plan
+        x = 34
+        y = 6
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fascjap }
+        completion_reward = {
+            add_stability = -0.15
+            1013 = {
+                add_extra_state_shared_building_slots = 4
+                add_building_construction = {
+                    type = arms_factory
+                    level = 4
+                    instant_build = yes
+                }    
+            }
+            if = {
+            				limit = {
+            					is_subject = yes
+            				}
+            				OVERLORD = {
+            					set_autonomy = {
+            						target = OMA
+            						autonomy_state = autonomy_free
+            					}
+            				}
+            			}
+            			ENG = { remove_from_faction = ROOT }
+            			set_rule = { can_create_factions = yes }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_civilwarhelp
+        icon = GFX_focus_PRC_invite_soviet_general
+        x = 9
+        y = 7
+        cost = 2
+        prerequisite = { focus = oman_mod_revoltdhofar }
+        available = {
+            has_civil_war = yes
+        }
+        bypass = {
+            has_civil_war = no
+        }
+        completion_reward = {
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 2500
+                producer = SOV    
+            }
+            add_manpower = 2000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_victoryinrevolution
+        icon = GFX_focus_SOV_stalins_cult_of_personality
+        x = 11
+        y = 7
+        cost = 5
+        prerequisite = { focus = oman_mod_revoltdhofar }
+        available = {
+            has_war = no
+        }
+        completion_reward = {
+            add_popularity = {
+                ideology = communism
+                popularity = 0.10
+            }
+            add_political_power = 100
+            add_stability = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_demoresearch2
+        icon = GFX_focus_research2
+        x = 14
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_demoresearch1 }
+        available = {
+            NOT = { has_idea = national_spirit_spendmoneyonlearn }
+        }
+        completion_reward = {
+            add_ideas = national_spirit_technocracy
+            add_timed_idea = {
+                idea = national_spirit_spendmoneyonlearn
+                days = 180
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_99
+        icon = GFX_focus_eng_the_sun_never_sets
+        x = 17
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_britiprotec }
+        completion_reward = {
+            ENG = {
+                country_event = {
+                    id = questionofgulfdomini.1
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_101
+        icon = GFX_focus_RAJ_the_dominion_of_india
+        x = 19
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_britiprotec }
+        completion_reward = {
+            RAJ = {
+                country_event = {
+                    id = omanresources.1
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_arabianfriendsyay
+        icon = GFX_focus_AFG_savior_of_the_holy_lands
+        x = 21
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_urbnonalanddemo }
+        prerequisite = { focus = hazzlaz_oman_mod_nonallfreefromeng }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_internal }
+        available = {
+            NOT = {
+             is_puppet = yes
+            }
+        }
+        completion_reward = {
+              set_rule = {
+               can_create_factions = yes
+            }
+            create_faction = "Arabian Cooperation Pact"
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_internal
+        icon = GFX_focus_PRC_bolshevik_urbanization_1
+        x = 23
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_armytur focus = hazzlaz_oman_mod_nonallfreefromeng }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_arabianfriendsyay }
+        completion_reward = {
+            1015 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_itaprop
+        icon = GFX_focus_generic_italy_propaganda
+        x = 26
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_itaind }
+        completion_reward = {
+            add_political_power = 150
+            add_stability = 0.15
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.10
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_itafreedom
+        icon = GFX_focus_RAJ_a_tiger_unchained
+        x = 28
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_itaind }
+        bypass = {
+            NOT = {
+            is_puppet_of = ENG
+            }
+        }
+        completion_reward = {
+            if = {
+            				limit = {
+            					is_subject = yes
+            				}
+            				OVERLORD = {
+            					set_autonomy = {
+            						target = OMA
+            						autonomy_state = autonomy_free
+            					}
+            				}
+            			}
+            			ENG = { remove_from_faction = ROOT }
+            			set_rule = { can_create_factions = yes }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_demandbritishcolonfasc
+        icon = GFX_goal_generic_demand_territory
+        x = 30
+        y = 7
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_faarabia }
+        completion_reward = {
+            ENG = {
+                country_event = {
+                    id = oman_incidentengyem.1
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fakillirq
+        icon = GFX_focus_generic_attack_iraq
+        x = 32
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_new_focus_tree_focus_158_2 }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = IRQ
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fakillper
+        icon = GFX_focus_generic_attack_iran
+        x = 34
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_new_focus_tree_focus_158_2 }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = PER
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fakillpe
+        icon = GFX_focus_generic_attack_afghanistan
+        x = 36
+        y = 7
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_new_focus_tree_focus_158_2 }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = AFG
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sovpeoples
+        icon = GFX_focus_generic_stalinist_industry
+        x = 8
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_civilwarhelp }
+        completion_reward = {
+            add_tech_bonus = {
+            name = industrial_bonus
+            bonus = 1
+            uses = 1
+            ahead_reduction = 1
+            category = industry
+             }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_socialtwocount
+        icon = GFX_focus_SOV_socialism_in_one_country
+        x = 10
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_victoryinrevolution }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_leftistinfighting }
+        completion_reward = {
+            set_rule = {
+                can_create_factions = yes    
+            } 
+            SOV = {
+                country_event = {
+                    id = omanally.17
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_leftistinfighting
+        icon = GFX_focus_GER_end_european_communism
+        x = 12
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_victoryinrevolution }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_socialtwocount }
+        completion_reward = {
+            set_rule = {
+                can_create_factions = yes    
+            }
+            OMA = {
+                create_faction = "United Arabian Bloc"
+            }
+            add_political_power = 50
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_128
+        icon = GFX_focus_generic_the_suez
+        x = 16
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_new_focus_tree_focus_99 }
+        prerequisite = { focus = hazzlaz_oman_mod_britiprotec }
+        completion_reward = {
+            declare_war_on = {
+                target = YEM
+                type = annex_everything
+            }
+            293 = {
+             add_core_of = OMA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_85
+        icon = GFX_focus_generic_treaty
+        x = 18
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_arabianfriendsyay }
+        completion_reward = {
+            add_political_power = 100
+            ENG = {
+                country_event = {
+                    id = omanaden.1
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_getfriends
+        icon = GFX_focus_generic_befriend_saudi_arabia
+        x = 20
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_arabianfriendsyay }
+        completion_reward = {
+            SAU = {
+                country_event = {
+                    id = omanally.1
+                    days = 1
+                }
+            }
+            YEM = {
+                country_event = {
+                    id = omanally.2
+                    days = 1
+                }
+            }
+            IRQ = {
+                country_event = {
+                    id = omanally.3
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_welovefreedominarabia
+        icon = GFX_focus_chi_british_cooperation
+        x = 22
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_arabianfriendsyay }
+        completion_reward = {
+            ENG = {
+                country_event = {
+                    id = omanaden.2
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_jointdev
+        icon = GFX_focus_generic_influence_middle_east
+        x = 24
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_arabianfriendsyay }
+        available = {
+            is_faction_leader = yes
+        }
+        completion_reward = {
+            every_faction_member = {
+            add_offsite_building = {
+            type = industrial_complex
+            level = 2
+            }}
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_thismakesenseemperor
+        icon = GFX_focus_ITA_king_vittorio
+        x = 26
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_itafreedom }
+        completion_reward = {
+            add_ideas = national_spirit_italianemperor
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_itatimmi
+        icon = GFX_focus_ETH_reach_out_to_the_italians
+        x = 30
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_itafreedom }
+        completion_reward = {
+            add_manpower = 50000
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_demandpak
+        icon = GFX_focus_AFG_pakistan_cold_war
+        x = 34
+        y = 8
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fakillper }
+        prerequisite = { focus = hazzlaz_oman_mod_fakillirq }
+        available = {
+            PER = {
+                all_core_state = {
+                    is_fully_controlled_by = OMA
+                }
+            }
+        }
+        bypass = {
+            NOT = {
+            PAK = {
+                all_core_state = {
+                    is_fully_controlled_by = RAJ
+                }
+            }
+            }
+        }
+        completion_reward = {
+            RAJ = {
+                country_event = {
+                    id = oman_demandpakistan.1
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_fakillchina
+        icon = GFX_focus_attack_china
+        x = 36
+        y = 8
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_fakillpe }
+        completion_reward = {
+            create_wargoal = {
+                type = annex_everything
+                target = CHI    
+            }
+            JAP = {
+            add_political_power = 100
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_education
+        icon = GFX_focus_generic_socialist_science
+        x = 7
+        y = 9
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_sovpeoples }
+        available = {
+            has_completed_focus = oman_mod_modernizewestresearch
+        }
+        completion_reward = {
+            add_research_slot = 1
+            add_political_power = 150
+            add_stability = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_newprogram
+        icon = GFX_focus_PRC_urbanization_two
+        x = 9
+        y = 9
+        cost = 15
+        prerequisite = { focus = hazzlaz_oman_mod_sovpeoples }
+        completion_reward = {
+            add_timed_idea = {
+                    idea = national_spirit_industrialprogram
+                    days = 365
+            }
+            1015 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }       
+            }
+            294 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            1016 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }       
+            }
+            1013 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_chudcommitee
+        icon = GFX_focus_PRC_the_central_committee
+        x = 11
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_leftistinfighting focus = hazzlaz_oman_mod_socialtwocount }
+        completion_reward = {
+            add_ideas = national_spirit_commicommite
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sovwar
+        icon = GFX_focus_SOV_organization_centralization_discipline
+        x = 13
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_socialtwocount focus = hazzlaz_oman_mod_leftistinfighting }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_chinnaaa }
+        completion_reward = {
+            1016 = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+                type = arms_factory
+                level = 2
+                instant_build = yes
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_chinnaaa
+        icon = GFX_focus_PRC_eastward_expansion
+        x = 15
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_socialtwocount focus = hazzlaz_oman_mod_leftistinfighting }
+        mutually_exclusive = { focus = hazzlaz_oman_mod_sovwar }
+        completion_reward = {
+            add_ideas = national_spirit_guerillawar
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_new_focus_tree_focus_88_3
+        icon = GFX_focus_generic_coastal_fort
+        x = 18
+        y = 9
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_new_focus_tree_focus_85 }
+        completion_reward = {
+            992 = {
+             controller = {
+                country_event = {
+                    id = omanaden.3
+                    days = 1
+                }   
+            }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omakurd1
+        icon = GFX_focus_IRQ_promote_kurdish_culture
+        x = 20
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_welovefreedominarabia }
+        bypass = {
+            KUR = {
+            exists = yes
+            }
+        }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = PER
+            }
+            create_wargoal = {
+            type = annex_everything
+            target = TUR
+            }
+            IRQ = {
+                country_event = {
+                    id = omanquestionkuri.1
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_allynewarabstate
+        icon = GFX_focus_CHI_registry_of_property
+        x = 22
+        y = 9
+        cost = 3
+        prerequisite = { focus = hazzlaz_oman_mod_welovefreedominarabia }
+        available = {
+            QAT = {
+            exists = yes
+            }
+            BHR = {
+            exists = yes
+            }
+            UAE = {
+            exists = yes
+            }
+        }
+        completion_reward = {
+            QAT = {
+                country_event = {
+                    id = omanally.4
+                    days = 1
+                }
+            }
+            BHR = {
+                country_event = {
+                    id = omanally.5
+                    days = 1
+                }
+            }
+            UAE = {
+                country_event = {
+                    id = omanally.6
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_murderitalians
+        icon = GFX_focus_ITA_strengthen_ascari_corps
+        x = 24
+        y = 9
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_welovefreedominarabia }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = ITA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omasomali
+        icon = GFX_focus_ETH_victory_in_the_desert
+        x = 27
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_itafreedom }
+        available = {
+            is_in_faction_with = ita
+            559 = { is_controlled_by = ITA }
+            844 = { is_controlled_by = ITA }
+        }
+        bypass = {
+            NOT = {
+            559 = { is_controlled_by = ITA }
+            844 = { is_controlled_by = ITA }
+            }
+        }
+        completion_reward = {
+            ITA = {
+                country_event = {
+                    id = oman_demandsomalia.1
+                    days = 1
+                }   
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omazani
+        icon = GFX_focus_generic_africa_liberation
+        x = 29
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_itafreedom }
+        completion_reward = {
+                add_timed_idea = {
+                    idea = national_spirit_zanzibar
+                    days = 180
+                }
+            create_wargoal = {
+                type = annex_everything
+                target = ENG
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_magankingdomtime
+        icon = GFX_focus_PER_march_on_saadabad
+        x = 34
+        y = 9
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_fakillchina focus = hazzlaz_oman_mod_demandpak }
+        available = {
+            UAE = {
+                all_core_state = {
+                    is_fully_controlled_by = OMA
+                }
+            }
+            PER = {
+                all_core_state = {
+                    is_fully_controlled_by = OMA
+                }
+            }
+        }
+        completion_reward = {
+            set_cosmetic_tag = OMA_cosmetic_Magan
+            every_state = {
+                limit = {
+                    is_core_of = UAE
+                }
+                add_core_of = OMA
+            }
+            every_state = {
+                limit = {
+                    is_core_of = PER
+                }
+                add_core_of = OMA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_comkillyem
+        icon = GFX_focus_SWE_refuge_for_revolutionaries
+        x = 8
+        y = 10
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_chudcommitee }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = YEM
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_comkillirq
+        icon = GFX_focus_generic_social_democracy
+        x = 10
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_chudcommitee }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = IRQ
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_comkillira
+        icon = GFX_focus_PER_abolish_feudalism
+        x = 12
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_chudcommitee }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = PER
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_comattsau
+        icon = GFX_focus_ETH_an_arabic_base
+        x = 14
+        y = 10
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_chudcommitee }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = SAU
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omakurd2
+        icon = GFX_focus_IRQ_kurdistan_united
+        x = 19
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_omakurd1 }
+        available = {
+            KUR = {
+                all_core_state = {
+                    is_fully_controlled_by = KUR
+                }
+            }
+        }
+        completion_reward = {
+            add_political_power = 150
+            add_ideas = national_spirit_liberators
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omakurd3
+        icon = GFX_focus_generic_befriend_kurdistan
+        x = 21
+        y = 10
+        cost = 3
+        prerequisite = { focus = hazzlaz_oman_mod_omakurd1 }
+        available = {
+            KUR = {
+            exists = yes
+            }
+        }
+        completion_reward = {
+            KUR = {
+                country_event = {
+                    id = omanally.8
+                    days = 1
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_sanusiafocus
+        icon = GFX_goal_hazzlaz_oman_mod_hazzlaz_oman_mod_sanusiafocus
+        x = 23
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_murderitalians }
+        available = {
+            LBA = {
+                all_core_state = {
+                    is_fully_controlled_by = OMA
+                }
+            }
+        }
+        completion_reward = {
+            OMA = { 
+               release = LBA
+            }
+            LBA = {
+            set_cosmetic_tag = LBA_cosmetic_sanussia
+            }
+            LBA = {
+                country_event = {
+                    id = omanally.7
+                    days = 1
+                }
+            }
+            every_country = {
+            news_event = { id = omannews.1 }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_syriaisour
+        icon = GFX_focus_generic_attack_syria
+        x = 25
+        y = 10
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_murderitalians }
+        completion_reward = {
+            create_wargoal = {
+            type = annex_everything
+            target = SYR
+            }
+            create_wargoal = {
+            type = annex_everything
+            target = FRA
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_omaemp
+        icon = GFX_focus_AFG_savior_of_the_holy_lands
+        x = 28
+        y = 10
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_omazani }
+        prerequisite = { focus = hazzlaz_oman_mod_omasomali }
+        available = {
+            TZN = {
+                all_core_state = {
+                    is_fully_controlled_by = OMA
+                }
+            }
+        }
+        completion_reward = {
+            set_cosmetic_tag = OMA_cosmetic_empire
+            add_ideas = national_spirit_omanrestored
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_greatersovietoma
+        icon = GFX_focus_SOV_proclaim_soviet_hegemony
+        x = 11
+        y = 11
+        cost = 5
+        prerequisite = { focus = hazzlaz_oman_mod_comkillyem }
+        prerequisite = { focus = hazzlaz_oman_mod_comattsau }
+        completion_reward = {
+            set_cosmetic_tag = OMA_cosmetic_USSME
+            every_state = {
+                limit = {
+                    is_core_of = YEM
+                }
+                add_core_of = OMA
+            }
+            every_state = {
+                limit = {
+                    is_core_of = SAU
+                }
+                add_core_of = OMA
+            }
+            every_state = {
+                limit = {
+                    is_core_of = UAE
+                }
+                add_core_of = OMA
+            }
+            every_state = {
+                limit = {
+                    is_core_of = BHR
+                }
+                add_core_of = OMA
+            }
+            every_state = {
+                limit = {
+                    is_core_of = QAT
+                }
+                add_core_of = OMA
+            }
+            add_political_power = 150
+            add_stability = 0.10
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+
+    focus = {
+        id = hazzlaz_oman_mod_endsykespicot
+        icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+        x = 22
+        y = 11
+        cost = 10
+        prerequisite = { focus = hazzlaz_oman_mod_sanusiafocus focus = hazzlaz_oman_mod_omakurd2 focus = hazzlaz_oman_mod_omakurd3 focus = hazzlaz_oman_mod_syriaisour focus = hazzlaz_oman_mod_allynewarabstate }
+        available_if_capitulated = yes
+        available = {
+            is_faction_leader = yes
+            is_in_faction_with = sau
+            is_in_faction_with = irq
+            is_in_faction_with = yem
+            SYR = {
+            NOT = {
+             is_puppet_of = FRA
+              }
+            }
+            SYR = {
+            NOT = {
+            any_core_state = {
+            is_controlled_by = FRA
+            }}}
+            industrial_complex > 14
+            has_stability > 0.85
+        }
+        completion_reward = {
+            add_ideas = national_spirit_unitedarabia
+            every_faction_member = {
+            add_ideas = national_spirit_unitedarabia
+            add_political_power = 100
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

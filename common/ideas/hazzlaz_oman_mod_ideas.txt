@@ -1,0 +1,524 @@
+ideas = {
+    country = {
+        national_spirit_agrarian = {
+            picture = generic_agrarian_reform
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = 0.15
+                production_speed_buildings_factor = -0.10
+                industrial_capacity_factory = -0.10
+                industrial_capacity_dockyard = -0.10
+                stability_weekly = 0.0025
+            }
+        }
+        national_spirit_pooreducation = {
+            picture = DEN_occupation_laws
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.30
+                stability_factor = -0.10
+                stability_weekly = -0.0025
+            }
+        }
+        national_spirit_centralisedindustry = {
+            picture = SOV_restoration_and_development_idea_ccp_sov_compatibility
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_buildings_factor = 0.10
+            }
+        }
+        national_spirit_isolationeco = {
+            picture = isolation
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                    trade_laws_cost_factor = 1.25
+                    industrial_capacity_factory = -0.10
+                    industrial_capacity_dockyard = -0.10
+                    stability_weekly = 0.0025
+            }
+        }
+        national_spirit_paying_stable_economy = {
+            picture = generic_mild_economic_recovery
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = 0.05
+                production_speed_buildings_factor = -0.025
+                industrial_capacity_factory = -0.025
+                industrial_capacity_dockyard = -0.025
+                stability_weekly = 0.0025
+            }
+        }
+        national_spirit_decline = {
+            picture = raj_marginalized_muslim_community
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = -0.50
+                stability_factor = -0.10
+                war_support_factor = -0.05
+            }
+        }
+        national_spirit_seekfuture = {
+            picture = generic_production
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = -0.25
+                stability_factor = -0.05
+                war_support_factor = -0.05
+            }
+        }
+        national_spirit_camels = {
+            picture = ARG_civilian_economy_boost
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.10
+                consumer_goods_factor = -0.15
+            }
+        }
+        new_national_spirit_mojitaxes = {
+            picture = RAJ_taxes
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                consumer_goods_factor = -0.10
+                political_power_gain = -0.10
+                stability_factor = -0.10
+            }
+        }
+        national_spirit_stabil = {
+            picture = OMA_said_bin_taimur
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_advisor_cost_factor = -0.10
+                stability_factor = 0.05
+            }
+        }
+        national_spirit_unitedarabia = {
+            picture = ARG_subdue_dissension
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                max_planning = 0.10
+                planning_speed = 0.10
+                army_core_attack_factor = 0.05
+                army_core_defence_factor = 0.05
+                supply_combat_penalties_on_core_factor = -0.10
+            }
+        }
+        national_spirit_liberators = {
+            picture = PER_kurdistan_resistance_idea
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.10
+                consumer_goods_factor = -0.15
+                stability_factor = 0.10
+            }
+        }
+        national_spirit_pooreducation2 = {
+            picture = DEN_occupation_laws
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.20
+                stability_factor = -0.10
+                stability_weekly = -0.0025
+            }
+        }
+        national_spirit_pooreducation3 = {
+            picture = DEN_occupation_laws
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = -0.10
+                stability_factor = -0.05
+                stability_weekly = -0.0010
+            }
+        }
+        national_spirit_spendmoneyonlearn = {
+            picture = generic_political_support
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.20
+                consumer_goods_factor = 0.15
+                production_speed_buildings_factor = -0.05
+            }
+        }
+        national_spirit_aramamentspendingpro = {
+            picture = SOV_defense_industry
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_arms_factory_factor = 0.1
+                production_speed_dockyard_factor = 0.1
+                production_speed_industrial_complex_factor = -0.1
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+                consumer_goods_factor = 0.05
+            }
+        }
+        national_spirit_civiliansector = {
+            picture = ARG_civilian_economy_boost
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_industrial_complex_factor = 0.10
+                consumer_goods_factor = -0.15
+                stability_weekly = 0.005
+            }
+        }
+        national_spirit_investlongtermindustry = {
+            picture = RAJ_external_investments
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.10
+                stability_factor = 0.20
+                production_speed_buildings_factor = -0.10
+                consumer_goods_factor = 0.10
+            }
+        }
+        national_spirit_technocracy = {
+            picture = jap_supremacy_of_technology
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = 0.15
+            }
+        }
+        national_spirit_dominionofbritshhh = {
+            picture = eng_guided_by_britain
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                political_power_gain = 0.10
+                stability_weekly = 0.0010
+                production_speed_buildings_factor = 0.05
+            }
+        }
+        national_spirit_leftsideresearch = {
+            picture = SOV_ussr_academy_of_sciences
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                research_speed_factor = 0.05
+                special_project_speed_factor = 0.05
+            }
+        }
+        national_spirit_muscatiinf = {
+            picture = chi_army_corruption3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                conscription_factor = 0.10
+                army_attack_factor = -0.075
+                army_defence_factor = -0.075
+            }
+        }
+        national_spirit_muscatregimental = {
+            picture = chi_army_corruption3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                conscription_factor = 0.05
+                army_attack_factor = 0.075
+                army_defence_factor = 0.075
+            }
+        }
+        national_spirit_muscatiinf2 = {
+            picture = chi_army_corruption3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                conscription_factor = 0.20
+                army_attack_factor = -0.025
+                army_defence_factor = -0.025
+            }
+        }
+        national_spirit_muscatiinf3 = {
+            picture = chi_army_corruption3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                conscription_factor = 0.25
+                army_attack_factor = -0.025
+                army_defence_factor = -0.025
+                stability_weekly = -0.0010
+                industrial_capacity_factory = -0.05
+                industrial_capacity_dockyard = -0.05
+            }
+        }
+        national_spirit_cutcornersproduc = {
+            picture = generic_supply_depot
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_factory_efficiency_gain_factor = 0.05
+                line_change_production_efficiency_factor = 0.075
+            }
+        }
+        national_spirit_stealequipmentlikejosteelsmyhoi4games = {
+            picture = brown_water_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                equipment_capture_factor = 0.25
+            }
+        }
+        national_spirit_resourceisssuearmy = {
+            picture = damage_control_training_spirit
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_lack_of_resource_penalty_factor = -0.25
+            }
+        }
+        national_spirit_cutcornersproduc2 = {
+            picture = generic_supply_depot
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_factory_max_efficiency_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.05
+                line_change_production_efficiency_factor = 0.075
+            }
+        }
+        national_spirit_transportsupp = {
+            picture = generic_supply_line
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                supply_consumption_factor = -0.10
+                supply_node_range = 0.10
+            }
+        }
+        national_spirit_industrialprogram = {
+            picture = PRC_urbanization_idea
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                production_speed_buildings_factor = 0.10
+                consumer_goods_factor = 0.20
+                political_power_gain = -0.25
+                stability_weekly = -0.005
+            }
+        }
+        national_spirit_commicommite = {
+            picture = PRC_publicity_department_of_central_committee
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                compliance_growth = 0.10
+                resistance_growth = -0.10
+            }
+        }
+        national_spirit_guerillawar = {
+            picture = generic_guerilla_warfare
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_speed_factor = 0.10
+                army_core_defence_factor = 0.10
+            }
+        }
+        national_spirit_recruitconscoma = {
+            picture = limited_conscription
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                weekly_manpower = 1500
+            }
+        }
+        national_spirit_recruitconscoma2 = {
+            picture = extensive_conscription
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                weekly_manpower = 2500
+            }
+        }
+        national_spirit_omaninavy1 = {
+            picture = SOV_red_navy
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.025
+                naval_damage_factor = 0.025
+            }
+        }
+        national_spirit_defunctnavyspend = {
+            picture = jap_interservice_rivalry_army_dominant
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = -0.25
+                consumer_goods_factor = -0.05
+            }
+        }
+        national_spirit_overfundednavy = {
+            picture = jap_interservice_rivalry_navy_dominant
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.25
+                industrial_capacity_factory = -0.10
+                consumer_goods_factor = 0.05
+            }
+        }
+        national_spirit_omaninavy2eng = {
+            picture = AUS_streamline_cruiser_production_idea
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.10
+                naval_damage_factor = 0.05
+            }
+        }
+        national_spirit_omaninavy3ger = {
+            picture = generic_navy_submarines
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.025
+                naval_speed_factor = 0.05
+                navy_visibility = -0.10
+            }
+        }
+        national_spirit_omaninavy4jap = {
+            picture = generic_navy_carrier_bonus
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.05
+                naval_damage_factor = 0.05
+                navy_anti_air_attack = 10.0
+                navy_carrier_air_agility_factor = 0.10
+                navy_carrier_air_attack_factor = 0.10
+                navy_carrier_air_targetting_factor = 0.10
+            }
+        }
+        national_spiritcomcercialair = {
+            picture = man_five_year_plan_air
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                consumer_goods_factor = -0.15
+                production_speed_buildings_factor = 0.10
+                stability_factor = 0.10
+            }
+        }
+        national_spirit_dockyoutput5 = {
+            picture = AUS_streamline_cruiser_production_idea
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                industrial_capacity_dockyard = 0.10
+            }
+        }
+        national_spirit_modernair = {
+            picture = generic_air_fighter
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                air_superiority_bonus_in_combat = 0.10
+                air_home_defence_factor = 0.15
+                air_superiority_efficiency = 0.10
+            }
+        }
+        national_spirit_academynaval = {
+            picture = generic_the_london_naval_treaty
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                navy_leader_start_level = 2
+                				navy_intel_to_others = -5.0
+                navy_leader_cost_factor = -0.4
+            }
+        }
+        national_spirit_italianemperor = {
+            picture = vittorio_emanuele
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                stability_factor = 0.10
+                compliance_growth = 0.10
+            }
+        }
+        national_spirit_omanrestored = {
+            picture = chi_war_of_resistance3
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                acclimatization_hot_climate_gain_factor = 0.10
+                terrain_penalty_reduction = 0.10
+                industrial_capacity_dockyard = 0.10
+            }
+        }
+        national_spirit_zanzibar = {
+            picture = hol_expand_the_colonial_army
+            allowed = {
+                always = yes
+            }
+            modifier = {
+                army_non_core_attack_factor = 0.10
+            }
+        }
+    }
+}

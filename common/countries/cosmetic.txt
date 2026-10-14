@@ -1,4 +1,4 @@
-MAL_UK = {
+﻿MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
 }
@@ -2127,4 +2127,24 @@ SOV_BALTIC_GOVERNANCE = {
 SOV_GRAND_DUCHY_OF_FINLAND = {
 	color = rgb { 30 80 140 }
 	color_ui = rgb { 30 80 140 }
+}
+LBA_cosmetic_sanussia = {
+    color = rgb { 8 18 10 }
+    color_ui = rgb { 8 18 10 }
+}
+OMA_cosmetic_empire = {
+    color = rgb { 24 115 38 }
+    color_ui = rgb { 24 115 38 }
+}
+OMA_cosmetic_gulfdominion = {
+    color = rgb { 128 13 47 }
+    color_ui = rgb { 128 13 47 }
+}
+OMA_cosmetic_Magan = {
+    color = rgb { 196 187 187 }
+    color_ui = rgb { 196 187 187 }
+}
+OMA_cosmetic_USSME = {
+    color = rgb { 166 60 104 }
+    color_ui = rgb { 166 60 104 }
 }

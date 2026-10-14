@@ -1,0 +1,58 @@
+spriteTypes = {
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Bertram
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Bertram_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Bertram
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Bertram_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Khalili
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Khalili_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Khalili
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Khalili_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Harthi
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Harthi_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Harthi
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Harthi_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Salimi
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Salimi_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Salimi
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Salimi_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Faisal
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Faisal_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Faisal
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Faisal_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Mashani
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Mashani_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Mashani
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Mashani_small.dds"
+    }
+    spriteType = {
+        name = GFX_portrait_hazzlaz_oman_mod_oma_character_Baruni
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Baruni_large.dds"
+    }
+    spriteType = {
+        name = GFX_idea_hazzlaz_oman_mod_oma_character_Baruni
+        texturefile = "gfx/leaders/OMA/hazzlaz_oman_mod_oma_character_Baruni_small.dds"
+    }
+}

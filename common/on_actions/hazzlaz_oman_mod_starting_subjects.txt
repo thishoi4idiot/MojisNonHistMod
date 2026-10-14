@@ -1,0 +1,36 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            # Preserve history-selected politics before changing subject relationships.
+            OMA = {
+                set_variable = { hmb_hazzlaz_oman_mod_starting_subject_ruling = current_party_ideology_group }
+                set_variable = { hmb_hazzlaz_oman_mod_starting_subject_popularity_0 = party_popularity_100@democratic }
+                set_variable = { hmb_hazzlaz_oman_mod_starting_subject_popularity_1 = party_popularity_100@fascism }
+                set_variable = { hmb_hazzlaz_oman_mod_starting_subject_popularity_2 = party_popularity_100@communism }
+                set_variable = { hmb_hazzlaz_oman_mod_starting_subject_popularity_3 = party_popularity_100@neutrality }
+            }
+            ENG = {
+                set_autonomy = {
+                    target = OMA
+                    autonomy_state = autonomy_colony
+                    freedom_level = 0.35
+                }
+            }
+            # Restore once at startup, not on daily ticks or after gameplay effects.
+            OMA = {
+                set_politics = { ruling_party = var:hmb_hazzlaz_oman_mod_starting_subject_ruling }
+                set_popularities = {
+                    democratic = hmb_hazzlaz_oman_mod_starting_subject_popularity_0
+                    fascism = hmb_hazzlaz_oman_mod_starting_subject_popularity_1
+                    communism = hmb_hazzlaz_oman_mod_starting_subject_popularity_2
+                    neutrality = hmb_hazzlaz_oman_mod_starting_subject_popularity_3
+                }
+                clear_variable = hmb_hazzlaz_oman_mod_starting_subject_ruling
+                clear_variable = hmb_hazzlaz_oman_mod_starting_subject_popularity_0
+                clear_variable = hmb_hazzlaz_oman_mod_starting_subject_popularity_1
+                clear_variable = hmb_hazzlaz_oman_mod_starting_subject_popularity_2
+                clear_variable = hmb_hazzlaz_oman_mod_starting_subject_popularity_3
+            }
+        }
+    }
+}

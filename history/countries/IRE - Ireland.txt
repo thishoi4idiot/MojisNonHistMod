@@ -3,18 +3,6 @@ set_research_slots = 3
 set_convoys = 10
 set_stability = 0.5
 set_war_support = 0.5
-set_politics = {
-    ruling_party = democratic
-    last_election = "1933.1.24"
-    election_frequency = 48
-    elections_allowed = yes
-}
-set_popularities = {
-    democratic = 98
-    fascism = 1
-    communism = 1
-    neutrality = 0
-}
 recruit_character = ire_character_1
 recruit_character = ire_character_2
 recruit_character = ire_character_3
@@ -77,6 +65,20 @@ recruit_character = IRE_sean_lemass
 recruit_character = IRE_douglas_hyde
 recruit_character = IRE_sean_ceallaigh
 recruit_character = IRE_ernest_walton
+
+# Politics selected in the builder
+set_politics = {
+    ruling_party = democratic
+    last_election = "1933.1.24"
+    election_frequency = 48
+    elections_allowed = yes
+}
+set_popularities = {
+    democratic = 98
+    fascism = 1
+    communism = 1
+    neutrality = 0
+}
 
 1939.1.1 = {
     add_political_power = 1198

@@ -1,0 +1,558 @@
+add_namespace = omanally
+add_namespace = omanaden
+add_namespace = omannews
+add_namespace = omanquestionkuri
+add_namespace = questionofindustry
+add_namespace = questionofgulfdomini
+add_namespace = omanresources
+add_namespace = oman_demandpakistan
+add_namespace = oman_demandsomalia
+add_namespace = oman_incidentengyem
+
+country_event = {
+    id = omanally.1
+    title = omanally.1.t
+    desc = omanally.1.d
+    picture = GFX_report_event_aid_pact
+    is_triggered_only = yes
+    option = {
+        name = omanally.1.a
+        ai_chance = {
+            factor = 1
+        }
+        OMA = {
+            add_to_faction = SAU
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = omanally.1.b
+        ai_chance = {
+            factor = 0
+        }
+        add_war_support = 0.02
+    }
+}
+
+country_event = {
+    id = omanally.2
+    title = omanally.2.t
+    desc = omanally.2.d
+    picture = GFX_report_event_aid_pact
+    is_triggered_only = yes
+    option = {
+        name = omanally.2.a
+        ai_chance = {
+            factor = 1
+        }
+        OMA = {
+            add_to_faction = YEM
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = omanally.2.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanally.3
+    title = omanally.3.t
+    desc = omanally.3.d
+    picture = GFX_report_event_aid_pact
+    is_triggered_only = yes
+    option = {
+        name = omanally.3.a
+        ai_chance = {
+            factor = 1
+        }
+        OMA = {
+            add_to_faction = IRQ
+            add_political_power = 50
+        }
+    }
+    option = {
+        name = omanally.3.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanaden.1
+    title = omanaden.1.t
+    desc = omanaden.1.d
+    picture = GFX_report_event_gathering_protest
+    is_triggered_only = yes
+    option = {
+        name = omanaden.1.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 75
+        YEM = {    
+            transfer_state = 659
+            transfer_state = 906
+        }
+    }
+    option = {
+        name = omanaden.1.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = -25
+    }
+}
+
+country_event = {
+    id = omanaden.2
+    title = omanaden.2.t
+    desc = omanaden.2.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanaden.2.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 150
+        ENG = {
+            release = QAT
+            }
+        ENG = {
+            release = BHR
+        }
+        ENG = {
+            release = UAE
+        }
+        UAE = {
+        set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+             }
+        }
+        QAT = {
+        set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+             }
+        }
+        BHR = {
+        set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+             }
+        }
+    }
+    option = {
+        name = omanaden.2.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = -50
+        658 = {
+        add_compliance = -10
+        }
+        1014 = {
+        add_compliance = -10
+        }
+        765 = {
+        add_compliance = -10
+        }
+    }
+}
+
+country_event = {
+    id = omanally.4
+    title = omanally.4.t
+    desc = omanally.4.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.4.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        OMA = {
+            add_to_faction = QAT
+        }
+    }
+    option = {
+        name = omanally.4.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanally.5
+    title = omanally.5.t
+    desc = omanally.5.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.5.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        OMA = {
+            add_to_faction = BHR    
+        }
+    }
+    option = {
+        name = omanally.5.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanally.6
+    title = omanally.6.t
+    desc = omanally.6.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.6.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        OMA = {
+            add_to_faction = UAE    
+        }
+    }
+    option = {
+        name = omanally.6.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanaden.3
+    title = omanaden.3.t
+    desc = omanaden.3.d
+    picture = GFX_report_event_ast_navy
+    is_triggered_only = yes
+    option = {
+        name = omanaden.3.a
+        ai_chance = {
+            factor = 1
+        }
+        YEM = {        
+            transfer_state = 992
+        }
+    }
+    option = {
+        name = omanaden.3.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanally.7
+    title = omanally.7.t
+    desc = omanally.7.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.7.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        OMA = {
+            add_to_faction = LBA    
+        }
+    }
+    option = {
+        name = omanally.7.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+news_event = {
+    id = omannews.1
+    title = omannews.1.t
+    desc = omannews.1.d
+    picture = GFX_news_event_038
+    is_triggered_only = yes
+    option = {
+        name = omannews.1.a
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+country_event = {
+    id = omanally.8
+    title = omanally.8.t
+    desc = omanally.8.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.8.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        OMA = {
+            add_to_faction = KUR   
+        }
+    }
+    option = {
+        name = omanally.8.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanquestionkuri.1
+    title = omanquestionkuri.1.t
+    desc = omanquestionkuri.1.d
+    picture = GFX_report_event_tur_kurdish_guerillas
+    is_triggered_only = yes
+    option = {
+        name = omanquestionkuri.1.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 100
+        release = KUR
+        KUR = {
+        set_politics = {
+                ruling_party = neutrality
+                elections_allowed = no
+             }
+        }
+    }
+    option = {
+        name = omanquestionkuri.1.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = questionofindustry.1
+    title = questionofindustry.1.t
+    desc = questionofindustry.1.d
+    picture = GFX_report_event_tur_industry
+    is_triggered_only = yes
+    option = {
+        name = questionofindustry.1.a
+        ai_chance = {
+            factor = 1
+        }
+            add_timed_idea = {
+                idea = national_spirit_civiliansector
+                days = 360
+            }
+    }
+    option = {
+        name = questionofindustry.1.b
+        ai_chance = {
+            factor = 1
+        }
+        add_timed_idea = {
+            idea = national_spirit_aramamentspendingpro
+            days = 360
+        }
+    }
+}
+
+country_event = {
+    id = questionofgulfdomini.1
+    title = questionofgulfdomini.1.t
+    desc = questionofgulfdomini.1.d
+    picture = GFX_report_event_gre_megali_conference_signing
+    is_triggered_only = yes
+    option = {
+        name = questionofgulfdomini.1.a
+        ai_chance = {
+            factor = 1
+        }
+        OMA = {
+        set_cosmetic_tag = OMA_cosmetic_gulfdominion
+        }
+        OMA = {           
+            transfer_state = 659
+            transfer_state = 906          
+         }
+        659 = {
+         add_core_of = OMA
+        }
+        906 = {
+         add_core_of = OMA
+        }
+    }
+    option = {
+        name = questionofgulfdomini.1.b
+        ai_chance = {
+            factor = 0
+        }
+        add_political_power = -100
+        add_stability = -0.02
+    }
+}
+
+country_event = {
+    id = omanresources.1
+    title = omanresources.1.t
+    desc = omanresources.1.d
+    picture = GFX_report_event_generic_sign_treaty2
+    is_triggered_only = yes
+    option = {
+        name = omanresources.1.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 75 
+        give_resource_rights = {
+            receiver = OMA
+            state = 431       
+        }
+    }
+    option = {
+        name = omanresources.1.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = omanally.17
+    title = omanally.17.t
+    desc = omanally.17.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = omanally.17.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 50
+        SOV = {
+            add_to_faction = OMA    
+        }
+    }
+    option = {
+        name = omanally.17.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = oman_demandpakistan.1
+    title = oman_demandpakistan.1.t
+    desc = oman_demandpakistan.1.d
+    picture = GFX_report_event_indian_soldiers
+    is_triggered_only = yes
+    option = {
+        name = oman_demandpakistan.1.a
+        ai_chance = {
+            factor = 1
+        }
+        every_state = {
+            limit = {
+                is_core_of = PAK
+            }
+            transfer_state_to = OMA
+        }
+    }
+    option = {
+        name = oman_demandpakistan.1.b
+        ai_chance = {
+            factor = 0
+        }
+        OMA = {
+        create_wargoal = {
+        type = annex_everything
+        target = RAJ
+        }
+        }
+    }
+}
+
+country_event = {
+    id = oman_demandsomalia.1
+    title = oman_demandsomalia.1.t
+    desc = oman_demandsomalia.1.d
+    picture = GFX_report_event_african_soldiers
+    is_triggered_only = yes
+    option = {
+        name = oman_demandsomalia.1.a
+        ai_chance = {
+            factor = 1
+        }
+        add_political_power = 100
+        OMA = {
+            transfer_state = 559
+            transfer_state = 844    
+        }
+    }
+    option = {
+        name = oman_demandsomalia.1.b
+        ai_chance = {
+            factor = 0
+        }
+    }
+}
+
+country_event = {
+    id = oman_incidentengyem.1
+    title = oman_incidentengyem.1.t
+    desc = oman_incidentengyem.1.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = {
+        name = oman_incidentengyem.1.a
+        ai_chance = {
+            factor = 1
+        }
+        OMA = {           
+            transfer_state = 659
+            transfer_state = 906          
+         }
+        659 = {
+         add_core_of = OMA
+        }
+        906 = {
+         add_core_of = OMA
+        }
+    }
+    option = {
+        name = oman_incidentengyem.1.b
+        ai_chance = {
+            factor = 0
+        }
+        659 = {
+            add_resistance = 20    
+        }
+        906 = {
+            add_resistance = 20
+        }
+        add_stability = -0.05
+    }
+}
