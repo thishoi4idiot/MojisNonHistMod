@@ -91,33 +91,6 @@
 			}
 		}
 	}
-	focus = {
-		id = FRA_extra_research_slot
-		icon = GFX_focus_research
-		available = {
-			if = {
-				limit = { amount_research_slots > 3 }
-				num_of_factories > 75
-			}
-			amount_research_slots < 5
-		}
-		prerequisite = {focus = FRA_develop_metropolitan_france}
-		prerequisite = {focus = FRA_the_blum_viollette_proposal}
-		x = -1
-		y = 1
-		relative_position_id = FRA_the_blum_viollette_proposal
-		cost = 10
-
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-		}		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
 
 	focus = {
 		id = FRA_algerie_france
@@ -610,6 +583,33 @@
 				annex_country = { target = ALG }
 			}
 			FRA_right_wing_riot_effect = yes
+		}
+	}
+	focus = {
+		id = FRA_extra_research_slot
+		icon = GFX_focus_research
+		available = {
+			if = {
+				limit = { amount_research_slots > 3 }
+				num_of_factories > 75
+			}
+			amount_research_slots < 5
+		}
+		prerequisite = {focus = FRA_develop_metropolitan_france}
+		prerequisite = {focus = FRA_the_blum_viollette_proposal}
+		x = -1
+		y = 1
+		relative_position_id = FRA_the_blum_viollette_proposal
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	focus = {

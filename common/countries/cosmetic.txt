@@ -28,11 +28,6 @@ UKR_Ukrainian_peooples_republic = {
 	color_ui = rgb { 171 96 96 }
 }
 
-POL_West_Russian_Volunteer_Army = {
-	color = rgb { 120 99 35}
-	color_ui = rgb { 120 99 35}
-}
-
 USA_American_Empire = {
 	color = rgb { 34 56 89 }
 	color_ui = rgb { 34 56 89 }

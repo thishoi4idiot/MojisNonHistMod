@@ -34490,7 +34490,6 @@ focus_tree = {
 			# Unlocks Raeder's laws in the political screen, and switches to them right away
 			set_country_flag = GER_raeder_laws_unlocked
 			if = { limit = { has_idea = civilian_economy } swap_ideas = { remove_idea = civilian_economy add_idea = GER_kriegsmarine_mobilization } }
-			else_if = { limit = { has_idea = early_mobilization } swap_ideas = { remove_idea = early_mobilization add_idea = GER_kriegsmarine_mobilization } }
 			else_if = { limit = { has_idea = partial_economic_mobilisation } swap_ideas = { remove_idea = partial_economic_mobilisation add_idea = GER_kriegsmarine_mobilization } }
 			else_if = { limit = { has_idea = war_economy } swap_ideas = { remove_idea = war_economy add_idea = GER_kriegsmarine_mobilization } }
 			else_if = { limit = { has_idea = tot_economic_mobilisation } swap_ideas = { remove_idea = tot_economic_mobilisation add_idea = GER_kriegsmarine_mobilization } }

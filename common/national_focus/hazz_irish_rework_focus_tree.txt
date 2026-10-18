@@ -844,7 +844,7 @@ focus_tree = {
              add_mio_funds = 1850
               }
             }
-            activate_military_industrial_organization = Ireland_Tank_Designer
+            unlock_military_industrial_organization_tooltip = mio:Ireland_Tank_Designer
             141 = {
             add_extra_state_shared_building_slots=1
                     add_building_construction={
@@ -1211,7 +1211,7 @@ focus_tree = {
              add_mio_funds = 2500
               }
             }
-            activate_military_industrial_organization = generic_escort_ship_organization
+            unlock_military_industrial_organization_tooltip = mio:Ireland_Convoy_Designer
             			navy_experience = 25
         }
         ai_will_do = {
@@ -1514,7 +1514,7 @@ focus_tree = {
         available = {
             OR = {
                 has_war = yes
-                date = 1946.9.1
+                date > 1946.9.1
             }
         }
         completion_reward = {
@@ -2268,8 +2268,8 @@ focus_tree = {
         completion_reward = {
             set_rule = {
                 can_create_factions = yes
-                add_political_power = 50
             }
+            add_political_power = 50
         }
         ai_will_do = {
             factor = 0

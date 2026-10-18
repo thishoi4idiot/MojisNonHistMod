@@ -104,4 +104,12 @@ characters = {
 		}
 	}
 
+	GEO_ioseb_jughashvili = {
+		name = GEO_ioseb_jughashvili
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GEO_ioseb_jughashvili
+			}
+		}
+	}
 }

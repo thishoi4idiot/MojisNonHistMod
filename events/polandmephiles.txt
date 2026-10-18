@@ -36,9 +36,7 @@ country_event = {
 		has_government = communism
 		tag = POL
 		any_state = {
-			limit = {
-				is_core_of = KOR
-			}
+			is_core_of = KOR
 			is_controlled_by = POL
 		}
 		KOR = {

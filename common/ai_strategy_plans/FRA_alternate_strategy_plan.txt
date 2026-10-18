@@ -28,10 +28,6 @@ FRA_alternate_plan_1 = {
 
 	ai_national_focuses = {
 		FRA_devalue_the_franc
-		FRA_copy_the_new_deal
-		FRA_autoroutes #March 10 1936	
-		FRA_fund_hydroelectric_projects #April 30 1938	
-		FRA_national_housing_programmes #May 20 1936	
 		FRA_naval_rearmament #October 10 1936
 		FRA_capital_ship_focus #October 10 1936	
 		FRA_begin_rearmament
@@ -40,7 +36,6 @@ FRA_alternate_plan_1 = {
 		FRA_infantry_focus #May 10 1937	
 		FRA_artillery_focus #July 20 1937	
 		FRA_heavy_armor_focus #September 30 1937	
-		FRA_increase_top_marginal_tax_rate #December 10 1937
 		FRA_improved_screen_ships #February 20 1938	
 								#July 10 1938	
 		FRA_extra_research_slot 					#November 30 1938
@@ -48,7 +43,6 @@ FRA_alternate_plan_1 = {
 		FRA_alpine_forts 							#April 20 1939	
 		FRA_extend_the_maginot_line 				#June 30 1939
 		FRA_army_reform								#September 10 1939	
-		FRA_increase_top_marginal_tax_rate					#November 20 1939	
 		FRA_air_focus 								#January 30 1940
 		FRA_fighter_focus 							#April 10 1940
 		FRA_cas_focus 								#June 20 1940	
@@ -119,11 +113,7 @@ FRA_alternate_plan_2 = {
 		FRA_go_with_britain 						#May 20 1936	
 		FRA_strengthen_government_support 			#July 30 1936	
 		FRA_defensive_strategems 					#October 10 1936
-		FRA_copy_the_new_deal 					#October 10 1936	
-		FRA_autoroutes 							#February 10 1939	
-		FRA_fund_hydroelectric_projects					#December 20 1936	
 		FRA_naval_rearmament 								#May 10 1937	
-		FRA_national_housing_programmes 						#July 20 1937	
 		FRA_defensive_focus							#September 30 1937	
 		FRA_fortification_focus 					#December 10 1937
 		FRA_infantry_focus 							#February 20 1938	
@@ -202,8 +192,6 @@ FRA_alternate_plan_3_regular = {
 		FRA_leftist_rhetoric						#October 10 1936
 		FRA_national_mobilization					#October 10 1936	
 		FRA_join_comintern 							#December 20 1936	
-		FRA_copy_the_new_deal 					#February 30 1937	
-		FRA_autoroutes 					#May 10 1937	
 		#FRA_initiate_government_reform 				#July 20 1937	
 		FRA_naval_rearmament 								#September 30 1937	
 		FRA_capital_ship_focus 						#December 10 1937
@@ -212,7 +200,6 @@ FRA_alternate_plan_3_regular = {
 		FRA_infantry_focus 							#July 10 1938	
 		FRA_artillery_focus 						#September 20 1938
 		FRA_heavy_armor_focus 						#November 30 1938
-		FRA_fund_hydroelectric_projects 						#February 10 1939	
 		FRA_improved_screen_ships 					#April 20 1939	
 		FRA_algerie_france 							#June 30 1939
 		#FRA_colonial_industry 						#September 10 1939	
@@ -284,10 +271,6 @@ FRA_alternate_plan_3_lar = {
 		FRA_womens_suffrage
 		FRA_legal_equality
 		FRA_force_the_issue
-		FRA_copy_the_new_deal
-		FRA_autoroutes 					#February 30 1937	
-		FRA_fund_hydroelectric_projects 							#June 30 1939
-		FRA_national_housing_programmes 					#May 10 1937		
 		FRA_reconciliation 								#September 30 1937	
 		FRA_constitutional_convention
 		FRA_loyalty_to_moscow
@@ -368,9 +351,7 @@ FRA_alternate_plan_4_regular = {
         FRA_right_wing_rhetoric = 500    
         FRA_army_of_aggression = 500    
         FRA_woo_italy = 500
-        FRA_copy_the_new_deal = 10
         FRA_extra_research_slot = 100
-        FRA_autoroutes = 100                                                             
     }   
 	research = {
 
@@ -419,10 +400,6 @@ FRA_alternate_plan_4_lar = {
 		FRA_economic_devolution
 		FRA_diplomatic_freedom
 		FRA_latin_entente
-		FRA_implement_austerity_measures
-		FRA_compulsory_cartelization 					#February 30 1937	
-		FRA_streamline_production_cost 							#June 30 1939
-		FRA_surpress_trade_union_opposition 					#May 10 1937		
 		FRA_reconciliation 								#September 30 1937	
 		FRA_constitutional_convention
 		FRA_loyalty_to_moscow
@@ -521,9 +498,7 @@ FRA_alternate_plan_little_entente = {
 	
 		FRA_strengthen_the_little_entente
 		FRA_strengthen_government_support
-		FRA_implement_austerity_measures
 		#1937
-		FRA_adopt_laissez_faire_economics
 		FRA_algerie_france
 		#FRA_colonial_industry
 		FRA_algerie_france
@@ -594,8 +569,6 @@ FRA_alternate_plan_fascist_regular = {
 
 	ai_national_focuses = {
 		#FRA_initiate_government_reform
-		FRA_implement_austerity_measures
-		FRA_adopt_laissez_faire_economics
 		FRA_algerie_france
 		FRA_grow_the_empire
 		#1937
@@ -669,7 +642,6 @@ FRA_alternate_plan_fascist_lar = {
 	ai_national_focuses = {
 		#1936
 		FRA_devalue_the_franc
-		FRA_implement_austerity_measures
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
 		FRA_utilize_the_leagues
@@ -677,11 +649,8 @@ FRA_alternate_plan_fascist_lar = {
 		#1937
 		FRA_economic_devolution
 		FRA_begin_rearmament
-		FRA_compulsory_cartelization
 		FRA_algerie_france
-		FRA_surpress_trade_union_opposition
 		#1938
-		FRA_adopt_laissez_faire_economics
 		FRA_extra_research_slot
 		FRA_national_regeneration
 		FRA_diplomatic_freedom
@@ -749,9 +718,6 @@ FRA_alternate_plan_communist_regular = {
 	}
 
 	ai_national_focuses = {
-		FRA_copy_the_new_deal
-		FRA_autoroutes
-		FRA_fund_hydroelectric_projects
 		FRA_extra_research_slot
 		#1937
 		FRA_algerie_france
@@ -818,13 +784,9 @@ FRA_alternate_plan_communist_lar = {
 		FRA_reform_the_labour_laws
 		FRA_invite_communist_ministers
 		#1937
-		FRA_copy_the_new_deal
 		FRA_begin_rearmament
 		FRA_defensive_focus
-		FRA_autoroutes
-		FRA_fund_hydroelectric_projects
 		#1938
-		FRA_national_housing_programmes
 		FRA_nationalize_key_industry
 		FRA_extra_research_slot
 		FRA_methodical_battle
@@ -838,7 +800,6 @@ FRA_alternate_plan_communist_lar = {
 		#1940
 		FRA_general_work_council
 		FRA_celebrate_the_commune
-		FRA_increase_top_marginal_tax_rate
 		FRA_invest_in_syria
 		FRA_invest_in_west_africa
 		#1941
@@ -899,15 +860,10 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
 		FRA_utilize_the_leagues
-		FRA_implement_austerity_measures
 		#1937
-		FRA_compulsory_cartelization
 		FRA_begin_rearmament
 		FRA_defensive_focus
-		FRA_streamline_production_cost
-		FRA_surpress_trade_union_opposition
 		#1938
-		FRA_adopt_laissez_faire_economics
 		FRA_the_council_of_rambouillet
 		FRA_extra_research_slot
 		FRA_revise_the_constitution
@@ -981,15 +937,10 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_revive_the_national_bloc
 		FRA_agricultural_protectionism
 		FRA_utilize_the_leagues
-		FRA_implement_austerity_measures
 		#1937
-		FRA_compulsory_cartelization
 		FRA_begin_rearmament
 		FRA_defensive_focus
-		FRA_streamline_production_cost
-		FRA_surpress_trade_union_opposition
 		#1938
-		FRA_adopt_laissez_faire_economics
 		FRA_the_council_of_rambouillet
 		FRA_extra_research_slot
 		FRA_revise_the_constitution
@@ -1064,11 +1015,9 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		FRA_agricultural_protectionism
 		#1937
 		FRA_revise_the_constitution
-		FRA_implement_austerity_measures
 		FRA_begin_rearmament
 		FRA_aggressive_focus
 		#1938
-		FRA_compulsory_cartelization
 		FRA_our_empire
 		FRA_repeal_the_law_of_exile
 		FRA_proclaim_the_third_empire

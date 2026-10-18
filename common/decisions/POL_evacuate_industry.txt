@@ -1,0 +1,57 @@
+POL_evacuate_industry_category = {
+	POL_evacuate_industry = {
+		icon = GFX_decision_generic_construction
+
+		state_target = yes
+		targets = { 10 85 86 87 88 89 90 91 92 93 94 95 96 97 98 762 784 807 }
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT
+				is_controlled_by = ROOT
+				OR = {
+					industrial_complex > 0
+					arms_factory > 0
+				}
+			}
+		}
+
+		allowed = { original_tag = POL }
+
+		visible = { has_country_flag = POL_industry_evacuation_unlocked }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_evacuate_industry_busy_tt
+				NOT = { has_country_flag = POL_evacuating_industry }
+			}
+		}
+
+		cost = 10
+		days_remove = 35
+
+		ai_will_do = { factor = 5 }
+
+		complete_effect = {
+			set_country_flag = POL_evacuating_industry
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = POL_evacuate_industry_tt
+			clr_country_flag = POL_evacuating_industry
+			hidden_effect = {
+				FROM = {
+					if = {
+						limit = { industrial_complex > 0 }
+						remove_building = { type = industrial_complex level = 1 }
+						ROOT = { add_offsite_building = { type = industrial_complex level = 1 } }
+					}
+					if = {
+						limit = { arms_factory > 0 }
+						remove_building = { type = arms_factory level = 1 }
+						ROOT = { add_offsite_building = { type = arms_factory level = 1 } }
+					}
+				}
+			}
+		}
+	}
+}
