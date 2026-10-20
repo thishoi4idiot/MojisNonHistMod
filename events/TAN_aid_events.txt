@@ -1,0 +1,753 @@
+﻿add_namespace = TAN_aid
+
+# Tuva asks the Soviet Union for aid
+country_event = {
+	id = TAN_aid.1
+	title = TAN_aid.1.t
+	desc = TAN_aid.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_aid.1.a
+		ai_chance = { factor = 95 }
+		add_timed_idea = {
+			idea = TAN_soviet_aid_burden
+			days = 180
+		}
+		FROM = {
+			country_event = { id = TAN_aid.2 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_aid.1.b
+		ai_chance = { factor = 5 }
+		FROM = {
+			country_event = { id = TAN_aid.3 }
+		}
+	}
+}
+
+# Moscow agrees
+country_event = {
+	id = TAN_aid.2
+	title = TAN_aid.2.t
+	desc = TAN_aid.2.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_aid.2.a
+		add_political_power = 50
+		capital_scope = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Moscow refuses
+country_event = {
+	id = TAN_aid.3
+	title = TAN_aid.3.t
+	desc = TAN_aid.3.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_aid.3.a
+	}
+}
+
+add_namespace = TAN_union
+
+# Tuva asks for union with the Oyrot Region
+country_event = {
+	id = TAN_union.1
+	title = TAN_union.1.t
+	desc = TAN_union.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_union.1.a
+		ai_chance = { factor = 95 }
+		FROM = {
+			country_event = { id = TAN_union.2 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_union.1.b
+		ai_chance = { factor = 5 }
+		FROM = {
+			country_event = { id = TAN_union.3 }
+		}
+	}
+}
+
+# Moscow agrees: Tuva gets the core and the state
+country_event = {
+	id = TAN_union.2
+	title = TAN_union.2.t
+	desc = TAN_union.2.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_union.2.a
+		654 = {
+			add_core_of = ROOT
+			transfer_state_to = ROOT
+		}
+	}
+}
+
+# Moscow refuses: Tuva keeps the core only
+country_event = {
+	id = TAN_union.3
+	title = TAN_union.3.t
+	desc = TAN_union.3.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_union.3.a
+		654 = {
+			add_core_of = ROOT
+		}
+	}
+}
+
+add_namespace = TAN_expand
+
+# Central Siberia
+country_event = {
+	id = TAN_expand.1
+	title = TAN_expand.1.t
+	desc = TAN_expand.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.1.a
+		ai_chance = { factor = 95 }
+		save_global_event_target_as = TAN_giver_central
+		TAN = {
+			country_event = { id = TAN_expand.11 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_expand.1.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_expand.14 }
+		}
+	}
+}
+
+# The Far East
+country_event = {
+	id = TAN_expand.2
+	title = TAN_expand.2.t
+	desc = TAN_expand.2.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.2.a
+		ai_chance = { factor = 95 }
+		save_global_event_target_as = TAN_giver_far_east
+		TAN = {
+			country_event = { id = TAN_expand.17 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_expand.2.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_expand.18 }
+		}
+	}
+}
+
+# Omsk
+country_event = {
+	id = TAN_expand.3
+	title = TAN_expand.3.t
+	desc = TAN_expand.3.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.3.a
+		ai_chance = { factor = 95 }
+		save_global_event_target_as = TAN_giver_omsk
+		TAN = {
+			country_event = { id = TAN_expand.19 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_expand.3.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_expand.20 }
+		}
+	}
+}
+
+# The Steppes
+country_event = {
+	id = TAN_expand.4
+	title = TAN_expand.4.t
+	desc = TAN_expand.4.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.4.a
+		ai_chance = { factor = 95 }
+		# STATES: for each state in this group add
+		# <state id> = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+	}
+	option = { # Refuse
+		name = TAN_expand.4.b
+		ai_chance = { factor = 5 }
+		# STATES: for each state in this group add
+		# <state id> = { add_core_of = TAN }
+	}
+}
+
+# Mongolia
+country_event = {
+	id = TAN_expand.5
+	title = TAN_expand.5.t
+	desc = TAN_expand.5.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.5.a
+		ai_chance = { factor = 95 }
+		TAN = {
+			country_event = { id = TAN_expand.13 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_expand.5.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_expand.16 }
+		}
+	}
+}
+
+# Siberian Manchus
+country_event = {
+	id = TAN_expand.6
+	title = TAN_expand.6.t
+	desc = TAN_expand.6.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.6.a
+		ai_chance = { factor = 60 }
+		# STATES: for each state in this group add
+		# <state id> = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+	}
+	option = { # Refuse
+		name = TAN_expand.6.b
+		ai_chance = { factor = 40 }
+		# STATES: for each state in this group add
+		# <state id> = { add_core_of = TAN }
+	}
+}
+
+# The Ainu
+country_event = {
+	id = TAN_expand.7
+	title = TAN_expand.7.t
+	desc = TAN_expand.7.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.7.a
+		ai_chance = { factor = 60 }
+		# STATES: for each state in this group add
+		# <state id> = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+	}
+	option = { # Refuse
+		name = TAN_expand.7.b
+		ai_chance = { factor = 40 }
+		# STATES: for each state in this group add
+		# <state id> = { add_core_of = TAN }
+	}
+}
+
+# Northern Siberia
+country_event = {
+	id = TAN_expand.8
+	title = TAN_expand.8.t
+	desc = TAN_expand.8.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_expand.8.a
+		ai_chance = { factor = 95 }
+		save_global_event_target_as = TAN_giver_north
+		TAN = {
+			country_event = { id = TAN_expand.12 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_expand.8.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_expand.15 }
+		}
+	}
+}
+
+# Confirmation: Central Siberia
+country_event = {
+	id = TAN_expand.11
+	title = TAN_expand.11.t
+	desc = TAN_expand.11.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.11.a
+		40 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		569 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		568 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		567 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		566 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		564 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		565 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+		563 = { if = { limit = { is_owned_by = event_target:TAN_giver_central } add_core_of = ROOT transfer_state_to = ROOT } }
+	}
+}
+
+# Confirmation: Northern Siberia
+country_event = {
+	id = TAN_expand.12
+	title = TAN_expand.12.t
+	desc = TAN_expand.12.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.12.a
+		570 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		578 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		576 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		516 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		878 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		575 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		565 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+		876 = { if = { limit = { is_owned_by = event_target:TAN_giver_north } add_core_of = ROOT transfer_state_to = ROOT } }
+	}
+}
+
+# Confirmation: Mongolia joins
+country_event = {
+	id = TAN_expand.13
+	title = TAN_expand.13.t
+	desc = TAN_expand.13.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.13.a
+		every_state = {
+			limit = { is_owned_by = MON }
+			add_core_of = ROOT
+		}
+		annex_country = {
+			target = MON
+			transfer_troops = yes
+		}
+	}
+}
+
+# Denial: Central Siberia
+country_event = {
+	id = TAN_expand.14
+	title = TAN_expand.14.t
+	desc = TAN_expand.14.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.14.a
+		40 = { add_core_of = ROOT }
+		569 = { add_core_of = ROOT }
+		568 = { add_core_of = ROOT }
+		567 = { add_core_of = ROOT }
+		566 = { add_core_of = ROOT }
+		564 = { add_core_of = ROOT }
+		565 = { add_core_of = ROOT }
+		563 = { add_core_of = ROOT }
+	}
+}
+
+# Denial: Northern Siberia
+country_event = {
+	id = TAN_expand.15
+	title = TAN_expand.15.t
+	desc = TAN_expand.15.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.15.a
+		570 = { add_core_of = ROOT }
+		578 = { add_core_of = ROOT }
+		576 = { add_core_of = ROOT }
+		516 = { add_core_of = ROOT }
+		878 = { add_core_of = ROOT }
+		575 = { add_core_of = ROOT }
+		565 = { add_core_of = ROOT }
+		876 = { add_core_of = ROOT }
+	}
+}
+
+# Denial: Mongolia
+country_event = {
+	id = TAN_expand.16
+	title = TAN_expand.16.t
+	desc = TAN_expand.16.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.16.a
+	}
+}
+
+# accept far_east
+country_event = {
+	id = TAN_expand.17
+	title = TAN_expand.17.t
+	desc = TAN_expand.17.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.17.a
+		574 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		877 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		644 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		822 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		875 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		637 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		874 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		562 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		561 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		560 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		657 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		409 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		408 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+		655 = { if = { limit = { is_owned_by = event_target:TAN_giver_far_east } add_core_of = ROOT transfer_state_to = ROOT } }
+	}
+}
+
+# deny far_east
+country_event = {
+	id = TAN_expand.18
+	title = TAN_expand.18.t
+	desc = TAN_expand.18.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.18.a
+		574 = { add_core_of = ROOT }
+		877 = { add_core_of = ROOT }
+		644 = { add_core_of = ROOT }
+		822 = { add_core_of = ROOT }
+		875 = { add_core_of = ROOT }
+		637 = { add_core_of = ROOT }
+		874 = { add_core_of = ROOT }
+		562 = { add_core_of = ROOT }
+		561 = { add_core_of = ROOT }
+		560 = { add_core_of = ROOT }
+		657 = { add_core_of = ROOT }
+		409 = { add_core_of = ROOT }
+		408 = { add_core_of = ROOT }
+		655 = { add_core_of = ROOT }
+	}
+}
+
+# accept omsk
+country_event = {
+	id = TAN_expand.19
+	title = TAN_expand.19.t
+	desc = TAN_expand.19.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.19.a
+		882 = { if = { limit = { is_owned_by = event_target:TAN_giver_omsk } add_core_of = ROOT transfer_state_to = ROOT } }
+		588 = { if = { limit = { is_owned_by = event_target:TAN_giver_omsk } add_core_of = ROOT transfer_state_to = ROOT } }
+		571 = { if = { limit = { is_owned_by = event_target:TAN_giver_omsk } add_core_of = ROOT transfer_state_to = ROOT } }
+		577 = { if = { limit = { is_owned_by = event_target:TAN_giver_omsk } add_core_of = ROOT transfer_state_to = ROOT } }
+		824 = { if = { limit = { is_owned_by = event_target:TAN_giver_omsk } add_core_of = ROOT transfer_state_to = ROOT } }
+	}
+}
+
+# deny omsk
+country_event = {
+	id = TAN_expand.20
+	title = TAN_expand.20.t
+	desc = TAN_expand.20.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_expand.20.a
+		882 = { add_core_of = ROOT }
+		588 = { add_core_of = ROOT }
+		571 = { add_core_of = ROOT }
+		577 = { add_core_of = ROOT }
+		824 = { add_core_of = ROOT }
+	}
+}
+
+add_namespace = TAN_free
+
+# Tuva asks to be free of Soviet protection
+country_event = {
+	id = TAN_free.1
+	title = TAN_free.1.t
+	desc = TAN_free.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_free.1.a
+		ai_chance = { factor = 75 }
+		TAN = {
+			country_event = { id = TAN_free.2 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_free.1.b
+		ai_chance = { factor = 25 }
+		TAN = {
+			country_event = { id = TAN_free.3 }
+		}
+	}
+}
+
+# Moscow agrees: Tuva confirms the end of the protectorate
+country_event = {
+	id = TAN_free.2
+	title = TAN_free.2.t
+	desc = TAN_free.2.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_free.2.a
+		remove_ideas = TAN_protectorate_republic
+		SOV = {
+			end_puppet = TAN
+		}
+	}
+}
+
+# Moscow refuses
+country_event = {
+	id = TAN_free.3
+	title = TAN_free.3.t
+	desc = TAN_free.3.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_free.3.a
+	}
+}
+
+add_namespace = TAN_gold
+
+# Tuva offers the state gold reserve to Moscow
+country_event = {
+	id = TAN_gold.1
+	title = TAN_gold.1.t
+	desc = TAN_gold.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_gold.1.a
+		ai_chance = { factor = 95 }
+		add_timed_idea = {
+			idea = TAN_gold_donation_boon
+			days = 365
+		}
+		add_opinion_modifier = {
+			target = TAN
+			modifier = TAN_gold_donation
+		}
+		TAN = {
+			country_event = { id = TAN_gold.2 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_gold.1.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_gold.3 }
+		}
+	}
+}
+
+# Moscow accepts the gold
+country_event = {
+	id = TAN_gold.2
+	title = TAN_gold.2.t
+	desc = TAN_gold.2.d
+	picture = GFX_report_event_stalin_propaganda
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_gold.2.a
+		add_political_power = 150
+		add_stability = 0.10
+		add_timed_idea = {
+			idea = TAN_empty_treasury
+			days = 365
+		}
+	}
+}
+
+# Moscow declines the gold
+country_event = {
+	id = TAN_gold.3
+	title = TAN_gold.3.t
+	desc = TAN_gold.3.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_gold.3.a
+		add_political_power = 25
+	}
+}
+
+add_namespace = TAN_split
+
+# Tuva asks Moscow to split Sinkiang
+country_event = {
+	id = TAN_split.1
+	title = TAN_split.1.t
+	desc = TAN_split.1.d
+	picture = GFX_report_event_stalin_01
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = TAN_split.1.a
+		ai_chance = { factor = 95 }
+		SIK = {
+			country_event = { id = TAN_split.2 }
+		}
+	}
+	option = { # Refuse
+		name = TAN_split.1.b
+		ai_chance = { factor = 5 }
+		TAN = {
+			country_event = { id = TAN_split.3 }
+		}
+	}
+}
+
+# Sinkiang is offered the carve-up
+country_event = {
+	id = TAN_split.2
+	title = TAN_split.2.t
+	desc = TAN_split.2.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = { # Accept the carve-up
+		name = TAN_split.2.a
+		ai_chance = { factor = 50 }
+		619 = { if = { limit = { is_owned_by = ROOT } transfer_state_to = SOV } }
+		618 = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+		617 = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+		760 = { if = { limit = { is_owned_by = ROOT } add_core_of = TAN transfer_state_to = TAN } }
+	}
+	option = { # Refuse and break free
+		name = TAN_split.2.b
+		ai_chance = { factor = 50 }
+		SOV = {
+			end_puppet = SIK
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+		MON = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+	}
+}
+
+# Moscow declines
+country_event = {
+	id = TAN_split.3
+	title = TAN_split.3.t
+	desc = TAN_split.3.d
+	picture = GFX_report_event_stalin_02
+
+	is_triggered_only = yes
+
+	option = {
+		name = TAN_split.3.a
+	}
+}

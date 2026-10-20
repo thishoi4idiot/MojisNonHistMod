@@ -2143,3 +2143,8 @@ OMA_cosmetic_USSME = {
     color = rgb { 166 60 104 }
     color_ui = rgb { 166 60 104 }
 }
+
+TAN_SIBERIAN_SSR = {
+	color = rgb { 190 30 45 }
+	color_ui = rgb { 220 50 60 }
+}

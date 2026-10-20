@@ -1,0 +1,1047 @@
+focus_tree = {
+	id = tannu_tuva_tree
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			original_tag = TAN
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	initial_show_position = {
+		focus = TAN_enforce_aksa
+	}
+
+	focus = {
+		id = TAN_enforce_aksa
+		icon = GFX_focus_PRC_promote_the_silver_dollar
+		x = 4
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_barter_economy
+				add_idea = TAN_transitioning_economy
+			}
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_kyzyl_workshops
+		icon = GFX_focus_generic_industry_1
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			TAN_soviet_aligned = yes
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		relative_position_id = TAN_enforce_aksa
+		prerequisite = {
+			focus = TAN_enforce_aksa
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAN_no_industrial_base
+				add_idea = TAN_small_industrial_base
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_soviet_trade_monopoly
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = TAN_enforce_aksa }
+		relative_position_id = TAN_enforce_aksa
+		x = 2
+		y = 1
+		cost = 5
+
+		available = {
+			TAN_soviet_aligned = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = TAN_soviet_trade_monopsony
+		}
+	}
+
+	focus = {
+		id = TAN_state_herd_registry
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = TAN_enforce_aksa }
+		relative_position_id = TAN_enforce_aksa
+		x = -2
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			add_ideas = TAN_state_herd_registry_idea
+		}
+	}
+
+	focus = {
+		id = TAN_mechanize_mines
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = TAN_soviet_trade_monopoly }
+		relative_position_id = TAN_soviet_trade_monopoly
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			TAN_soviet_aligned = yes
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = chromium
+					amount = 4
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = TAN_mechanize_mines
+				bonus = 2.0
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_russian_labor_colonies
+		icon = GFX_focus_generic_industrial_experts
+		prerequisite = { focus = TAN_kyzyl_workshops }
+		relative_position_id = TAN_kyzyl_workshops
+		x = 0
+		y = 1
+		cost = 5
+
+		available = {
+			TAN_soviet_aligned = yes
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = TAN_russian_labor_colonies_idea
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_sedentary_mandate
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_state_herd_registry }
+		relative_position_id = TAN_state_herd_registry
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			remove_ideas = TAN_nomadic_herding_legacy
+			add_timed_idea = {
+				idea = TAN_nomadic_unrest
+				days = 180
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_begin_five_year_plan
+		icon = GFX_focus_CHI_planned_economy
+		prerequisite = { focus = TAN_mechanize_mines }
+		prerequisite = { focus = TAN_russian_labor_colonies }
+		prerequisite = { focus = TAN_sedentary_mandate }
+		relative_position_id = TAN_russian_labor_colonies
+		x = 0
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			TAN_soviet_aligned = yes
+			SOV = {
+				has_completed_focus = SOV_finish_the_five_year_plan
+			}
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_timed_idea = {
+				idea = TAN_five_year_plan
+				days = 1825
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_connect_trans_siberian
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = TAN_begin_five_year_plan }
+		relative_position_id = TAN_begin_five_year_plan
+		x = -2
+		y = 1
+		cost = 10
+
+		available = {
+			TAN_soviet_aligned = yes
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = TAN_crumbling_infrastructure }
+				swap_ideas = {
+					remove_idea = TAN_crumbling_infrastructure
+					add_idea = TAN_poor_infrastructure
+				}
+			}
+			else_if = {
+				limit = { has_idea = TAN_poor_infrastructure }
+				swap_ideas = {
+					remove_idea = TAN_poor_infrastructure
+					add_idea = TAN_poor_infrastructure_2
+				}
+			}
+			build_railway = {
+				level = 1
+				start_province = 7274
+				target_province = 7822
+			}
+			build_railway = {
+				level = 1
+				start_province = 7822
+				target_province = 10627
+			}
+			build_railway = {
+				level = 1
+				start_province = 10627
+				target_province = 4797
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_transformation_of_nature
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = TAN_begin_five_year_plan }
+		relative_position_id = TAN_begin_five_year_plan
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			TAN_homeland_held = yes
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = TAN_crumbling_infrastructure }
+				swap_ideas = {
+					remove_idea = TAN_crumbling_infrastructure
+					add_idea = TAN_poor_infrastructure
+				}
+			}
+			else_if = {
+				limit = { has_idea = TAN_poor_infrastructure }
+				swap_ideas = {
+					remove_idea = TAN_poor_infrastructure
+					add_idea = TAN_poor_infrastructure_2
+				}
+			}
+			
+			add_ideas = TAN_transformation_of_nature_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			capital_scope = {
+				set_state_category = town
+			}
+
+			unlock_decision_category_tooltip = TAN_develop_siberia_category
+			
+		}
+	}
+
+	focus = {
+		id = TAN_request_soviet_aid
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = TAN_begin_five_year_plan }
+		relative_position_id = TAN_begin_five_year_plan
+		x = 2
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			TAN_soviet_aligned = yes
+			TAN_homeland_held = yes
+			country_exists = SOV
+		}
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = TAN_aid.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_increase_trans_siberian_trade
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = TAN_connect_trans_siberian }
+		relative_position_id = TAN_connect_trans_siberian
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			TAN_soviet_aligned = yes
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 40
+				producer = SOV
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = TAN_trans_siberian_trade
+			
+		}
+	}
+
+	focus = {
+		id = TAN_subsidize_tuvan_industries
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = TAN_transformation_of_nature }
+		relative_position_id = TAN_transformation_of_nature
+		x = 0
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			effect_tooltip = {
+				add_ideas = TAN_industrializing_economy
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = TAN_transitioning_economy }
+					swap_ideas = {
+						remove_idea = TAN_transitioning_economy
+						add_idea = TAN_industrializing_economy
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_idea = TAN_industrializing_economy }
+						NOT = { has_idea = TAN_barter_economy }
+					}
+					add_ideas = TAN_industrializing_economy
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_increase_production_output
+		icon = GFX_focus_generic_industrial_experts
+		prerequisite = { focus = TAN_request_soviet_aid }
+		relative_position_id = TAN_request_soviet_aid
+		x = 0
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = TAN_increased_production_output
+		}
+	}
+
+	focus = {
+		id = TAN_complete_five_year_plan
+		icon = GFX_focus_CHI_planned_economy
+		prerequisite = { focus = TAN_increase_trans_siberian_trade }
+		prerequisite = { focus = TAN_subsidize_tuvan_industries }
+		prerequisite = { focus = TAN_increase_production_output }
+		relative_position_id = TAN_subsidize_tuvan_industries
+		x = 0
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		available = {
+			TAN_soviet_aligned = yes
+			NOT = { has_idea = TAN_five_year_plan }
+		}
+
+		completion_reward = {
+			effect_tooltip = {
+				add_ideas = TAN_strong_industrial_base
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_idea = TAN_small_industrial_base }
+					swap_ideas = {
+						remove_idea = TAN_small_industrial_base
+						add_idea = TAN_strong_industrial_base
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_idea = TAN_strong_industrial_base }
+						NOT = { has_idea = TAN_no_industrial_base }
+					}
+					add_ideas = TAN_strong_industrial_base
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_revolutionary_army
+		icon = GFX_focus_generic_self_management
+		x = 18
+		y = 0
+		cost = 5
+
+		completion_reward = {
+			army_experience = 20
+			hidden_effect = {
+				remove_ideas = TAN_tuvan_army_1
+			}
+			swap_ideas = {
+				remove_idea = TAN_tuvan_army_1
+				add_idea = TAN_tuvan_army_2
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_steppe_cavalry
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = TAN_revolutionary_army }
+		mutually_exclusive = { focus = TAN_border_guards focus = TAN_increase_conscription }
+		relative_position_id = TAN_revolutionary_army
+		x = -2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_ideas = TAN_steppe_cavalry_idea
+		}
+	}
+
+	focus = {
+		id = TAN_border_guards
+		icon = GFX_focus_generic_mountain_troops
+		prerequisite = { focus = TAN_revolutionary_army }
+		mutually_exclusive = { focus = TAN_steppe_cavalry focus = TAN_increase_conscription }
+		relative_position_id = TAN_revolutionary_army
+		x = 2
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_ideas = TAN_border_guards_idea
+			add_tech_bonus = {
+				name = TAN_border_guards
+				bonus = 0.75
+				uses = 1
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_increase_conscription
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_revolutionary_army }
+		mutually_exclusive = { focus = TAN_steppe_cavalry focus = TAN_border_guards }
+		relative_position_id = TAN_revolutionary_army
+		x = 0
+		y = 1
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = TAN_tuvan_conscription
+		}
+	}
+
+	focus = {
+		id = TAN_consolidate_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = TAN_steppe_cavalry focus = TAN_border_guards focus = TAN_increase_conscription }
+		relative_position_id = TAN_revolutionary_army
+		x = 0
+		y = 2
+		cost = 5
+
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = TAN_tuvan_army_2
+				add_idea = TAN_tuvan_army_3
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_infantry_efforts
+		icon = GFX_focus_generic_army_attack
+		prerequisite = { focus = TAN_consolidate_army }
+		relative_position_id = TAN_revolutionary_army
+		x = -2
+		y = 3
+		cost = 5
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TAN_infantry_efforts
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = TAN_fortification_efforts
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = TAN_consolidate_army }
+		relative_position_id = TAN_revolutionary_army
+		x = 0
+		y = 3
+		cost = 5
+
+		completion_reward = {
+			add_ideas = TAN_fortification_efforts_idea
+		}
+	}
+
+	focus = {
+		id = TAN_seek_soviet_assistance
+		icon = GFX_focus_SOV_merge_plants
+		prerequisite = { focus = TAN_consolidate_army }
+		relative_position_id = TAN_revolutionary_army
+		x = 2
+		y = 3
+		cost = 5
+
+		available = {
+			TAN_soviet_aligned = yes
+			country_exists = SOV
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				producer = SOV
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 150
+				producer = SOV
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = TAN_soviet_military_cooperation
+		}
+	}
+
+	focus = {
+		id = TAN_soviet_military_mission
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = TAN_seek_soviet_assistance }
+		relative_position_id = TAN_seek_soviet_assistance
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			TAN_soviet_aligned = yes
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = TAN_soviet_military_mission
+				cost_reduction = 0.75
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_mobilize_herdsmen
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_infantry_efforts focus = TAN_fortification_efforts focus = TAN_seek_soviet_assistance }
+		relative_position_id = TAN_revolutionary_army
+		x = 0
+		y = 4
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = extensive_conscription
+			}
+			swap_ideas = {
+				remove_idea = TAN_tuvan_army_3
+				add_idea = TAN_tuvan_army_4
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_work_with_moscow
+		icon = GFX_focus_PRC_invite_soviet_general
+		x = 12
+		y = 0
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = SOV
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TAN_hold_what_we_have
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = TAN_work_with_moscow }
+		mutually_exclusive = { focus = TAN_siberian_aspirations }
+		relative_position_id = TAN_work_with_moscow
+		x = -2
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = TAN_hold_what_we_have_idea
+		}
+	}
+
+	focus = {
+		id = TAN_siberian_aspirations
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_work_with_moscow }
+		mutually_exclusive = { focus = TAN_hold_what_we_have }
+		relative_position_id = TAN_work_with_moscow
+		x = 2
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = TAN_siberian_aspirations_idea
+		}
+	}
+
+	focus = {
+		id = TAN_union_with_oyrot
+		icon = GFX_focus_SOV_my_brothers_keeper
+		prerequisite = { focus = TAN_siberian_aspirations }
+		prerequisite = { focus = TAN_the_little_purge }
+		relative_position_id = TAN_work_with_moscow
+		x = 2
+		y = 3
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available = {
+			country_exists = SOV
+			SOV = { owns_state = 654 }
+		}
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = TAN_union.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_the_little_purge
+		icon = GFX_focus_SOV_purge_bukharinists
+		prerequisite = { focus = TAN_hold_what_we_have focus = TAN_siberian_aspirations }
+		relative_position_id = TAN_work_with_moscow
+		x = 0
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = TAN_little_purge_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_latinization_campaign
+		icon = GFX_focus_generic_education
+		prerequisite = { focus = TAN_hold_what_we_have }
+		prerequisite = { focus = TAN_the_little_purge }
+		relative_position_id = TAN_work_with_moscow
+		x = -2
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = 0.05
+			add_ideas = TAN_latinization_idea
+		}
+	}
+
+	focus = {
+		id = TAN_seize_monastery_wealth
+		icon = GFX_focus_BRA_state_atheism
+		prerequisite = { focus = TAN_latinization_campaign }
+		relative_position_id = TAN_work_with_moscow
+		x = -2
+		y = 4
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.15
+			add_timed_idea = {
+				idea = TAN_monastery_wealth_idea
+				days = 365
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_champion_siberianism
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		prerequisite = { focus = TAN_union_with_oyrot }
+		relative_position_id = TAN_work_with_moscow
+		x = 2
+		y = 4
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			owns_state = 654
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = SOV_siberian_republics
+		}
+	}
+
+	focus = {
+		id = TAN_expand_the_ssr
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_champion_siberianism }
+		relative_position_id = TAN_work_with_moscow
+		x = 2
+		y = 5
+		cost = 10
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		available = {
+			owns_state = 654
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_ideas = TAN_expand_the_ssr_idea
+			unlock_decision_category_tooltip = TAN_expand_ssr_category
+			654 = {
+				if = {
+					limit = { is_owned_by = ROOT }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_free_of_protection
+		icon = GFX_focus_JAP_raise_the_red_flag_high
+		prerequisite = { focus = TAN_the_little_purge }
+		relative_position_id = TAN_work_with_moscow
+		x = 0
+		y = 3
+		cost = 5
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = SOV
+			is_subject_of = SOV
+		}
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = TAN_free.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_secularize_the_lamas
+		icon = GFX_focus_SOV_mobilization_plan
+		prerequisite = { focus = TAN_seize_monastery_wealth }
+		relative_position_id = TAN_work_with_moscow
+		x = -2
+		y = 5
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+			add_ideas = TAN_secularized_clergy_idea
+		}
+	}
+
+	focus = {
+		id = TAN_rely_on_our_infantry
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = TAN_mobilize_herdsmen }
+		mutually_exclusive = { focus = TAN_modern_warfare }
+		relative_position_id = TAN_mobilize_herdsmen
+		x = -1
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TAN_rely_on_our_infantry
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = TAN_rely_on_our_infantry
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+			}
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TAN_modern_warfare
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TAN_mobilize_herdsmen }
+		mutually_exclusive = { focus = TAN_rely_on_our_infantry }
+		relative_position_id = TAN_mobilize_herdsmen
+		x = 1
+		y = 1
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TAN_modern_warfare
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+			army_experience = 50
+		}
+	}
+
+	focus = {
+		id = TAN_donate_gold_reserve
+		icon = GFX_focus_generic_money_for_equipment
+		prerequisite = { focus = TAN_hold_what_we_have }
+		prerequisite = { focus = TAN_mechanize_mines }
+		relative_position_id = TAN_work_with_moscow
+		x = -4
+		y = 3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			TAN_soviet_aligned = yes
+		}
+
+		completion_reward = {
+			SOV = {
+				country_event = { id = TAN_gold.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = TAN_mechanize_the_cavalry
+		icon = GFX_focus_generic_military_industry
+		prerequisite = { focus = TAN_steppe_cavalry }
+		relative_position_id = TAN_revolutionary_army
+		x = -2
+		y = 2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TAN_mechanize_the_cavalry
+				bonus = 2.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = TAN_mechanize_the_cavalry
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			army_experience = 50
+		}
+	}
+}

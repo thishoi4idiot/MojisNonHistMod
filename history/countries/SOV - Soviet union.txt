@@ -1518,6 +1518,14 @@ add_to_faction = MON
 add_to_faction = TAN
 
 if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_autonomy = {
+		target = TAN
+		autonomous_state = autonomy_supervised_state
+	}
+}
+
+if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}

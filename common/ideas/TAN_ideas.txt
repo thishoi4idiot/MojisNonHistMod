@@ -1,0 +1,431 @@
+ideas = {
+	country = {
+
+		### Starting debuffs (1936) - each is removed by one economy focus ###
+
+		# Removed by TAN_enforce_aksa
+		TAN_barter_economy = {
+			picture = prc_low_popular_support2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.20
+				stability_factor = -0.05
+			}
+		}
+
+		# Replaces TAN_barter_economy via TAN_enforce_aksa
+		TAN_transitioning_economy = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				stability_factor = -0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		# Removed by TAN_kyzyl_workshops
+		TAN_no_industrial_base = {
+			picture = TAN_no_industrial_base
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.30
+			}
+		}
+
+		# Replaces TAN_no_industrial_base via TAN_kyzyl_workshops
+		TAN_small_industrial_base = {
+			picture = generic_industrial_concern_1
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+
+		# Removed by TAN_sedentary_mandate
+		TAN_nomadic_herding_legacy = {
+			picture = ETH_national_studs
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				production_speed_buildings_factor = -0.15
+			}
+		}
+
+		TAN_crumbling_infrastructure = {
+			picture = POL_disjointed_industry
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = -0.50
+				supply_consumption_factor = 0.10
+			}
+		}
+
+		TAN_poor_infrastructure = {
+			picture = POL_disjointed_industry
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = -0.35
+				supply_consumption_factor = 0.10
+			}
+		}
+
+		TAN_poor_infrastructure_2 = {
+			picture = POL_disjointed_industry
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = -0.20
+				supply_consumption_factor = 0.10
+			}
+		}
+
+		TAN_protectorate_republic = {
+			picture = generic_political_support
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				autonomy_gain = -2
+			}
+		}
+
+		### Focus rewards ###
+
+		TAN_soviet_trade_monopsony = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.10
+			}
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+
+		TAN_state_herd_registry_idea = {
+			picture = generic_mild_economic_recovery
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		TAN_russian_labor_colonies_idea = {
+			picture = generic_industrial_concern_1
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = -100
+				local_resources_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+
+		# Temporary, added by TAN_sedentary_mandate
+		TAN_nomadic_unrest = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.05
+			}
+		}
+
+		TAN_hardy_mountain_people = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+			}
+		}
+
+		TAN_tuvan_army_1 = {
+			picture = chi_army_corruption
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = -0.10
+				army_defence_factor = -0.10
+				training_time_factor = 0.25
+			}
+		}
+
+		TAN_tuvan_army_2 = {
+			picture = chi_army_corruption2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = -0.05
+				army_defence_factor = -0.05
+				training_time_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_3 = {
+			picture = chi_army_corruption3
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				training_time_factor = 0.05
+			}
+		}
+
+		TAN_tuvan_army_4 = {
+			picture = generic_women_in_the_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+
+		TAN_five_year_plan = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		TAN_industrializing_economy = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		TAN_soviet_aid_burden = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.10
+			}
+		}
+
+		TAN_strong_industrial_base = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		TAN_trans_siberian_trade = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = SOV
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+
+		TAN_increased_production_output = {
+			picture = generic_industrial_concern_1
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+			}
+		}
+
+		TAN_transformation_of_nature_idea = {
+			picture = generic_mild_economic_recovery
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = -0.10
+				local_resources_factor = 0.10
+			}
+		}
+
+		TAN_soviet_military_cooperation = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.05
+				army_org_factor = 0.05
+				supply_consumption_factor = -0.02
+			}
+		}
+
+		TAN_tuvan_conscription = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription = 0.10
+			}
+		}
+
+		TAN_steppe_cavalry_idea = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.10
+				supply_consumption_factor = -0.05
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.15
+			}
+		}
+
+		TAN_border_guards_idea = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.10
+				land_reinforce_rate = 0.02
+				special_forces_cap = 0.50
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.10
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
+			}
+		}
+
+		### Political focus rewards ###
+
+		TAN_hold_what_we_have_idea = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				army_core_defence_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+
+		TAN_siberian_aspirations_idea = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.10
+			}
+		}
+
+		TAN_little_purge_idea = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.15
+			}
+		}
+
+		TAN_latinization_idea = {
+			picture = generic_research_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		TAN_monastery_wealth_idea = {
+			picture = generic_mild_economic_recovery
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.25
+			}
+		}
+
+		TAN_expand_the_ssr_idea = {
+			picture = AFG_parliament_building
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+
+		TAN_secularized_clergy_idea = {
+			picture = generic_manpower_bonus
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+
+		TAN_fortification_efforts_idea = {
+			picture = generic_improved_industries
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.10
+				land_reinforce_rate = 0.02
+			}
+		}
+
+		TAN_empty_treasury = {
+			picture = generic_economic_crisis
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.10
+				production_speed_buildings_factor = -0.10
+			}
+		}
+
+		TAN_gold_donation_boon = {
+			picture = generic_economic_increase
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.15
+			}
+		}
+	}
+}

@@ -3503,3 +3503,6 @@
  SOV_GRAND_DUCHY_OF_FINLAND:0 "The Grand Duchy of Finland"
  SOV_GRAND_DUCHY_OF_FINLAND_DEF:0 "the Grand Duchy of Finland"
  SOV_GRAND_DUCHY_OF_FINLAND_ADJ:0 "Finnish"
+ TAN_SIBERIAN_SSR:0 "Siberian SSR"
+ TAN_SIBERIAN_SSR_DEF:0 "the Siberian SSR"
+ TAN_SIBERIAN_SSR_ADJ:0 "Siberian"

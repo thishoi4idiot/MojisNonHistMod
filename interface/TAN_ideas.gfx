@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_TAN_no_industrial_base"
+		texturefile = "gfx/interface/ideas/TAN_no_industrial_base.dds"
+	}
+}
