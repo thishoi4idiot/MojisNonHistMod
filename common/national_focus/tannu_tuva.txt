@@ -390,8 +390,20 @@ focus_tree = {
 				producer = SOV
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = TAN_trans_siberian_trade
-			
+			custom_effect_tooltip = TAN_trade_expand_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = TAN_soviet_trade_monopsony }
+					swap_ideas = {
+						remove_idea = TAN_soviet_trade_monopsony
+						add_idea = TAN_soviet_trade_monopsony_2
+					}
+				}
+				else_if = {
+					limit = { NOT = { has_idea = TAN_soviet_trade_monopsony_2 } }
+					add_ideas = TAN_soviet_trade_monopsony_2
+				}
+			}
 		}
 	}
 
@@ -415,9 +427,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			effect_tooltip = {
-				add_ideas = TAN_industrializing_economy
-			}
+			custom_effect_tooltip = TAN_industrializing_swap_tt
 			hidden_effect = {
 				if = {
 					limit = { has_idea = TAN_transitioning_economy }
@@ -425,13 +435,6 @@ focus_tree = {
 						remove_idea = TAN_transitioning_economy
 						add_idea = TAN_industrializing_economy
 					}
-				}
-				else_if = {
-					limit = {
-						NOT = { has_idea = TAN_industrializing_economy }
-						NOT = { has_idea = TAN_barter_economy }
-					}
-					add_ideas = TAN_industrializing_economy
 				}
 			}
 		}
@@ -524,7 +527,15 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_ideas = TAN_steppe_cavalry_idea
+			effect_tooltip = {
+				add_ideas = TAN_tuvan_army_2_cav
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TAN_tuvan_army_2
+					add_idea = TAN_tuvan_army_2_cav
+				}
+			}
 		}
 	}
 
@@ -539,7 +550,15 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_ideas = TAN_border_guards_idea
+			effect_tooltip = {
+				add_ideas = TAN_tuvan_army_2_mtn
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TAN_tuvan_army_2
+					add_idea = TAN_tuvan_army_2_mtn
+				}
+			}
 			add_tech_bonus = {
 				name = TAN_border_guards
 				bonus = 0.75
@@ -562,7 +581,15 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_ideas = TAN_tuvan_conscription
+			effect_tooltip = {
+				add_ideas = TAN_tuvan_army_2_con
+			}
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = TAN_tuvan_army_2
+					add_idea = TAN_tuvan_army_2_con
+				}
+			}
 		}
 	}
 
@@ -578,9 +605,29 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 25
 			add_political_power = 50
-			swap_ideas = {
-				remove_idea = TAN_tuvan_army_2
-				add_idea = TAN_tuvan_army_3
+			custom_effect_tooltip = TAN_army_upgrade_consolidate_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = TAN_tuvan_army_2_cav }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_2_cav
+						add_idea = TAN_tuvan_army_3_cav
+					}
+				}
+				else_if = {
+					limit = { has_idea = TAN_tuvan_army_2_mtn }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_2_mtn
+						add_idea = TAN_tuvan_army_3_mtn
+					}
+				}
+				else_if = {
+					limit = { has_idea = TAN_tuvan_army_2_con }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_2_con
+						add_idea = TAN_tuvan_army_3_con
+					}
+				}
 			}
 		}
 	}
@@ -686,9 +733,29 @@ focus_tree = {
 				remove_idea = limited_conscription
 				add_idea = extensive_conscription
 			}
-			swap_ideas = {
-				remove_idea = TAN_tuvan_army_3
-				add_idea = TAN_tuvan_army_4
+			custom_effect_tooltip = TAN_army_upgrade_people_tt
+			hidden_effect = {
+				if = {
+					limit = { has_idea = TAN_tuvan_army_3_cav }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_3_cav
+						add_idea = TAN_tuvan_army_4_cav
+					}
+				}
+				else_if = {
+					limit = { has_idea = TAN_tuvan_army_3_mtn }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_3_mtn
+						add_idea = TAN_tuvan_army_4_mtn
+					}
+				}
+				else_if = {
+					limit = { has_idea = TAN_tuvan_army_3_con }
+					swap_ideas = {
+						remove_idea = TAN_tuvan_army_3_con
+						add_idea = TAN_tuvan_army_4_con
+					}
+				}
 			}
 		}
 	}
@@ -791,9 +858,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_timed_idea = {
-				idea = TAN_little_purge_idea
-				days = 365
+			swap_ideas = {
+				remove_idea = TAN_protectorate_republic
+				add_idea = TAN_protectorate_republic_purge
+			}
+			custom_effect_tooltip = TAN_little_purge_tt
+			hidden_effect = {
+				country_event = { id = TAN_purge.1 days = 365 }
 			}
 		}
 	}

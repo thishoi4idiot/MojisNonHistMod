@@ -585,6 +585,7 @@ country_event = {
 	option = {
 		name = TAN_free.2.a
 		remove_ideas = TAN_protectorate_republic
+		remove_ideas = TAN_protectorate_republic_purge
 		SOV = {
 			end_puppet = TAN
 		}
@@ -749,5 +750,29 @@ country_event = {
 
 	option = {
 		name = TAN_split.3.a
+	}
+}
+
+add_namespace = TAN_purge
+
+# The purge ends: the protectorate returns to normal
+country_event = {
+	id = TAN_purge.1
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_idea = TAN_protectorate_republic_purge }
+			swap_ideas = {
+				remove_idea = TAN_protectorate_republic_purge
+				add_idea = TAN_protectorate_republic
+			}
+		}
+	}
+
+	option = {
+		name = TAN_purge.1.a
 	}
 }

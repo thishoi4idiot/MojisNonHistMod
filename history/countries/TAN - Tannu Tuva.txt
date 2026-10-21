@@ -35,7 +35,6 @@ add_ideas = {
 	TAN_crumbling_infrastructure
 	TAN_protectorate_republic
 	TAN_tuvan_army_1
-	TAN_hardy_mountain_people
 }
 
 1939.1.1 = {

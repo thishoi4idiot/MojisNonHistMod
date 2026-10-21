@@ -101,7 +101,7 @@ ideas = {
 		### Focus rewards ###
 
 		TAN_soviet_trade_monopsony = {
-			picture = generic_economic_increase
+			picture = CHI_lend_lease_soviet
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -115,7 +115,7 @@ ideas = {
 		}
 
 		TAN_state_herd_registry_idea = {
-			picture = generic_mild_economic_recovery
+			picture = AST_wool_agreement
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -125,7 +125,7 @@ ideas = {
 		}
 
 		TAN_russian_labor_colonies_idea = {
-			picture = generic_industrial_concern_1
+			picture = GER_iron_front
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -137,22 +137,12 @@ ideas = {
 
 		# Temporary, added by TAN_sedentary_mandate
 		TAN_nomadic_unrest = {
-			picture = generic_economic_crisis
+			picture = chi_war_of_resistance3
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.10
 				political_power_gain = -0.05
-			}
-		}
-
-		TAN_hardy_mountain_people = {
-			picture = generic_improved_industries
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				acclimatization_cold_climate_gain_factor = 0.25
-				supply_consumption_factor = -0.15
 			}
 		}
 
@@ -182,31 +172,6 @@ ideas = {
 			}
 		}
 
-		TAN_tuvan_army_3 = {
-			picture = chi_army_corruption3
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				acclimatization_cold_climate_gain_factor = 0.25
-				supply_consumption_factor = -0.15
-				training_time_factor = 0.05
-			}
-		}
-
-		TAN_tuvan_army_4 = {
-			picture = generic_women_in_the_army
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				acclimatization_cold_climate_gain_factor = 0.25
-				supply_consumption_factor = -0.15
-				army_org_factor = 0.05
-				army_defence_factor = 0.05
-				army_attack_factor = 0.05
-				training_time_factor = -0.10
-			}
-		}
-
 		TAN_five_year_plan = {
 			picture = generic_economic_increase
 			allowed = { always = no }
@@ -219,7 +184,7 @@ ideas = {
 		}
 
 		TAN_industrializing_economy = {
-			picture = generic_economic_crisis
+			picture = generic_mild_economic_recovery
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -238,7 +203,7 @@ ideas = {
 		}
 
 		TAN_strong_industrial_base = {
-			picture = generic_improved_industries
+			picture = man_five_year_plan_industry
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -247,22 +212,23 @@ ideas = {
 			}
 		}
 
-		TAN_trans_siberian_trade = {
-			picture = generic_economic_increase
+		TAN_soviet_trade_monopsony_2 = {
+			picture = CHI_lend_lease_soviet
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.15
 				local_resources_factor = 0.05
 			}
 			targeted_modifier = {
 				tag = SOV
-				trade_cost_for_target_factor = -0.25
+				trade_cost_for_target_factor = -0.75
 			}
 		}
 
 		TAN_increased_production_output = {
-			picture = generic_industrial_concern_1
+			picture = generic_license_production
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -272,7 +238,7 @@ ideas = {
 		}
 
 		TAN_transformation_of_nature_idea = {
-			picture = generic_mild_economic_recovery
+			picture = SOV_transformation_of_nature
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -293,44 +259,10 @@ ideas = {
 			}
 		}
 
-		TAN_tuvan_conscription = {
-			picture = generic_manpower_bonus
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				conscription = 0.10
-			}
-		}
-
-		TAN_steppe_cavalry_idea = {
-			picture = generic_improved_industries
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				army_speed_factor = 0.10
-				supply_consumption_factor = -0.05
-				cavalry_attack_factor = 0.10
-				cavalry_defence_factor = 0.15
-			}
-		}
-
-		TAN_border_guards_idea = {
-			picture = generic_improved_industries
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				army_defence_factor = 0.10
-				land_reinforce_rate = 0.02
-				special_forces_cap = 0.50
-				modifier_army_sub_unit_mountaineers_attack_factor = 0.10
-				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
-			}
-		}
-
 		### Political focus rewards ###
 
 		TAN_hold_what_we_have_idea = {
-			picture = generic_improved_industries
+			picture = YUG_federal_defense_council
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -341,7 +273,7 @@ ideas = {
 		}
 
 		TAN_siberian_aspirations_idea = {
-			picture = generic_improved_industries
+			picture = HUN_the_rakosi_battalion_idea
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -351,27 +283,17 @@ ideas = {
 			}
 		}
 
-		TAN_little_purge_idea = {
-			picture = generic_economic_crisis
-			allowed = { always = no }
-			removal_cost = -1
-			modifier = {
-				political_power_factor = -0.25
-				stability_factor = -0.15
-			}
-		}
-
 		TAN_latinization_idea = {
 			picture = generic_research_bonus
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.10
 			}
 		}
 
 		TAN_monastery_wealth_idea = {
-			picture = generic_mild_economic_recovery
+			picture = SPR_appropriate_church_riches
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -400,7 +322,7 @@ ideas = {
 		}
 
 		TAN_fortification_efforts_idea = {
-			picture = generic_improved_industries
+			picture = PRC_the_internal_enemy
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -410,7 +332,7 @@ ideas = {
 		}
 
 		TAN_empty_treasury = {
-			picture = generic_economic_crisis
+			picture = SPR_relocate_the_gold_reserves
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
@@ -420,11 +342,161 @@ ideas = {
 		}
 
 		TAN_gold_donation_boon = {
-			picture = generic_economic_increase
+			picture = SPR_seize_the_gold_reserves
 			allowed = { always = no }
 			removal_cost = -1
 			modifier = {
 				consumer_goods_expected_value = -0.15
+			}
+		}
+
+		TAN_tuvan_army_2_cav = {
+			picture = chi_army_corruption2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.20
+				army_org_factor = -0.05
+				army_defence_factor = -0.05
+				training_time_factor = 0.15
+				army_speed_factor = 0.10
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_3_cav = {
+			picture = chi_army_corruption3
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.20
+				training_time_factor = 0.05
+				army_speed_factor = 0.10
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_4_cav = {
+			picture = generic_women_in_the_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.20
+				army_org_factor = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+				army_speed_factor = 0.10
+				cavalry_attack_factor = 0.10
+				cavalry_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_2_mtn = {
+			picture = chi_army_corruption2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = -0.05
+				army_defence_factor = 0.05
+				training_time_factor = 0.15
+				land_reinforce_rate = 0.02
+				special_forces_cap = 0.50
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.10
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_3_mtn = {
+			picture = chi_army_corruption3
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				training_time_factor = 0.05
+				army_defence_factor = 0.10
+				land_reinforce_rate = 0.02
+				special_forces_cap = 0.50
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.10
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_4_mtn = {
+			picture = generic_women_in_the_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = 0.05
+				army_defence_factor = 0.15
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+				land_reinforce_rate = 0.02
+				special_forces_cap = 0.50
+				modifier_army_sub_unit_mountaineers_attack_factor = 0.10
+				modifier_army_sub_unit_mountaineers_defence_factor = 0.15
+			}
+		}
+
+		TAN_tuvan_army_2_con = {
+			picture = chi_army_corruption2
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = -0.05
+				army_defence_factor = -0.05
+				training_time_factor = 0.15
+				conscription = 0.10
+			}
+		}
+
+		TAN_tuvan_army_3_con = {
+			picture = chi_army_corruption3
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				training_time_factor = 0.05
+				conscription = 0.10
+			}
+		}
+
+		TAN_tuvan_army_4_con = {
+			picture = generic_women_in_the_army
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.25
+				supply_consumption_factor = -0.15
+				army_org_factor = 0.05
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				training_time_factor = -0.10
+				conscription = 0.10
+			}
+		}
+
+		TAN_protectorate_republic_purge = {
+			picture = generic_purge
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				autonomy_gain = -2
+				political_power_factor = -0.25
+				stability_factor = -0.15
 			}
 		}
 	}
