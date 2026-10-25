@@ -16014,10 +16014,6 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
 			hidden_effect = {
 				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
 				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }
@@ -16368,11 +16364,6 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
-			custom_effect_tooltip = SOV_the_hands_do_denikin_tt
 			country_event = { 
 				id = NSB_Soviet_fascist_civil_war.001 hours = 6 random_hours = 6 
 			}
@@ -17013,10 +17004,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
 			hidden_effect = {
 				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
 				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }

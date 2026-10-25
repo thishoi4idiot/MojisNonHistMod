@@ -1965,6 +1965,9 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			visible = {
+				has_global_flag = SOV_soviet_civil_war_over
+			}
 			available = {
 				if = {
 					limit = {
@@ -4301,6 +4304,9 @@ characters = {
 			idea_token = anatoliy_pepelyaev
 			allowed = {
 				original_tag = SOV
+			}
+			visible = {
+				has_global_flag = SOV_soviet_civil_war_over
 			}
 			available = {
 				if = {
