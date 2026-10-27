@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+		SOV_russian_influence = {
+			picture = eng_service_overseas
+			allowed = {
+				always = no
+			}
+			modifier = {
+				neutrality_drift = 0.25
+			}
+		}
+	}
+}

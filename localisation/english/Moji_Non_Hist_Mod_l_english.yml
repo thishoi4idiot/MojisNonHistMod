@@ -9,6 +9,13 @@
  CAN_United_States_Crusade: "United States Crusade"
 
  ###########################
+ # CZECH       #
+ ###########################
+
+ GER_work_with_skoda: "Work with Skoda"
+ GER_work_with_skoda_desc: "The Skoda Works in Czechoslovakia are one of the most advanced industrial facilities in Europe. With our now ownership of the Czech lands, we can work with Skoda to expand our own industrial base"
+
+ ###########################
  # ENGLAND / BRITAIN       #
  ###########################
 
@@ -371,6 +378,8 @@
  GermanyStealSouthTyrol.t: "The Seizure Of South Tyrol"
  GermanyStealSouthTyrol.d: "Bambus is Happy :D"
  GermanyStealSouthTyrol.a: "Who tf is Bambus"
+ GER_legacy_of_von_moltke: "Legacy of Von Moltke"
+ GER_legacy_of_von_moltke_desc: "With our artillery doctrine now reestablished, we can look on von Moltke's legacy and continue to build upon his strategic foundations."
 
  ###########################
  # GREECE                  #
@@ -506,59 +515,20 @@
  poland_meme_events.2.d: "With Polish troops standing on cores of a shattered Korea, our comrades have made contact with Kim Il-sung, the Great Leader of the Korean communist movement. Stripped of a homeland to lead, he has agreed to lend his revolutionary genius to the Polish cause instead - offering himself as the new leader of our people's republic."
  poland_meme_events.2.a: "Welcome the Great Leader"
  # Focuses
- POL_ally_russia: "Ally Russia"
  POL_proclaim_zapadoslavia: "Proclaim Zapadoslavia"
- POL_restore_russia: "Restore Russia"
 
  # Focus Descriptions
  POL_proclaim_zapadoslavia_desc: "With Czechoslovakia now firmly under Polish control, the possibility of a broader Western Slavic union has emerged. By proclaiming Zapadoslavia, we can unite these lands under a single banner and solidify Poland's leadership among the Western Slavs."
- POL_restore_russia_desc: "With the second russian civil war raging and the country in chaos, we have the opportunity to restore Russia to its former glory. By intervening in the conflict and supporting a rightful government we can restore monarchcy and order to Russia and destroy communism once and for all."
  POL_unlock_zapadoslavia_decisions: "Unlocks §YDecisions§! to Form §YZapadoslavia§!"
 
  # Events
- pol_russia.1.t: "A Question of Survival"
- pol_russia.1.d: "Poland stands at a crossroads. Russia looms to the east — powerful, vast, and unpredictable. Should we seek to bind ourselves to them, or dissolve ourselves into their empire entirely?"
- pol_russia.1.a: "Propose a formal alliance with Russia."
- pol_russia.1.b: "Request that Russia annex Poland entirely."
- pol_russia.2.t: "Poland Seeks an Alliance"
- pol_russia.2.d: "The Polish government has approached us with a formal proposal for an alliance. How shall we respond?"
- pol_russia.2.a: "We welcome this partnership."
- pol_russia.2.b: "We have no interest in this."
- pol_russia.3.t: "Poland Requests Annexation"
- pol_russia.3.d: "In a stunning diplomatic move, Poland has formally requested to be absorbed into Russia. This is an extraordinary offer."
- pol_russia.3.a: "Poland shall become part of Mother Russia."
- pol_russia.3.b: "We will not absorb Poland at this time."
- pol_russia.4.t: "Russia Accepts Our Alliance"
- pol_russia.4.d: "Russia has agreed to our alliance proposal. A new pact is born — Poland is no longer alone."
- pol_russia.4.a: "Long live the Russo-Polish friendship!"
- pol_russia.5.t: "Russia Refuses Our Alliance"
- pol_russia.5.d: "Russia has declined Poland's offer of alliance. We must look elsewhere for security."
- pol_russia.5.a: "We must seek other allies..."
- pol_russia.6.t: "Russia Accepts — Poland Is No More"
- pol_russia.6.d: "Russia has accepted our offer. Poland formally dissolves itself into the Russian state. A nation ends, so that its people may endure."
- pol_russia.6.a: "Poland yields to Russia."
- pol_russia.7.t: "Russia Refuses Annexation"
- pol_russia.7.d: "Russia has rejected our offer to be annexed. We remain independent — for now."
- pol_russia.7.a: "Russia will not protect us... we are on our own."
 
  # Ideas
  PilsudskiIdea: "Marshal Józef Piłsudski"
  PilsudskiIdea_desc: "God has returned to reclaim his Kingdom and lead Poland to greatness once more."
- PolishInterventionCategory: "Intervening in Russia"
- PolishInterventionCategory_desc: "The Russian Civil War has left the country in chaos and we have the opportunity to intervene and restore order. By supporting a rightful government and crushing the communists we can restore Russia to its former glory."
- POL_West_Russian_Volunteer_Army: "The West Russian Volunteer Army"
  Protector_of_the_west_slavs: "Protector of the West Slavs"
- RedeclareTheWestRussianVolunteerArmy: "Redeclare the West Russian Volunteer Army"
- RedeclareTheWestRussianVolunteerArmy_desc: "With our intentions to intervene in the second Russian civil war to restore the monarchy we can now redeclare the formation of the West Russian Volunteers to restore Russia"
 
  # Decisions
- DirectIntervention: "Intervene Directly in Russia"
- EconomicSupport: "Provide Economic Support to the Whites"
- SendGuns: "Send Guns to the whites"
- SendVolunteers: "Send Volunteers to Russia"
- decision_cost_mil_factory_5: "5 £GFX_mil_factory"
- decision_cost_mil_factory_5_blocked: "It takes at least §Y15§!  £GFX_mil_factory  to take the decision"
- military_factory_useP: "Military Factory Use:§R 5§!"
 
  # Events (Pilsudski)
  pilsudski_event.1.t: "A gathering in Warsaw"
@@ -1657,6 +1627,18 @@
  free_templates_rule_DISABLED_desc: "Standard gameplay rules apply."
  free_templates_rule_ENABLED: "Enabled"
  free_templates_rule_ENABLED_desc: "All modifications and additions to division templates cost zero Army XP."
+ GER_raeder_expands_the_kriegsmarine: "\"No Strings Attached?\""
+ GER_raeder_expands_the_kriegsmarine_desc: "\"What do you mean by 'no strings attached'?\" asked the admiral as he was handed a letter from the German government. Erich Raeder as once the head of the Kriegsmarine has now been given unlimited authority to expand the Kriegsmarine. This is a huge step for the Kriegsmarine as it will now be able to expand and modernize at a much faster pace."
+ GER_reorienting_the_german_economy: "Reorienting the German Economy"
+ GER_reorienting_the_german_economy_desc: "A navy cannot be built on goodwill alone. Under Raeder's direction, German industry is quietly redirected away from consumer goods and toward the slipways, steelworks and munitions plants the fleet will need."
+ GER_kriegsmarine_mobilization: "Kriegsmarine Economy"
+ GER_kriegsmarine_mobilization_desc: "The whole economy is geared toward supplying the fleet. Dockyards, steelworks and arms plants run on priority orders, at the expense of the consumer."
+ GER_maritime_autarky: "Maritime Autarky"
+ GER_maritime_autarky_desc: "Germany will no longer depend on the sea lanes controlled by her rivals. Domestic production and tightly controlled trade keep the shipyards fed, but the world takes a dim view of such isolation."
+ GER_reorient_the_military: "Reorient the Military"
+ GER_reorient_the_military_desc: "The Reich's armed forces were built for a different kind of war. Raeder's reforms shift priorities, doctrine and funding so that the army and air force serve the new naval strategy."
+ Von_Moltke_rail_docterine: "Von Moltke's Rail Doctrine"
+ Von_Moltke_rail_docterine_desc: "Helmuth von Moltke the Elder understood that wars are won by whoever can move and feed their armies fastest. Building on his legacy, the railways are planned as instruments of war, with supply depots and rail lines laid out to follow the advance."
  Mojis_Boon: "Moji's Boon"
  Mojis_Boon_desc: " \"Those who are free were never as strong as those who wore chains\" -Moji (after drinking)"
  Mojis_Boon_tt: " §YMoji§!, against his wishes, has granted you the ability to have free templates and designs."
@@ -2209,22 +2191,7 @@
  FRA_national_housing_programmes_idea_tier3_desc: "Housing construction is underway across the entire mainland at once, diverting a large share of consumer goods towards the effort."
 
 
- G7B: "Gaul"
- G7B_ADJ: "Gaul"
- G7B_DEF: "Gaul"
- Sigmas_rise_communisssssst: "Irish People's Republic"
- Sigmas_rise_communisssssst_ADJ: "Irish People's Republic"
- Sigmas_rise_communisssssst_DEF: "Irish People's Republic"
- Sigmas_rise_fascismo: "Irish State"
- Sigmas_rise_fascismo_ADJ: "Irish State"
- Sigmas_rise_fascismo_DEF: "Irish State"
 
- ire_character_1: "James Ryan"
- ire_character_2: "Richard Corish"
- ire_character_3: "Sean MacEntee"
- ire_character_4: "Frank Aiken"
- ire_character_5: "Sean Collins Powell"
- ire_character_6: "Joseph Vize"
 
  new_character_1: "Greta Baumann"
  new_character_10: "Bruno"
@@ -2240,3 +2207,20 @@
  new_character_7: "Mackenzie Flynn"
  new_character_8: "Charles Delacruz"
  new_character_9: "Levi Ponce"
+ SOV_invite_the_democratic_exiles_tt: "Democratic exiles such as Milyukov, Maklakov, Tsereteli and Chernov can now be hired as §YPolitical Advisors§!."
+ SOV_embrace_the_black_hundreds_advisors_tt: "Fascist exiles such as Markov, Shulgin, Trubetzkoy and Baydalakov can now be hired as §YPolitical Advisors§!."
+ SOV_romanov_reconstruction_advisors_tt: "Conservative exiles such as Yusupov and Tereshchenko can now be hired as §YPolitical Advisors§!."
+ SOV_muster_the_old_guard_generals_tt: "The White generals of the ROVS and the fascist emigre movement, such as Denikin, Miller, Shatilov, Krasnov and Shkuro, return to service."
+ SOV_dismantle_the_zemsky_sobor_advisors_tt: "Fascist exiles such as Markov, Shulgin, Trubetzkoy, Vernadskiy, Stolypin, Solzhenstein, S. Merkulov and Baydalakov can now be hired as §YPolitical Advisors§!."
+ SOV_reconvene_the_zemsky_sobor_generals_tt: "The ROVS generals, including Denikin, Miller and Shatilov, return from exile and can serve in the Russian army."
+ SOV_the_hands_do_denikin_tt: "Anton Denikin joins as an §YArmy Theorist§!."
+ GER_reorienting_the_military: "Reorienting the Military"
+ GER_reorienting_the_military_desc: "Factories are being retooled to serve the new naval strategy. This disruption will pass in a year."
+ GER_naval_armament_priority: "Naval Armament Priority"
+ GER_naval_armament_priority_desc: "Dockyards now take priority in the Reich's arms planning."
+ GER_reorient_the_military_better_tt: "§GAfter one year, the penalty ends and the spirit is replaced by a permanent §Y+20% dockyard output§! bonus.§!"
+ POL_evacuate_industry_category: "Evacuate Industry"
+ POL_evacuate_industry: "Evacuate Industry from [FROM.GetName]"
+ POL_evacuate_industry_desc: "Dismantle machinery in the threatened regions of our homeland and ship it abroad, out of the enemy's reach."
+ POL_evacuate_industry_tt: "§Y1 Civilian Factory§! and §Y1 Military Factory§! in this state are moved §Yoff-map§!."
+ POL_evacuate_industry_busy_tt: "No other evacuation is in progress"

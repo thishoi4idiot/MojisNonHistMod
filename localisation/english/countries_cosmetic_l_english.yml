@@ -3636,3 +3636,30 @@
  AST_independent_DEF: "$AST_DEF$"
  AST_monarchy_neutrality: "Kingdom of Australia"
  AST_monarchy_neutrality_DEF: "the Kingdom of Australia"
+
+
+
+
+
+
+ POL_german_vassal:0 "Kingdom of Poland"
+ POL_german_vassal_DEF:0 "the Kingdom of Poland"
+ POL_german_vassal_ADJ:0 "Polish"
+ DON_german_vassal:0 "Don Cossack Host"
+ DON_german_vassal_DEF:0 "the Don Cossack Host"
+ DON_german_vassal_ADJ:0 "Don Cossack"
+ KAZ_german_vassal:0 "Kazakh Border Authority"
+ KAZ_german_vassal_DEF:0 "the Kazakh Border Authority"
+ KAZ_german_vassal_ADJ:0 "Kazakh"
+ SOV_CONGRESSIONAL_POLAND:0 "The Congressional Kingdom of Poland"
+ SOV_CONGRESSIONAL_POLAND_DEF:0 "the Congressional Kingdom of Poland"
+ SOV_CONGRESSIONAL_POLAND_ADJ:0 "Polish"
+ SOV_BALTIC_GOVERNANCE:0 "The Baltic Governance"
+ SOV_BALTIC_GOVERNANCE_DEF:0 "the Baltic Governance"
+ SOV_BALTIC_GOVERNANCE_ADJ:0 "Baltic"
+ SOV_GRAND_DUCHY_OF_FINLAND:0 "The Grand Duchy of Finland"
+ SOV_GRAND_DUCHY_OF_FINLAND_DEF:0 "the Grand Duchy of Finland"
+ SOV_GRAND_DUCHY_OF_FINLAND_ADJ:0 "Finnish"
+ TAN_SIBERIAN_SSR:0 "Siberian SSR"
+ TAN_SIBERIAN_SSR_DEF:0 "the Siberian SSR"
+ TAN_SIBERIAN_SSR_ADJ:0 "Siberian"

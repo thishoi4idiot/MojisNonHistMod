@@ -1,0 +1,11 @@
+dynamic_modifier_omanarmy = {
+    icon = GFX_idea_unknown
+    enable = {
+        tag = OMA
+    }
+    army_attack_factor = -0.075
+    army_defence_factor = -0.075
+    army_org = -0.05
+    planning_speed = -0.10
+}
+

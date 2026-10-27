@@ -1979,7 +1979,8 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = army_chief
+			slot = theorist
+			ledger = army
 			idea_token = anton_denikin
 			allowed = {
 				original_tag = SOV
@@ -1993,7 +1994,7 @@ characters = {
 				}
 			}				
 			traits = {
-				army_chief_drill_1
+				denikin_army_theorist
 			}
 			cost = 50
 			ai_will_do = {
@@ -2752,6 +2753,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = { has_character_flag = SOV_character_purged_flag }
 				
 			}
@@ -2814,6 +2816,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
@@ -3006,6 +3009,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
@@ -3287,6 +3291,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
@@ -3353,6 +3358,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
@@ -3418,6 +3424,7 @@ characters = {
 				original_tag = SOV
 			}
 			visible = {
+				NOT = { has_character_flag = SOV_imprisoned_flag }
 				NOT = {
 					has_character_flag = SOV_character_purged_flag 
 				}
@@ -4248,4 +4255,1743 @@ characters = {
 	}
 
 
+	SOV_white_army = {
+		name = "White Army Leadership"
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_white_transitionary_council"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1953.3.1.1"
+			id = -1
+			traits = {
+				desperate_gambit lacking_leadership martial_stratocracy
+			}
+		}
+	}
+
+	SOV_abram_dragonmirov = { # ROVS member
+		name = "Abram Dragonmirov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Abram_Dragomirov.png"
+				small = "gfx/interface/ideas/idea_RUS_Abram_Dragomirov.dds" 
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = abram_dragonmirov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			cost = 100
+			traits = {
+				army_cavalry_2  
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+				traits = {
+					old_guard
+					cavalry_officer
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_anatoliy_pepelyaev = { # non-alligned general, lives free in Russia 1936-37, before being imprisoned and purged in 38.
+		name = "Anatoliy Pepelyaev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Anatoliy_Pepelyaev.png"
+				small = "gfx/interface/ideas/idea_RUS_Anatoliy_Pepelyaev.dds" 
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = anatoliy_pepelyaev
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}		
+			cost = 100		
+			traits = {
+				army_chief_offensive_2
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+				war_hero
+				career_officer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				has_country_flag = SOV_recruited_pepelyaev
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
+	}
+
+	SOV_anton_turkul = { # NS member (italy), though there were also rumours that he might have been a double agent
+		name = "Anton Turkul"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Anton_Turkul.png"
+				small = "gfx/interface/ideas/idea_RUS_Anton_Turkul.dds" # TODO
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = anton_turkul
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			cost = 100
+			traits = {
+				military_theorist
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_fascist_youth_union
+				}
+			}
+		}
+	}
+
+	SOV_boris_steyfon = { # NS member
+		name = "Boris Steyfon"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Boris_Shteyfon.png"
+				small = "gfx/interface/ideas/idea_RUS_Boris_Shteyfon.dds" 
+			}
+		}
+		corps_commander = {
+			traits = {
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_fascist_youth_union
+				}
+			}
+		}
+	}
+
+	SOV_dmitry_semyenov = { # pro-japan, but not a fascist - will go to transbakai
+		name = "Dmitriy Semyonov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Dmitriy_Semyenov.png"
+				small = "gfx/interface/ideas/idea_RUS_Dmitriy_Semyenov.dds" # TODO
+			}
+		}
+		corps_commander = {
+			traits = {
+				organizer	
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+				}
+			}
+		}
+	}
+
+	SOV_fyedor_abramov = { # ROVS member, but also supported Vlasov's army, as a break with Deakin's ROVS policy
+		name = "Fyodor Abramov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Fyodor_Abramov.png"
+				small = "gfx/interface/ideas/idea_RUS_Fyodor_Abramov.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = fyedor_abramov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			cost = 100
+			traits = {
+				army_regrouping_2   
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {	
+			traits = {
+				old_guard
+				cavalry_officer
+				cavalry_leader
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_leonid_skipetov = { # pro-japan, but not a fascist
+		name = "Leonid Skipetov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Leonid_Skipetrov.png"
+				small = "gfx/interface/ideas/idea_RUS_Leonid_Skipetrov.dds" 
+			}
+		}
+		corps_commander = {	
+			traits = {
+				commando
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+				}
+			}
+		}
+	}
+
+	SOV_mikhail_levitov = { # ROVS member
+		name = "Mikhail Levitov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Mikhail_Levitov.png"
+				small = "gfx/interface/ideas/idea_RUS_Mikhail_Levitov.dds" 
+			}
+		}
+		corps_commander = {	
+			traits = {
+				trait_reckless
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_pavel_shatilov = { # ROVS member, though there have been accusations that he mayhave been a double agent
+		name = "Pavel Shatilov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Pavel_Shatilov.png"
+				small = "gfx/interface/ideas/idea_RUS_Pavel_Shatilov.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = pavel_shatilov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			cost = 100
+			traits = {
+				army_chief_maneuver_2 
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = {
+				war_hero
+				cavalry_officer
+				cavalry_leader
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_vladimir_tolstov = { # ROVS member
+		name = "Vladimir Tolstov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Vladimir_Tolstov.png"
+				small = "gfx/interface/ideas/idea_RUS_Vladimir_Tolstov.dds" # TODO
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = vladimir_tolstov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}			
+			cost = 100	
+			traits = {
+				army_logistics_2    
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { # ataman of the ural cossacks
+				cavalry_leader
+				trait_mountaineer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_vladimir_vitkovsky = { # ROVS member
+		name = "Vladimir Vitkovsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Vladimir_Vitkovskiy.png"
+				small = "gfx/interface/ideas/idea_RUS_Vladimir_Vitkovskiy.dds" 
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_vladimir_sidorin = { # NS (pro german) don cossack leader. possible don sepratist
+		name = "Vladimir Sidorin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/DON/portrait_DON_Vladimir_Sidorin.dds"
+				small = "gfx/interface/ideas/idea_DON_Vladimir_Sidorin.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = vladimir_sidorin
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				has_country_flag = SOV_don_autonomy_given_flag
+			}
+			traits = {
+				sidorin_cossack_ataman
+			}
+			cost = 50
+			ai_will_do = {
+				base = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_fascist_youth_union
+				}
+			}
+		}
+	}
+
+	SOV_ivanis_vasily_nikolaevich = { # kuban cossack leader, kuban seperatist, but worked with Wrangel in South Russia
+		name = "Vasily Ivanis"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KUB/portrait_KUB_ivanis_vasily_nikolaevich.dds"
+				small = "gfx/interface/ideas/idea_KUB_ivanis_vasily_nikolaevich.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_gerasim_vdovenko = { # terek cossack leader. worked with Wrangel in South Russia
+		name = "Gerasim Vdovenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/portrait_RUS_gerasim_vdovenko.png"
+				small = "gfx/interface/ideas/idea_RUS_gerasim_vdovenko.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_yevgeny_miller = { # ROVS chairman, kidnapped by the soviets in '37, executed in '39 - note that though he chaired the organisation, he lacked influence having not served with wrangel in South Russia, or denikin in the east - Miller commanded the whites in arkhangelsk with British support
+		name = "Yevgeny Miller"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_yevgeny_miller.png"
+				small = "gfx/interface/ideas/idea_RUS_yevgeny_miller.dds" 
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard # served from 1884
+				winter_specialist # led the northern army
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = { has_character_flag = SOV_imprisoned_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = yevgeny_miller
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}			
+			cost = 100	
+			traits = {
+				army_concealment_2   
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	SOV_alexei_arkhangelsky = { # ROVS chairman who takes over afer miller, served on the Red side on the general staff under Trotsky during the civil war as an effective double-agent. defected properly to the whites after being posted southwards. historically could not organise resistance to the Soviets due to divided loyalties, and suppression by GER
+		name = "Alexei Arkhangelsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_alexei_arkhangelsky.png"
+				small = "gfx/interface/ideas/idea_RUS_alexei_arkhangelsky.dds" 
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard # served from 1890
+				infantry_officer
+				infantry_leader # served exclusivly with infantry units
+				trickster # due to his role as a double-agent
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+				}
+			}
+		}
+	}
+
+	SOV_georgiy_stark = { # non-alligned admiral
+		name = "Georgiy Stark"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Georgiy_Stark.png"
+				small = "gfx/interface/ideas/idea_RUS_Georgiy_Stark.dds" 
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = georgiy_stark
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}			
+			cost = 100	
+			traits = {
+				navy_chief_maneuver_2     
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = {
+				
+			}
+			skill = 3
+			maneuvering_skill = 2
+			defense_skill = 3
+			attack_skill = 3
+			coordination_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
+			}
+		}
+	}
+
+	SOV_mikhail_kedrov = { # non-alligned admiral, though he helped ROVS
+		name = "Mikhail Kedrov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_mikhail_kedrov.png"
+				small = "gfx/interface/ideas/idea_RUS_mikhail_kedrov.dds" # TODO
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = mikhail_kedrov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			traits = {
+				navy_chief_decisive_battle_2      
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = {
+				old_guard_navy
+				ironside 
+			}
+			skill = 3
+			maneuvering_skill = 2
+			defense_skill = 3
+			attack_skill = 3
+			coordination_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_mikhail_berens = { # non-alligned admiral, though he helped ROVS
+		name = "Mikhail Berens"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Mikhail_Berens.png"
+				small = "gfx/interface/ideas/idea_RUS_Mikhail_Berens.dds" # TODO
+			}
+		}
+		navy_leader = {
+			traits = {
+				spotter
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 1
+			coordination_skill = 2
+			coordination_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_nestor_monastryrev = { # ROVS admiral
+		name = "Nestor Monastryrev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Nestor_Monastyrev.png"
+				small = "gfx/interface/ideas/idea_RUS_Nestor_Monastyrev.dds" 
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = nestor_monastryrev
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}				
+			cost = 100
+			traits = {
+				navy_submarine_2       
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = {
+				seawolf
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_muster_the_old_guard
+				}
+			}
+		}
+	}
+
+	SOV_pavel_bermondt_avalov = { # avalov clone to help the whites if he doesn't become king of poland. as he does not appear unless the poles pick him, he should never appear in the game for both countries
+		name=POL_pavel_bermondt_avalov
+		portraits = {
+			civilian = {
+				large="GFX_portrait_POL_pavel_bermondt_avlov"
+			}
+			army = {
+				large="GFX_portrait_POL_pavel_bermondt_avlov"
+				small="gfx/interface/ideas/idea_POL_pavel_bermondt_avlov.dds" # in the vanilla files
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					POL = {
+						has_completed_focus = POL_cossack_king
+					}
+				}
+				ROOT = { 
+					has_completed_focus = SOV_beaten_but_not_defeated 
+					has_completed_focus = SOV_fascist_youth_union
+				}
+			}
+		}
+	}
+
+	SOV_irakliy_tsereteli = { # georgian menshevik member of the provisional government, in exile he advocated for a united anti-bolshevik front between both russians and georgians
+		name = "Irakli Tsereteli"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Irakliy_Tsereteli.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Irakliy_Tsereteli.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SOV_iraki_tsereteli
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { advocate_for_national_cooperation }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_nikolai_trubetzkoy = { #  noted eurasianist - for the fascist path
+		name = "Nikolai Trubetskoy"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Nikolai_Trubetskoy.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Nikolai_Trubetskoy.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SOV_nikolai_trubetzkoy
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { eurasianist_linguist }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_spiridon_merkulov = { #  minister of agriculture for the white far-eastern republic last civilian leader of white russia before the priamurye govt. was couped by kolchak and replaced by diterikhs' military regime
+		name = "Spiridon Merkulov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_spiridon_merkulov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_spiridon_merkulov.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SOV_nikolai_trubetzkoy
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { last_civilian_leader }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_felix_yusupov = { #  rich aristocrat. previously noted to be one of the men to kill rasputin
+		name = "Felix Yusupov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Felix_Yusupov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Felix_Yusupov.dds" # TODO
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = felix_yusupov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { aristocratic_oligarch }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_geogriy_vernadskiy = { #  eurasianist, critic of democracy in Russia
+		name = "Georgiy Venadskiy"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Georgiy_Vernadskiy.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Georgiy_Vernadskiy.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = felix_yusupov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { anti_democratic_eurasianist }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_nikolay_markov = { #  early monarchist organiser turned fascist - by all accounts a leading russian nazi
+		name = "Nikolay Markov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Nikolay_Markov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Nikolay_Markov.dds"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolay_markov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { dean_of_russian_nazism }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_vasily_shulgin = { #  so-called knight of the black hundreds - a figure in the nationalist movement
+		name = "Vasily Shulgin"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Vasily_Shulgin.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Vasily_Shulgin.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolay_markov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { knight_of_the_black_hundreds }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_viktor_chernov = { #  Socialist revolutionary theorist and kerensky's minister for agriculture
+		name = "Viktor Chernov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Viktor_Chernov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Viktor_Chernov.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolay_markov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { social_revolutionary_reformer }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_mikhail_tereshchenko = { # ukrainian landowner financier and sugar capitalist not alligned with any party forgeign minister for prov.gov.
+		name = "Mikhail Tereschenko"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_mikhail_tereshchenko.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = mikhail_tereshchenko
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = { capitalist_diplomat  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_nikolai_nekrasov = { # kadet minister for transport. did not go into exile executed in 1940
+		name = "Nikolai Nekrasov"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_nikolai_nekrasov.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = SOV_nikolai_nekrasov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { minster_for_transport  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_nikolai_merkulov = { # foreign minister of the priamurye govt. Spiridon's brother
+		name = "Nikolai Merkulov"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_nikolai_merkulov.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolai_merkulov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { merchant_minister  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_vladimir_ryabushinsky = { # octobrist politician involved in the white movement
+		name = "Vladimir Ryabushinsky"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_vladimir_ryabushinsky.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolai_merkulov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { old_guard_octobrist  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_ivan_efremov = { # pro-democratic cossack noble. member of the progressivists. Served in the Prov. Gov. as well
+		name = "Ivan Efremov"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_ivan_efremov.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolai_merkulov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { cossack_democrat  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_dmitry_odinets = { # turdovik academic, and key member of the Paris emigré community
+		name = "Dmitry Odinets"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_dmitry_odinets.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = dmitry_odinets
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { socialist_academic  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_ivan_zhilkin = { # founding turdovik
+		name = "Ivan Zhilkin"
+
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/idea_SOV_ivan_zhilkin.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = ivan_zhilkin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { turdovik_writer  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_arkady_stolypin = { # founding turdovik
+		name = "Arkady Stolypin"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_arkady_stolypin.png"
+				small = "gfx/interface/ideas/idea_SOV_arkady_stolypin.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = arkady_stolypin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { inheritor_of_the_mantle  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_alexander_solzhenstein = { # founding turdovik
+		name = "Aleksandr Solzhenstein"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_alexander_solzhenstein.png"
+				small = "gfx/interface/ideas/idea_SOV_alexander_solzhenstein.dds" 
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = alexander_solzhenstein
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { arch_reactionary  }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_viktor_baydalakov = { # leader of the european russian fascist youth
+		name = "Viktor Baydalakov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_Soviet_Victor_Baydalakov.dds"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = viktor_baydalakov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					OR = {
+						has_character_flag = SOV_character_purged_flag 
+						has_completed_focus = SOV_the_path_of_marxism_leninism
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				solidarist_campaigner 
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { national_solidarist sharing_power_with_army }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { national_solidarist }
+			expire = "1953.3.1.1"
+			id = -1
+		}
+	}
+
+	SOV_nikolay_avksentyev = { #  Socialist revolutionary and the first head of the provisional govt.
+		name = "Nikolay Avksentyev"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Nikolay_Avksentyev.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Nikolay_Avksentyev.dds" 
+			}
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1953.3.1.1"
+			traits = { dedicated_reformer }
+			id = -1
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikolay_avksentyev
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					has_completed_focus = SOV_the_path_of_marxism_leninism
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+		traits = { first_head_of_the_provisional_government }
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_pavel_milyukov = { #  liberal leader. dies in 43. have malakov succeed
+		name = "Pavel Milyukov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Pavel_Milyukov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Pavel_Milyukov.dds" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = pavel_milyukov
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					OR = {
+						has_character_flag = SOV_character_purged_flag 
+						has_completed_focus = SOV_the_path_of_marxism_leninism
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				kadet_leader 
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1953.3.1.1"
+			traits = { kadet_leader }
+			id = -1
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_vasily_maklakov = { #  liberal leader, though more centrist than milyukov. set to take over after '43
+		name = "Vasily Maklakov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_vasily_maklakov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_vasily_maklakov.dds" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = vasily_maklakov
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					OR = {
+						has_character_flag = SOV_character_purged_flag 
+						has_completed_focus = SOV_the_path_of_marxism_leninism
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				SOV_staunch_constitutionalist 
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1953.3.1.1"
+			traits = {
+				SOV_staunch_constitutionalist 
+			}
+			id = -1
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_aleksandr_konovalov = { #  conservative leader  - which ironically positions him on the left of the emigres
+		name = "Aleksandr Konovalov"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_aleksandr_konovalov.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_aleksandr_konovalov.dds" 
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = aleksandr_konovalov
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					OR = {
+						has_character_flag = SOV_character_purged_flag 
+						has_completed_focus = SOV_the_path_of_marxism_leninism
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				conservative_industrialist 
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1953.3.1.1"
+			traits = {
+				conservative_industrialist 
+			}
+			id = -1
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
+
+	SOV_rafail_abramovich = { #  menshevik leader
+		name = "Rafail Abramovich"
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_RUS_Rafail_Abramovich.png"
+			}
+			army = {
+				small = "gfx/interface/ideas/idea_RUS_Rafail_Abramovich.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = rafail_abramovich
+			allowed = {
+					original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_exiled_flag }
+				NOT = {
+					OR = {
+						has_character_flag = SOV_character_purged_flag 
+						has_completed_focus = SOV_the_path_of_marxism_leninism
+					}
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				leading_menshevik 
+			}
+		}
+		country_leader = {
+			ideology = socialism 
+			expire = "1953.3.1.1"
+			traits = {
+				leading_menshevik_leader_trait
+			}
+			id = -1
+		}
+		allowed_civil_war = { tag = SOV}	
+	}
 }

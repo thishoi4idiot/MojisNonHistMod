@@ -1,0 +1,166 @@
+TAN_expand_ssr_category = {
+
+	# Each decision asks the owner of a group of states for them.
+	# STATES: replace "always = no" in available and add the lead state id in remove_effect once the groups are chosen.
+
+	TAN_ask_central_siberia = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		available = {
+			NOT = { owns_state = 40 }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			set_country_flag = TAN_central_siberia_done
+			40 = {
+				owner = {
+					country_event = { id = TAN_expand.1 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_ask_far_east = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_northern_siberia_done }
+		available = {
+			NOT = { owns_state = 574 }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			574 = {
+				owner = {
+					country_event = { id = TAN_expand.2 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_ask_omsk = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_northern_siberia_done }
+		available = {
+			NOT = { owns_state = 882 }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			882 = {
+				owner = {
+					country_event = { id = TAN_expand.3 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_ask_steppes = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_expansion_stage_3 }
+		available = { always = no }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			# <lead state id> = { owner = { country_event = { id = TAN_expand.4 } } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_reach_out_to_mongolia = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_central_siberia_done }
+		available = {
+			country_exists = MON
+			NOT = { has_war_with = MON }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			MON = {
+				country_event = { id = TAN_expand.5 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_integrate_siberian_manchus = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_expansion_stage_3 }
+		available = { always = no }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			# <lead state id> = { owner = { country_event = { id = TAN_expand.6 } } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_integrate_the_ainu = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_expansion_stage_3 }
+		available = { always = no }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			# <lead state id> = { owner = { country_event = { id = TAN_expand.7 } } }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_ask_northern_siberia = {
+		icon = GFX_decision_infiltrate_state
+		allowed = { original_tag = TAN }
+		visible = { has_country_flag = TAN_central_siberia_done }
+		available = {
+			NOT = { owns_state = 570 }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			set_country_flag = TAN_northern_siberia_done
+			570 = {
+				owner = {
+					country_event = { id = TAN_expand.8 }
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	TAN_ask_to_split_sinkiang = {
+		icon = GFX_decision_eng_trade_unions_support
+		allowed = { original_tag = TAN }
+		available = {
+			country_exists = SOV
+			country_exists = SIK
+			SIK = { is_subject_of = SOV }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 35
+		remove_effect = {
+			SOV = {
+				country_event = { id = TAN_split.1 }
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

@@ -1,0 +1,82 @@
+characters={
+
+	
+	
+	UZB_Kurshirmat = { 
+		name = "Shir Muhammed-bek 'Korshirmat' Gazi"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UZB/Portrait_TRK_Kurshirmat.png"
+				small = "gfx/interface/ideas/idea_TRK_Kurshirmat.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				cavalry_leader
+				commando
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		
+	}
+	UZB_Veli_kayum = { 
+		name = "Veli Kayum Kahn"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UZB/Portrait_TRK_Veli_kayum.png"
+				small = "gfx/interface/ideas/idea_TRK_Veli_kayum.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				trait_reckless
+				harsh_leader
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		
+	}
+	UZB_Madamin_Bek = { 
+		name = "Madamin Bek"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UZB/Portrait_TRK_Madamin_Bek.png"
+				small = "gfx/interface/ideas/idea_TRK_Madamin_Bek.dds"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	UZB_Katta_Ergash = { 
+		name = "Katta Ergash"
+		portraits = {
+			army = {
+				large = "gfx/leaders/UZB/Portrait_TRK_Katta_Ergash.png"
+				small = "gfx/interface/ideas/idea_TRK_Katta_Ergash.dds"
+			}
+		}
+		corps_commander = {
+			traits = {}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+}

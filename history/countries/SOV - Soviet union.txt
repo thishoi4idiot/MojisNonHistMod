@@ -16,6 +16,17 @@ set_party_name = {
 	name = SOV_fascism_party_russian
 }
 
+set_party_name = { 
+	ideology = democratic 
+	long_name = SOV_democratic_coalition_party_long 
+	name = SOV_democratic_coalition_party 
+}
+every_state = {
+	limit = {
+		is_core_of = ROOT
+	}
+	set_state_flag = SOV_original_core
+}
 #COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus
@@ -23,6 +34,7 @@ if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
+	recruit_character = SOV_white_army # disunited Exiles
 	recruit_character = SOV_provisional_government # United Exiles
 	set_country_flag = vlasov_owner_flag
 }
@@ -40,18 +52,12 @@ recruit_character = SOV_vyacheslav_molotov
 recruit_character = SOV_maksim_litvinov
 
 recruit_character = SOV_lev_trotsky
-recruit_character = SOV_ivan_smirnov
-recruit_character = SOV_ivar_smilga
 recruit_character = SOV_karl_radek
 recruit_character = SOV_yevgeny_preobrazhensky
-recruit_character = SOV_aleksandr_shlyapnikov
 recruit_character = SOV_nikolay_bukharin
 recruit_character = SOV_aleksey_rykov
 recruit_character = SOV_mikhail_tomsky
 recruit_character = SOV_grigory_sokolnikov
-recruit_character = SOV_grigory_zinovyev
-recruit_character = SOV_lev_kamenev
-recruit_character = SOV_martemyan_ryutin
 recruit_character = SOV_patriarch_sergy
 recruit_character = SOV_aleksandr_kerensky
 recruit_character = SOV_konstantin_rodzayevsky
@@ -114,7 +120,6 @@ recruit_character = SOV_sergey_gorshkov
 recruit_character = SOV_stepan_krasovsky
 recruit_character = SOV_vasily_blyukher
 recruit_character = SOV_vasily_chuykov
-recruit_character = SOV_aleksandr_cherepanov
 recruit_character = SOV_vasily_kuznetsov
 recruit_character = SOV_vladimir_kasatonov
 recruit_character = SOV_vladimir_tributs
@@ -128,18 +133,6 @@ recruit_character = SOV_vasily_korzh
 recruit_character = SOV_sidor_kovpak
 recruit_character = SOV_lev_dovator
 recruit_character = SOV_pavel_rybalko
-recruit_character = SOV_abram_ioffe
-recruit_character = SOV_boris_stechkin
-recruit_character = SOV_arkady_nazarov
-recruit_character = SOV_vladimir_kotelnikov
-
-# Lokot Autonomy Characters
-recruit_character = SOV_konstantin_voskoboinik
-recruit_character = SOV_bronislav_kaminski
-
-# Even without NSB so Germany can access them on historical
-recruit_character = SOV_pyotr_krasnov
-recruit_character = SOV_konstantin_nechayev
 
 if = {
 	limit = {
@@ -158,12 +151,73 @@ if = {
 	recruit_character = SOV_yan_nagursky
 	recruit_character = SOV_vasily_yanchenko
 	recruit_character = SOV_tsar_vladimir_kirillovich
+	recruit_character = SOV_tsar_vsevolod_ivanovich
+
+	recruit_character = SOV_pyotr_krasnov
+	recruit_character = SOV_konstantin_nechayev
 	recruit_character = SOV_aleksandr_rodzyanko
 	recruit_character = SOV_vladimir_kosmin
 	recruit_character = SOV_andrey_shkuro
 	recruit_character = SOV_anton_denikin
+	
+	
+	recruit_character = SOV_abram_dragonmirov
+	recruit_character = SOV_anatoliy_pepelyaev
+	recruit_character = SOV_anton_turkul
+	recruit_character = SOV_boris_steyfon
+	recruit_character = SOV_bronislav_kaminski
+	recruit_character = SOV_dmitry_semyenov
+	recruit_character = SOV_fyedor_abramov
+	recruit_character = SOV_leonid_skipetov
+	recruit_character = SOV_mikhail_levitov
+	recruit_character = SOV_pavel_shatilov
+	recruit_character = SOV_vladimir_tolstov
+	recruit_character = SOV_vladimir_vitkovsky
+	recruit_character = SOV_vladimir_sidorin
+	recruit_character = SOV_ivanis_vasily_nikolaevich
+	recruit_character = SOV_gerasim_vdovenko
+	recruit_character = SOV_yevgeny_miller
+	recruit_character = SOV_alexei_arkhangelsky
+	recruit_character = SOV_pavel_bermondt_avalov
+	recruit_character = SOV_georgiy_stark
+	recruit_character = SOV_mikhail_kedrov
+	recruit_character = SOV_mikhail_berens
+	recruit_character = SOV_nestor_monastryrev
+	
+	
 }
 
+
+#Recruited at start, hidden until released by their focus (exile/prison flags)
+recruit_character = SOV_ivan_smirnov
+recruit_character = SOV_ivar_smilga
+recruit_character = SOV_aleksandr_shlyapnikov
+recruit_character = SOV_grigory_zinovyev
+recruit_character = SOV_lev_kamenev
+recruit_character = SOV_martemyan_ryutin
+recruit_character = SOV_felix_yusupov
+recruit_character = SOV_mikhail_tereshchenko
+recruit_character = SOV_nikolai_merkulov
+recruit_character = SOV_aleksandr_konovalov
+recruit_character = SOV_dmitry_odinets
+recruit_character = SOV_irakliy_tsereteli
+recruit_character = SOV_ivan_efremov
+recruit_character = SOV_ivan_zhilkin
+recruit_character = SOV_nikolai_nekrasov
+recruit_character = SOV_nikolay_avksentyev
+recruit_character = SOV_pavel_milyukov
+recruit_character = SOV_rafail_abramovich
+recruit_character = SOV_vasily_maklakov
+recruit_character = SOV_viktor_chernov
+recruit_character = SOV_vladimir_ryabushinsky
+recruit_character = SOV_alexander_solzhenstein
+recruit_character = SOV_arkady_stolypin
+recruit_character = SOV_geogriy_vernadskiy
+recruit_character = SOV_nikolai_trubetzkoy
+recruit_character = SOV_nikolay_markov
+recruit_character = SOV_spiridon_merkulov
+recruit_character = SOV_vasily_shulgin
+recruit_character = SOV_viktor_baydalakov
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {
@@ -192,9 +246,13 @@ SOV_vyacheslav_molotov = {
 }
 SOV_konstantin_rodzayevsky = { #Not in the country
 	set_character_flag = SOV_exiled_flag
+	set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
 }
 SOV_aleksandr_kerensky = { #Not in the country
 	set_character_flag = SOV_exiled_flag
+	set_character_flag = SOV_exiled_political_advisor
+	set_character_flag = SOV_democratic_supporter_flag
 }
 SOV_lev_trotsky = { #Not in the country
 	set_character_flag = SOV_exiled_flag
@@ -237,12 +295,11 @@ if = {
 		set_character_flag = SOV_exiled_flag
 	}
 	SOV_anton_denikin = { #Not in the country
-		set_character_flag = SOV_exiled_flag
-		set_character_flag = SOV_exiled_army_leader
+		set_character_flag = SOV_exiled_army_leader_ROVS
 	}
 	SOV_pyotr_krasnov = { #Not in the country
 		set_character_flag = SOV_exiled_flag
-		set_character_flag = SOV_exiled_army_leader
+		set_character_flag = SOV_exiled_army_leader_fascist
 	}
 	SOV_konstantin_nechayev = { #Not in the country
 		set_character_flag = SOV_exiled_flag
@@ -250,7 +307,7 @@ if = {
 	}
 	SOV_vladimir_kosmin = { #Not in the country
 		set_character_flag = SOV_exiled_flag
-		set_character_flag = SOV_exiled_army_leader
+		set_character_flag = SOV_exiled_army_leader_fascist
 	}
 	SOV_aleksandr_rodzyanko = { #Not in the country
 		set_character_flag = SOV_exiled_flag
@@ -258,10 +315,212 @@ if = {
 	}
 	SOV_andrey_shkuro = { #Not in the country
 		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_fascist
+	}
+	SOV_abram_dragonmirov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_anatoliy_pepelyaev = { #execution handled by events
+		set_character_flag = SOV_safe_from_purge_flag
+#		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_yevgeny_miller = { #execution handled by events
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_safe_from_purge_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_alexei_arkhangelsky = { #not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_anton_turkul = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_fascist
+	}
+	SOV_boris_steyfon = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_fascist
+	}
+	SOV_bronislav_kaminski = { #Not important until the peasants rise up
+		set_character_flag = SOV_safe_from_purge_flag
+		set_character_flag = SOV_exiled_army_leader_fascist # used only to assign fascist trait
+	}
+	SOV_dmitry_semyenov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_semyenov
+	}
+	SOV_fyedor_abramov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_leonid_skipetov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_semyenov
+	}
+	SOV_mikhail_levitov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_pavel_shatilov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_vladimir_tolstov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_vladimir_vitkovsky = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_vladimir_sidorin = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_fascist
+	}
+	SOV_ivanis_vasily_nikolaevich = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader # though he associated with the ROVS, he was not a ROVS member
+	}
+	SOV_gerasim_vdovenko = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader # though he associated with the ROVS, he was not a ROVS member
+	}
+	SOV_pavel_bermondt_avalov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_fascist
+	}
+	SOV_georgiy_stark = { #Not in the country
+		set_character_flag = SOV_exiled_flag
 		set_character_flag = SOV_exiled_army_leader
 	}
-	
-	
+	SOV_mikhail_kedrov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_mikhail_berens = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_nestor_monastryrev = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_army_leader_ROVS
+	}
+	SOV_irakliy_tsereteli = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_nikolai_trubetzkoy = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_spiridon_merkulov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_felix_yusupov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_centrist_flag
+	}
+	SOV_geogriy_vernadskiy = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_nikolay_markov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_vasily_shulgin = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_nikolay_avksentyev = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_viktor_chernov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_mikhail_tereshchenko = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_centrist_flag
+	}
+	SOV_nikolai_nekrasov = { # handed_by_event
+		set_character_flag = SOV_safe_from_purge_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_nikolai_merkulov = {  #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_centrist_flag
+	}
+	SOV_vladimir_ryabushinsky = {  #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_ivan_efremov = {  #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_dmitry_odinets = {  #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_ivan_zhilkin = {  #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_arkady_stolypin = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_alexander_solzhenstein = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_viktor_baydalakov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_fascist_supporter_flag
+	}
+	SOV_pavel_milyukov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_vasily_maklakov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_aleksandr_konovalov = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
+	SOV_rafail_abramovich = { #Not in the country
+		set_character_flag = SOV_exiled_flag
+		set_character_flag = SOV_exiled_political_advisor
+		set_character_flag = SOV_democratic_supporter_flag
+	}
 }
 
 
@@ -340,6 +599,9 @@ if = {
 	}
 }
 
+
+
+
 #Initialize character flags Part III (aka who's in prison)
 SOV_ivan_smirnov = {
 	set_character_flag = SOV_imprisoned_flag
@@ -359,7 +621,6 @@ SOV_lev_kamenev = {
 SOV_martemyan_ryutin = {
 	set_character_flag = SOV_imprisoned_flag
 }
-	
 
 
 ### PROPAGANDA ###
@@ -521,7 +782,7 @@ set_variable = { SOV_fyp_factory_requirement_tier_5 = 200 }
 #THIRD FIVE YEAR PLAN NATIONAL SPIRIT VARS
 set_variable = { SOV_fyp_production_factory_efficiency_gain_factor = -0.15 }
 set_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 }
-set_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
+set_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
 set_variable = { SOV_fyp_production_speed_industrial_complex_factor = 0.05 }
 
 set_variable = { SOV_fyp_industrial_concern_cost_factor = -0.15 } #-> Third Five Year Plan
@@ -592,10 +853,8 @@ set_variable = { SOV_defense_industry_army_artillery_defence_factor = 0 } #-> Mi
 #THE RED ARMY NATIONAL SPIRIT VARS
 set_variable = { SOV_the_red_army_mobilization_laws_cost_factor = -0.1 }
 set_variable = { SOV_the_red_army_army_org_factor = -0.15 } # -> Restore Cossack Units / Cohsesion First #Meant to represent disgruntledness
+set_variable = { SOV_the_red_army_experience_gain_army_factor = -0.1 }
 set_variable = { SOV_the_red_army_experience_loss_factor = 0.25 }
-set_variable = { SOV_the_red_army_mastery_loss_factor = -0.15 }
-set_variable = { SOV_the_red_army_mastery_loss_factor_inverted = SOV_the_red_army_mastery_loss_factor }
-multiply_variable = { SOV_the_red_army_mastery_loss_factor_inverted = -1 }
 
 set_variable = { SOV_the_red_army_mobilization_speed = 0 } #-> Strengthen the Mobilization Plan
 set_variable = { SOV_the_red_army_conscription_factor = 0 } #-> Strengthen the Mobilization Plan
@@ -606,7 +865,7 @@ set_variable = { SOV_the_red_army_heat_attrition_factor = 0 } # -> An Adaptable 
 set_variable = { SOV_the_red_army_winter_attrition_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_cold_climate_gain_factor = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_acclimatization_hot_climate_gain_factor = 0 } # -> An Adaptable Army
-set_variable = { SOV_the_red_army_terrain_trait_xp_gain_factor = 0 } # -> An Adaptable Army
+set_variable = { SOV_the_red_army_terrain_penalty_reduction = 0 } # -> An Adaptable Army
 set_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = 0 } # -> Military Reorganization
 set_variable = { SOV_the_red_army_army_org_regain = 0 } # -> Barrier Troops
@@ -702,18 +961,30 @@ set_variable = { SOV_planned_economy_max_surrender_limit_offset = 0 } #Victory O
 set_variable = { SOV_planned_economy_industry_repair_factor = 0 } #Victory Over Devastation
 set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over Devastation
 
+#EXILES VARS
+set_variable = { WRE_sway_rescue_general_decision_re_enable_days = 30 } #rescue generals starting days, minus increment
+set_variable = { WRE_sway_rescue_general_decision_re_enable_days_display = 60 } #rescue generals starting days
+set_variable = { SOV_DEM_widen_the_coalition_decision_cost = 100 } #widen coalition decisions cost
+set_variable = { SOV_DEM_widen_the_coalition_decision_re_enable_days = 30 } #widen coalition decisions starting days, minus increment
+set_variable = { SOV_DEM_widen_the_coalition_decision_re_enable_days_display = 60 } #widen coalition decisions starting days
+set_variable = { SOV_ROVS_contact_emigres_decision_cost = 50 }
+set_variable = { SOV_ROVS_contact_emigres_decision_cost = 50 }
+set_variable = { SOV_ROVS_contact_emigres_decision_re_enable_days = 90 }
+set_variable = { SOV_ROVS_contact_emigres_decision_re_enable_days_display = 120 }
+set_variable = { SOV_rally_the_exiles_counter = 0 }
+
+
 
 #Add synthetic refineries tech
 set_technology = {
 	synth_oil_experiments = 1
 }
 
-
 ####
 #### VANILLA ####
 ####
 
-capital = 219 # Moscow
+capital = 219
 
 starting_train_buffer = 3.0
 
@@ -753,8 +1024,6 @@ if = {
 			basic_small_airframe = 1
 			basic_medium_airframe = 1
 			aircraft_construction = 1
-			air_torpedoe_1 = 1
-			bba_early_transport_plane = 1
 		}
 	else = {
 		set_air_oob = "SOV_1936_air_legacy"
@@ -764,7 +1033,6 @@ if = {
 			early_bomber = 1
 			strategic_bomber1 = 1
 			naval_bomber1 = 1
-			early_transport_plane = 1
 		}
 	}
 }
@@ -772,22 +1040,6 @@ if = {
 set_research_slots = 3
 set_stability = 0.5
 set_war_support = 0.3
-
-add_breakthrough_progress = {
-	specialization = specialization_land
-	value = 0.2
-}
-
-add_breakthrough_progress = {
-	specialization = specialization_naval
-	value = 0.2
-}
-
-add_breakthrough_progress = {
-	specialization = specialization_air
-	value = 0.3
-}
-
 # Starting tech
 set_technology = { #WARNING: Do not just remove techs from here -> It can impact a lot of stuff. Before removing, double check that content does not count on these techs being researched
 	infantry_weapons = 1
@@ -797,7 +1049,6 @@ set_technology = { #WARNING: Do not just remove techs from here -> It can impact
 	tech_engineers = 1
 	tech_military_police = 1
 	tech_mountaineers = 1
-	tech_trucks = 1
 	motorised_infantry = 1
 	paratroopers = 1
 	gw_artillery = 1
@@ -806,9 +1057,6 @@ set_technology = { #WARNING: Do not just remove techs from here -> It can impact
 	fuel_refining = 1
 	basic_train = 1
 }
-
-set_grand_doctrine = mass_assault
-set_grand_doctrine = new_fleet_in_being
 
 if = {
 	limit = {
@@ -906,19 +1154,6 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 	}
 
 
-	IF = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		complete_special_project = {
-			project = sp:sp_land_flamethrower_tank
-		}
-	}
-
-	complete_special_project = {
-		project = sp:sp_naval_cruiser_submarine
-	}
-
 	###################
 	### Purge stuff ###
 	###################
@@ -932,7 +1167,7 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 	#PURGE NSs
 	add_timed_idea = {
 		idea = SOV_understaffed_bureaucracy
-		days = 365
+		days  =365
 	}
 	add_ideas = {
 		SOV_anti_soviet_military_thinking_banned_army
@@ -1050,8 +1285,8 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 	add_opinion_modifier = { target = GER modifier = MR_pact }# pact 
 	set_global_flag = sov_yes_pact
 	add_state_claim = 146 #KARELIA (FIN)
-	#add_state_claim = 147 #SALLA (FIN) # Claim removed from MR pact (AAT)
-	#add_state_claim = 722 #PETSAMO (FIN) # Claim removed from MR pact (AAT)
+	add_state_claim = 147 #SALLA (FIN)
+	add_state_claim = 722 #PETSAMO (FIN)
 	add_state_claim = 13 #PÄRNU (EST)
 	add_state_claim = 191 #TARTU (EST)
 	add_state_claim = 811 #SAAREMAA (EST)
@@ -1117,7 +1352,6 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 			category = armor
 		}
 	}
-
 	if = {
 		limit = { has_dlc = "By Blood Alone" }
 			set_air_oob = "SOV_1939_air_bba"
@@ -1173,7 +1407,7 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 
 	#FYP NS
 	add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
-	add_to_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
+	add_to_variable = { SOV_fyp_consumer_goods_factor = 0.05 }
 	remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
 	add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier }
 
@@ -1214,14 +1448,13 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 		paratroopers = 1
 
 		#doctrines
+
 		#Air
-		#formation_flying = 1		
-		#dive_bombing = 1
-		#direct_ground_support = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 		basic_encryption = 1
@@ -1241,40 +1474,6 @@ add_ideas = SOV_second_five_year_plan_fake_1936_ns
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
 	}
-
-set_grand_doctrine = mass_assault
-set_grand_doctrine = new_fleet_in_being
-set_grand_doctrine = new_battlefield_support
-
-set_sub_doctrine = large_unit_tactics
-add_mastery = {
-    amount = 200
-    sub_doctrine = large_unit_tactics
-}
-set_sub_doctrine = fire_concentration
-add_mastery = {
-    amount = 100
-    sub_doctrine = fire_concentration
-}
-set_sub_doctrine = deep_battle
-add_mastery = {
-    amount = 100
-    sub_doctrine = deep_battle
-}
-set_sub_doctrine = air_subdoctrine_dogfighting_mastery
-add_mastery = {
-    amount = 75
-    sub_doctrine = air_subdoctrine_dogfighting_mastery
-}
-
-
-	
-	complete_special_project = {
-		project = sp:sp_air_radar
-		scientist = SOV_vladimir_kotelnikov
-		state = 260
-	}
-
 	if = {
 		limit = {
 			NOT = { has_dlc = "No Step Back" }
@@ -1330,18 +1529,25 @@ set_popularities = {
 	communism = 88
 }
 
-create_faction_from_template = faction_template_comintern
+create_faction = Comintern
 add_to_faction = SOV
 add_to_faction = MON
 add_to_faction = TAN
 
 if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_autonomy = {
+		target = TAN
+		autonomous_state = autonomy_supervised_state
+	}
+}
+
+if = {
 	limit = {
 		has_dlc = "La Resistance"
 	}
-
 	create_operative_leader = {
-		name = SOV_alexander_rado
+		name = "Alexander Radó"
 		GFX = GFX_portrait_alexander_rado
 		traits = { operative_natural_orator }
 		bypass_recruitment = no
@@ -1350,32 +1556,21 @@ if = {
 	}
 
 	create_operative_leader = {
-		name = SOV_kim_philby
+		name = "Kim Philby"
 		GFX = GFX_portrait_kim_philby
 		traits = { operative_double_agent operative_infiltrator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV ENG }
 	}
-
 	create_operative_leader = {
-		name = SOV_richard_sorge
+		name = "Richard Sorge"
 		GFX = GFX_portrait_richard_sorge
 		traits = { operative_well_groomed }
 		bypass_recruitment = no
 		available_to_spy_master = yes
 		nationalities = { SOV GER }
 	}
-
-	create_operative_leader = {
-		name = SOV_yan_chernyak
-		GFX = GFX_portrait_SOV_yan_chernyak
-		traits = { operative_linguist operative_infiltrator }
-		bypass_recruitment = no
-		available_to_spy_master = yes
-		nationalities = { SOV GER HUN ROM CZE SLO }
-	}
-
 }
 
 
@@ -1421,7 +1616,6 @@ if = {
 	create_equipment_variant = {
 		name = "DB-3" #
 		type = medium_plane_airframe_0
-		design_team = mio:SOV_ilyushin_design_bureau_organization
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = bomb_locks
@@ -1458,7 +1652,7 @@ if = {
 	limit = {
 		has_dlc = "No Step Back"
 	}
-	create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_soviet_equipment_for_cw). Any changes here should also be applied there
+	create_equipment_variant = {
 		name = "T-27"
 		type = light_tank_chassis_0
 		parent_version = 0
@@ -1480,7 +1674,6 @@ if = {
 	create_equipment_variant = {
 		name = "T-26TU mod. 1933"
 		type = light_tank_chassis_1
-		design_team = mio:SOV_okmo_organization
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_small_cannon_2
@@ -1496,10 +1689,9 @@ if = {
 		}
 		icon = "GFX_SOV_basic_light_tank_medium"
 	}
-	create_equipment_variant = { #Note: There is a copy of this variant in Finnish National Focus file (FIN_bring_foreign_armor_experts). Any changes here should also be applied there
+	create_equipment_variant = {
 		name = "BT-5"
 		type = light_tank_chassis_1
-		design_team = mio:SOV_morozov_design_bureau_organization
 		parent_version = 1
 		modules = {
 			main_armament_slot = tank_small_cannon_2
@@ -1512,13 +1704,11 @@ if = {
 			tank_nsb_engine_upgrade = 8
 			tank_nsb_armor_upgrade = 1
 		}
-		icon = "GFX_SOV_improved_light_tank_medium" #More similar to BT-7 than to T-26
-		model = "SOV_light_armor_entity" #More similar to BT-7 than to T-26
+		icon = "GFX_SOV_improved_light_tank_medium"
 	}
 	create_equipment_variant = {
 		name = "BT-7"
 		type = light_tank_chassis_2
-		design_team = mio:SOV_morozov_design_bureau_organization
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_small_cannon_2
@@ -1531,10 +1721,7 @@ if = {
 			tank_nsb_engine_upgrade = 10
 			tank_nsb_armor_upgrade = 2
 		}
-
 		icon = "GFX_SOV_improved_light_tank_medium"
-		model = "SOV_light_armor_entity"
-	
 	}
 
 	create_equipment_variant = {
@@ -1555,13 +1742,11 @@ if = {
 			tank_nsb_armor_upgrade = 3
 			tank_nsb_engine_upgrade = 10
 		}
-		icon = "GFX_SOV_medium_gwtank_medium"
-		model = "SOV_medium_gw_armor_0_entity"
+		icon = "GFX_SOV_basic_heavy_tank_medium"
 	}
 	create_equipment_variant = {
 		name = "T-35"
 		type = heavy_tank_chassis_0
-		design_team = mio:SOV_okmo_organization
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_close_support_gun
@@ -1579,24 +1764,6 @@ if = {
 			tank_nsb_engine_upgrade = 10
 		}
 		icon = "GFX_SOV_basic_heavy_tank_medium"
-	}
-	create_equipment_variant = {
-		name = "SU-152"
-		type = heavy_tank_destroyer_chassis_1
-		design_team = mio:SOV_kirov_organization
-		parent_version = 0
-		modules = {
-			main_armament_slot = tank_heavy_cannon
-			turret_type_slot = tank_heavy_fixed_superstructure_turret
-			suspension_type_slot = tank_torsion_bar_suspension
-			armor_type_slot = tank_welded_armor
-			engine_type_slot = tank_diesel_engine
-			special_type_slot_1 = tank_radio_1
-		}
-		upgrades = {
-			tank_nsb_engine_upgrade = 4
-			tank_nsb_armor_upgrade = 3
-		}
 	}
 }
 if = {
@@ -1682,12 +1849,6 @@ if = {
 			fixed_ship_engine_slot = sub_ship_engine_1
 			rear_1_custom_slot = empty
 		}
-		optional_assets = {
-			{
-				icon = "GFX_SOV_submarine_shchuka"
-				model = "SOV_submarine_entity"
-			}
-		}
 		obsolete = yes
 	}
 	create_equipment_variant = {
@@ -1710,12 +1871,6 @@ if = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
 			fixed_ship_engine_slot = sub_ship_engine_2
 			rear_1_custom_slot = empty
-		}
-		optional_assets = {
-			{
-				icon = "GFX_SOV_submarine_shchuka"
-				model = "SOV_submarine_entity"
-			}
 		}
 	}
 	# Destroyers #
@@ -1824,7 +1979,6 @@ if = {
 		type = ship_hull_cruiser_1				# minelayer
 		name_group = SOV_MINELAYERS_HISTORICAL
 		parent_version = 0
-		role_icon_index = 4
 		modules = {
 			fixed_ship_battery_slot = ship_light_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
@@ -1919,7 +2073,7 @@ if = {
 			modules = {
 				fixed_main_weapon_slot = large_bomb_bay
 				fixed_auxiliary_weapon_slot_1 = large_bomb_bay
-				engine_type_slot = engine_3_4x #Increased tier due to thrust/weight issues
+				engine_type_slot = engine_2_4x
 				special_type_slot_1 = lmg_defense_turret
 				special_type_slot_2 = cannon_defense_turret_2x
 			}
@@ -1992,12 +2146,6 @@ if = {
 				fixed_ship_torpedo_slot = empty
 				mid_1_custom_slot = empty
 				rear_1_custom_slot = ship_depth_charge_1
-			}
-			optional_assets = {
-				{
-					icon = "GFX_PRC_destroyer_anshan"
-					model = "PRC_destroyer_entity"
-				}
 			}
 			obsolete = yes
 		}
@@ -2075,3 +2223,4 @@ if = {
 		}
 	}
 }
+

@@ -1,0 +1,11 @@
+TAN_develop_siberia_category = {
+	icon = generic_industry
+
+	allowed = {
+		original_tag = TAN
+	}
+
+	visible = {
+		has_completed_focus = TAN_transformation_of_nature
+	}
+}

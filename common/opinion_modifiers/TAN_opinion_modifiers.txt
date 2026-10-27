@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	TAN_gold_donation = {
+		value = 75
+		decay = 0.5
+	}
+}

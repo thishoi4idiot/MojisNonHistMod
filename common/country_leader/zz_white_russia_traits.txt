@@ -1,0 +1,267 @@
+leader_traits = {
+	lacking_leadership = {
+		random = no
+		political_power_factor = -0.45
+		stability_weekly = -0.05
+		war_support_weekly = -0.05
+		political_advisor_cost_factor = 1
+		trade_laws_cost_factor = 1
+		economy_cost_factor = 1
+	}
+	
+	martial_stratocracy = {
+		random = no
+		army_chief_cost_factor = -0.5
+		navy_chief_cost_factor = -0.5
+		air_chief_cost_factor = -0.5
+		high_command_cost_factor = -0.5
+		army_spirit_cost_factor = -0.5
+		academy_spirit_cost_factor = -0.5
+		division_command_spirit_cost_factor = -0.5
+		navy_spirit_cost_factor = -0.5
+		naval_command_spirit_cost_factor = -0.5
+		naval_academy_spirit_cost_factor = -0.5
+#		air_force_academy_spirit_cost_factor = -0.5 # this doesn't actually exist in game, despite being in the idea_tags file
+		air_force_spirit_cost_factor = -0.5
+		air_force_command_spirit_cost_factor = -0.5
+	}
+	
+	advocate_for_national_cooperation = {
+		random = no
+		sprite = 13
+		subjects_autonomy_gain  = -0.05
+		stability_weekly = 0.001
+		compliance_gain = 0.03
+		political_power_factor = -0.15
+	}
+	
+	eurasianist_linguist = {
+		random = no
+		sprite = 13
+		compliance_growth = 0.05
+		political_power_factor = -0.15
+	}
+	last_civilian_leader = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		political_power_factor = 0.15
+	}
+	aristocratic_oligarch = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.05
+		consumer_goods_factor  = -0.05
+	}
+	
+	anti_democratic_eurasianist= {
+		random = no
+		sprite = 13
+		democratic_drift = -0.1
+		stability_weekly  = -0.001
+		political_power_factor = 0.1
+	}
+	
+	dean_of_russian_nazism = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		political_power_factor = 0.15 
+		foreign_subversive_activites = -0.3
+	}
+	
+	knight_of_the_black_hundreds = {
+		random = no
+		sprite = 13
+		compliance_growth = -0.01
+		non_core_manpower = 0.03
+		war_support_factor = 0.1
+	}
+	first_head_of_the_provisional_government = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		stability_factor = 0.1
+	}
+	social_revolutionary_reformer = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = -0.05
+		trade_laws_cost_factor = -0.15
+		economy_cost_factor = -0.15
+	}
+	embattled_turdovik = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.1
+		communism_drift = -0.1
+		war_support_factor = 0.1
+		defensive_war_stability_factor = 0.4
+	}
+	kadet_leader = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.05
+		production_speed_buildings_factor = 0.05
+		trade_opinion_factor = 0.15
+		opinion_gain_monthly_same_ideology_factor = 1.0
+	}
+	national_solidarist = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.1
+		economy_cost_factor = -0.33
+		trade_laws_cost_factor = -0.33
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+	}
+	
+	sharing_power_with_army = {
+		random = no
+		war_support_factor = 0.1
+		stability_factor = -0.05
+		political_power_factor = -0.05
+		experience_gain_army = 0.02
+	}
+		
+	SOV_staunch_constitutionalist = {
+		random = no	
+		sprite = 13
+		drift_defence_factor = 0.15
+		political_power_factor = 0.05
+		stability_factor = 0.1
+	}
+	conservative_industrialist = {
+		random = no	
+		sprite = 13
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_arms_factory_factor = 0.1
+		production_speed_dockyard_factor = 0.1	
+		conversion_cost_civ_to_mil_factor = -0.2
+	}
+	leading_menshevik = {
+		random = no	
+		sprite = 13
+		communism_drift = 0.05
+		war_support_factor = -0.1
+		non_core_manpower = 0.04
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+	}
+	leading_menshevik_leader_trait = {
+		random = no	
+		sprite = 13
+		#communism_drift = 0.05 # so he doesn't actively overthrow himself
+		war_support_factor = -0.1
+		non_core_manpower = 0.04
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+	}
+	ardent_fascist = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		war_support_factor = 0.05
+		political_power_factor = 0.15
+	}
+	solidarist_campaigner = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		democratic_drift = 0.05
+		industrial_capacity_factory = 0.05
+		non_core_manpower = 0.05
+	}
+	
+	capitalist_diplomat = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.05
+		opinion_gain_monthly_factor = 0.1
+		production_speed_industrial_complex_factor = 0.05
+	}
+	
+	minster_for_transport = {
+		random = no
+		sprite = 13
+		production_speed_rail_way_factor = 0.05
+		production_speed_supply_node_factor = 0.05
+		fuel_gain_factor = 0.05
+	}
+	merchant_minister = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.10
+		consumer_goods_factor = -0.02
+		production_factory_max_efficiency_factor = 0.05
+	}
+	
+	dedicated_reformer = {
+		random = no
+		stability_factor = -0.1
+		political_power_factor = 0.1
+		economy_cost_factor = -0.33
+		trade_laws_cost_factor = -0.33
+		political_advisor_cost_factor = -0.33
+	}
+		
+	old_guard_octobrist = {
+		random = no
+		sprite = 13
+		stability_factor = 0.15
+		political_power_factor = 0.05
+	}
+	cossack_democrat = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.05
+		democratic_drift = 0.05
+		conscription_factor = 0.05
+	}
+	socialist_academic = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		democratic_drift = 0.05
+		political_power_factor = 0.05
+	}
+	turdovik_writer = {
+		random = no
+		sprite = 13
+		drift_defence_factor = 0.05
+		political_power_factor  = 0.05
+		stability_factor  = 0.05
+	}
+		
+	eurasianist_cossack_author = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.05
+		political_power_factor = 0.05
+		war_support_factor = 0.15
+	}
+	
+	inheritor_of_the_mantle = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		political_power_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.1
+	}
+	
+	arch_reactionary = {
+		random = no
+		sprite = 13
+		neutrality_drift = 0.03
+		war_support_factor = 0.05
+		drift_defence_factor = 0.5
+		conscription_factor = 0.03
+	}
+	
+		
+}
+		

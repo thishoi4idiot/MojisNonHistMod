@@ -1,5 +1,17 @@
 	
 leader_traits = {	
+	sidorin_cossack_ataman = {
+		sprite = 10
+		random = no
+		cavalry_attack_factor = 0.2
+		cavalry_defence_factor = 0.2
+	}
+	denikin_army_theorist = {
+		sprite = 10
+		random = no
+		experience_gain_army = 0.3
+		land_doctrine_cost_factor = -0.15
+	}
 	Protector_of_the_west_slavs = { 
 		sprite = 10
 		random = no

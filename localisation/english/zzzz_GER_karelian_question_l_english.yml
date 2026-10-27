@@ -1,0 +1,6 @@
+﻿l_english:
+ GER_karelia.1.t:0 "The Karelian Question"
+ GER_karelia.1.desc:0 "With the capture of the East-Karelian strategic zone, it has come into question how the region should be dealt with. Some plans reward our Finnish friends, whilst others propose that it be attached to our Russian puppet government. What say we?"
+ GER_karelia.1.a:0 "Finland should be rewarded"
+ GER_karelia.1.b:0 "It should be incorporated into our Russian puppet"
+ GER_karelia_russian_puppet_effect_tt:0 "Every state in the Karelian interest zone is awarded to our §YRussian puppet government§!"

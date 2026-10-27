@@ -4,15 +4,6 @@ form_west_slavia_category = {
 
 		icon = generic_form_nation
 
-		allowed = {
-			OR = {
-				original_tag = CZE
-				original_tag = SLO
-				original_tag = SIL
-			}
-			has_dlc = "Waking the Tiger"
-		}
-
 		visible = {
 			OR = {
 				original_tag = CZE
@@ -69,6 +60,7 @@ form_west_slavia_category = {
 		}
 
 		complete_effect = {
+			set_global_flag = form_west_slavia_flag
 			set_cosmetic_tag = ZAP_UNIFIED
 			# Czechoslovakia
 			custom_effect_tooltip = MNHM_form_country_czechoslovakia_coring_states_tt

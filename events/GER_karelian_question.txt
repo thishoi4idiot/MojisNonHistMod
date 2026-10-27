@@ -1,0 +1,92 @@
+add_namespace = GER_karelia
+
+# The Karelian Question - event for GER
+country_event = {
+	id = GER_karelia.1
+	title = GER_karelia.1.t
+	desc = GER_karelia.1.desc
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	option = { # Finland should be rewarded
+		name = GER_karelia.1.a
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			FIN = {
+				exists = yes
+			}
+		}
+
+		custom_effect_tooltip = GER_karelia_fin_effect_tt
+
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						GER_is_soviet_greater_finland_state = yes
+						GER_is_additional_soviet_greater_finland_state = yes
+					}
+					OR = {
+						is_owned_by = ROOT
+						any_country = {
+							is_subject_of = ROOT
+							owns_state = PREV
+						}
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = PREV
+						}
+						is_controlled_by = ROOT
+						is_controlled_by = FIN
+					}
+				}
+				transfer_state_to = FIN
+			}
+		}
+	}
+
+	option = { # It should go to our Russian puppet
+		name = GER_karelia.1.b
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			has_global_flag = GER_russian_puppet_created_flag
+			has_global_flag = GER_russian_puppet_expanded_flag
+			event_target:GER_russian_puppet = {
+				exists = yes
+			}
+		}
+
+		custom_effect_tooltip = GER_karelia_russian_puppet_effect_tt
+
+		hidden_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						GER_is_soviet_greater_finland_state = yes
+						GER_is_additional_soviet_greater_finland_state = yes
+					}
+					OR = {
+						is_owned_by = ROOT
+						any_country = {
+							is_subject_of = ROOT
+							owns_state = PREV
+						}
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = PREV
+						}
+						is_controlled_by = ROOT
+					}
+				}
+				event_target:GER_russian_puppet = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+}

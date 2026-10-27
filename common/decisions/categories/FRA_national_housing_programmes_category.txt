@@ -8,6 +8,10 @@ FRA_national_housing_programmes_category = {
 	}
 
 	visible = {
-		has_completed_focus = FRA_national_housing_programmes
+		OR = {
+			has_idea = FRA_national_housing_programmes_idea_tier1
+			has_idea = FRA_national_housing_programmes_idea_tier2
+			has_idea = FRA_national_housing_programmes_idea_tier3
+		}
 	}
 }

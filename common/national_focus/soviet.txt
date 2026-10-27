@@ -11427,7 +11427,6 @@ focus_tree = {
 				limit = {
 					SOV_ivan_smirnov = {
 						NOT = { has_character_flag = SOV_character_purged_flag }
-						has_character_flag = SOV_imprisoned_flag	
 					}
 				}
 				SOV_ivan_smirnov = { clr_character_flag = SOV_imprisoned_flag }
@@ -11437,7 +11436,6 @@ focus_tree = {
 				limit = {
 					SOV_ivar_smilga = {
 						NOT = { has_character_flag = SOV_character_purged_flag }
-						has_character_flag = SOV_imprisoned_flag	
 					}
 				}
 				SOV_ivar_smilga = { clr_character_flag = SOV_imprisoned_flag }
@@ -11447,7 +11445,6 @@ focus_tree = {
 				limit = {
 					SOV_aleksandr_shlyapnikov = {
 						NOT = { has_character_flag = SOV_character_purged_flag }
-						has_character_flag = SOV_imprisoned_flag	
 					}
 				}
 				SOV_aleksandr_shlyapnikov = {  clr_character_flag = SOV_imprisoned_flag }
@@ -16022,6 +16019,22 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			if = {
+				limit = { NOT = { has_character = SOV_anton_denikin } }
+				recruit_character = SOV_anton_denikin
+			}
+			hidden_effect = {
+				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
+				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }
+				SOV_geogriy_vernadskiy = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolai_trubetzkoy = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolay_markov = { clr_character_flag = SOV_exiled_flag }
+				SOV_spiridon_merkulov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vasily_shulgin = { clr_character_flag = SOV_exiled_flag }
+				SOV_viktor_baydalakov = { clr_character_flag = SOV_exiled_flag }
+				SOV_anastasy_vonsyatsky = { clr_character_flag = SOV_exiled_flag }
+			}
+			custom_effect_tooltip = SOV_embrace_the_black_hundreds_advisors_tt
 			set_country_flag = SOV_embrace_the_black_hundreds_flag
 			custom_effect_tooltip = SOV_embrace_the_black_hundreds_tt
 			add_political_power = 50 
@@ -16087,6 +16100,28 @@ ai_will_do = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_muster_the_old_guard_tt
+			hidden_effect = {
+				SOV_andrey_shkuro = { clr_character_flag = SOV_exiled_flag }
+				SOV_anton_turkul = { clr_character_flag = SOV_exiled_flag }
+				SOV_boris_steyfon = { clr_character_flag = SOV_exiled_flag }
+				SOV_pavel_bermondt_avalov = { clr_character_flag = SOV_exiled_flag }
+				SOV_pyotr_krasnov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_kosmin = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_sidorin = { clr_character_flag = SOV_exiled_flag }
+				SOV_abram_dragonmirov = { clr_character_flag = SOV_exiled_flag }
+				SOV_alexei_arkhangelsky = { clr_character_flag = SOV_exiled_flag }
+				SOV_anton_denikin = { clr_character_flag = SOV_exiled_flag }
+				SOV_fyedor_abramov = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_berens = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_kedrov = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_levitov = { clr_character_flag = SOV_exiled_flag }
+				SOV_nestor_monastryrev = { clr_character_flag = SOV_exiled_flag }
+				SOV_pavel_shatilov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_tolstov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_vitkovsky = { clr_character_flag = SOV_exiled_flag }
+				SOV_yevgeny_miller = { clr_character_flag = SOV_exiled_flag }
+			}
+			custom_effect_tooltip = SOV_muster_the_old_guard_generals_tt
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
@@ -16338,6 +16373,11 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
+			if = {
+				limit = { NOT = { has_character = SOV_anton_denikin } }
+				recruit_character = SOV_anton_denikin
+			}
+			custom_effect_tooltip = SOV_the_hands_do_denikin_tt
 			country_event = { 
 				id = NSB_Soviet_fascist_civil_war.001 hours = 6 random_hours = 6 
 			}
@@ -16504,7 +16544,7 @@ ai_will_do = {
 			#TODO jo remove this once the civil war ends
 		}
 	}
-
+	
 	focus = {
 		id = SOV_consolidate_power
 		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
@@ -16551,8 +16591,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			custom_effect_tooltip = SOV_article_124_tt
-			SOV_increase_church_power = yes
+			add_ideas = SOV_church_power_1
 		}
 	}
 
@@ -16584,6 +16623,7 @@ ai_will_do = {
 				ideology = communism
 				popularity = -0.1
 			}
+			SOV_increase_church_power = yes
 		}
 	}
 
@@ -16729,7 +16769,6 @@ ai_will_do = {
 				has_country_flag = SOV_breakaway_country_flag
 			}
 		}
-
 		available_if_capitulated = no
 		
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -16749,6 +16788,29 @@ ai_will_do = {
 			
 		}
 	}
+	focus = {
+		id = SOV_integrate_breakaway_commanders
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = {
+			focus = SOV_consolidate_power
+		}
+		x = 2
+		y = 1
+		relative_position_id = SOV_consolidate_power
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_integrate_breakaway_commanders_tt
+		}
+	}
+
 	focus = {
 		id = SOV_offer_autonomy_to_former_soviet_republics 
 		icon = GFX_SOV_offer_autonomy_to_former_soviet_republics_ccp_2d_sov_compatibility
@@ -16841,6 +16903,21 @@ ai_will_do = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
+			hidden_effect = {
+				SOV_abram_dragonmirov = { clr_character_flag = SOV_exiled_flag }
+				SOV_alexei_arkhangelsky = { clr_character_flag = SOV_exiled_flag }
+				SOV_anton_denikin = { clr_character_flag = SOV_exiled_flag }
+				SOV_fyedor_abramov = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_berens = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_kedrov = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_levitov = { clr_character_flag = SOV_exiled_flag }
+				SOV_nestor_monastryrev = { clr_character_flag = SOV_exiled_flag }
+				SOV_pavel_shatilov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_tolstov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_vitkovsky = { clr_character_flag = SOV_exiled_flag }
+				SOV_yevgeny_miller = { clr_character_flag = SOV_exiled_flag }
+			}
+			custom_effect_tooltip = SOV_reconvene_the_zemsky_sobor_generals_tt
 			add_ideas = SOV_romanov_spirit_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = SOV_reconvene_the_zemsky_sobor_tt
@@ -16856,7 +16933,6 @@ ai_will_do = {
 			set_rule = { can_join_factions = yes }
 			custom_effect_tooltip = SOV_autonomous_soviet_republics_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = Unlocks_Decisions_To_Reintegrate_territories_that_belonged_to_the_Russian_Empire
 		}
 	}
 
@@ -16943,6 +17019,22 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			if = {
+				limit = { NOT = { has_character = SOV_anton_denikin } }
+				recruit_character = SOV_anton_denikin
+			}
+			hidden_effect = {
+				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
+				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }
+				SOV_geogriy_vernadskiy = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolai_trubetzkoy = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolay_markov = { clr_character_flag = SOV_exiled_flag }
+				SOV_spiridon_merkulov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vasily_shulgin = { clr_character_flag = SOV_exiled_flag }
+				SOV_viktor_baydalakov = { clr_character_flag = SOV_exiled_flag }
+				SOV_anastasy_vonsyatsky = { clr_character_flag = SOV_exiled_flag }
+			}
+			custom_effect_tooltip = SOV_dismantle_the_zemsky_sobor_advisors_tt
 			hidden_effect = {
 				set_temp_variable = {
 					var = dismantle_the_zemsky_sobor_var
@@ -17051,7 +17143,7 @@ ai_will_do = {
 		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
 		mutually_exclusive = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_reistablish_the_duma}
-		x = -7
+		x = -9
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 10
@@ -17063,6 +17155,14 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_romanov_reconstruction_empire_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				SOV_felix_yusupov = { clr_character_flag = SOV_exiled_flag }
+				SOV_mikhail_tereshchenko = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolai_merkulov = { clr_character_flag = SOV_exiled_flag }
+			}
+			custom_effect_tooltip = SOV_romanov_reconstruction_advisors_tt
 			add_timed_idea = {
 				idea = SOV_romanov_reconstruction
 				days = 730
@@ -17081,7 +17181,7 @@ ai_will_do = {
 		x = 6
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17108,6 +17208,7 @@ ai_will_do = {
 				add_stability = 0.05
 				SOV_increase_church_power = yes
 			}
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -17131,23 +17232,110 @@ ai_will_do = {
 
 		completion_reward = {
 			if = {
-				limit = {
-					TAN = { exists = yes }
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = TAN
-				}
-			}			
-			if = {
-				limit = {
-					MON = { exists = yes }
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = MON
+				limit = { country_exists = TAN }
+				TAN = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
 				}
 			}
+			if = {
+				limit = { country_exists = MON }
+				MON = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = SIK }
+				SIK = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_reestablish_influence_in_the_east_unlock_tt
+		}
+	}
+
+	focus = {
+		id = SOV_the_new_great_game
+		icon = GFX_focus_CHI_the_greater_game
+		prerequisite = { focus = SOV_romanov_reconstruction focus = SOV_dismantle_the_zemsky_sobor }
+		x = 2
+		y = 0
+		relative_position_id = SOV_reestablish_influence_in_the_east
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = IRQ }
+				IRQ = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = PER }
+				PER = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = AFG }
+				AFG = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			if = {
+				limit = { country_exists = SAU }
+				SAU = {
+					add_timed_idea = {
+						idea = neutrality_influence_weak
+						days = 1095
+					}
+				}
+			}
+			custom_effect_tooltip = SOV_the_new_great_game_unlock_tt
+		}
+	}
+
+	focus = {
+		id = SOV_lessons_from_the_past
+		icon = GFX_focus_POL_cossack_king
+		prerequisite = { focus = SOV_reestablish_influence_in_the_east focus = SOV_the_new_great_game }
+		x = 1
+		y = 1
+		relative_position_id = SOV_reestablish_influence_in_the_east
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_lessons_from_the_past_unlock_tt
+			custom_effect_tooltip = SOV_lessons_from_the_past_unlock_kuban_tt
 		}
 	}
 
@@ -17443,7 +17631,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -17458,6 +17646,8 @@ ai_will_do = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_westward_bound_unlock_tt
+			custom_effect_tooltip = SOV_westward_bound_unlock_romania_tt
 			# Murmansk
 			213 = {
 				if = {
@@ -17616,19 +17806,19 @@ ai_will_do = {
 	}	
 
 	focus = {
-		id = SOV_the_old_enemy
-		icon = GFX_SOV_the_old_enemy_ccp_2d_sov_compatibility
+		id = SOV_secure_poland
+		icon = GFX_focus_generic_attack_poland
 		prerequisite = { focus = SOV_westward_bound }
 		x = -2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available_if_capitulated = no
 
-		will_lead_to_war_with = SWE
+		will_lead_to_war_with = POL
 
 		search_filters = {}
 
@@ -17637,7 +17827,7 @@ ai_will_do = {
 		}
 
 		bypass = {
-			SWE = {
+			POL = {
 				OR = {
 					exists = no
 					has_war_with = SOV
@@ -17647,7 +17837,8 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			create_wargoal = { type = annex_everything target = SWE }
+			custom_effect_tooltip = SOV_secure_poland_unlock_tt
+			create_wargoal = { type = annex_everything target = POL }
 		}
 	}	
 
@@ -17658,7 +17849,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_westward_bound 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17683,6 +17874,7 @@ ai_will_do = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_secure_finland_unlock_tt
 			create_wargoal = { type = annex_everything target = FIN }
 		}
 	}	
@@ -17695,7 +17887,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17735,6 +17927,8 @@ ai_will_do = {
 		}
 
 		completion_reward = {
+			custom_effect_tooltip = SOV_secure_the_baltics_unlock_tt
+			custom_effect_tooltip = SOV_secure_the_baltics_unlock_reintegrate_tt
 			create_wargoal = { type = annex_everything target = EST }
 			create_wargoal = { type = annex_everything target = LIT }
 			create_wargoal = { type = annex_everything target = LAT }
@@ -17747,7 +17941,7 @@ ai_will_do = {
 		icon = GFX_focus_SOV_panslavic_nationalism
 		prerequisite = { focus = SOV_secure_the_baltics }
 		prerequisite = { focus = SOV_secure_finland }
-		prerequisite = { focus = SOV_the_old_enemy }
+		prerequisite = { focus = SOV_secure_poland }
 		mutually_exclusive = { focus = SOV_the_rightful_heir_to_the_empire }
 		x = 0
 		y = 1
@@ -17931,11 +18125,11 @@ ai_will_do = {
 	focus = {
 		id = SOV_the_fate_of_romania
 		icon = GFX_SOV_the_fate_of_romania_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_panslavic_nationalism focus = SOV_the_rightful_heir_to_the_empire}
-		x = 1
-		y = 1
-		relative_position_id = SOV_panslavic_nationalism
-		cost = 10
+		prerequisite = { focus = SOV_secure_poland }
+		x = -2
+		y = 2
+		relative_position_id = SOV_westward_bound
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17951,7 +18145,9 @@ ai_will_do = {
 		}
 
 		completion_reward = {
-			create_wargoal = { type = annex_everything target = ROM }
+			ROM = {
+				country_event = { id = SOV_romania_puppet.1 }
+			}
 		}
 	}	
 
@@ -18741,6 +18937,26 @@ ai_will_do = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = SOV_the_duma_1
+			custom_effect_tooltip = SOV_invite_the_democratic_exiles_tt
+			hidden_effect = {
+				SOV_aleksandr_konovalov = { clr_character_flag = SOV_exiled_flag }
+				SOV_dmitry_odinets = { clr_character_flag = SOV_exiled_flag }
+				SOV_irakliy_tsereteli = { clr_character_flag = SOV_exiled_flag }
+				SOV_ivan_efremov = { clr_character_flag = SOV_exiled_flag }
+				SOV_ivan_zhilkin = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolai_nekrasov = { clr_character_flag = SOV_exiled_flag }
+				SOV_nikolay_avksentyev = { clr_character_flag = SOV_exiled_flag }
+				SOV_pavel_milyukov = { clr_character_flag = SOV_exiled_flag }
+				SOV_rafail_abramovich = { clr_character_flag = SOV_exiled_flag }
+				SOV_vasily_maklakov = { clr_character_flag = SOV_exiled_flag }
+				SOV_viktor_chernov = { clr_character_flag = SOV_exiled_flag }
+				SOV_vladimir_ryabushinsky = { clr_character_flag = SOV_exiled_flag }
+				SOV_aleksandr_rodzyanko = { clr_character_flag = SOV_exiled_flag }
+				SOV_georgiy_stark = { clr_character_flag = SOV_exiled_flag }
+				SOV_gerasim_vdovenko = { clr_character_flag = SOV_exiled_flag }
+				SOV_ivanis_vasily_nikolaevich = { clr_character_flag = SOV_exiled_flag }
+				SOV_konstantin_nechayev = { clr_character_flag = SOV_exiled_flag }
+			}
 		}
 	}
 	focus = {

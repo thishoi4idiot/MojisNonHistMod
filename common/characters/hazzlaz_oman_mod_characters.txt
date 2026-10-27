@@ -1,0 +1,131 @@
+characters = {
+    oma_character_Bertram = {
+        name = oma_character_Bertram
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Bertram
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Bertram
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Bertram
+            cost = 50
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { financial_expert }
+        }
+    }
+    oma_character_Khalili = {
+        name = oma_character_Khalili
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Khalili
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Khalili
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Khalili
+            cost = 100
+            allowed = {
+                original_tag = OMA
+                NOT = { 
+                has_completed_focus = my_hoi4_mod_new_awayfromagra
+                }
+            }
+            traits = { agrarian_nationalist }
+        }
+    }
+    oma_character_Harthi = {
+        name = oma_character_Harthi
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Harthi
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Harthi
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Harthi
+            cost = 250
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { GER_traditionalist }
+        }
+    }
+    oma_character_Salimi = {
+        name = oma_character_Salimi
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Salimi
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Salimi
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Salimi
+            cost = 200
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { popular_figurehead muslim_scholar }
+        }
+    }
+    oma_character_Faisal = {
+        name = oma_character_Faisal
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Faisal
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Faisal
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Faisal
+            cost = 150
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { national_integralist RAJ_GOE_costly_reformer }
+        }
+    }
+    oma_character_Mashani = {
+        name = oma_character_Mashani
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Mashani
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Mashani
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Mashani
+            cost = 150
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { RAJ_GOE_cultural_icon }
+        }
+    }
+    oma_character_Baruni = {
+        name = oma_character_Baruni
+        portraits = {
+            civilian = {
+                large = GFX_portrait_hazzlaz_oman_mod_oma_character_Baruni
+                small = GFX_idea_hazzlaz_oman_mod_oma_character_Baruni
+            }
+        }
+        advisor = {
+            slot = political_advisor
+            idea_token = oma_character_Baruni
+            cost = 150
+            allowed = {
+                original_tag = OMA
+            }
+            traits = { banking_mogul }
+        }
+    }
+}

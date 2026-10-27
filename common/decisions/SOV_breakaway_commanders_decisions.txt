@@ -1,0 +1,47 @@
+SOV_breakaway_commanders_category = {
+
+	SOV_recruit_commanders = {
+
+		icon = GFX_decision_generic_decision
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		target_root_trigger = {
+			has_completed_focus = SOV_integrate_breakaway_commanders
+		}
+
+		targets = { ARM AZR BLR BUK CIN DAG GEO KAL KAZ KBK KHI NOA TAT TMS UKR UZB }
+		target_non_existing = yes
+
+		target_trigger = {
+			FROM = {
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		visible = {
+			has_completed_focus = SOV_integrate_breakaway_commanders
+		}
+
+		available = {
+			NOT = { has_war_with = FROM }
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			FROM = {
+				every_unit_leader = {
+					set_nationality = SOV
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

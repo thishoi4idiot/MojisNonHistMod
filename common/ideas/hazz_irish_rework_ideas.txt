@@ -232,8 +232,8 @@ ideas = {
                 always = yes
             }
             modifier = {
+                conscription_factor = 0.10
                 communism_drift = 0.05
-                recruitable_population_factor = 0.10
             }
         }
         Sigmas_rise_willllll = {

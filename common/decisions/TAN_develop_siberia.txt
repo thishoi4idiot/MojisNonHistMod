@@ -1,0 +1,39 @@
+TAN_develop_siberia_category = {
+
+	TAN_reclaim_siberian_wasteland = {
+		icon = GFX_decision_generic_construction
+
+		allowed = {
+			original_tag = TAN
+		}
+
+		state_target = yes
+		target_array = TAN.core_states
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = { has_state_flag = TAN_developed }
+				OR = {
+					has_state_category = wasteland
+					has_state_category = pastoral
+				}
+			}
+		}
+
+		on_map_mode = map_and_decisions_view
+
+		cost = 25
+		days_remove = 35
+
+		remove_effect = {
+			FROM = {
+				set_state_category = rural
+				set_state_flag = TAN_developed
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

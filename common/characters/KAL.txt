@@ -1,0 +1,48 @@
+characters={
+	
+	
+	KAL_nikolai_tundutov = {
+		name = "Khagan Nikolai Tundutov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/KAL/Portrait_KAL_Nikolai_tundutov.png" # no pictures of Nikolai, so here's his father Danzan, courtesy of KX
+				small = "gfx/interface/ideas/Portrait_KAL_Nikolai_tundutov.dds"
+			}
+		}
+		
+		field_marshal = { 
+			traits = {
+				politically_connected
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	
+	
+	KAL_oka_gorodovikov = {
+		name = "Oka Gorodovikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/KAL/Portrait_KLY_Gorodovikov.png"
+				small = "gfx/interface/ideas/idea_KLY_Gorodovikov.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				old_guard
+				cavalry_leader 
+				cavalry_expert 
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}
+	

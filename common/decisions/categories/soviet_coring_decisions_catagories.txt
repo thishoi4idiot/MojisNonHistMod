@@ -10,7 +10,6 @@ soviet_coring_decisions_catagory = {
 		tag = SOV
 		OR = {
 			has_completed_focus = SOV_the_comintern
-			has_completed_focus = SOV_reconvene_the_zemsky_sobor
 		}
 	}
 	priority = {

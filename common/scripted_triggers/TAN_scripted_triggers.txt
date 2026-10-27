@@ -1,0 +1,13 @@
+TAN_soviet_aligned = {
+	country_exists = SOV
+	NOT = { has_war_with = SOV }
+	OR = {
+		is_subject_of = SOV
+		is_in_faction_with = SOV
+	}
+}
+
+TAN_homeland_held = {
+	owns_state = 329
+	controls_state = 329
+}

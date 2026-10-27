@@ -1,4 +1,3 @@
-FRA_historical_plan = {
 	name = "France historical plan"
 	desc = "Historical behavior for France"
 
@@ -79,7 +78,6 @@ FRA_historical_plan = {
 		FRA_army_reform
 		FRA_air_focus 
 		FRA_fighter_focus 
-		FRA_dirigisme 
 		FRA_heavy_fighter_focus 
 		#1942
 		FRA_air_doctrine 

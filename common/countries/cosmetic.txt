@@ -28,11 +28,6 @@ UKR_Ukrainian_peooples_republic = {
 	color_ui = rgb { 171 96 96 }
 }
 
-POL_West_Russian_Volunteer_Army = {
-	color = rgb { 120 99 35}
-	color_ui = rgb { 120 99 35}
-}
-
 USA_American_Empire = {
 	color = rgb { 34 56 89 }
 	color_ui = rgb { 34 56 89 }
@@ -1967,21 +1962,6 @@ INS_aslia = {
 	color_ui = rgb { 101 163 145 }
 }
 
-SPR_habsburg = {
-	color = rgb { 255 128 0 }
-	color_ui = rgb { 255 255 122 }
-}
-
-HND_UNIFIED = {
-	color = rgb { 204 102 0 }
-	color_ui = rgb { 128 64 0 }
-}
-
-neo_mesopotamia = {
-	color = rgb { 204 51 0 }
-	color_ui = rgb { 153 38 0 }
-}
-
 CHI_great_yuan = {
 	color = rgb { 45 80 10 }
 	color_ui = rgb { 13 26 0 }
@@ -2117,6 +2097,66 @@ LUX_cosmetic = {
 LUX_cosmetic_nap = {
     color = rgb { 65 179 167 }
     color_ui = rgb { 65 179 167 }
+}
+
+POL_german_vassal = {
+	color = rgb { 150 23 23 }
+	color_ui = rgb { 150 23 23 }
+}
+
+DON_german_vassal = {
+	color = rgb { 255 170 0 }
+	color_ui = rgb { 255 170 0 }
+}
+
+KAZ_german_vassal = {
+	color = rgb { 75 184 203 }
+	color_ui = rgb { 75 184 203 }
+}
+
+RUP = {
+	color = rgb { 120 110 90 }
+	color_ui = rgb { 120 110 90 }
+}
+
+SOV_CONGRESSIONAL_POLAND = {
+	color = rgb { 120 30 30 }
+	color_ui = rgb { 120 30 30 }
+}
+
+SOV_BALTIC_GOVERNANCE = {
+	color = rgb { 60 90 60 }
+	color_ui = rgb { 60 90 60 }
+}
+
+SOV_GRAND_DUCHY_OF_FINLAND = {
+	color = rgb { 30 80 140 }
+	color_ui = rgb { 30 80 140 }
+}
+LBA_cosmetic_sanussia = {
+    color = rgb { 8 18 10 }
+    color_ui = rgb { 8 18 10 }
+}
+OMA_cosmetic_empire = {
+    color = rgb { 24 115 38 }
+    color_ui = rgb { 24 115 38 }
+}
+OMA_cosmetic_gulfdominion = {
+    color = rgb { 128 13 47 }
+    color_ui = rgb { 128 13 47 }
+}
+OMA_cosmetic_Magan = {
+    color = rgb { 196 187 187 }
+    color_ui = rgb { 196 187 187 }
+}
+OMA_cosmetic_USSME = {
+    color = rgb { 166 60 104 }
+    color_ui = rgb { 166 60 104 }
+}
+
+TAN_SIBERIAN_SSR = {
+	color = rgb { 190 30 45 }
+	color_ui = rgb { 220 50 60 }
 }
 
 AST_monarchy = {

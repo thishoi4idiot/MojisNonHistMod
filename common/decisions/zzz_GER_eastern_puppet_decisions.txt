@@ -1,0 +1,1804 @@
+GER_realpolitik_cat = {
+	# Found a Baltic-German State
+	GER_found_a_baltic_german_state_decision = {
+
+		icon = GFX_decision_generic_nationalism
+
+		priority = 50
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			UBD = {
+				exists = no
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				810 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				12 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				808 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				809 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				190 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				13 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				191 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				813 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				812 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				811 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 810
+				state = 12
+				state = 808
+				state = 809
+				state = 190
+				state = 13
+				state = 191
+				state = 813
+				state = 812
+				state = 811
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = { 
+					OR = {
+						has_capitulated = yes 
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_ubd_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = { 
+					target = UBD 
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = { 
+					target = UBD 
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = { 
+					target = UBD 
+					autonomy_state = autonomy_puppet 
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 810
+							state = 12
+							state = 808
+							state = 809
+							state = 190
+							state = 13
+							state = 191
+							state = 813
+							state = 812
+							state = 811
+						}
+					}
+					add_core_of = UBD
+					transfer_state_to = UBD
+				}
+
+				UBD = {
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}	
+				}
+			}
+		}
+	}
+
+	# Restore the Ukrainian State
+	GER_restore_the_ukrainian_state_decision = {
+	
+		priority = 49
+	
+		icon = GFX_decision_generic_nationalism
+	
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = { 
+					OR = {
+						has_capitulated = yes 
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+				state = 201
+				state = 93
+				state = 199
+				state = 198
+				state = 834
+				state = 192
+				state = 203
+				state = 193
+				state = 225
+				state = 259
+				state = 226
+				state = 197
+				state = 196
+				state = 200
+				state = 221
+				state = 227
+				state = 228
+				state = 137
+				state = 218
+				state = 234
+			}
+		}
+	
+		allowed = {  
+			original_tag = GER
+		}
+	
+		visible = { 
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			UKR = {
+				exists = no
+			}
+		} 
+	
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			UKR = {
+				exists = no
+			}
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				202 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				201 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				93 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				199 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				198 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				834 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				192 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				203 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				193 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				225 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				259 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				226 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				197 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				196 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				200 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				221 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				227 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				228 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				137 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				218 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				234 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+	
+		cost = 50
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_ukr_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = { 
+					target = UKR 
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = { 
+					target = UKR 
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = { 
+					target = UKR 
+					autonomy_state = autonomy_puppet 
+				}
+			}
+			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 202
+							state = 201
+							state = 93
+							state = 199
+							state = 198
+							state = 834
+							state = 192
+							state = 203
+							state = 193
+							state = 225
+							state = 259
+							state = 226
+							state = 197
+							state = 196
+							state = 200
+							state = 221
+							state = 227
+							state = 228
+							state = 137
+							state = 218
+							state = 234
+						}
+					}
+					add_core_of = UKR
+					transfer_state_to = UKR
+				}
+
+				UKR = {
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}	
+				}
+			}
+
+			UKR = {
+				UKR_mykhailo_omelianovych_pavlenko = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {
+							ideology = despotism
+							expire = 1965.1.1
+							traits = { POL_cossack_king } 
+						}
+					}
+				}
+			}
+		}
+	
+	}
+
+	# Found a Transcaucasian Satellite
+	GER_found_a_transcacuasian_satellite_state_decision = {
+
+		icon = GFX_decision_generic_nationalism
+
+		priority = 48
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			GEO = {
+				exists = no
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				231 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				826 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				230 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				229 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 231
+				state = 826
+				state = 230
+				state = 229
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = { 
+					OR = {
+						has_capitulated = yes 
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_geo_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = { 
+					target = GEO 
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = { 
+					target = GEO 
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = { 
+					target = GEO 
+					autonomy_state = autonomy_puppet 
+				}
+			}
+			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 231
+							state = 826
+							state = 230
+							state = 229
+						}
+					}
+					add_core_of = GEO
+					transfer_state_to = GEO
+				}
+
+				GEO = {
+					set_cosmetic_tag = transcaucasia_unified
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}	
+				}
+			}
+
+			set_global_flag = form_transcaucasia_flag
+
+		}
+	}
+
+	# Expand Transcaucasian Adminsitration to the Northern Caucasus
+	GER_expand_transcacuasian_administrative_duties_decision = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		priority = 47
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			has_global_flag = form_transcaucasia_flag
+		}
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			GEO = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				827 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				828 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				821 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				232 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				233 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 827
+				state = 828
+				state = 821
+				state = 232
+				state = 233
+			}
+		}
+
+		cost = 15
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = { 
+					OR = {
+						has_capitulated = yes 
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_geo_state_transfer_effect_north_caucasus_tt
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 827
+							state = 828
+							state = 821
+							state = 232
+							state = 233
+						}
+					}
+					add_core_of = GEO
+					transfer_state_to = GEO
+				}
+				set_global_flag = northern_caucasus_claimed_flag
+			}
+
+		}
+	}
+
+	# Establish a Belarusian State
+	GER_establish_a_belarusian_state_decision = {
+	
+		priority = 46
+	
+		icon = GFX_decision_generic_nationalism
+	
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = { 
+					OR = {
+						has_capitulated = yes 
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 194 # Mozyr
+				state = 204 # Bobryusk
+				state = 206 # Minsk
+				state = 207 # Vitebsk
+				state = 96 # Wiljeka
+				state = 95
+				state = 94
+			}
+		}
+	
+		allowed = {  
+			original_tag = GER
+		}
+	
+		visible = { 
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			BLR = {
+				exists = no
+			}
+		} 
+	
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			BLR = {
+				exists = no
+			}
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				194 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				204 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				206 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				207 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				95 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				94 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				96 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+	
+		cost = 35
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_blr_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = { 
+					target = BLR 
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = { 
+					target = BLR 
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = { 
+					target = BLR 
+					autonomy_state = autonomy_puppet 
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 194 # Mozyr
+							state = 204 # Bobryusk
+							state = 206 # Minsk
+							state = 207 # Vitebsk
+							state = 96 # Wiljeka
+							state = 95 # Minsk
+							state = 94 # Minsk
+						}
+					}
+					add_core_of = BLR
+					transfer_state_to = BLR
+				}
+
+				BLR = {
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}	
+				}
+			}
+		}
+	
+	}
+
+	# Partition Lithuania
+	GER_partition_lithuania_decision = {
+
+		icon = GFX_decision_generic_nationalism
+
+		priority = 45
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 188 # Memel
+				state = 814 # Suduva
+				state = 11
+				state = 815 # Aukstaitija
+				state = 189 # Kaunas
+				state = 784 # Ermland-Masuren
+			}
+		}
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			has_global_flag = GER_wishes_to_annex_lithuania_flag
+			UBD = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+			BLR = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_partition_lithuania_required_states_tt
+				188 = { is_owned_by = ROOT }
+				814 = { is_owned_by = ROOT }
+				11 = { is_owned_by = ROOT }
+				815 = { is_owned_by = ROOT }
+				189 = { is_owned_by = ROOT }
+				784 = { is_owned_by = ROOT }
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_partition_lithuania_effect_tt
+
+			hidden_effect = {
+				# Memel and Suduva stay with Germany
+				188 = { add_core_of = ROOT }
+				814 = { add_core_of = ROOT }
+
+				# Northern and central Lithuania go to the Baltic state
+				every_state = {
+					limit = {
+						OR = {
+							state = 11
+							state = 815
+							state = 189
+						}
+					}
+					add_core_of = UBD
+					transfer_state_to = UBD
+				}
+
+				# Ermland-Masuren goes to Belarus
+				784 = {
+					add_core_of = BLR
+					transfer_state_to = BLR
+				}
+			}
+		}
+	}
+
+	# Restore the Polish State
+	GER_establish_a_polish_state_decision = {
+
+		priority = 44
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+				state = 90
+				state = 92
+				state = 88
+				state = 91
+				state = 89
+			}
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			POL = {
+				exists = no
+			}
+		}
+
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			POL = {
+				exists = no
+			}
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				10 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				90 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				92 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				88 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				91 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				89 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		cost = 35
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_pol_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = {
+					target = POL
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = {
+					target = POL
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = POL
+					autonomy_state = autonomy_puppet
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 10
+							state = 90
+							state = 92
+							state = 88
+							state = 91
+							state = 89
+						}
+					}
+					add_core_of = POL
+					transfer_state_to = POL
+				}
+
+				POL = {
+					set_cosmetic_tag = POL_german_vassal
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}
+				}
+			}
+		}
+	}
+
+	# Reestablish the Don Cossack Host
+	GER_reestablish_the_don_cossack_host_decision = {
+
+		priority = 43
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 217
+				state = 238
+				state = 237
+				state = 236
+				state = 235
+			}
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			DON = {
+				exists = no
+			}
+		}
+
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			DON = {
+				exists = no
+			}
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				217 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				238 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				237 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				236 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				235 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		cost = 25
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_don_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = {
+					target = DON
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = {
+					target = DON
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = DON
+					autonomy_state = autonomy_puppet
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 217
+							state = 238
+							state = 237
+							state = 236
+							state = 235
+						}
+					}
+					add_core_of = DON
+					transfer_state_to = DON
+				}
+
+				DON = {
+					set_cosmetic_tag = DON_german_vassal
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}
+				}
+			}
+		}
+	}
+
+	# Establish a Kazakh Border Authority
+	GER_establish_a_kazakh_border_authority_decision = {
+
+		priority = 42
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 406
+				state = 407
+				state = 401
+				state = 829
+				state = 251
+				state = 652
+			}
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			KAZ = {
+				exists = no
+			}
+		}
+
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			KAZ = {
+				exists = no
+			}
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				406 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				407 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				401 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				829 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				251 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				652 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		cost = 25
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_kaz_state_transfer_effect_tt
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = {
+					target = KAZ
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = {
+					target = KAZ
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = KAZ
+					autonomy_state = autonomy_puppet
+				}
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 406
+							state = 407
+							state = 401
+							state = 829
+							state = 251
+							state = 652
+						}
+					}
+					add_core_of = KAZ
+					transfer_state_to = KAZ
+				}
+
+				KAZ = {
+					set_cosmetic_tag = KAZ_german_vassal
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}
+				}
+			}
+		}
+	}
+
+	# Establish a Russian Puppet Government
+	GER_establish_a_russian_puppet_government_decision = {
+
+		priority = 41
+
+		icon = GFX_decision_generic_nationalism
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		fire_only_once = yes
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+				state = 254
+				state = 223
+				state = 205
+				state = 242
+				state = 243
+				state = 241
+				state = 224
+				state = 222
+				state = 220
+				state = 240
+				state = 260
+				state = 245
+				state = 265
+				state = 239
+				state = 255
+				state = 250
+				state = 252
+				state = 253
+				state = 248
+				state = 264
+				state = 244
+				state = 195
+				state = 257
+				state = 258
+				state = 246
+				state = 247
+				state = 208
+				state = 209
+				state = 210
+				state = 263
+				state = 833
+				state = 256
+			}
+		}
+
+		allowed = {
+			original_tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+		}
+
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				219 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				254 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				223 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				205 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				242 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				243 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				241 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				224 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				222 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				220 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				240 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				260 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				245 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				265 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				239 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				255 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				250 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				252 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				253 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				248 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				264 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				244 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				195 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				257 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				258 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				246 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				247 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				208 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				209 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				210 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				263 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				833 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				256 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_rup_state_transfer_effect_tt
+
+			hidden_effect = {
+				set_global_flag = GER_russian_puppet_created_flag
+				# Spawn the puppet Russian government as a dynamic country
+				create_dynamic_country = {
+					original_tag = SOV
+					set_cosmetic_tag = RUP
+					set_politics = {
+						ruling_party = neutrality
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+					set_popularities = {
+						democratic = 15
+						neutrality = 60
+						communism = 5
+						fascism = 20
+					}
+					set_temp_variable = { rup_var = this }
+					save_global_event_target_as = GER_russian_puppet
+					random_list = {
+						25 = {
+							create_country_leader = {
+								name = "Konstantin Voskoboinik"
+								desc = ""
+								picture = GFX_portrait_SOV_konstantin_voskoboinik
+								expire = "1965.1.1"
+								ideology = despotism
+								traits = { }
+							}
+						}
+						25 = {
+							create_country_leader = {
+								name = "Vasily Flug"
+								desc = ""
+								picture = GFX_portrait_SOV_vasily_flug
+								expire = "1965.1.1"
+								ideology = despotism
+								traits = { }
+							}
+						}
+						25 = {
+							create_country_leader = {
+								name = "Boris Shteifon"
+								desc = ""
+								picture = GFX_portrait_SOV_boris_shteifon
+								expire = "1965.1.1"
+								ideology = despotism
+								traits = { }
+							}
+						}
+						25 = {
+							create_country_leader = {
+								name = "Pyotr Krasnov"
+								desc = ""
+								picture = GFX_portrait_SOV_pyotr_krasnov
+								expire = "1965.1.1"
+								ideology = despotism
+								traits = { }
+							}
+						}
+					}
+				}
+
+				ROOT = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 219
+								state = 254
+								state = 223
+								state = 205
+								state = 242
+								state = 243
+								state = 241
+								state = 224
+								state = 222
+								state = 220
+								state = 240
+								state = 260
+								state = 245
+								state = 265
+								state = 239
+								state = 255
+								state = 250
+								state = 252
+								state = 253
+								state = 248
+								state = 264
+								state = 244
+								state = 195
+								state = 257
+								state = 258
+								state = 246
+								state = 247
+								state = 208
+								state = 209
+								state = 210
+								state = 263
+ 								state = 833
+								state = 256
+							}
+						}
+						add_core_of = var:rup_var
+						var:rup_var = { transfer_state = PREV }
+					}
+				}
+
+				var:rup_var = {
+					set_cosmetic_tag = RUP
+					set_capital = {
+						state = 219
+						remember_old_capital = no
+					}
+
+					# The exiled Tsar becomes the leader of the puppet government
+					create_country_leader = {
+						name = "Vladimir III"
+						desc = ""
+						picture = "GFX_portrait_SOV_vladimir_kirillovich"
+						ideology = despotism
+						traits = {
+							emperor_and_autocrat_of_all_the_russias
+							GER_in_the_kaisers_pocket
+						}
+						expire = "1965.1.1"
+					}
+
+					add_manpower = 25000
+					add_ideas = GER_german_economic_dominance
+					add_equipment_to_stockpile = {
+						type = infantry_equipment
+						amount = 1000
+						producer = GER
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment
+						amount = 250
+						producer = GER
+					}
+				}
+			}
+
+			IF = {
+				limit = {
+					has_government = neutrality
+				}
+				set_autonomy = {
+					target = var:rup_var
+					autonomy_state = autonomy_personal_union
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_government = democratic
+				}
+				set_autonomy = {
+					target = var:rup_var
+					autonomy_state = autonomy_colony
+				}
+			}
+			ELSE = {
+				set_autonomy = {
+					target = var:rup_var
+					autonomy_state = autonomy_puppet
+				}
+			}
+		}
+	}
+
+	# The Karelian Question
+	GER_the_karelian_question_decision = {
+
+		priority = 40
+
+		icon = GFX_decision_generic_nationalism
+
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			OR = {
+				FIN = {
+					exists = yes
+				}
+				AND = {
+					has_global_flag = GER_russian_puppet_created_flag
+					has_global_flag = GER_russian_puppet_expanded_flag
+					event_target:GER_russian_puppet = {
+						exists = yes
+					}
+				}
+			}
+		}
+
+		available = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+		}
+
+		cost = 15
+
+		ai_will_do = {
+			base = 50
+		}
+
+		complete_effect = {
+			country_event = GER_karelia.1
+		}
+	}
+
+	# Expand the Russian Puppet
+	GER_expand_russian_puppet_decision = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		priority = 39
+
+		visible = {
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			has_global_flag = GER_russian_puppet_created_flag
+			event_target:GER_russian_puppet = {
+				exists = yes
+			}
+		}
+
+		fire_only_once = yes
+
+		available = {
+			is_subject = no
+			has_completed_focus = GER_establish_eastern_grand_duchies
+			event_target:GER_russian_puppet = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				351 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				880 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				879 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				214 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				400 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				397 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				262 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				825 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				398 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				249 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				651 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				581 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				399 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				573 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 351
+				state = 880
+				state = 879
+				state = 214
+				state = 400
+				state = 397
+				state = 262
+				state = 825
+				state = 398
+				state = 249
+				state = 651
+				state = 581
+				state = 399
+				state = 573
+			}
+		}
+
+		cost = 25
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				add = 150
+				SOV = {
+					OR = {
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			modifier = {
+				add = 25
+				SOV = { has_war_with = ROOT }
+			}
+		}
+
+		complete_effect = {
+
+			custom_effect_tooltip = GER_expand_russian_puppet_effect_tt
+
+			set_global_flag = GER_russian_puppet_expanded_flag
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 351
+							state = 880
+							state = 879
+							state = 214
+							state = 400
+							state = 397
+							state = 262
+							state = 825
+							state = 398
+							state = 249
+							state = 651
+							state = 581
+							state = 399
+							state = 573
+						}
+					}
+					event_target:GER_russian_puppet = {
+						transfer_state = PREV
+					}
+					add_core_of = event_target:GER_russian_puppet
+				}
+			}
+		}
+	}
+}

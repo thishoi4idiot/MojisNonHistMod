@@ -1,0 +1,91 @@
+TAN_historical = {
+	name = "Tuvan historical plan"
+	desc = "Tuva stays loyal to Moscow, builds its economy under Soviet guidance and keeps its borders. It never reaches for Siberia."
+
+	allowed = {
+		original_tag = TAN
+	}
+	enable = {
+
+	}
+	abort = {
+
+	}
+
+	ai_national_focuses = {
+		# Economy: fix the barter economy, then the workshops
+		TAN_enforce_aksa
+		TAN_kyzyl_workshops
+		TAN_soviet_trade_monopoly
+		TAN_state_herd_registry
+		TAN_mechanize_mines
+		TAN_russian_labor_colonies
+		TAN_sedentary_mandate
+		TAN_begin_five_year_plan
+
+		# Political: work with Moscow, hold what we have
+		TAN_work_with_moscow
+		TAN_hold_what_we_have
+		TAN_the_little_purge
+		TAN_latinization_campaign
+		TAN_donate_gold_reserve
+		TAN_seize_monastery_wealth
+		TAN_secularize_the_lamas
+
+		# Economy: second half
+		TAN_request_soviet_aid
+		TAN_connect_trans_siberian
+		TAN_increase_trans_siberian_trade
+		TAN_transformation_of_nature
+		TAN_subsidize_tuvan_industries
+		TAN_increase_production_output
+		TAN_complete_five_year_plan
+
+		# Army: cavalry first, loyal to the Soviets
+		TAN_revolutionary_army
+		TAN_steppe_cavalry
+		TAN_consolidate_army
+		TAN_infantry_efforts
+		TAN_fortification_efforts
+		TAN_seek_soviet_assistance
+		TAN_soviet_military_mission
+		TAN_mobilize_herdsmen
+		TAN_rely_on_our_infantry
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	focus_factors = {
+		# Always take the historical branch at the fork
+		TAN_hold_what_we_have = 1000
+		TAN_steppe_cavalry = 500
+
+		# Never the Siberian path
+		TAN_siberian_aspirations = -1000
+		TAN_union_with_oyrot = -1000
+		TAN_champion_siberianism = -1000
+		TAN_expand_the_ssr = -1000
+
+		# Stay in the Soviet orbit
+		TAN_free_of_protection = -1000
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

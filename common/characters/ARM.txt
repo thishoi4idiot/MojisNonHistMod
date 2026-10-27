@@ -1,0 +1,93 @@
+# Aleksandra Kollontay has an unsed portrait
+# Viktor Baydalakov has an unused portrait
+
+characters = {
+
+                                                                                       
+
+	ARM_Garegin_Nzhdeh = {
+		name = "Garegin Nzhdeh"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ARM/Portarit_Armenia_Garegin_Nzhdeh.png"
+			}
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Armenia_Garegin_Nzhdeh_army.png"
+				small = "gfx/interface/ideas/idea_Armenia_Garegin_Nzhdeh_army.dds"
+			}
+		}
+		
+		field_marshal = {
+			traits = {
+				brilliant_strategist
+				inspirational_leader
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	
+	
+	
+	
+	
+	ARM_Christopher_Araratyan= { # historically is arrested in '35, purged in '37
+		name = "Christopher Araratyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/ARM_Christopher_Araratyan.dds"
+				small = "gfx/interface/ideas/idea_ARM_Christopher_Araratyan.dds"
+			}
+		}
+		corps_commander = {
+			traits = {  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	ARM_Hamazasp_Babadzhanian= {
+		name = "Hamazasp Babadzhanian"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Armenia_Hamazasp_Babadzhanian.png"
+				small = "gfx/interface/ideas/idea_Armenia_Hamazasp_Babadzhanian.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				trait_reckless
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ARM_Sarkis_Theodorosi_Galajyan= {
+		name = "Sarkis Theodorosi Galajyan"
+		portraits = {
+			army = {
+				large = "gfx/leaders/ARM/Portrait_Armenia_Sarkis_Theodorosi_Galajyan.png"
+				small = "gfx/interface/ideas/idea_Armenia_Sarkis_Theodorosi_Galajyan.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			traits = {}
+		}
+	}
+		
+
+
+}

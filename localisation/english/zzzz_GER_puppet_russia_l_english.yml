@@ -1,0 +1,12 @@
+﻿l_english:
+ RUP:0 "Kingdom of Russia"
+ RUP_DEF:0 "the Kingdom of Russia"
+ RUP_neutrality:0 "Kingdom of Russia"
+ RUP_neutrality_DEF:0 "the Kingdom of Russia"
+ RUP_fascism:0 "Kingdom of Russia"
+ RUP_fascism_DEF:0 "the Kingdom of Russia"
+ RUP_democratic:0 "Kingdom of Russia"
+ RUP_democratic_DEF:0 "the Kingdom of Russia"
+ RUP_communism:0 "Kingdom of Russia"
+ RUP_communism_DEF:0 "the Kingdom of Russia"
+ RUP_ADJ:0 "Russian"
