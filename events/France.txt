@@ -274,7 +274,7 @@ country_event = {
 				}
 				country_event = {
 					id = GOE_generic_events.1
-					hours = 4
+					days = 7
 				}
 			}
 		}
@@ -416,7 +416,10 @@ country_event = {
 	
 	option = { # Become Vichy
 		name = france.13.a
-		trigger = { is_ai = no }
+		trigger = {
+			is_ai = no
+			has_civil_war = no
+		}
 		set_country_flag = become_vichy
 		set_global_flag = fall_of_france
 		save_global_event_target_as = vichy_france
@@ -454,6 +457,12 @@ country_event = {
 	desc = france.14.d
 	picture = GFX_report_event_german_parade_paris
 	
+	trigger = {
+		FRA = {
+			has_civil_war = no
+		}
+	}
+
 	is_triggered_only = yes
 	
 	option = { # Agree
@@ -1225,6 +1234,21 @@ country_event = {
 							is_core_of = LAO
 							is_core_of = LEB
 							is_core_of = SYR
+						}
+						# Keep French Indochina out of Vichy while Siam's limited war over it is ongoing
+						NOT = {
+							AND = {
+								OR = {
+									is_core_of = VIN
+									is_core_of = CAM
+									is_core_of = LAO
+								}
+								SIA = {
+									has_active_mission = SIA_limited_war_indochina
+									has_variable = limited_war_target
+									var:limited_war_target = { original_tag = FRA }
+								}
+							}
 						}
 					}
 					event_target:vichy_france = { transfer_state = PREV }

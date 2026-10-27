@@ -1174,11 +1174,11 @@
 				}
 				capital_scope = {
 					create_unit = {
-						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_1 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_0 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
+						division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7 force_equipment_variants = { heavy_tank_chassis_1 = { creator = \"FRA\" version_name = \"Char B1\"} }"  
 						owner = ROOT
 					}
 				}
@@ -3339,6 +3339,7 @@
 				has_completed_focus = FRA_revive_the_national_bloc
 			}
 		}
+
 		prerequisite = {
 			focus = FRA_reform_the_labour_laws
 			focus = FRA_protect_the_rights_of_man
@@ -3763,6 +3764,7 @@
 			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = rene_massigli
+
 		}
 	}
 	focus = {
@@ -3782,12 +3784,16 @@
 		}
 
 		available = {
-			country_exists = CZE
 			is_subject = no
 		}
 		
 		bypass = {
-
+			is_in_faction = yes
+			is_faction_leader = no
+			has_war = yes
+		}
+		bypass_effect = {
+			set_rule = { can_create_factions = yes }
 		}
 
 		cancel_if_invalid = yes
@@ -3809,6 +3815,7 @@
 			else_if = {
 				limit = {
 					CZE = {
+						exists = yes
 						has_government = ROOT
 						OR = {
 							is_subject = no
@@ -3822,6 +3829,7 @@
 			else_if = {
 				limit = {
 					CZE = {
+						exists = yes
 						has_government = ROOT
 						is_in_faction = no
 						OR = {
@@ -3829,14 +3837,19 @@
 							is_subject_of = ROOT
 						}
 					}
-					is_in_faction = no
+					#is_in_faction = no		#focus now bypasses if in a faction and war, let them leave the faction and do this otherwise
 				}
 				set_rule = { can_create_factions = yes }
-				create_faction = FRA_little_entente
+				create_faction_from_template = faction_template_the_little_entente
+
 				CZE = { custom_effect_tooltip = invite_to_faction_tt }
 				hidden_effect = {
 					CZE = { country_event = generic.5 }
 				}
+			}
+			else = {
+				set_rule = { can_create_factions = yes }
+				create_faction_from_template = faction_template_the_little_entente
 			}
 		}
 	}
@@ -6254,21 +6267,30 @@
 		}
 
 		available = {
-			BEL = {
-				is_subject_of = ROOT
-			}
-			OR = { 
+
+			AND = {
+				OR = {
+					BEL = { is_subject_of = ROOT }
+					COG = { is_subject_of = ROOT }
+				}
 				is_subject = no
-				is_subject_of = GER
+
+				#All states would have to evaluate true for ALL STATES it's easier this way
+
+				custom_trigger_tooltip = {
+					tooltip = FRA_grow_the_empire_available_tt
+					295 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					538 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					718 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					769 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					768 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					890 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					888 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+					889 = { CONTROLLER = { OR = { AND = { original_tag = BEL is_subject_of = ROOT } AND = { original_tag = COG is_subject_of = ROOT } } } }
+				}
+				
+				
 			}
-			295 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			538 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			718 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			769 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			768 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			890 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			888 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
-			889 = { CONTROLLER = { OR = { tag = BEL is_subject_of = BEL } } }
 		}
 		
 		bypass = {
@@ -6279,8 +6301,15 @@
 				295 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6289,18 +6318,32 @@
 				538 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
-					} 
+					}  
 				} 
 			}
 			NOT = { 
 				718 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6309,8 +6352,15 @@
 				769 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6319,8 +6369,15 @@
 				768 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6329,8 +6386,15 @@
 				890 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6339,8 +6403,15 @@
 				888 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
 					} 
 				} 
@@ -6349,10 +6420,17 @@
 				889 = { 
 					CONTROLLER = { 
 						OR = { 
-							tag = BEL 
+							AND = {
+								original_tag = BEL 
+								is_subject_of = ROOT
+							}
 							is_subject_of = BEL 
+							AND = {
+								original_tag = COG 
+								is_subject_of = ROOT
+							}
 						} 
-					} 
+					}  
 				} 
 			}
 		}
@@ -8530,6 +8608,18 @@
 		
 		bypass = {
 			BEL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+			HOL = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+				}
+			}
+			ENG = {
 				OR = {
 					exists = no
 					is_subject_of = ROOT

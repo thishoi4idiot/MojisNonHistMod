@@ -889,12 +889,22 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
-				has_global_flag = lokot_autonomy_has_been_established_flag
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					has_global_flag = lokot_autonomy_has_been_crushed_flag
+				OR = {
+					AND = {
+						has_global_flag = lokot_autonomy_has_been_established_flag
+						NOT = {
+							has_government = communism
+						}
+						NOT = {
+							has_global_flag = lokot_autonomy_has_been_crushed_flag
+						}
+					}
+					AND = {
+						has_completed_focus = SOV_the_hands_do
+						NOT = {
+							has_government = communism
+						}
+					}
 				}
 			}
 		}
@@ -916,12 +926,22 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
-				has_global_flag = lokot_autonomy_has_been_established_flag
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					has_global_flag = lokot_autonomy_has_been_crushed_flag
+				OR = {
+					AND = {
+						has_global_flag = lokot_autonomy_has_been_established_flag
+						NOT = {
+							has_government = communism
+						}
+						NOT = {
+							has_global_flag = lokot_autonomy_has_been_crushed_flag
+						}
+					}
+					AND = {
+						has_completed_focus = SOV_the_hands_do
+						NOT = {
+							has_government = communism
+						}
+					}
 				}
 			}
 		}
@@ -4051,10 +4071,26 @@ characters = {
 					original_tag = SOV
 			}
 			visible = {
-				always = yes
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
 			}
 			available = {
-				has_completed_focus = SOV_reistablish_the_duma
+        has_completed_focus = SOV_reistablish_the_duma # MNHM mod condition
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
 			}
 			traits = {
 				democratic_reformer 

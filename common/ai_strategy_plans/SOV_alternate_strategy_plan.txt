@@ -1028,13 +1028,17 @@ SOV_exiles_tsarist_plan = {
 		SOV_restore_the_glory_of_the_motherland #70
 
 		#Take during Civil War until it ends, then take them after consolidation
+		SOV_article_124 #35
 		SOV_reopen_novodevichi #35
+		SOV_the_synod #70
 
 		#Take Political Path
 		SOV_rebuild_the_savior_cathedral #70
+		SOV_reformalize_the_role_of_the_patriarchate #70
 		SOV_reconvene_the_zemsky_sobor #70
 		SOV_romanov_reconstruction #70
 		SOV_capital_of_the_tsars #70
+		SOV_the_triple_entente #70
 
 		#Take during Civil War if it lasts long, but otherwise take it as soon as political path is established - until 1st tech slot
 		SOV_infrastructure_effort_nsb #35
@@ -1141,10 +1145,13 @@ SOV_exiles_fascist_plan = {
 		SOV_restore_the_glory_of_the_motherland
 
 		#Take during Civil War until it ends, then take them after consolidation
+		SOV_article_124
 		SOV_reopen_novodevichi
+		SOV_the_synod
 
 		#Take Political Path
 		SOV_rebuild_the_savior_cathedral
+		SOV_reformalize_the_role_of_the_patriarchate
 		SOV_reconvene_the_zemsky_sobor
 		SOV_dismantle_the_zemsky_sobor
 		SOV_russian_corporate_state
@@ -1174,6 +1181,7 @@ SOV_exiles_fascist_plan = {
 
 		#More political path until next wargoals and preparations for far east shenanigans
 		SOV_the_declaration
+		SOV_return_of_the_rocor
 		SOV_church_candidates
 		SOV_secure_finland
 		SOV_rebuild_the_far_eastern_fleet

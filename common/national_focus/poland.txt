@@ -8524,9 +8524,15 @@ focus_tree = {
 					is_faction_leader = yes
 				}
 				NOT = { has_war_with = ROOT }
-				has_country_leader = {
-					character = HUN_otto_von_habsburg
-					ruling_only = yes
+				OR = {
+					has_country_leader = {
+						character = HUN_otto_von_habsburg
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = HUN_joseph_august_von_habsburg
+						ruling_only = yes
+					}
 				}
 			}
 			NOT = {
@@ -8534,7 +8540,7 @@ focus_tree = {
 			}
 		}
 
-		available_if_capitulated = yes
+		#available_if_capitulated = yes
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
@@ -8923,6 +8929,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
 			show_unit_leaders_tooltip = POL_rudinger_von_der_goltz
+			add_field_marshal_role = {
+				character = "POL_pavel_bermondt_avalov"
+				traits={ cavalry_officer trait_reckless }
+				skill=3
+				attack_skill=4
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=4
+				legacy_id=-1
+			}
 			division_template = {
 				name = "Oddział im. Bermonta"
 				priority = 2
@@ -9783,6 +9799,7 @@ focus_tree = {
 						is_core_of = CZE
 						is_core_of = SLO
 						state = 5
+						state = 68
 						state = 763
 					}
 				}

@@ -9882,6 +9882,7 @@ focus_tree = {
 				limit = {
 					SLO = {
 						exists = yes
+						is_subject = no
 						owns_state = 664
 					}
 				}

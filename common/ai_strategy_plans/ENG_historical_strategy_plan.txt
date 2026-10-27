@@ -83,6 +83,7 @@ ENG_historical_plan = {
 		uk_south_africa_focus
 		UK_secret_focus
 		uk_jet_focus
+		ENG_tank_focus
 	}
 
 	research = {

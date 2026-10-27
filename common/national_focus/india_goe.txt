@@ -986,6 +986,7 @@ focus_tree = {
                             is_character = RAJ_mughal_industrialist
                             is_character = RAJ_silent_mughal
                             is_character = RAJ_backroom_mughal
+                            is_character = RAJ_GOE_muhammad_musa
                         }
                     }
                     set_nationality = event_target:UK_INDIA
@@ -1776,19 +1777,25 @@ focus_tree = {
                 #division_names_group = NAMELIST_ID # optional
                 priority = 1 # optional 
                 template_counter = 108 # optional
+                override_model = RAJ_elephantry_entity
                 regiments = {
-                    elephantry = { x = 0 y = 0 }
-                    elephantry = { x = 0 y = 1 }
-                    elephantry = { x = 0 y = 2 }
-                    elephantry = { x = 0 y = 3 }
-                    elephantry = { x = 1 y = 0 }
-                    elephantry = { x = 1 y = 1 }
-                    elephantry = { x = 1 y = 2 }
-                    elephantry = { x = 1 y = 3 }
+                    infantry = { x = 0 y = 0 }
+                    infantry = { x = 0 y = 1 }
+                    infantry = { x = 0 y = 2 }
+                    infantry = { x = 0 y = 3 }
+                    infantry = { x = 1 y = 0 }
+                    infantry = { x = 1 y = 1 }
+                    infantry = { x = 1 y = 2 }
+                    infantry = { x = 1 y = 3 }
+
+                    artillery_brigade = { x = 2 y = 0 }
+                    artillery_brigade = { x = 2 y = 1 }
+                    artillery_brigade = { x = 2 y = 2 }
+                    artillery_brigade = { x = 2 y = 3 }
                 }
-                #support = {
-                #    artillery = { x = 0 y = 0 }
-                #}
+                support = {
+                    elephantry = { x = 0 y = 0 }
+                }
             }
             capital_scope = {
                 create_unit = {
@@ -15286,6 +15293,11 @@ focus_tree = {
                         exists = yes
                     }
                 }
+                custom_trigger_tooltip = {
+                    tooltip = RAJ_hedgemony_pakistan_assessed_tt
+                    has_variable = pak_factories
+                    has_variable = pak_researched_techs
+                }
                 OR = {
                     check_variable = { RAJ.num_of_factories >  pak_factories tooltip = pak_factories_tt }
                     check_variable = { RAJ.num_researched_technologies > pak_researched_techs tooltip = pak_tech_tt }
@@ -17160,6 +17172,12 @@ focus = {
 		set_variable = { RAJ_local_leaders_infra_chance = 0 }
 		set_variable = { RAJ_local_leaders_civs_chance = 0.6 }
 		set_variable = { RAJ_local_leaders_mils_chance = 0.4 }
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = RAJ_GOE_j_r_d_tata
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = RAJ_GOE_g_d_birla
 	}
 }
 
@@ -18041,6 +18059,7 @@ focus = {
 		every_owned_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
+				synthetic_refinery < 1
 				has_resources_amount = {
 					resource = oil
 					amount > 0
@@ -18095,6 +18114,10 @@ focus = {
 						resource = rubber
 						amount > 19
 					}
+                    has_resources_amount = {
+                        resource = coal
+                        amount > 19
+                    }
 				}
 				is_in_array = {
 					array = ROOT.owned_states_at_game_start
@@ -19872,6 +19895,15 @@ focus = {
 				has_full_control_of_state = PREV
 			}
 		}
+        1021 = {
+            controller = {
+                OR = {
+                    original_tag = ROOT
+                    is_ally_with = ROOT
+                }
+                has_full_control_of_state = PREV
+            }
+        }
 		custom_override_tooltip = {
 			tooltip = {
 				localization_key = generic_requires_divs_in_state_tt
@@ -25962,4 +25994,47 @@ focus = {
         }
     }
 
-}       
+    focus = {
+        id = RAJ_establish_the_alupuram_works
+        icon = GFX_focus_generic_aluminum
+        prerequisite = { focus = RAJ_bombay_baroda_and_central_india_railway }
+        x = 2
+        y = 1
+        relative_position_id = RAJ_bombay_baroda_and_central_india_railway
+        
+        cost = 5
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available = {
+            controls_state = 982 
+        }
+        
+        bypass = {
+
+        }
+
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+
+        search_filters = { FOCUS_FILTER_INDUSTRY }
+
+        completion_reward = {
+            982 = {
+                add_resource = {
+                    type = aluminium
+                    amount = 15  
+                }
+            }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            unlock_decision_tooltip = {
+                decision = establish_jaykaynagar_aliminium_smelters
+                show_effect_tooltip = yes # default is no
+                show_modifiers = no 
+            }   
+        }
+    }
+}

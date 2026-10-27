@@ -54,6 +54,10 @@ IF = {
         early_fighter = 1
     }
 }
+
+set_war_support = 0.15
+set_stability = 0.7
+
 recruit_character = LUX_joseph_bech
 recruit_character = LUX_charles_marx
 recruit_character = LUX_damian_kratzenberg
@@ -76,9 +80,13 @@ recruit_character = LUX_martin_karp
 recruit_character = LUX_guillaume_konsbruck
 recruit_character = LUX_felix_of_luxembourg
 
+
+# 1939 Scenario
 1939.1.1 = {
     add_political_power = 1198
     add_command_power = 100
+	
+	#generic focuses
     complete_national_focus = army_effort
     complete_national_focus = equipment_effort
     complete_national_focus = motorization_effort
@@ -94,9 +102,16 @@ recruit_character = LUX_felix_of_luxembourg
         tech_recon = 1
         interwar_artillery = 1
         interwar_antiair = 1
+		
+		#doctrines
+		#air_superiority = 1
+
+		#electronics
         electronic_mechanical_engineering = 1
         radio = 1
         mechanical_computing = 1
+
+		#industry
         basic_machine_tools = 1
         improved_machine_tools = 1
         advanced_machine_tools = 1

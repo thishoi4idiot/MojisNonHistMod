@@ -400,6 +400,9 @@
 			set_variable = { ABDA_screen_defence_factor = 0 }
 			set_variable = { ABDA_experience_gain_navy_unit_factor = 0 }
 		}
+
+		custom_effect_tooltip = ABDA_faction_membership_requirement_tt
+		
 		every_country = {
 			limit = {
 				OR = {
@@ -708,6 +711,11 @@ joint_focus = {
 						limit = {
 							is_controlled_by = AST
 							is_core_of = AST
+							free_building_slots = {
+								building = dockyard
+								size > 1
+								include_locked = yes
+							}
 						}
 						add_building_construction = {
 							type = dockyard
@@ -724,6 +732,11 @@ joint_focus = {
 						limit = {
 							is_controlled_by = INS
 							is_core_of = INS
+							free_building_slots = {
+								building = dockyard
+								size > 1
+								include_locked = yes
+							}
 						}
 						add_building_construction = {
 							type = dockyard

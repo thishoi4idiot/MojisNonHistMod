@@ -158,10 +158,17 @@ set_convoys = 10
 		interwar_artillery = 1
 		interwar_antiair = 1
 		support_weapons = 1
+
+		#doctrines
+		#air_superiority = 1
+
+		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
 		mechanical_computing = 1
 		computing_machine = 1
+
+		#industry
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
@@ -201,6 +208,9 @@ if = {
 		}
 	}
 }
+
+### VARIANTS ###
+# 1936 Start #
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

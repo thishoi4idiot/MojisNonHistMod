@@ -1990,9 +1990,11 @@ country_event = {
 			transfer_state = 70
 			transfer_state = 71
 			transfer_state = 72
+			transfer_state = 73
 			add_state_core = 70
 			add_state_core = 71
 			add_state_core = 72
+			add_state_core = 73
 
 		}
 		ROM = {

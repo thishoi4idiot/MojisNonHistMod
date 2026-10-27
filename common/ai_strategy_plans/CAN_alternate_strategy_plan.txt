@@ -66,6 +66,7 @@ CAN_democratic_alternate = {
 		CAN_retool_angus_shops							
 		CAN_commit_to_the_war							
 		CAN_imperial_oil																		
+		CAN_if_day																				
 		#1944
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
@@ -141,6 +142,11 @@ CAN_fascist = {
 	}
 
 	ai_national_focuses = {
+		# Break with Britain first, so the new regime is in place before the war
+		CAN_patriation
+		CAN_swastika_clubs
+		CAN_support_the_blue_shirts
+		CAN_join_germany
 		CAN_crown_corporations							
 		CAN_national_housing_act						
 		CAN_rcaf_station_borden							
@@ -189,6 +195,7 @@ CAN_fascist = {
 		CAN_commit_to_the_war							
 		CAN_imperial_oil											
 		#1944
+		CAN_if_day																				
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
 		CAN_war_fueled_economy							
@@ -263,6 +270,12 @@ CAN_communist = {
 	}
 
 	ai_national_focuses = {
+		# Break with Britain first, so the new regime is in place before the war
+		CAN_patriation
+		CAN_burn_the_royal_portraits
+		CAN_communist_labor_total_war_committee
+		CAN_supply_the_red_army
+		CAN_join_comintern
 		CAN_crown_corporations							
 		CAN_national_housing_act						
 		CAN_rcaf_station_borden							
@@ -311,6 +324,7 @@ CAN_communist = {
 		CAN_commit_to_the_war							
 		CAN_imperial_oil											
 		#1944
+		CAN_if_day																				
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
 		CAN_war_fueled_economy							

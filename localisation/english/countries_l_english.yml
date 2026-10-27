@@ -2178,8 +2178,8 @@
  SUR: "Suriname"
  SUR_DEF: "Suriname"
  SUR_ADJ: "Surinamese"
- TAJ_fascism: "Bekstvo of Matcha"
- TAJ_fascism_DEF: "the Bekstvo of Matcha"
+ TAJ_fascism: "Darvaz Shahdom" # was Bekstvo of Matcha
+ TAJ_fascism_DEF: "the Darvaz Shahdom"
  TAJ_democratic: "Republic of Tajikistan"
  TAJ_democratic_DEF: "the Republic of Tajikistan"
  TAJ_neutrality: "Tajikistan"
@@ -5999,3 +5999,8 @@
  GAL_democratic: "Republic of Galicia"
  GAL_democratic_DEF: "the Republic of Galicia"
  GAL_ADJ: "Galician"
+
+ # added from vanilla 1.19.4
+ SIA_pan_tai_empire: "Pan-Tai Empire"
+ SIA_pan_tai_empire_DEF: "the Pan-Tai Empire"
+ SIA_pan_tai_empire_ADJ: "Tai"

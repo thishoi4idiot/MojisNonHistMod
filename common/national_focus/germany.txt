@@ -10183,6 +10183,10 @@ focus_tree = {
 						exists = yes
 						has_war = no
 						is_subject = no
+						NOT = {		#refused Sudetenland
+							owns_state = 69
+							owns_state = 972
+						}
 					}
 				}
 				set_global_flag = end_of_czechoslovakia
@@ -10299,6 +10303,8 @@ focus_tree = {
 			}
 		}
 	}
+
+	#Peace For Our Time#
 	focus = { #All related content and local will be in Czech related files and local locations
 		id = GER_integrate_czech_manufacturers
 		icon = GFX_focus_PER_czech_tanks
@@ -11966,6 +11972,14 @@ focus_tree = {
 					has_war_with = ROOT
 				}
 			}
+			INS = {
+				OR = {
+					exists = no
+					NOT = {
+						has_cosmetic_tag = INS_UNION
+					}
+				}
+			}
 			BEL = {
 				OR = {
 					exists = no
@@ -11986,6 +12000,14 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				NOT = { HOL = { is_in_faction_with = GER } }
+				if = {
+					limit = {
+						INS = {
+							has_cosmetic_tag = INS_UNION
+						}
+					}
+					NOT = { INS = { is_in_faction_with = GER } }
+				}
 				NOT = { BEL = { is_in_faction_with = GER } }
 				NOT = { LUX = { is_in_faction_with = GER } }
 			}
@@ -12067,6 +12089,22 @@ focus_tree = {
 				}
 				HOL = {
 					country_event = { id = mtg_germany.1 hours = 6 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = INS
+					INS = {
+						has_cosmetic_tag = INS_UNION
+					}
+					NOT = { has_war_with = INS }
+					NOT = { INS = { is_in_faction_with = GER } }
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = INS
+					expire = 0
+					generator = { 7 }
 				}
 			}
 			if = {
@@ -12792,6 +12830,7 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				OR = {
+					surrender_progress > 0.05
 					has_government = democratic
 					has_government = communism
 				}
@@ -30300,6 +30339,8 @@ focus_tree = {
 								owns_state = PREV
 								controls_state = PREV
 							}
+
+							
 						}
 					}
 					add_building_construction = {
@@ -33351,6 +33392,10 @@ focus_tree = {
 						state = 729 # Macau
 						state = 743 # Qingdao
 						state = 1017 # Trung Bo 
+						state = 1066 
+						state = 1067 
+						state = 1068 
+						state = 1069 
 					}
 					NOT = {
 						is_claimed_by = ROOT
@@ -33424,6 +33469,10 @@ focus_tree = {
 							owns_state = 670 # Laos
 							owns_state = 671 # Tonkin
 							owns_state = 1017 # Trung Bo 
+							owns_state = 1066 
+							owns_state = 1067 
+							owns_state = 1068 
+							owns_state = 1069 
 						}
 					}
 				}
@@ -34131,6 +34180,7 @@ focus_tree = {
 					523 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
 					979 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
 					737 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
+					1070 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes }
 				}
 			}
 		}
@@ -34182,6 +34232,7 @@ focus_tree = {
 						controls_state = 894
 						controls_state = 893
 						controls_state = 634
+						controls_state = 1070
 					}
 				}
 				display_individual_scopes = yes
@@ -34206,6 +34257,7 @@ focus_tree = {
 							state = 894
 							state = 893
 							state = 634
+							state = 1070
 						}
 					}
 					add_to_array = {
@@ -36057,6 +36109,7 @@ focus_tree = {
 			add_state_claim = 541
 			add_state_claim = 546
 			add_state_claim = 737
+			add_state_claim = 1070
 			add_state_claim = 684
 			add_state_claim = 633
 			add_state_claim = 646

@@ -4620,6 +4620,8 @@ focus_tree = {
 						original_tag = HAI
 						original_tag = DOM
 						original_tag = GUA
+						original_tag = MEX
+						original_tag = CAN
 						original_tag = HON
 						original_tag = NIC
 						original_tag = PAN
@@ -4655,6 +4657,18 @@ focus_tree = {
 		bypass = {
 				AND = {
 					336 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
+					1065 = {
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { has_war_with = ROOT }
+						}	
+					}
+					1031 = {
 						OR = {
 							is_controlled_by = ROOT
 							CONTROLLER = { has_war_with = ROOT }
@@ -5115,6 +5129,7 @@ focus_tree = {
 							controls_state = 670
 							controls_state = 286
 							controls_state = 741
+							controls_state = 1017
 							not = { has_war_with = ROOT }
 						} 
 					}
@@ -6301,6 +6316,10 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			USA_george_s_patton = {
+				add_skill_level = 1
+			}	
 		}
 	}
 	focus = {

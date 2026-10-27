@@ -1207,7 +1207,12 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
 				}
-				has_completed_focus = SOV_curtailment_of_the_collective_farms 
+				has_completed_focus = SOV_curtailment_of_the_collective_farms
+			}
+			ELSE = {
+				hidden_trigger = {
+					always = no
+				}
 			}
 		}
 		
@@ -4959,7 +4964,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_defense_industry_production_speed_coastal_bunker_factor = 0.05 }
 			add_to_variable = { SOV_defense_industry_production_speed_bunker_factor = 0.05 }
-			add_to_variable = { SOV_defense_industry_max_dig_in_factor = 0.05 }
+			add_to_variable = { SOV_defense_industry_max_dig_in = 2 }
 			custom_effect_tooltip = SOV_military_engineering_university_ns_tt
 		}
 	}
@@ -16706,6 +16711,7 @@ ai_will_do = {
 			}
 		}
 	}
+
 	focus = {
 		id = SOV_bringing_breakaways_back_to_the_fold
 		icon = GFX_SOV_bringing_breakaways_back_to_the_fold_ccp_2d_sov_compatibility

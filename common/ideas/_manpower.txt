@@ -500,6 +500,7 @@ ideas = {
 						has_dlc = "Together for Victory"
 					}
 					has_completed_focus = CAN_commit_to_the_war
+					has_completed_focus = CAN_if_day
 				}
 				if = {
 					limit = {

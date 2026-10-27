@@ -2114,6 +2114,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_dlc = "Death or Dishonor"
+					country_exists = YUG
 				}
 				country_event = {
 					id = DOD_yugoslavia.40
@@ -2947,6 +2948,8 @@ focus_tree = {
 				has_full_control_of_state = 119
 				has_full_control_of_state = 118
 				has_full_control_of_state = 906
+				has_full_control_of_state = 1021
+				has_full_control_of_state = 1065 
 			}
 		}
 		bypass = {
@@ -2959,6 +2962,8 @@ focus_tree = {
 					owns_state = 119
 					owns_state = 118
 					owns_state = 906
+					owns_state = 1021
+					owns_state = 1065 
 				}
 			}
 		}
@@ -3079,6 +3084,24 @@ focus_tree = {
 				}
 				IRE = {
 					transfer_state = 119
+					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1021
+				}
+				MAL = {
+					transfer_state = 1021
+					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1065
+				}
+				MAL = {
+					transfer_state = 1065
 					add_opinion_modifier = { target = ENG modifier = ENG_returned_our_territory }
 				}
 			}
@@ -4268,6 +4291,7 @@ focus_tree = {
 				has_full_control_of_state = 725
 				has_full_control_of_state = 711
 				has_full_control_of_state = 712
+				has_full_control_of_state = 634
 				OR = {
 					RAJ = {
 						is_subject_of = ENG
@@ -4415,6 +4439,37 @@ focus_tree = {
 							has_war_with = ENG
 						}
 						FIJ = {
+							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 634
+						has_full_control_of_state = 734 
+					}
+				}
+				release = SOL
+				if = {
+					limit = {
+						has_dlc = "Together for Victory"
+					}
+					set_autonomy = { target = SOL autonomy_state = autonomy_dominion }
+				}
+				if = {
+					limit = {
+						NOT = { has_dlc = "Together for Victory" }
+					}
+					puppet = SOL
+				}
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							has_war_with = ENG
+						}
+						SOL = {
 							add_to_war = { targeted_alliance = ENG enemy = PREV hostility_reason = asked_to_join }
 						}
 					}
@@ -7432,6 +7487,7 @@ focus_tree = {
 					limit = {
 						RAJ = { has_country_flag = ENG_accepted_federation }
 					}
+
 					RAJ = {
 						OR = {
 							AND = {
@@ -7563,6 +7619,7 @@ focus_tree = {
 				every_state = {
 					limit = {
 						is_core_of = SAF
+						NOT = { state = 275 }
 					}
 					add_core_of = ENG
 				}
@@ -10184,6 +10241,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = ENG_the_british_path_to_fascism
 		prerequisite = { focus = ENG_organize_the_blackshirts }
@@ -10218,6 +10276,7 @@ focus_tree = {
 	focus = {
 		id = ENG_secure_the_italian_alliance
 		prerequisite = { focus = ENG_the_british_path_to_fascism }
+
 		available = {
 			is_subject = no
 			country_exists = ITA
@@ -10225,6 +10284,7 @@ focus_tree = {
 			NOT = { has_war_with = ITA }
 			ITA = { is_in_faction = no }
 		}
+
 		bypass = {
 			OR = {
 				ITA = {	exists = no }
@@ -10275,6 +10335,7 @@ focus_tree = {
 				id = GER
 				value = -200
 			}
+
 			GER = {
 				add_ai_strategy = {
 					type = antagonize
@@ -11681,6 +11742,7 @@ focus_tree = {
 				id = SOU
 				value = -200
 			}
+
 			SOU = {
 				add_ai_strategy = {
 					type = alliance

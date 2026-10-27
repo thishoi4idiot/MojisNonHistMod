@@ -1,3 +1,12 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
 form_scandinavia_category = {
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_generic_scandinavia
@@ -139,28 +148,51 @@ form_arabia_category = {
 	picture = GFX_decision_cat_generic_arabia
 	allowed = {
 		OR = {
+			# Iraq
 			original_tag = IRQ
+			# Saudi Arabia
 			original_tag = SAU
+			# Yemen
 			original_tag = YEM
+			# Oman
 			original_tag = OMA
+			# Egypt
 			original_tag = EGY
+			# Libya
 			original_tag = LBA
+			# Jordan
 			original_tag = JOR
+			# Palestine
 			original_tag = PAL
+			# Lebanon
 			original_tag = LEB
+			# Syria
 			original_tag = SYR
+			# Kuwait
 			original_tag = KUW
+			# United Arab Emirates
 			original_tag = UAE
+			# Qatar
 			original_tag = QAT
+			# Tunisia
 			original_tag = TUN
+			# Algeria
 			original_tag = ALG
+			# Morocco
 			original_tag = MOR
+			# Sahrawi Arab Republic
 			original_tag = WES
+			# Mauretania
 			original_tag = MRT
+			# Sudan
 			original_tag = SUD
+			# Bahrain
 			original_tag = BHR
+			# South Arabia
 			original_tag = FSA
+			# Imamate of Oman
 			original_tag = IMO
+			# Rif 
 			original_tag = RIF
 		}
 		has_dlc = "Waking the Tiger"
@@ -196,6 +228,18 @@ form_rattanakosin_kingdom_category = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+
+form_pan_tai_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_rattanakosin_kingdom
+
+	allowed = {
+		original_tag = SIA
+	}
+}
+
 form_hre_category = {
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_generic_hre
@@ -247,6 +291,15 @@ form_turkestan_category = {
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_picture_form_turan
 }
+
+reform_the_samanid_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_persian_empire 
+}
+
+
 form_mountainous_republic_category = {
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_picture_form_mountainous_republic
@@ -461,6 +514,9 @@ GOE_form_hindustan_category = {
 }
 raj_formable_cat = {
 	icon = generic_formable_nations
+
+	#picture = GFX_decision_cat_picture_neo_assyrian_empire
+	
 	allowed = {
 		original_tag = RAJ
 	}

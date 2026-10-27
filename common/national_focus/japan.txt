@@ -10793,6 +10793,26 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 			has_war = yes
+			OR = {
+				AND = {
+					NOT = {
+						any_allied_country = {
+							is_major = yes 
+							has_capitulated = no 
+						}
+					}
+					608 = {
+						is_controlled_by_ROOT_or_ally = no  
+					}
+					1035 = {
+						is_controlled_by_ROOT_or_ally = no  
+					}
+					592 = {
+						is_controlled_by_ROOT_or_ally = no  
+					}
+				}
+				has_global_flag = JAP_nuke_1
+			}
 		}
 
 		bypass = {
@@ -11459,6 +11479,7 @@ focus_tree = {
 				NOT = {
 					has_completed_focus = JAP_ensure_temporary_peace_with_china
 				}
+				has_country_flag = JAP_chinese_japanese_neutrality_pact_refused_flag
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_chinese_japanese_neutrality_pact_flag
@@ -13034,6 +13055,9 @@ focus_tree = {
 				635 = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
+				1071 = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
 				#726 = {
 				#	state_is_fully_controlled_by_ROOT_or_subject = yes
 				#}
@@ -13075,6 +13099,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					air_base < 2 
@@ -13105,6 +13130,7 @@ focus_tree = {
 						state = 726
 						state = 648
 						state = 645
+						state = 1071
 					}
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					any_province_building_level = {
@@ -13152,6 +13178,7 @@ focus_tree = {
 							state = 726
 							state = 648
 							state = 645
+							state = 1071
 						}
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 						radar_station < 1
@@ -13238,6 +13265,7 @@ focus_tree = {
 						state = 737
 						state = 634
 						state = 669
+						state = 1070
 						state = 734
 						state = 635
 					}
@@ -14321,6 +14349,7 @@ focus_tree = {
 						}
 					}
 				}
+				INS_cancel_hol_ally_strategy_entirely_effect = yes
 			}
 			IF = {
 				limit = {
@@ -15477,6 +15506,7 @@ focus_tree = {
 				NOT = {
 					has_completed_focus = JAP_soviet_japanese_neutrality_pact
 				}
+				has_country_flag = JAP_soviet_japanese_neutrality_pact_refused_flag
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_soviet_japanese_neutrality_pact_flag
@@ -15649,6 +15679,7 @@ focus_tree = {
 				NOT = {
 					has_completed_focus = JAP_soviet_japanese_neutrality_pact
 				}
+				has_country_flag = JAP_soviet_japanese_neutrality_pact_refused_flag
 				AND = {
 					has_country_flag = {
 					 	flag = JAP_soviet_japanese_neutrality_pact_flag
@@ -30235,7 +30266,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -30428,7 +30459,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -30490,7 +30521,7 @@ focus_tree = {
 		x = 1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -31231,7 +31262,7 @@ focus_tree = {
 		x = -1
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3
@@ -32651,7 +32682,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 3

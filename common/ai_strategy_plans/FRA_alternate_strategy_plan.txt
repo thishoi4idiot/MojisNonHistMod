@@ -603,6 +603,7 @@ FRA_alternate_plan_fascist_regular = {
 		#FRA_colonial_industry
 		#1938
 		FRA_aggressive_focus
+		FRA_extra_research_slot_2
 		FRA_right_wing_rhetoric
 		#1939
 		FRA_army_of_aggression
@@ -695,6 +696,7 @@ FRA_alternate_plan_fascist_lar = {
 		#1940
 		FRA_grow_the_empire
 		FRA_integralism
+		FRA_work
 		FRA_battle_of_maneuver
 		FRA_motorized_focus
 		#1941
@@ -702,6 +704,7 @@ FRA_alternate_plan_fascist_lar = {
 		FRA_light_medium_armor
 		FRA_army_reform
 		FRA_expand_to_the_suez
+		FRA_extra_research_slot_2
 		#1942
 		FRA_dominate_the_middle_east
 		FRA_naval_rearmament
@@ -817,6 +820,7 @@ FRA_alternate_plan_communist_lar = {
 		FRA_form_the_popular_front
 		FRA_reform_the_labour_laws
 		FRA_invite_communist_ministers
+		FRA_invest_in_the_metropole
 		#1937
 		FRA_copy_the_new_deal
 		FRA_begin_rearmament
@@ -844,6 +848,7 @@ FRA_alternate_plan_communist_lar = {
 		#1941
 		FRA_invest_in_indochina
 		FRA_colonial_industry
+		FRA_military_factories
 		FRA_force_the_issue
 		FRA_algerie_france
 		FRA_reconciliation
@@ -929,8 +934,10 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_colonial_industry
 		FRA_invest_in_indochina
 		FRA_the_first_citizen_of_the_state
+		FRA_extra_research_slot_2
 		FRA_counter_action
 		#1942
+		FRA_slum_clearing
 		FRA_no_further_humiliations
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
@@ -1007,7 +1014,12 @@ FRA_alternate_plan_monarchist_legitimate = {
 		FRA_the_legitimate_heir
 		#1941
 		FRA_invest_in_indochina
+		FRA_the_legitimate_heir
+		FRA_invest_in_syria
 		FRA_invest_in_west_africa
+		#1941
+		FRA_colonial_industry
+		FRA_military_factories
 		FRA_secure_the_crown_of_spain
 		FRA_invest_in_syria
 		FRA_two_countries_two_crowns
@@ -1066,6 +1078,7 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		FRA_revise_the_constitution
 		FRA_implement_austerity_measures
 		FRA_begin_rearmament
+		FRA_invest_in_the_colonies
 		FRA_aggressive_focus
 		#1938
 		FRA_compulsory_cartelization
@@ -1084,17 +1097,22 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		#1940
 		FRA_army_reform
 		FRA_invest_in_indochina
+		FRA_avenge_waterloo
 		FRA_invest_in_syria
 		#1941
 		FRA_invest_in_west_africa
 		FRA_retribution_for_sedan
 		FRA_colonial_industry
+		FRA_military_factories
+		FRA_retribution_for_sedan
+		FRA_extra_research_slot_2
 		FRA_disunite_germany
 		#1942
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
 		FRA_fighter_focus
 		FRA_cas_focus
+		FRA_return_to_borodino
 		FRA_je_suis_la_deluge
 	}			
 	research = {

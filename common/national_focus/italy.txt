@@ -13935,6 +13935,10 @@ focus_tree = {
 		relative_position_id = ITA_mare_nostrum_bba
 		cost = 5
 		available = {
+			any_controlled_state = {
+				resistance > 0
+				is_fully_controlled_by = ROOT
+			}
 		}
 
 		search_filters = {}
@@ -14148,12 +14152,31 @@ focus_tree = {
 				limit = {
 					has_dlc = "No Step Back"
 				}
-				custom_effect_tooltip = ITA_modern_musculus_military_industry_dm_tt
-				hidden_effect = {
-					add_ideas = ITA_hidden_super_heavy_tank_ns
+				if = {
+					limit = {
+						NOT = {
+							has_idea = ITA_hidden_super_heavy_tank_ns
+						}
+					}
+					custom_effect_tooltip = ITA_modern_musculus_military_industry_dm_tt
+					hidden_effect = {
+						add_ideas = ITA_hidden_super_heavy_tank_ns
+					}
 				}
-				
-				ITA_add_modern_musculus_sh_tank_template_and_production = yes
+
+				if = {
+					limit = {
+						has_tech = super_heavy_tank_chassis
+					}
+					#SH template
+					ITA_add_modern_musculus_sh_tank_template_and_production = yes
+				}
+				else = {
+					custom_effect_tooltip = ITA_focus_sh_tank_template_tt
+					effect_tooltip = {
+						ITA_add_modern_musculus_sh_tank_template_and_production = yes
+					}
+				}
 			}
 			else = {
 				add_tech_bonus = {
@@ -15551,6 +15574,7 @@ focus_tree = {
 		relative_position_id = ITA_negotiate_italian_claims
 		cost = 10
 		available = {
+			is_subject = no 
 			OR = {
 				AND = {
 					NOT = {
@@ -21266,9 +21290,7 @@ focus_tree = {
 					has_government = democratic
 					is_subject = no
 				}
-				any_other_country = {
-					is_in_faction_with = ROOT
-				}
+				num_faction_members > 1
 			}
 		}
 
