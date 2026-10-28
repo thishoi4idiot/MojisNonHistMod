@@ -3,5 +3,5 @@ tags={
 	"Alternative History"
 }
 name="MojisNonHistMod"
-supported_version="1.19.3.0"
+supported_version="1.19.2"
 remote_file_id="3553569019"
