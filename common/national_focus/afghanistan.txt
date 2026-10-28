@@ -4945,70 +4945,7 @@ focus_tree = {
 
 	}
 
-	focus = {
-		id = AFG_reclaim_the_emperors_lost_domain
-		icon = GFX_focus_SOV_patriarch_of_all_russia  
-		prerequisite = { focus = AFG_heirs_of_the_chagatai focus = AFG_turanist_abitions }
-		x = -1
-		y = 1
-		relative_position_id = AFG_heirs_of_the_chagatai
 
-		will_lead_to_war_with = SOV
-		
-		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			every_state = {
-        		limit = {
-        			OR = {
-        				is_core_of = UZB
-        				is_core_of = TMS
-        				is_core_of = BUK
-        				is_core_of = TAJ
-        				is_core_of = KYR
-        			}
-        		}
-        		add_core_of = ROOT
-        		IF = {
-        			limit = {
-        				OWNER = {
-        					NOT = {
-        						OR = {
-        							tag = ROOT
-        							is_ally_with = ROOT
-        							ROOT = {
-        								has_wargoal_against = PREV
-        							}
-        						}
-        					}
-        				}
-        			}
-        			ROOT = {
-        				create_wargoal = {
-        					target = PREV
-        					type = take_core_state
-        				}
-        			}
-        		}
-        	}
-			
-		}
-
-	}
 
 	focus = {
 		id = AFG_return_to_delhi
@@ -11973,6 +11910,71 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			unlock_decision_category_tooltip = greater_mongolia_category
+			
+		}
+
+	}
+
+	focus = {
+		id = AFG_reclaim_the_emperors_lost_domain
+		icon = GFX_focus_SOV_patriarch_of_all_russia  
+		prerequisite = { focus = AFG_heirs_of_the_chagatai focus = AFG_turanist_abitions }
+		x = -1
+		y = 1
+		relative_position_id = AFG_heirs_of_the_chagatai
+
+		will_lead_to_war_with = SOV
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+
+		bypass = {
+			
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
+
+		completion_reward = {
+
+			every_state = {
+        		limit = {
+        			OR = {
+        				is_core_of = UZB
+        				is_core_of = TMS
+        				is_core_of = BUK
+        				is_core_of = TAJ
+        				is_core_of = KYR
+        			}
+        		}
+        		add_core_of = ROOT
+        		IF = {
+        			limit = {
+        				OWNER = {
+        					NOT = {
+        						OR = {
+        							tag = ROOT
+        							is_ally_with = ROOT
+        							ROOT = {
+        								has_wargoal_against = PREV
+        							}
+        						}
+        					}
+        				}
+        			}
+        			ROOT = {
+        				create_wargoal = {
+        					target = PREV
+        					type = take_core_state
+        				}
+        			}
+        		}
+        	}
 			
 		}
 

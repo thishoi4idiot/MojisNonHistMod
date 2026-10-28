@@ -359,7 +359,15 @@ form_horn_of_africa_africa_category = {
 greater_italy_category = {
 	icon = generic_formable_nations
 	picture = GFX_decision_cat_picture_greater_italy
-	allowed = {}
+	allowed = {
+		original_tag = ITA # Italy
+	}
+	visible = {
+		NOT = {
+			has_global_flag = greater_italy_flag
+			has_completed_focus = ITA_mare_nostrum_bba	#Mutually exclusive
+		}
+	}
 }
 form_sweden_hungary_category = {
 	icon = generic_formable_nations

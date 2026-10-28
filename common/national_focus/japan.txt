@@ -11892,12 +11892,6 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-			MAN = {
-				has_completed_focus = MAN_tsr_national_cooperation_government
-			}
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no

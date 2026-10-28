@@ -665,7 +665,6 @@ FRA_alternate_plan_fascist_lar = {
 		#1940
 		FRA_grow_the_empire
 		FRA_integralism
-		FRA_work
 		FRA_battle_of_maneuver
 		FRA_motorized_focus
 		#1941
@@ -786,7 +785,6 @@ FRA_alternate_plan_communist_lar = {
 		FRA_form_the_popular_front
 		FRA_reform_the_labour_laws
 		FRA_invite_communist_ministers
-		FRA_invest_in_the_metropole
 		#1937
 		FRA_begin_rearmament
 		FRA_defensive_focus
@@ -893,7 +891,6 @@ FRA_alternate_plan_monarchist_orleans = {
 		FRA_extra_research_slot_2
 		FRA_counter_action
 		#1942
-		FRA_slum_clearing
 		FRA_no_further_humiliations
 		FRA_naval_rearmament
 		FRA_capital_ship_focus
@@ -1028,7 +1025,6 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		#1937
 		FRA_revise_the_constitution
 		FRA_begin_rearmament
-		FRA_invest_in_the_colonies
 		FRA_aggressive_focus
 		#1938
 		FRA_our_empire
@@ -1046,7 +1042,6 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		#1940
 		FRA_army_reform
 		FRA_invest_in_indochina
-		FRA_avenge_waterloo
 		FRA_invest_in_syria
 		#1941
 		FRA_invest_in_west_africa
@@ -1061,7 +1056,6 @@ FRA_alternate_plan_monarchist_bonaparte = {
 		FRA_capital_ship_focus
 		FRA_fighter_focus
 		FRA_cas_focus
-		FRA_return_to_borodino
 		FRA_je_suis_la_deluge
 	}			
 	research = {

@@ -65,7 +65,6 @@ CAN_historical = {
 		CAN_light_cruiser_effort						#
 		CAN_imperial_oil								#1930s
 		CAN_montreal_laboratory_collaboration			#1941
-		CAN_if_day										#1942
 		CAN_camp_x										#1940
 		CAN_supply_the_empire							#1940s
 		CAN_heavy_cruiser_effort						#

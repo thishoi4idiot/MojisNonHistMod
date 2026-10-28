@@ -66,7 +66,6 @@ CAN_democratic_alternate = {
 		CAN_retool_angus_shops							
 		CAN_commit_to_the_war							
 		CAN_imperial_oil																		
-		CAN_if_day																				
 		#1944
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
@@ -195,7 +194,6 @@ CAN_fascist = {
 		CAN_commit_to_the_war							
 		CAN_imperial_oil											
 		#1944
-		CAN_if_day																				
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
 		CAN_war_fueled_economy							
@@ -324,7 +322,6 @@ CAN_communist = {
 		CAN_commit_to_the_war							
 		CAN_imperial_oil											
 		#1944
-		CAN_if_day																				
 		CAN_defense_research_grants				
 		CAN_polymer_corporation							
 		CAN_war_fueled_economy							

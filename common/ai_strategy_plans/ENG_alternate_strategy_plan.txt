@@ -151,7 +151,6 @@ ENG_alternate_communist_plan = {
 		ENG_the_three_nation_solution
 		ENG_towards_indian_independence
 		ENG_decolonization
-		ENG_the_winds_of_change
 		air_rearmament_focus
 		fighter_command_focus
 		aircraft_production_focus
@@ -256,7 +255,6 @@ ENG_alternate_unaligned_plan = {
 		uk_extra_tech_slot
 		uk_empire_focus
 		ENG_reassess_continental_commitments
-		ENG_isolate_the_mediterranean_threat
 		ENG_alliance_with_germany
 		ENG_consolidate_the_british_isles
 		ENG_ceylon_forward_operating_base

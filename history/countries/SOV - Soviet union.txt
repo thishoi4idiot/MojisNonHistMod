@@ -166,6 +166,7 @@ if = {
 	recruit_character = SOV_anton_turkul
 	recruit_character = SOV_boris_steyfon
 	recruit_character = SOV_bronislav_kaminski
+	recruit_character = SOV_konstantin_voskoboinik
 	recruit_character = SOV_dmitry_semyenov
 	recruit_character = SOV_fyedor_abramov
 	recruit_character = SOV_leonid_skipetov
