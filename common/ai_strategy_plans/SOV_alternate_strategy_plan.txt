@@ -1038,7 +1038,6 @@ SOV_exiles_tsarist_plan = {
 		SOV_reconvene_the_zemsky_sobor #70
 		SOV_romanov_reconstruction #70
 		SOV_capital_of_the_tsars #70
-		SOV_the_triple_entente #70
 
 		#Take during Civil War if it lasts long, but otherwise take it as soon as political path is established - until 1st tech slot
 		SOV_infrastructure_effort_nsb #35

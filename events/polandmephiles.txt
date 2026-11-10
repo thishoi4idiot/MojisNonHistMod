@@ -53,7 +53,14 @@ country_event = {
 		KOR = {
 			retire_character = KOR_kim_il_sung
 		}
-		recruit_character = KOR_kim_il_sung
-		promote_character = KOR_kim_il_sung
+		add_country_leader_role = {
+			character = KOR_kim_il_sung
+			promote_leader = yes
+			country_leader = {
+				ideology = stalinism
+				expire = "1965.1.1.1"
+				traits = { KOR_suryong }
+			}
+		}
 	}
 }

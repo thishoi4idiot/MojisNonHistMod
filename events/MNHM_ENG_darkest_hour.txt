@@ -1,0 +1,319 @@
+add_namespace = MNHM_ENG_darkest_hour
+
+# Chain started by the focus "Our Darkest Hour":
+#   .1 (ENG)  choose which dominion should host the British government
+#   .2 (host) asked to host the British government -> yes: .3 | no: .4
+#   .3 (ENG)  "they accepted": annex the host (with cores, units and navy) and gain the hosted-government spirit
+#   .4 (ENG)  "they refused": pick again
+# The chosen dominion is remembered with the global event target MNHM_ENG_dh_host.
+
+country_event = {
+	id = MNHM_ENG_darkest_hour.1
+	title = MNHM_ENG_darkest_hour.1.t
+	desc = MNHM_ENG_darkest_hour.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_darkest_hour.1.opt_canada
+		trigger = {
+			NOT = { has_country_flag = ENG_dh_refused_CAN }
+			CAN = {
+				exists = yes
+				is_subject_of = ENG
+				has_autonomy_state = autonomy_dominion
+			}
+		}
+		ai_chance = { factor = 40 }
+
+		clr_country_flag = ENG_dh_host_CAN
+		clr_country_flag = ENG_dh_host_AST
+		clr_country_flag = ENG_dh_host_SAF
+		clr_country_flag = ENG_dh_host_RAJ
+		set_country_flag = ENG_dh_host_CAN
+		CAN = {
+			save_global_event_target_as = MNHM_ENG_dh_host
+			country_event = MNHM_ENG_darkest_hour.2
+		}
+	}
+
+	option = {
+		name = MNHM_ENG_darkest_hour.1.opt_australia
+		trigger = {
+			NOT = { has_country_flag = ENG_dh_refused_AST }
+			AST = {
+				exists = yes
+				is_subject_of = ENG
+				has_autonomy_state = autonomy_dominion
+			}
+		}
+		ai_chance = { factor = 25 }
+
+		clr_country_flag = ENG_dh_host_CAN
+		clr_country_flag = ENG_dh_host_AST
+		clr_country_flag = ENG_dh_host_SAF
+		clr_country_flag = ENG_dh_host_RAJ
+		set_country_flag = ENG_dh_host_AST
+		AST = {
+			save_global_event_target_as = MNHM_ENG_dh_host
+			country_event = MNHM_ENG_darkest_hour.2
+		}
+	}
+
+	option = {
+		name = MNHM_ENG_darkest_hour.1.opt_south_africa
+		trigger = {
+			NOT = { has_country_flag = ENG_dh_refused_SAF }
+			SAF = {
+				exists = yes
+				is_subject_of = ENG
+				has_autonomy_state = autonomy_dominion
+			}
+		}
+		ai_chance = { factor = 15 }
+
+		clr_country_flag = ENG_dh_host_CAN
+		clr_country_flag = ENG_dh_host_AST
+		clr_country_flag = ENG_dh_host_SAF
+		clr_country_flag = ENG_dh_host_RAJ
+		set_country_flag = ENG_dh_host_SAF
+		SAF = {
+			save_global_event_target_as = MNHM_ENG_dh_host
+			country_event = MNHM_ENG_darkest_hour.2
+		}
+	}
+
+	option = {
+		name = MNHM_ENG_darkest_hour.1.opt_raj
+		trigger = {
+			NOT = { has_country_flag = ENG_dh_refused_RAJ }
+			RAJ = {
+				exists = yes
+				is_subject_of = ENG
+				OR = {
+					has_autonomy_state = autonomy_dominion
+					has_autonomy_state = autonomy_colony
+				}
+			}
+		}
+		ai_chance = { factor = 20 }
+
+		clr_country_flag = ENG_dh_host_CAN
+		clr_country_flag = ENG_dh_host_AST
+		clr_country_flag = ENG_dh_host_SAF
+		clr_country_flag = ENG_dh_host_RAJ
+		set_country_flag = ENG_dh_host_RAJ
+		RAJ = {
+			save_global_event_target_as = MNHM_ENG_dh_host
+			country_event = MNHM_ENG_darkest_hour.2
+		}
+	}
+}
+
+# Host: asked to host the British government
+country_event = {
+	id = MNHM_ENG_darkest_hour.2
+	title = MNHM_ENG_darkest_hour.2.t
+	desc = MNHM_ENG_darkest_hour.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_darkest_hour.2.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 90
+				tag = CAN
+			}
+			modifier = {
+				add = 50
+				tag = AST
+			}
+			modifier = {
+				add = 30
+				tag = SAF
+			}
+			modifier = {
+				add = 20
+				tag = RAJ
+			}
+		}
+		ENG = { country_event = MNHM_ENG_darkest_hour.3 }
+	}
+	option = {
+		name = MNHM_ENG_darkest_hour.2.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				tag = CAN
+			}
+			modifier = {
+				add = 50
+				tag = AST
+			}
+			modifier = {
+				add = 70
+				tag = SAF
+			}
+			modifier = {
+				add = 80
+				tag = RAJ
+			}
+		}
+		ENG = { country_event = MNHM_ENG_darkest_hour.4 }
+	}
+}
+
+# ENG: the host accepted. Annex it, core its states and gain the hosted-government spirit.
+country_event = {
+	id = MNHM_ENG_darkest_hour.3
+	title = MNHM_ENG_darkest_hour.3.t
+	desc = MNHM_ENG_darkest_hour.3.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_darkest_hour.3.a
+		ai_chance = { factor = 100 }
+		event_target:MNHM_ENG_dh_host = {
+			every_core_state = {
+				add_core_of = ENG
+			}
+		}
+		# Hand over the host's army, navy, air force and equipment stockpile explicitly, then annex it.
+		event_target:MNHM_ENG_dh_host = {
+			transfer_units_fraction = {
+				target = ROOT
+				size = 1
+				army_ratio = 1
+				navy_ratio = 1
+				air_ratio = 1
+				stockpile_ratio = 1
+			}
+		}
+		annex_country = {
+			target = event_target:MNHM_ENG_dh_host
+			transfer_troops = yes
+		}
+		# Move the British capital to the host's old capital once its states are ours.
+		if = {
+			limit = { has_country_flag = ENG_dh_host_CAN }
+			set_capital = { state = 276 }
+		}
+		else_if = {
+			limit = { has_country_flag = ENG_dh_host_AST }
+			set_capital = { state = 285 }
+		}
+		else_if = {
+			limit = { has_country_flag = ENG_dh_host_SAF }
+			set_capital = { state = 275 }
+		}
+		else_if = {
+			limit = { has_country_flag = ENG_dh_host_RAJ }
+			set_capital = { state = 439 }
+		}
+		add_ideas = ENG_hosted_by_dominion
+	}
+}
+
+# ENG: the host refused. Choose another dominion.
+country_event = {
+	id = MNHM_ENG_darkest_hour.4
+	title = MNHM_ENG_darkest_hour.4.t
+	desc = MNHM_ENG_darkest_hour.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_darkest_hour.4.a
+		ai_chance = { factor = 100 }
+		if = {
+			limit = { has_country_flag = ENG_dh_host_CAN }
+			set_country_flag = ENG_dh_refused_CAN
+		}
+		if = {
+			limit = { has_country_flag = ENG_dh_host_AST }
+			set_country_flag = ENG_dh_refused_AST
+		}
+		if = {
+			limit = { has_country_flag = ENG_dh_host_SAF }
+			set_country_flag = ENG_dh_refused_SAF
+		}
+		if = {
+			limit = { has_country_flag = ENG_dh_host_RAJ }
+			set_country_flag = ENG_dh_refused_RAJ
+		}
+		# Ask another dominion if any are left, otherwise fall back to the last resorts.
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						NOT = { has_country_flag = ENG_dh_refused_CAN }
+						CAN = { exists = yes is_subject_of = ENG has_autonomy_state = autonomy_dominion }
+					}
+					AND = {
+						NOT = { has_country_flag = ENG_dh_refused_AST }
+						AST = { exists = yes is_subject_of = ENG has_autonomy_state = autonomy_dominion }
+					}
+					AND = {
+						NOT = { has_country_flag = ENG_dh_refused_SAF }
+						SAF = { exists = yes is_subject_of = ENG has_autonomy_state = autonomy_dominion }
+					}
+					AND = {
+						NOT = { has_country_flag = ENG_dh_refused_RAJ }
+						RAJ = { exists = yes is_subject_of = ENG OR = { has_autonomy_state = autonomy_dominion has_autonomy_state = autonomy_colony } }
+					}
+				}
+			}
+			country_event = MNHM_ENG_darkest_hour.1
+		}
+		else = {
+			country_event = MNHM_ENG_darkest_hour.5
+		}
+	}
+}
+
+# ENG: no dominion is left to host the government.
+country_event = {
+	id = MNHM_ENG_darkest_hour.5
+	title = MNHM_ENG_darkest_hour.5.t
+	desc = MNHM_ENG_darkest_hour.5.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_darkest_hour.5.a
+		ai_chance = { factor = 0 }
+		set_country_flag = ENG_empire_doomed_flag
+	}
+	option = {
+		name = MNHM_ENG_darkest_hour.5.b
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = MNHM_ENG_darkest_hour_egypt_tt
+				controls_state = 446
+				controls_state = 447
+				controls_state = 452
+				controls_state = 453
+				controls_state = 456
+				controls_state = 457
+				controls_state = 552
+				controls_state = 907
+			}
+		}
+		ai_chance = { factor = 100 }
+		# Make Egypt a core part of the British state.
+		446 = { add_core_of = ENG }
+		447 = { add_core_of = ENG }
+		452 = { add_core_of = ENG }
+		453 = { add_core_of = ENG }
+		456 = { add_core_of = ENG }
+		457 = { add_core_of = ENG }
+		552 = { add_core_of = ENG }
+		907 = { add_core_of = ENG }
+		set_capital = { state = 907 }
+		add_ideas = ENG_hosted_by_dominion
+	}
+}

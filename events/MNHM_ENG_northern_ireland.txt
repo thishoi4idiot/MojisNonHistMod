@@ -1,0 +1,43 @@
+add_namespace = MNHM_ENG_ni
+
+# Sent to Ireland by the focus "Fortify Northern Ireland": Britain asks Ireland to join the Allies.
+country_event = {
+	id = MNHM_ENG_ni.1
+	title = MNHM_ENG_ni.1.t
+	desc = MNHM_ENG_ni.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_ni.1.a
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 20
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		# Make sure Britain has a faction to join, then bring Ireland into it.
+		if = {
+			limit = { ENG = { is_in_faction = no } }
+			ENG = { create_faction = "Allies" }
+		}
+		ENG = { add_to_faction = IRE }
+	}
+	option = {
+		name = MNHM_ENG_ni.1.b
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 0.05
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+	}
+}

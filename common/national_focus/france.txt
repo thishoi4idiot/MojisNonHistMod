@@ -8078,6 +8078,17 @@
 		completion_reward = {
 			if = {
 				limit = {
+					country_exists = SPB
+				}
+				# Carlist Spain is asked instead; the AI always accepts (annex/core/tag effects live in the event)
+				SPB = {
+					country_event = {
+						id = MNHM_fra_crown.1
+					}
+				}
+			}
+			else_if = {
+				limit = {
 					country_exists = SPR
 				}
 				annex_country = {
@@ -8094,28 +8105,25 @@
 			}
 			else_if = {
 				limit = {
-					country_exists = SPB
-				}
-				annex_country = {
-					target = SPB
-				}
-			}
-			else_if = {
-				limit = {
 					country_exists = SPC
 				}
 				annex_country = {
 					target = SPC
 				}
 			}
-			every_state = {
+			if = {
 				limit = {
-					is_core_of = SPB
+					NOT = { country_exists = SPB }
 				}
-				add_core_of = FRA
+				every_state = {
+					limit = {
+						is_core_of = SPB
+					}
+					add_core_of = FRA
+				}
+				add_stability = -0.1
+				set_cosmetic_tag = FRANCO_SPAIN
 			}
-			add_stability = -0.1
-			set_cosmetic_tag = FRANCO_SPAIN
 		}
 	}
 	focus = {

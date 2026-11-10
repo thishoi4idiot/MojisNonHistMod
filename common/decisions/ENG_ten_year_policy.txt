@@ -40,13 +40,13 @@ ENG_ten_year_policy_category = {
 				custom_effect_tooltip = TenYear
 				if = {
 					limit = {
-						check_variable = { var = ENG_consumer_goods_factor value = 0.98 compare = greater_than }
+						check_variable = { var = ENG_consumer_goods_factor value = 0.975 compare = greater_than }
 					}
 					set_variable = { var = ENG_consumer_goods_factor value = 1 }
 				}
 				else = {
 					add_to_variable = {
-						ENG_consumer_goods_factor = 0.02
+						ENG_consumer_goods_factor = 0.025
 					}
 				}
 				if = {
@@ -99,7 +99,6 @@ ENG_ten_year_policy_category = {
 		complete_effect = {
 			remove_dynamic_modifier = { modifier = ENG_10_year_policy }
 			add_timed_idea = { idea = ENG_failed_rearmament days = 365 }
-			custom_effect_tooltip = ENG_call_early_end_to_rearmament_tt
 		}
 	}
 }

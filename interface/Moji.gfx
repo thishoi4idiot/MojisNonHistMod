@@ -45,4 +45,70 @@ spriteTypes = {
         name = "Leader-paul-faure"
         texturefile = "gfx/leaders/france/paul-faure.dds"
     }
+    spriteType = {
+        name = "GFX_focus_ENG_our_darkest_hour"
+        texturefile = "gfx/interface/goals/OurDarkestHour.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_ENG_our_darkest_hour_shine"
+        texturefile = "gfx/interface/goals/OurDarkestHour.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/OurDarkestHour.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/OurDarkestHour.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+    }
+    spriteType = {
+        name = "GFX_focus_ENG_fortify_northern_ireland"
+        texturefile = "gfx/interface/goals/NorthernIrelandFortress.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_ENG_fortify_northern_ireland_shine"
+        texturefile = "gfx/interface/goals/NorthernIrelandFortress.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/NorthernIrelandFortress.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/interface/goals/NorthernIrelandFortress.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+    }
 }

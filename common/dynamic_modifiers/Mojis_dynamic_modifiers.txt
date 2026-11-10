@@ -20,25 +20,6 @@ ENG_10_year_policy = {
 	}
 	icon = GFX_idea_SOV_third_five_year_plan
 
-	remove_trigger = {
-		OR = {
-			GER = {
-				has_civil_war = yes
-			}
-			AND = {
-				GER = {
-					has_government = fascism
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-				ENG = {
-					OR = {
-						has_war_with = GER
-						is_ally_with = GER
-					}
-				}
-			}
-		}
-	}
 	consumer_goods_factor = ENG_consumer_goods_factor
 	production_speed_industrial_complex_factor = ENG_production_speed_industrial_complex_factor
 	production_speed_arms_factory_factor = ENG_production_speed_arms_factory_factor
@@ -157,3 +138,19 @@ FRA_great_depression = {
 	industrial_capacity_factory = FRA_gd_ind_cap_factory
 }
 
+#Override of vanilla: Factionalism now reduces stability instead of political power gain.
+#The variable name is kept (SOV_factionalism_political_power_factor) so all existing focus effects still work, it is just applied as stability now.
+SOV_factionalism_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_SOV_factionalism_modifier
+
+	stability_factor = SOV_factionalism_political_power_factor # -0.1 The Left Opposition, the Right opposition
+
+	political_advisor_cost_factor = SOV_factionalism_political_advisor_cost_factor # 0.2 -> Cooperation Against stalin
+	party_popularity_stability_factor = SOV_factionalism_popularity_stability_cost_factor # -0.15 -> Cooperation Against stalin
+	overlord_trade_cost_factor = SOV_factionalism_overlord_trade_cost_factor
+	global_building_slots_factor =  SOV_factionalism_building_slots_factor
+
+	custom_modifier_tooltip = SOV_factionalism_modifier_tt
+}

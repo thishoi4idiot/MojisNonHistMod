@@ -1,0 +1,285 @@
+add_namespace = MNHM_ENG_pressure_ireland
+
+# Chain started by the focus ENG_pressure_ireland. Every step is delayed by 24 hours.
+#   .1 (IRE) naval base demand        -> yes: .2 | no: .9
+#   .2 (ENG) "They accepted"          -> pressure for air bases: .3 | stop
+#   .3 (IRE) air base demand          -> yes: .4 | no: .9
+#   .4 (ENG) "They accepted"          -> pressure for military access: .5 | pressure to join the Allies: .6 | stop
+#   .5 (IRE) military access demand   -> yes: .10 | no: .9
+#   .10 (ENG) Ireland accepted military access -> annex Ireland at 50% compliance
+#   .6 (IRE) join the Allies demand   -> yes: IRE joins ENG's faction (+ .8 confirmation) | no: .9
+#   .8 (IRE) confirmation that Ireland joined the Allies
+#   .9 (ENG) "They refused our demands" -> press the case (war goal) | let it go (-5% war support)
+
+# IRE: naval base access
+country_event = {
+	id = MNHM_ENG_pressure_ireland.1
+	title = MNHM_ENG_pressure_ireland.1.t
+	desc = MNHM_ENG_pressure_ireland.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.1.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = {
+			set_country_flag = ENG_IRE_naval_access_flag
+			country_event = { id = MNHM_ENG_pressure_ireland.2 hours = 24 }
+		}
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.1.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.01
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = { country_event = MNHM_ENG_pressure_ireland.9 }
+	}
+}
+
+# ENG: Ireland accepted the naval demand. Pressure for air bases or stop.
+country_event = {
+	id = MNHM_ENG_pressure_ireland.2
+	title = MNHM_ENG_pressure_ireland.2.t
+	desc = MNHM_ENG_pressure_ireland.2.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.2.a
+		ai_chance = { factor = 100 }
+		IRE = { country_event = { id = MNHM_ENG_pressure_ireland.3 hours = 24 } }
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.2.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+# IRE: air base access
+country_event = {
+	id = MNHM_ENG_pressure_ireland.3
+	title = MNHM_ENG_pressure_ireland.3.t
+	desc = MNHM_ENG_pressure_ireland.3.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.3.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = {
+			set_country_flag = ENG_IRE_air_access_flag
+			country_event = { id = MNHM_ENG_pressure_ireland.4 hours = 24 }
+		}
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.3.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.01
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = { country_event = MNHM_ENG_pressure_ireland.9 }
+	}
+}
+
+# ENG: Ireland accepted the air base demand. Pressure for military access, pressure to join the Allies, or stop.
+country_event = {
+	id = MNHM_ENG_pressure_ireland.4
+	title = MNHM_ENG_pressure_ireland.4.t
+	desc = MNHM_ENG_pressure_ireland.4.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.4.a
+		ai_chance = { factor = 50 }
+		IRE = { country_event = { id = MNHM_ENG_pressure_ireland.5 hours = 24 } }
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.4.b
+		ai_chance = { factor = 50 }
+		IRE = { country_event = { id = MNHM_ENG_pressure_ireland.6 hours = 24 } }
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.4.c
+		ai_chance = { factor = 0 }
+	}
+}
+
+# IRE: British military access (accepting means annexation)
+country_event = {
+	id = MNHM_ENG_pressure_ireland.5
+	title = MNHM_ENG_pressure_ireland.5.t
+	desc = MNHM_ENG_pressure_ireland.5.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.5.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		custom_effect_tooltip = MNHM_ENG_pressure_ireland_game_over_tt
+		IRE = { give_military_access = ENG }
+		ENG = { country_event = { id = MNHM_ENG_pressure_ireland.10 hours = 24 } }
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.5.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.01
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = { country_event = MNHM_ENG_pressure_ireland.9 }
+	}
+}
+
+# IRE: join the Allies
+country_event = {
+	id = MNHM_ENG_pressure_ireland.6
+	title = MNHM_ENG_pressure_ireland.6.t
+	desc = MNHM_ENG_pressure_ireland.6.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.6.a
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 100
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		# Make sure Britain has a faction to join, then bring Ireland into it.
+		if = {
+			limit = { ENG = { is_in_faction = no } }
+			ENG = { create_faction = "Allies" }
+		}
+		ENG = { add_to_faction = IRE }
+		country_event = MNHM_ENG_pressure_ireland.8
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.6.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0.01
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+		ENG = { country_event = MNHM_ENG_pressure_ireland.9 }
+	}
+}
+
+# IRE: confirmation that Ireland has joined the Allies
+country_event = {
+	id = MNHM_ENG_pressure_ireland.8
+	title = MNHM_ENG_pressure_ireland.8.t
+	desc = MNHM_ENG_pressure_ireland.8.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.8.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+# ENG: Ireland refused. Press the case (war goal) or let it go (-5% war support).
+country_event = {
+	id = MNHM_ENG_pressure_ireland.9
+	title = MNHM_ENG_pressure_ireland.9.t
+	desc = MNHM_ENG_pressure_ireland.9.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.9.a
+		ai_chance = { factor = 0 }
+		add_war_support = -0.05
+	}
+	option = {
+		name = MNHM_ENG_pressure_ireland.9.b
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = IRE
+			expire = 0
+		}
+	}
+}
+
+# ENG: Ireland accepted military access. Confirming annexes Ireland at 50% compliance.
+country_event = {
+	id = MNHM_ENG_pressure_ireland.10
+	title = MNHM_ENG_pressure_ireland.10.t
+	desc = MNHM_ENG_pressure_ireland.10.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_pressure_ireland.10.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+			target = IRE
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = IRE
+				NOT = { is_core_of = ENG }
+				is_owned_by = ENG
+			}
+			set_compliance = 50
+		}
+	}
+}

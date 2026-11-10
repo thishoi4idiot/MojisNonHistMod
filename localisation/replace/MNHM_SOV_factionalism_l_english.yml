@@ -1,0 +1,6 @@
+﻿l_english:
+ SOV_eliminate_opposition_factionalism_tt: "Modifies §Y$SOV_factionalism_modifier$§!:\n Stability: §G+5%§!."
+ SOV_left_right_purges_factionalism_tt: "Removes the Stability Modifier from §Y$SOV_factionalism_modifier$§!"
+ SOV_cooperation_against_stalin_factionalism_tt: "Modifies §Y$SOV_factionalism_modifier$§! with §G-15%§! Political Advisor Cost, §R-10%§! Party Popularity Stability Factor, and §R-5%§! Stability."
+ SOV_align_the_zinovyevites_factionalism_tt: "Modifies §Y$SOV_factionalism_modifier$§! with §R-5%§! Stability."
+ SOV_return_democracy_to_the_party_factionalism_tt: "Modifies §Y$SOV_factionalism_modifier$§! with §R-5%§! Stability."

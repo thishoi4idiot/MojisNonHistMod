@@ -9249,11 +9249,10 @@ country_event = {
 
 			#START CIVIL WAR
 			SOV_start_civil_war = yes 
+			set_global_flag = SOV_monarchist_civil_war
 			
 			# Exiles stuff set up
 			SOV_exiles_civil_war_start = yes 
-
-			recruit_character = SOV_anton_denikin 
 
 		}
 	}

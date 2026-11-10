@@ -1,0 +1,47 @@
+﻿add_namespace = MNHM_ENG_usa
+
+# Sent to the USA by the focus "A Plea Across the Atlantic": Britain asks the USA to join the Allies.
+country_event = {
+	id = MNHM_ENG_usa.1
+	title = MNHM_ENG_usa.1.t
+	desc = MNHM_ENG_usa.1.d
+	picture = GFX_report_event_generic_conference
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_ENG_usa.1.a
+		ai_chance = {
+			base = 35
+			modifier = {
+				factor = 3
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+		}
+		# Make sure Britain has a faction to join, then bring the USA into it.
+		if = {
+			limit = { ENG = { is_in_faction = no } }
+			ENG = { create_faction = "Allies" }
+		}
+		ENG = { add_to_faction = USA }
+	}
+	option = {
+		name = MNHM_ENG_usa.1.b
+		ai_chance = {
+			base = 65
+			modifier = {
+				factor = 0.3
+				has_opinion = {
+					target = ENG
+					value > 0
+				}
+			}
+		}
+	}
+}

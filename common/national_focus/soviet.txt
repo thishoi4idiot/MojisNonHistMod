@@ -10394,9 +10394,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
 		cost = 10
-		available = {
-			has_character = SOV_aleksey_rykov
-		}
 		                
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
@@ -10454,7 +10451,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_curtailment_of_the_collective_farms
-		cost = 10
+		cost = 5
 		available = {
 			has_war = no
 		}
@@ -10479,7 +10476,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -10531,7 +10528,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_back_to_the_nep
-		cost = 10
+		cost = 5
 		available = {
 		}
 		                
@@ -10543,14 +10540,14 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 5
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -10559,14 +10556,14 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex 
-						size > 1
+						size > 5
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = industrial_complex 
-					level = 2
+					level = 6
 					instant_build = yes
 				}
 			}
@@ -16019,10 +16016,6 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
 			hidden_effect = {
 				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
 				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }
@@ -16373,10 +16366,6 @@ ai_will_do = {
 		search_filters = {}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
 			custom_effect_tooltip = SOV_the_hands_do_denikin_tt
 			country_event = { 
 				id = NSB_Soviet_fascist_civil_war.001 hours = 6 random_hours = 6 
@@ -17006,8 +16995,8 @@ ai_will_do = {
 		id = SOV_dismantle_the_zemsky_sobor
 		icon = GFX_SOV_dismantle_the_zemsky_sobor_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
-		mutually_exclusive = { focus = SOV_romanov_reconstruction focus = SOV_reistablish_the_duma}
-		x = 4
+		mutually_exclusive = { focus = SOV_romanov_reconstruction }
+		x = 7
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 10
@@ -17019,10 +17008,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
-				limit = { NOT = { has_character = SOV_anton_denikin } }
-				recruit_character = SOV_anton_denikin
-			}
 			hidden_effect = {
 				SOV_alexander_solzhenstein = { clr_character_flag = SOV_exiled_flag }
 				SOV_arkady_stolypin = { clr_character_flag = SOV_exiled_flag }
@@ -17142,8 +17127,8 @@ ai_will_do = {
 		id = SOV_romanov_reconstruction
 		icon = GFX_SOV_romanov_reconstruction_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_reconvene_the_zemsky_sobor }
-		mutually_exclusive = { focus = SOV_dismantle_the_zemsky_sobor focus = SOV_reistablish_the_duma}
-		x = -9
+		mutually_exclusive = { focus = SOV_dismantle_the_zemsky_sobor }
+		x = -6
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
 		cost = 10
@@ -18909,56 +18894,56 @@ ai_will_do = {
 	}
 
 	#Russian Democratic Path
-	focus = {
-		id = SOV_reistablish_the_duma
-		icon = GFX_goal_support_democracy
-		prerequisite = {
-			focus = SOV_reconvene_the_zemsky_sobor
-		}
-		available = {
-			always = no
-			NOT = {
-				is_subject = yes
-			}
-		}
-		mutually_exclusive = {
-			focus = SOV_dismantle_the_zemsky_sobor
-			focus = SOV_romanov_reconstruction
-		}
-		cost = 5
-		relative_position_id = SOV_romanov_reconstruction
-		x = 28
-		y = 0
-		completion_reward = {
-			add_political_power = 150
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_the_duma_1
-			custom_effect_tooltip = SOV_invite_the_democratic_exiles_tt
-			hidden_effect = {
-				SOV_aleksandr_konovalov = { clr_character_flag = SOV_exiled_flag }
-				SOV_dmitry_odinets = { clr_character_flag = SOV_exiled_flag }
-				SOV_irakliy_tsereteli = { clr_character_flag = SOV_exiled_flag }
-				SOV_ivan_efremov = { clr_character_flag = SOV_exiled_flag }
-				SOV_ivan_zhilkin = { clr_character_flag = SOV_exiled_flag }
-				SOV_nikolai_nekrasov = { clr_character_flag = SOV_exiled_flag }
-				SOV_nikolay_avksentyev = { clr_character_flag = SOV_exiled_flag }
-				SOV_pavel_milyukov = { clr_character_flag = SOV_exiled_flag }
-				SOV_rafail_abramovich = { clr_character_flag = SOV_exiled_flag }
-				SOV_vasily_maklakov = { clr_character_flag = SOV_exiled_flag }
-				SOV_viktor_chernov = { clr_character_flag = SOV_exiled_flag }
-				SOV_vladimir_ryabushinsky = { clr_character_flag = SOV_exiled_flag }
-				SOV_aleksandr_rodzyanko = { clr_character_flag = SOV_exiled_flag }
-				SOV_georgiy_stark = { clr_character_flag = SOV_exiled_flag }
-				SOV_gerasim_vdovenko = { clr_character_flag = SOV_exiled_flag }
-				SOV_ivanis_vasily_nikolaevich = { clr_character_flag = SOV_exiled_flag }
-				SOV_konstantin_nechayev = { clr_character_flag = SOV_exiled_flag }
-			}
-		}
-	}
+#	focus = {
+#		id = SOV_reistablish_the_duma
+#		icon = GFX_goal_support_democracy
+#		prerequisite = {
+#			focus = SOV_reconvene_the_zemsky_sobor
+#		}
+#		available = {
+#			always = no
+#			NOT = {
+#				is_subject = yes
+#			}
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_dismantle_the_zemsky_sobor
+#			focus = SOV_romanov_reconstruction
+#		}
+#		cost = 5
+#		relative_position_id = SOV_romanov_reconstruction
+#		x = 28
+#		y = 0
+#		completion_reward = {
+#			add_political_power = 150
+#			add_popularity = {
+#				ideology = democratic
+#				popularity = 0.1
+#			}
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#			add_ideas = SOV_the_duma_1
+#			custom_effect_tooltip = SOV_invite_the_democratic_exiles_tt
+#			hidden_effect = {
+#				SOV_aleksandr_konovalov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_dmitry_odinets = { clr_character_flag = SOV_exiled_flag }
+#				SOV_irakliy_tsereteli = { clr_character_flag = SOV_exiled_flag }
+#				SOV_ivan_efremov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_ivan_zhilkin = { clr_character_flag = SOV_exiled_flag }
+#				SOV_nikolai_nekrasov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_nikolay_avksentyev = { clr_character_flag = SOV_exiled_flag }
+#				SOV_pavel_milyukov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_rafail_abramovich = { clr_character_flag = SOV_exiled_flag }
+#				SOV_vasily_maklakov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_viktor_chernov = { clr_character_flag = SOV_exiled_flag }
+#				SOV_vladimir_ryabushinsky = { clr_character_flag = SOV_exiled_flag }
+#				SOV_aleksandr_rodzyanko = { clr_character_flag = SOV_exiled_flag }
+#				SOV_georgiy_stark = { clr_character_flag = SOV_exiled_flag }
+#				SOV_gerasim_vdovenko = { clr_character_flag = SOV_exiled_flag }
+#				SOV_ivanis_vasily_nikolaevich = { clr_character_flag = SOV_exiled_flag }
+#				SOV_konstantin_nechayev = { clr_character_flag = SOV_exiled_flag }
+#			}
+#		}
+#	}
 	focus = {
 		id = SOV_capital_of_the_tsars
 		icon = GFX_SOV_capital_of_the_tsars_ccp_2d_sov_compatibility
@@ -19024,72 +19009,72 @@ ai_will_do = {
 		}
 	}
 
-	focus = {
-		id = SOV_guarantee_religious_liberties
-		icon = GFX_focus_ARG_defense_and_democracy
-		relative_position_id = SOV_reistablish_the_duma
-		x = -1 y = 1
-		cost = 5
-		prerequisite = {
-			focus = SOV_reistablish_the_duma
-		}
-		available = {
-			democratic > 0.25
-		}
-		completion_reward = {
-			add_stability = 0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_freedom_of_worship
-		}
-	}
+#	focus = {
+#		id = SOV_guarantee_religious_liberties
+#		icon = GFX_focus_ARG_defense_and_democracy
+#		relative_position_id = SOV_reistablish_the_duma
+#		x = -1 y = 1
+#		cost = 5
+#		prerequisite = {
+#			focus = SOV_reistablish_the_duma
+#		}
+#		available = {
+#			democratic > 0.25
+#		}
+#		completion_reward = {
+#			add_stability = 0.10
+#			add_popularity = {
+#				ideology = democratic
+#				popularity = 0.05
+#			}
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#			add_ideas = SOV_freedom_of_worship
+#		}
+#	}
 
-	focus = {
-		id = SOV_empower_the_peasantry
-		icon = GFX_focus_PRC_land_revolution_expedited
-		cost = 5
-		prerequisite = {
-			focus = SOV_reistablish_the_duma
-		}
-		y = 1 x = 1
-		relative_position_id = SOV_reistablish_the_duma
-		completion_reward = {
-			add_stability = -0.05
-			add_war_support = 0.15
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.05
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_empowered_peasantry_spirit
-		}
-	}
-	focus = {
-		id = SOV_empower_the_duma
-		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
-		relative_position_id = SOV_reistablish_the_duma
-		x = 0 y = 2
-		cost = 5
-		prerequisite = {
-			focus = SOV_guarantee_religious_liberties
-		}
-		prerequisite = {
-			focus = SOV_empower_the_peasantry
-		}
-		available = {
-			democratic > 0.4
-		}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = SOV_the_duma_1
-				add_idea = SOV_the_duma_2
-			}
-
-		}
-	}
+#	focus = {
+#		id = SOV_empower_the_peasantry
+#		icon = GFX_focus_PRC_land_revolution_expedited
+#		cost = 5
+#		prerequisite = {
+#			focus = SOV_reistablish_the_duma
+#		}
+#		y = 1 x = 1
+#		relative_position_id = SOV_reistablish_the_duma
+#		completion_reward = {
+#			add_stability = -0.05
+#			add_war_support = 0.15
+#			add_popularity = {
+#				ideology = democratic
+#				popularity = 0.05
+#			}
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#			add_ideas = SOV_empowered_peasantry_spirit
+#		}
+#	}
+#	focus = {
+#		id = SOV_empower_the_duma
+#		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+#		relative_position_id = SOV_reistablish_the_duma
+#		x = 0 y = 2
+#		cost = 5
+#		prerequisite = {
+#			focus = SOV_guarantee_religious_liberties
+#		}
+#		prerequisite = {
+#			focus = SOV_empower_the_peasantry
+#		}
+#		available = {
+#			democratic > 0.4
+#		}
+#		completion_reward = {
+#			swap_ideas = {
+#				remove_idea = SOV_the_duma_1
+#				add_idea = SOV_the_duma_2
+#			}
+#
+#		}
+#	}
 	#Hidden for now - re-center dreams_of_federation as the sole option
 	#focus = {
 	#	id = SOV_the_peoples_tsar
@@ -19151,487 +19136,487 @@ ai_will_do = {
 	#		}
 	#	}
 	#}
-	focus = {
-		id = SOV_the_triple_entente
-		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
-		x = 0
-		y = 1
-		relative_position_id = SOV_empower_the_duma
-		cost = 10
-		prerequisite = {
-			focus = SOV_empower_the_duma
-		}
-		mutually_exclusive = {
-			focus = SOV_the_lone_bear
-			focus = SOV_the_guardians_of_the_slavs
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-
-		search_filters = {}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-			ENG = {
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					has_completed_focus = ENG_alliance_with_germany
-				}
-			}
-			FRA = {
-				NOT = {
-					has_government = communism
-				}
-				NOT = {
-					has_completed_focus = FRA_establish_spheres_of_influence
-				}
-			}
-		}
-
-		bypass = {
-			ENG = {
-				OR = {
-					AND = {
-						is_in_faction = yes
-						is_faction_leader = no
-					}
-					has_war_with = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-			FRA = {
-				OR = {
-					AND = {
-						is_in_faction = yes
-						is_faction_leader = no
-					}
-					has_war_with = ROOT
-					is_in_faction_with = ROOT
-				}
-			}
-		}
-
-		completion_reward = {
-			if = {
-				limit = {
-					ENG = {
-						is_faction_leader = yes
-						NOT = { has_war_with = ROOT }
-					}
-				}
-				ENG = {
-					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
-				}
-			}
-			else_if = {
-				limit = {
-					FRA = {
-						is_faction_leader = yes
-						NOT = { has_war_with = ROOT }
-					}
-				}
-				FRA = {
-					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
-				}
-			}
-			else_if = {
-				limit = {
-					ENG = { is_faction_leader = no }
-					FRA = { is_faction_leader = no }
-					OR = {
-						ENG = {
-							is_in_faction = no
-							NOT = { has_war_with = ROOT }
-						}
-						FRA = {
-							is_in_faction = no
-							NOT = { has_war_with = ROOT }
-						}
-					}
-				}
-				create_faction_from_template = {
-					template = faction_template_allies
-					name = TRIPLE_ENTENTE
-				}
-				ENG = {
-					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
-				}
-				FRA = {
-					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
-				}
-			}
-			else = {
-				create_faction_from_template = {
-					template = faction_template_allies
-					name = TRIPLE_ENTENTE
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_dreams_of_federation
-		icon = GFX_SOV_patriarch_of_all_russia_ccp_2d_sov_compatibility
-		relative_position_id = SOV_the_triple_entente
-		x = 0 y = 1
-		cost = 5
-		prerequisite = {
-			focus = SOV_the_lone_bear
-			focus = SOV_the_triple_entente
-			focus = SOV_the_guardians_of_the_slavs
-		}
-		completion_reward = {
-			country_event = democratic_russia.1
-		}
-	}
-	focus = {
-		id = SOV_the_lone_bear
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		x = -2
-		y = 1
-		relative_position_id = SOV_empower_the_duma
-		cost = 10
-		prerequisite = {
-			focus = SOV_empower_the_duma
-		}
-		mutually_exclusive = {
-			focus = SOV_the_triple_entente
-			focus = SOV_the_guardians_of_the_slavs
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 100
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-	focus = {
-		id = SOV_the_guardians_of_the_slavs
-		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
-		x = 2
-		y = 1
-		relative_position_id = SOV_empower_the_duma
-		cost = 10
-		prerequisite = {
-			focus = SOV_empower_the_duma
-		}
-		mutually_exclusive = {
-			focus = SOV_the_triple_entente
-			focus = SOV_the_lone_bear
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
-			custom_effect_tooltip = generic_skip_one_line_tt
-			give_guarantee = CZE
-			give_guarantee = POL
-			give_guarantee = YUG
-			give_guarantee = BUL
-		}
-	}
-	focus = {
-		id = SOV_promote_multiculturalism
-		icon = GFX_SOV_offer_autonomy_to_former_soviet_republics_ccp_2d_sov_compatibility
-		x = -2
-		y = 1
-		relative_position_id = SOV_dreams_of_federation
-		cost = 10
-		prerequisite = {
-			focus = SOV_dreams_of_federation
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		available = {
-			is_subject = no
-		}
-		completion_reward = {
-			add_stability = -0.10
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.10
-			}
-			add_war_support = 0.10
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-	focus = {
-		id = MNHM_SOV_our_slavic_commitments
-		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
-		x = 0
-		y = 1
-		relative_position_id = SOV_dreams_of_federation
-		cost = 10
-		prerequisite = {
-			focus = SOV_dreams_of_federation
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		available = {
-			is_subject = no
-		}
-		completion_reward = {
-			add_ideas = SOV_our_slavic_commitments
-			give_guarantee = CZE
-			give_guarantee = POL
-			give_guarantee = YUG
-			give_guarantee = BUL
-			news_event = { id = nsb_news.406 hours = 12 }
-		}
-	}
-	focus = {
-		id = SOV_establish_an_eastern_economic_union
-		icon = GFX_focus_RAJ_special_economic_zones
-		x = 2
-		y = 0
-		relative_position_id = MNHM_SOV_our_slavic_commitments
-		cost = 10
-		prerequisite = {
-			focus = SOV_dreams_of_federation
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_expanding_into_the_middle_east
-		icon = GFX_focus_generic_influence_middle_east
-		relative_position_id = SOV_dreams_of_federation
-		prerequisite = {
-			focus = SOV_the_lone_bear
-			focus = SOV_the_guardians_of_the_slavs
-			focus = SOV_the_triple_entente
-		}
-		y = 0 x = 7
-		cost = 5
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_befriend_afghanistan
-		icon = GFX_focus_generic_befriend_afghanistan
-		relative_position_id = SOV_expanding_into_the_middle_east
-		prerequisite = {
-			focus = SOV_expanding_into_the_middle_east
-		}
-		mutually_exclusive = {
-			focus = SOV_demand_democratic_reforms_in_afghanistan
-		}
-		y = 1 x = 1
-		cost = 5
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_demand_democratic_reforms_in_afghanistan
-		icon = GFX_focus_generic_attack_afghanistan
-		relative_position_id = SOV_expanding_into_the_middle_east
-		prerequisite = {
-			focus = SOV_expanding_into_the_middle_east
-		}
-		y = 1 x = -1
-		mutually_exclusive = {
-			focus = SOV_befriend_afghanistan
-		}
-		cost = 10
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_reapproach_turkey
-		icon = GFX_focus_generic_black_sea_focus
-		relative_position_id = SOV_expanding_into_the_middle_east
-		prerequisite = {
-			focus = SOV_expanding_into_the_middle_east
-		}
-		y = 1 x = -3
-		cost = 10
-		completion_reward = {
-			TUR = {
-				country_event = { id = sov_turkish_straits.1 hours = 6 random_hours = 12 }
-			}
-		}
-	}
-	focus = {
-		id = SOV_topple_the_shah
-		icon = GFX_focus_generic_attack_iran
-		relative_position_id = SOV_demand_democratic_reforms_in_afghanistan
-		prerequisite = {
-			focus = SOV_befriend_afghanistan
-			focus = SOV_demand_democratic_reforms_in_afghanistan
-		}
-		mutually_exclusive = {
-			focus = SOV_support_the_persian_constitutionalists
-		}
-		y = 1 x = 0
-		cost = 10
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = PER
-			}
-			add_political_power = -50
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-	focus = {
-		id = SOV_support_the_persian_constitutionalists
-		icon = GFX_goal_support_democracy
-		relative_position_id = SOV_befriend_afghanistan
-		prerequisite = {
-			focus = SOV_befriend_afghanistan
-			focus = SOV_demand_democratic_reforms_in_afghanistan
-		}
-		mutually_exclusive = {
-			focus = SOV_topple_the_shah
-		}
-		y = 1 x = 0
-		cost = 10
-		completion_reward = {
-			PER = {
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.2
-				}
-			}
-			add_political_power = 50
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
-	}
-	focus = {
-		id = SOV_fund_kurdish_rebels
-		icon = GFX_focus_IRQ_promote_kurdish_culture
-		relative_position_id = SOV_expanding_into_the_middle_east
-		prerequisite = {
-			focus = SOV_expanding_into_the_middle_east
-		}
-		y = 1 x = 3
-		cost = 10
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_reexamination_our_asian_positions
-		icon = GFX_focus_generic_asia_liberation
-		prerequisite = {
-			focus = SOV_the_lone_bear
-			focus = SOV_the_triple_entente
-			focus = SOV_the_guardians_of_the_slavs
-		}
-		relative_position_id = SOV_dreams_of_federation
-		x = -7 y = 0
-		cost = 5
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_secure_tanna_tuva
-		icon = GFX_focus_generic_befriend_tannu_tuva
-		prerequisite = {
-			focus = SOV_reexamination_our_asian_positions
-		}
-		relative_position_id = SOV_reexamination_our_asian_positions
-		x = -3 y = 1
-		cost = 5
-		completion_reward = {
-			TAN = {
-				add_ai_strategy = {
-					type = befriend
-					id = ROOT
-					value = 150
-				}
-				country_event = {
-					id = democratic_russia.2
-					hours = 4
-					random_hours = 4
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOV_seek_mongolian_cooperation
-		icon = GFX_focus_generic_befriend_mongolia
-		prerequisite = {
-			focus = SOV_reexamination_our_asian_positions
-		}
-		relative_position_id = SOV_reexamination_our_asian_positions
-		x = 3 y = 1
-		cost = 5
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_sakhalin_for_peace
-		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
-		relative_position_id = SOV_reexamination_our_asian_positions
-		prerequisite = {
-			focus = SOV_reexamination_our_asian_positions
-		}
-		y = 1 x = -1
-		mutually_exclusive = {
-			focus = SOV_crush_japan
-		}
-		cost = 10
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_crush_japan
-		icon = GFX_focus_attack_japan
-		relative_position_id = SOV_reexamination_our_asian_positions
-		prerequisite = {
-			focus = SOV_reexamination_our_asian_positions
-		}
-		y = 1 x = 1
-		mutually_exclusive = {
-			focus = SOV_sakhalin_for_peace
-		}
-		cost = 10
-		completion_reward = {
-
-		}
-	}
-	focus = {
-		id = SOV_repurchase_alaska
-		icon = GFX_focus_AUS_seek_to_purchase_alaska
-		cost = 5
-		prerequisite = {
-			focus = SOV_crush_japan
-			focus = SOV_sakhalin_for_peace
-		}
-		y = 1 x = 1
-		relative_position_id = SOV_sakhalin_for_peace
-		completion_reward = {
-		}
-	}
+#	focus = {
+#		id = SOV_the_triple_entente
+#		icon = GFX_SOV_the_triple_entente_ccp_2d_sov_compatibility
+#		x = 0
+#		y = 1
+#		relative_position_id = SOV_empower_the_duma
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_empower_the_duma
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_the_lone_bear
+#			focus = SOV_the_guardians_of_the_slavs
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#
+#		search_filters = {}
+#
+#		available = {
+#			is_subject = no
+#			is_in_faction = no
+#			ENG = {
+#				NOT = {
+#					has_government = communism
+#				}
+#				NOT = {
+#					has_completed_focus = ENG_alliance_with_germany
+#				}
+#			}
+#			FRA = {
+#				NOT = {
+#					has_government = communism
+#				}
+#				NOT = {
+#					has_completed_focus = FRA_establish_spheres_of_influence
+#				}
+#			}
+#		}
+#
+#		bypass = {
+#			ENG = {
+#				OR = {
+#					AND = {
+#						is_in_faction = yes
+#						is_faction_leader = no
+#					}
+#					has_war_with = ROOT
+#					is_in_faction_with = ROOT
+#				}
+#			}
+#			FRA = {
+#				OR = {
+#					AND = {
+#						is_in_faction = yes
+#						is_faction_leader = no
+#					}
+#					has_war_with = ROOT
+#					is_in_faction_with = ROOT
+#				}
+#			}
+#		}
+#
+#		completion_reward = {
+#			if = {
+#				limit = {
+#					ENG = {
+#						is_faction_leader = yes
+#						NOT = { has_war_with = ROOT }
+#					}
+#				}
+#				ENG = {
+#					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					FRA = {
+#						is_faction_leader = yes
+#						NOT = { has_war_with = ROOT }
+#					}
+#				}
+#				FRA = {
+#					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
+#				}
+#			}
+#			else_if = {
+#				limit = {
+#					ENG = { is_faction_leader = no }
+#					FRA = { is_faction_leader = no }
+#					OR = {
+#						ENG = {
+#							is_in_faction = no
+#							NOT = { has_war_with = ROOT }
+#						}
+#						FRA = {
+#							is_in_faction = no
+#							NOT = { has_war_with = ROOT }
+#						}
+#					}
+#				}
+#				create_faction_from_template = {
+#					template = faction_template_allies
+#					name = TRIPLE_ENTENTE
+#				}
+#				ENG = {
+#					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
+#				}
+#				FRA = {
+#					country_event = { id = NSB_soviet_fascist_tsarist.16 hours = 6 }
+#				}
+#			}
+#			else = {
+#				create_faction_from_template = {
+#					template = faction_template_allies
+#					name = TRIPLE_ENTENTE
+#				}
+#			}
+#		}
+#	}
+#	focus = {
+#		id = SOV_dreams_of_federation
+#		icon = GFX_SOV_patriarch_of_all_russia_ccp_2d_sov_compatibility
+#		relative_position_id = SOV_the_triple_entente
+#		x = 0 y = 1
+#		cost = 5
+#		prerequisite = {
+#			focus = SOV_the_lone_bear
+#			focus = SOV_the_triple_entente
+#			focus = SOV_the_guardians_of_the_slavs
+#		}
+#		completion_reward = {
+#			country_event = democratic_russia.1
+#		}
+#	}
+#	focus = {
+#		id = SOV_the_lone_bear
+#		icon = GFX_focus_spr_torchbearers_of_tomorrow
+#		x = -2
+#		y = 1
+#		relative_position_id = SOV_empower_the_duma
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_empower_the_duma
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_the_triple_entente
+#			focus = SOV_the_guardians_of_the_slavs
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#		completion_reward = {
+#			add_stability = 0.1
+#			add_political_power = 100
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#		}
+#	}
+#	focus = {
+#		id = SOV_the_guardians_of_the_slavs
+#		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
+#		x = 2
+#		y = 1
+#		relative_position_id = SOV_empower_the_duma
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_empower_the_duma
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_the_triple_entente
+#			focus = SOV_the_lone_bear
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#		completion_reward = {
+#			add_political_power = 100
+#			add_stability = 0.1
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#			give_guarantee = CZE
+#			give_guarantee = POL
+#			give_guarantee = YUG
+#			give_guarantee = BUL
+#		}
+#	}
+#	focus = {
+#		id = SOV_promote_multiculturalism
+#		icon = GFX_SOV_offer_autonomy_to_former_soviet_republics_ccp_2d_sov_compatibility
+#		x = -2
+#		y = 1
+#		relative_position_id = SOV_dreams_of_federation
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_dreams_of_federation
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#		search_filters = {FOCUS_FILTER_POLITICAL}
+#		available = {
+#			is_subject = no
+#		}
+#		completion_reward = {
+#			add_stability = -0.10
+#			add_popularity = {
+#				ideology = democratic
+#				popularity = 0.10
+#			}
+#			add_war_support = 0.10
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#		}
+#	}
+#	focus = {
+#		id = MNHM_SOV_our_slavic_commitments
+#		icon = GFX_SOV_our_slavic_commitments_ccp_2d_sov_compatibility
+#		x = 0
+#		y = 1
+#		relative_position_id = SOV_dreams_of_federation
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_dreams_of_federation
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#		search_filters = {FOCUS_FILTER_POLITICAL}
+#		available = {
+#			is_subject = no
+#		}
+#		completion_reward = {
+#			add_ideas = SOV_our_slavic_commitments
+#			give_guarantee = CZE
+#			give_guarantee = POL
+#			give_guarantee = YUG
+#			give_guarantee = BUL
+#			news_event = { id = nsb_news.406 hours = 12 }
+#		}
+#	}
+#	focus = {
+#		id = SOV_establish_an_eastern_economic_union
+#		icon = GFX_focus_RAJ_special_economic_zones
+#		x = 2
+#		y = 0
+#		relative_position_id = MNHM_SOV_our_slavic_commitments
+#		cost = 10
+#		prerequisite = {
+#			focus = SOV_dreams_of_federation
+#		}
+#		ai_will_do = {
+#			factor = 1
+#		}
+#		available_if_capitulated = no
+#		search_filters = {FOCUS_FILTER_POLITICAL}
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_expanding_into_the_middle_east
+#		icon = GFX_focus_generic_influence_middle_east
+#		relative_position_id = SOV_dreams_of_federation
+#		prerequisite = {
+#			focus = SOV_the_lone_bear
+#			focus = SOV_the_guardians_of_the_slavs
+#			focus = SOV_the_triple_entente
+#		}
+#		y = 0 x = 7
+#		cost = 5
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_befriend_afghanistan
+#		icon = GFX_focus_generic_befriend_afghanistan
+#		relative_position_id = SOV_expanding_into_the_middle_east
+#		prerequisite = {
+#			focus = SOV_expanding_into_the_middle_east
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_demand_democratic_reforms_in_afghanistan
+#		}
+#		y = 1 x = 1
+#		cost = 5
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_demand_democratic_reforms_in_afghanistan
+#		icon = GFX_focus_generic_attack_afghanistan
+#		relative_position_id = SOV_expanding_into_the_middle_east
+#		prerequisite = {
+#			focus = SOV_expanding_into_the_middle_east
+#		}
+#		y = 1 x = -1
+#		mutually_exclusive = {
+#			focus = SOV_befriend_afghanistan
+#		}
+#		cost = 10
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_reapproach_turkey
+#		icon = GFX_focus_generic_black_sea_focus
+#		relative_position_id = SOV_expanding_into_the_middle_east
+#		prerequisite = {
+#			focus = SOV_expanding_into_the_middle_east
+#		}
+#		y = 1 x = -3
+#		cost = 10
+#		completion_reward = {
+#			TUR = {
+#				country_event = { id = sov_turkish_straits.1 hours = 6 random_hours = 12 }
+#			}
+#		}
+#	}
+#	focus = {
+#		id = SOV_topple_the_shah
+#		icon = GFX_focus_generic_attack_iran
+#		relative_position_id = SOV_demand_democratic_reforms_in_afghanistan
+#		prerequisite = {
+#			focus = SOV_befriend_afghanistan
+#			focus = SOV_demand_democratic_reforms_in_afghanistan
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_support_the_persian_constitutionalists
+#		}
+#		y = 1 x = 0
+#		cost = 10
+#		completion_reward = {
+#			create_wargoal = {
+#				type = annex_everything
+#				target = PER
+#			}
+#			add_political_power = -50
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#		}
+#	}
+#	focus = {
+#		id = SOV_support_the_persian_constitutionalists
+#		icon = GFX_goal_support_democracy
+#		relative_position_id = SOV_befriend_afghanistan
+#		prerequisite = {
+#			focus = SOV_befriend_afghanistan
+#			focus = SOV_demand_democratic_reforms_in_afghanistan
+#		}
+#		mutually_exclusive = {
+#			focus = SOV_topple_the_shah
+#		}
+#		y = 1 x = 0
+#		cost = 10
+#		completion_reward = {
+#			PER = {
+#				add_popularity = {
+#					ideology = democratic
+#					popularity = 0.2
+#				}
+#			}
+#			add_political_power = 50
+#			custom_effect_tooltip = generic_skip_one_line_tt
+#		}
+#	}
+#	focus = {
+#		id = SOV_fund_kurdish_rebels
+#		icon = GFX_focus_IRQ_promote_kurdish_culture
+#		relative_position_id = SOV_expanding_into_the_middle_east
+#		prerequisite = {
+#			focus = SOV_expanding_into_the_middle_east
+#		}
+#		y = 1 x = 3
+#		cost = 10
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_reexamination_our_asian_positions
+#		icon = GFX_focus_generic_asia_liberation
+#		prerequisite = {
+#			focus = SOV_the_lone_bear
+#			focus = SOV_the_triple_entente
+#			focus = SOV_the_guardians_of_the_slavs
+#		}
+#		relative_position_id = SOV_dreams_of_federation
+#		x = -7 y = 0
+#		cost = 5
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_secure_tanna_tuva
+#		icon = GFX_focus_generic_befriend_tannu_tuva
+#		prerequisite = {
+#			focus = SOV_reexamination_our_asian_positions
+#		}
+#		relative_position_id = SOV_reexamination_our_asian_positions
+#		x = -3 y = 1
+#		cost = 5
+#		completion_reward = {
+#			TAN = {
+#				add_ai_strategy = {
+#					type = befriend
+#					id = ROOT
+#					value = 150
+#				}
+#				country_event = {
+#					id = democratic_russia.2
+#					hours = 4
+#					random_hours = 4
+#				}
+#			}
+#		}
+#	}
+#	focus = {
+#		id = SOV_seek_mongolian_cooperation
+#		icon = GFX_focus_generic_befriend_mongolia
+#		prerequisite = {
+#			focus = SOV_reexamination_our_asian_positions
+#		}
+#		relative_position_id = SOV_reexamination_our_asian_positions
+#		x = 3 y = 1
+#		cost = 5
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_sakhalin_for_peace
+#		icon = GFX_SOV_japanese_overtures_ccp_2d_sov_compatibility
+#		relative_position_id = SOV_reexamination_our_asian_positions
+#		prerequisite = {
+#			focus = SOV_reexamination_our_asian_positions
+#		}
+#		y = 1 x = -1
+#		mutually_exclusive = {
+#			focus = SOV_crush_japan
+#		}
+#		cost = 10
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_crush_japan
+#		icon = GFX_focus_attack_japan
+#		relative_position_id = SOV_reexamination_our_asian_positions
+#		prerequisite = {
+#			focus = SOV_reexamination_our_asian_positions
+#		}
+#		y = 1 x = 1
+#		mutually_exclusive = {
+#			focus = SOV_sakhalin_for_peace
+#		}
+#		cost = 10
+#		completion_reward = {
+#
+#		}
+#	}
+#	focus = {
+#		id = SOV_repurchase_alaska
+#		icon = GFX_focus_AUS_seek_to_purchase_alaska
+#		cost = 5
+#		prerequisite = {
+#			focus = SOV_crush_japan
+#			focus = SOV_sakhalin_for_peace
+#		}
+#		y = 1 x = 1
+#		relative_position_id = SOV_sakhalin_for_peace
+#		completion_reward = {
+#		}
+#	}
 	focus = {
 		id = SOV_national_recovery_plan
 		icon = GFX_SOV_finish_the_five_year_plan_ccp_2d_sov_compatibility

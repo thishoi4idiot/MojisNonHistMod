@@ -707,14 +707,58 @@ ideas = {
 				army_morale_factor = 0.1
 			}
 		}
+		ENG_hosted_by_dominion = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_navy_cruiser_warfare
+			modifier = {
+				surrender_limit = 1.0
+			}
+		}
+		ENG_rule_the_waves_spirit = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_navy_cruiser_warfare
+			modifier = {
+				navy_max_range_factor = 0.2
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.25
+			}
+		}
+		ENG_return_home_spirit = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_navy_cruiser_warfare
+			removal_cost = -1
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.4
+				defense_bonus_against = 0.4
+				breakthrough_bonus_against = 0.4
+			}
+		}
+		ENG_liberation_spirit = {
+			allowed = {
+				always = yes
+			}
+			picture = generic_navy_cruiser_warfare
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				training_time_factor = -0.1
+			}
+		}
 		ENG_failed_rearmament = {
 			allowed = {
 				always = yes
 			}
 			picture = GFX_idea_generic_economic_crisis
 			modifier = {
-				stability_factor = -0.10
-				war_support_factor = -0.20
+				stability_factor = -0.20
+				war_support_factor = -0.10
 			}
 		}
 		Von_Moltke_rail_docterine = {

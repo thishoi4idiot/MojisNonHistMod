@@ -1985,6 +1985,9 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			visible = {
+				has_global_flag = SOV_monarchist_civil_war
+			}
 			available = {
 				if = {
 					limit = {
@@ -2010,6 +2013,7 @@ characters = {
 			planning_skill = 1
 			logistics_skill = 1
 			visible = {
+				has_global_flag = SOV_monarchist_civil_war
 				NOT = { has_character_flag = SOV_exiled_flag }
 				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }
 			}
@@ -4083,7 +4087,6 @@ characters = {
 				}
 			}
 			available = {
-        has_completed_focus = SOV_reistablish_the_duma # MNHM mod condition
 				if = {
 					limit = {
 						has_dlc = "Man the Guns"
@@ -4338,6 +4341,9 @@ characters = {
 			allowed = {
 				original_tag = SOV
 			}
+			visible = {
+				has_global_flag = SOV_monarchist_civil_war
+			}
 			available = {
 				if = {
 					limit = {
@@ -4367,6 +4373,7 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			visible = {
+				has_global_flag = SOV_monarchist_civil_war
 				NOT = { has_character_flag = SOV_exiled_flag }
 				has_country_flag = SOV_recruited_pepelyaev
 				ROOT = { has_completed_focus = SOV_beaten_but_not_defeated }

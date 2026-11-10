@@ -1,0 +1,93 @@
+﻿###########################
+# Franco-Spanish Union
+###########################
+
+add_namespace = MNHM_fra_crown
+
+# France proposes uniting the crowns - sent to Carlist Spain (FROM = France)
+country_event = {
+	id = MNHM_fra_crown.1
+	title = MNHM_fra_crown.1.t
+	desc = MNHM_fra_crown.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = MNHM_fra_crown.1.a
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			country_event = {
+				id = MNHM_fra_crown.3
+			}
+		}
+	}
+
+	option = { # Refuse - never chosen by the AI
+		name = MNHM_fra_crown.1.b
+		ai_chance = {
+			base = 0
+		}
+		FROM = {
+			country_event = {
+				id = MNHM_fra_crown.2
+			}
+		}
+	}
+}
+
+# Carlist Spain refused the union (ROOT = France, FROM = Carlist Spain)
+country_event = {
+	id = MNHM_fra_crown.2
+	title = MNHM_fra_crown.2.t
+	desc = MNHM_fra_crown.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { # Let it go
+		name = MNHM_fra_crown.2.a
+		add_war_support = -0.05
+	}
+
+	option = { # Press the claim by force
+		name = MNHM_fra_crown.2.b
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+			expire = 0
+		}
+	}
+}
+
+# Carlist Spain accepted the union (ROOT = France, FROM = Carlist Spain)
+country_event = {
+	id = MNHM_fra_crown.3
+	title = MNHM_fra_crown.3.t
+	desc = MNHM_fra_crown.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = MNHM_fra_crown.3.a
+		if = {
+			limit = {
+				country_exists = SPB
+			}
+			annex_country = {
+				target = SPB
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = SPB
+			}
+			add_core_of = FRA
+		}
+		add_stability = -0.1
+		set_cosmetic_tag = FRANCO_SPAIN
+	}
+}

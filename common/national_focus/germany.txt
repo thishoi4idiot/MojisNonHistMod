@@ -28427,18 +28427,6 @@ focus_tree = {
 			}
 		}
 
-		allow_branch = {
-			has_dlc = "Peace For Our Time"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-			}
-		}
-
 		available = {
 			9 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
@@ -28449,7 +28437,7 @@ focus_tree = {
 
 		completion_reward = {
 			GER_modify_industrial_modifier = yes
-			add_to_variable = { 
+			add_to_variable = {
 				GER_industrial_equipment_conversion_speed = 0.05
 				tooltip = equipment_conversion_speed_tt
 			}
